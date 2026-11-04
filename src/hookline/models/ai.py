@@ -91,6 +91,9 @@ class AIRun(FrozenModel):
         default=False, description="Whether personal data was redacted before sending."
     )
     error: str | None = None
+    notes: tuple[str, ...] = Field(
+        default=(), description="What was done to the input or output, such as truncation."
+    )
     assessment: AIAssessment | None = None
 
     @model_validator(mode="after")

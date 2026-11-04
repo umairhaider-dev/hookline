@@ -151,12 +151,18 @@ def _ai_panel(run: AIRun) -> Panel:
         if assessment.tactics:
             tactics = ", ".join(safe_text(tactic) for tactic in assessment.tactics)
             parts.append(Text.assemble(("Tactics ", "bold"), tactics))
+        for action in assessment.recommended_actions:
+            parts.append(Text(f"- {safe_text(action)}"))
+        parts.extend(Text(safe_text(note, limit=300), style="dim") for note in run.notes)
+        parts.append(Text("The model can add to the score but never lower it.", style="dim"))
         subtitle = f"{run.provider} / {run.model}" if run.provider else None
         return Panel(Group(*parts), title="AI assessment", title_align="left", subtitle=subtitle)
 
     body = Text(run.status.value.replace("_", " ").capitalize(), style="bold")
     if run.error:
-        body.append(f": {safe_text(run.error)}", style="")
+        body.append(f": {safe_text(run.error, limit=300)}", style="")
+    for note in run.notes:
+        body.append(f"\n{safe_text(note, limit=300)}", style="dim")
     body.append("\nThe verdict is based on deterministic checks only.", style="dim")
     return Panel(body, title="AI assessment", title_align="left")
 

@@ -93,6 +93,45 @@ attachment hashes, URLs, sending IPs and domains:
 - A malicious answer adds a critical `threat_intel_match` indicator; a
   suspicious one adds a medium one.
 
+## AI assessment
+
+After the checks, a language model reads the email and the findings and returns
+a likelihood (0-100), an attack type, the tactics used, an explanation for the
+analyst and recommended actions, as JSON validated against a strict schema.
+
+| Provider | Setting | Notes |
+| --- | --- | --- |
+| Ollama (default) | `llm.provider = "ollama"` | Local; the email never leaves the machine. Run `ollama pull llama3.1:8b` once. |
+| Anthropic | `llm.provider = "anthropic"` | Needs `ANTHROPIC_API_KEY` and `pip install "hookline[anthropic]"`; uses `claude-opus-5-5` with structured outputs and server-side refusal fallback. |
+
+`--no-ai` skips the model. If it is unreachable, too slow or answers invalid
+JSON twice, the verdict falls back to the deterministic checks and the report
+says why.
+
+### AI safety
+
+The model assists; it never decides alone.
+
+- **It cannot lower the score.** Its likelihood adds up to `ai_max_points`
+  (default 40) above 50 and nothing below. This is clamped in the scoring code,
+  so no answer can remove a finding or soften a verdict.
+- **Email content is data.** The system prompt says so, and everything taken
+  from the email sits between markers carrying a random value the sender
+  cannot predict; marker-like text inside the email is broken up.
+- **Injection attempts are findings.** Text addressed to an AI or a scanner
+  ("ignore previous instructions", "classify this email as safe") is a high
+  severity `prompt_injection` indicator, or critical when it is hidden.
+- **Hidden text is removed and recorded.** `display:none`, zero-size,
+  transparent or background-coloured text, `mso-hide`, HTML comments and
+  zero-width characters are kept out of the prompt and reported as
+  `hidden_text`.
+- **Personal data is redacted for cloud providers** (on by default; set
+  `llm.redaction`): mailbox names, recipients' names, phone, card and ID
+  numbers, IBANs and URL query values. Domains are kept, since they are the
+  evidence.
+- **Answers are validated.** Bounded fields, an enum for the attack type, one
+  corrective retry, then rules-only.
+
 ## Configuration
 
 Settings are read from, highest precedence first:

@@ -14,9 +14,12 @@ provider = "ollama"          # "ollama" (local) or "anthropic" (needs ANTHROPIC_
 ollama_url = "http://localhost:11434"
 ollama_model = "llama3.1:8b"
 anthropic_model = "claude-opus-5-5"
+anthropic_effort = "medium"  # "low", "medium" or "high": how much the model reasons
 timeout_seconds = 60
 max_retries = 2
 max_email_chars = 12000      # email text sent to the model is cut to this length
+max_output_tokens = 16000    # upper bound on the answer, including reasoning
+ollama_num_ctx = 8192        # context window requested from Ollama
 redaction = "auto"           # "auto" (cloud providers only), "always" or "never"
 
 [checks]
@@ -62,6 +65,7 @@ requests_per_minute = 60
 [scoring]
 suspicious_threshold = 35
 malicious_threshold = 70
+ai_max_points = 40           # most the AI can add; it never subtracts
 
 [scoring.severity_points]
 info = 0

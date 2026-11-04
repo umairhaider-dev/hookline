@@ -160,3 +160,31 @@ def test_threat_intel_counts_without_cache() -> None:
     )
     output = render(make_report(threat_intel=run))
     assert "1 answer(s): 0 malicious, 1 suspicious" in output
+
+
+def test_ai_panel_lists_actions_and_notes() -> None:
+    run = AIRun(
+        status=AIStatus.COMPLETED,
+        provider="fake",
+        model="m",
+        notes=("Email text was cut to 1,000 characters for the model.",),
+        assessment=AIAssessment(
+            phishing_likelihood=80,
+            attack_type=AttackType.BEC,
+            explanation="Looks like invoice fraud.",
+            recommended_actions=("Call the vendor on a known number",),
+        ),
+    )
+    output = render(make_report(ai=run))
+    assert "- Call the vendor on a known number" in output
+    assert "Email text was cut to 1,000 characters" in output
+    assert "never lower it" in output
+
+
+def test_ai_failure_panel_shows_notes() -> None:
+    run = AIRun(
+        status=AIStatus.INVALID_OUTPUT, error="bad answers", notes=("Answer 1 was invalid.",)
+    )
+    output = render(make_report(ai=run))
+    assert "Invalid output: bad answers" in output
+    assert "Answer 1 was invalid." in output

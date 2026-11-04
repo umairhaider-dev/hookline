@@ -3,6 +3,7 @@
 from hookline.checks.attachments import AttachmentCheck
 from hookline.checks.authentication import AuthenticationCheck
 from hookline.checks.base import Check
+from hookline.checks.content import ContentCheck
 from hookline.checks.domains import DomainCheck
 from hookline.checks.language import LanguageCheck
 from hookline.checks.links import LinkCheck
@@ -23,6 +24,7 @@ def build_checks(settings: CheckSettings) -> list[Check]:
         LinkCheck(settings),
         AttachmentCheck(),
         LanguageCheck(),
+        ContentCheck(),
     ]
 
 
@@ -30,6 +32,7 @@ __all__ = [
     "AttachmentCheck",
     "AuthenticationCheck",
     "Check",
+    "ContentCheck",
     "DomainCheck",
     "LanguageCheck",
     "LinkCheck",

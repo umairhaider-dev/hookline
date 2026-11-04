@@ -85,6 +85,13 @@ class Link(FrozenModel):
     origin: LinkOrigin
 
 
+class HiddenText(FrozenModel):
+    """Text in the HTML body that a reader would not see, and why it is invisible."""
+
+    text: str = Field(min_length=1)
+    reason: str = Field(description="For example display:none, white text or HTML comment.")
+
+
 class Attachment(FrozenModel):
     """Metadata about an attachment. The payload itself is never kept or opened."""
 
@@ -122,7 +129,11 @@ class ParsedEmail(FrozenModel):
     text_body: str = ""
     html_body: str = ""
     html_text: str = Field(
-        default="", description="Readable text of the HTML body, without tags, scripts or styles."
+        default="",
+        description="Visible text of the HTML body, without tags, scripts, styles or hidden text.",
+    )
+    hidden_text: tuple[HiddenText, ...] = Field(
+        default=(), description="Invisible HTML text and comments, kept out of html_text."
     )
     links: tuple[Link, ...] = ()
     attachments: tuple[Attachment, ...] = ()

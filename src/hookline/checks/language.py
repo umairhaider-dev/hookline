@@ -8,27 +8,15 @@ analysis down. The patterns are English only.
 """
 
 import re
-import unicodedata
 from collections.abc import Iterator
 from dataclasses import dataclass
 
 from hookline.models.email import ParsedEmail
 from hookline.models.indicator import Indicator, IndicatorSource, IndicatorType, Severity
+from hookline.textnorm import normalize_text
 
 MAX_PHRASES_SHOWN = 5
 MAX_TEXT_CHARS = 200_000
-
-# Zero-width and other invisible formatting characters that can be slipped
-# inside words are removed; typographic apostrophes become plain ones.
-_FOLD_TABLE: dict[int, str | None] = {
-    **dict.fromkeys(
-        (0x00AD, 0x034F, 0x180E, 0x200B, 0x200C, 0x200D, 0x2060, 0x2061, 0x2062, 0x2063)
-    ),
-    **dict.fromkeys((0x2064, 0xFEFF)),
-    0x2018: "'",
-    0x2019: "'",
-}
-_SPACES = re.compile(r"\s+")
 
 
 @dataclass(frozen=True)
@@ -150,12 +138,6 @@ class LanguageCheck:
                 evidence=evidence,
                 source=IndicatorSource.LANGUAGE,
             )
-
-
-def normalize_text(text: str) -> str:
-    """Fold text for phrase matching: compatibility forms, case, invisibles, whitespace."""
-    folded = unicodedata.normalize("NFKC", text).translate(_FOLD_TABLE).casefold()
-    return _SPACES.sub(" ", folded)
 
 
 def _matches(category: _Category, text: str) -> list[str]:

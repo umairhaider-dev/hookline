@@ -300,3 +300,18 @@ def test_html_link_overflow_is_reported(monkeypatch: pytest.MonkeyPatch) -> None
     email = parse_email(message.as_bytes())
     assert [link.url for link in email.links] == ["https://a.test"]
     assert any(defect.startswith("Message has more than 1 distinct") for defect in email.defects)
+
+
+def test_absurd_time_zones_do_not_crash_the_parser() -> None:
+    zone = "+" + "9" * 12
+    email = parse_email(
+        build_eml(
+            [
+                ("Date", f"Mon, 02 Nov 2026 15:02:08 {zone}"),
+                ("Received", f"from a.test by b.test; Mon, 02 Nov 2026 15:02:08 {zone}"),
+            ]
+        )
+    )
+    assert email.date is None
+    assert email.received[0].timestamp is None
+    assert any("Date header" in defect for defect in email.defects)

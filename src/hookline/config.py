@@ -42,6 +42,7 @@ CONFIG_ENV_VAR = "HOOKLINE_CONFIG"
 DEFAULT_CONFIG_FILENAME = "hookline.toml"
 
 LogLevel = Literal["DEBUG", "INFO", "WARNING", "ERROR"]
+Effort = Literal["low", "medium", "high"]
 
 # Commonly impersonated brands. Replace or extend these with your own
 # organisation's domains in the config file.
@@ -167,9 +168,29 @@ class LLMSettings(_Section):
     ollama_url: str = "http://localhost:11434"
     ollama_model: str = Field(default="llama3.1:8b", min_length=1)
     anthropic_model: str = Field(default="claude-opus-5-5", min_length=1)
+    anthropic_effort: Effort = Field(
+        default="medium", description="How much the model reasons before answering."
+    )
     timeout_seconds: float = Field(default=60.0, gt=0, le=600)
     max_retries: int = Field(default=2, ge=0, le=5)
-    max_email_chars: int = Field(default=12_000, ge=500, le=200_000)
+    max_email_chars: int = Field(
+        default=12_000,
+        ge=500,
+        le=200_000,
+        description="Email text sent to the model is cut to this many characters.",
+    )
+    max_output_tokens: int = Field(
+        default=16_000,
+        ge=512,
+        le=64_000,
+        description="Upper bound on the model's answer, including any reasoning it does.",
+    )
+    ollama_num_ctx: int = Field(
+        default=8192,
+        ge=2048,
+        le=262_144,
+        description="Context window to request from Ollama, so long prompts are not cut.",
+    )
     redaction: RedactionMode = RedactionMode.AUTO
 
     @field_validator("ollama_url")
@@ -216,6 +237,15 @@ class ScoringSettings(_Section):
     )
     suspicious_threshold: float = Field(default=35.0, gt=0, lt=100)
     malicious_threshold: float = Field(default=70.0, gt=0, le=100)
+    ai_max_points: float = Field(
+        default=40.0,
+        ge=0,
+        le=100,
+        description=(
+            "Most points the AI assessment can add. It adds nothing at a likelihood of 50 or "
+            "below and can never subtract."
+        ),
+    )
 
     @field_validator("severity_points")
     @classmethod

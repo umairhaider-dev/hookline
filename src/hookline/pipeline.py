@@ -7,6 +7,7 @@ from pathlib import Path
 from types import TracebackType
 from typing import Self
 
+from hookline.ai import Assessor, build_assessor
 from hookline.checks import Check, build_checks
 from hookline.config import Settings
 from hookline.errors import InputError
@@ -17,7 +18,7 @@ from hookline.models.indicator import Indicator
 from hookline.models.intel import IntelRun, IntelStatus
 from hookline.models.report import Report
 from hookline.parsing import parse_email
-from hookline.scoring import score_indicators
+from hookline.scoring import score_verdict
 
 logger = logging.getLogger(__name__)
 
@@ -51,8 +52,8 @@ def read_email_file(path: Path, *, max_bytes: int) -> bytes:
 class Analyzer:
     """Analyzes one email at a time using the configured checks.
 
-    Holds network clients when threat intelligence is configured, so close it
-    when done, ideally by using it as a context manager.
+    Holds network clients for threat intelligence and the language model, so
+    close it when done, ideally by using it as a context manager.
     """
 
     def __init__(
@@ -60,10 +61,25 @@ class Analyzer:
         settings: Settings,
         checks: Sequence[Check] | None = None,
         threat_intel: ThreatIntel | None = None,
+        assessor: Assessor | None = None,
     ) -> None:
         self._settings = settings
         self._checks = list(checks) if checks is not None else build_checks(settings.checks)
         self._intel = threat_intel if threat_intel is not None else build_threat_intel(settings)
+        if assessor is not None:
+            self._assessor: Assessor | None = assessor
+            self._ai_unavailable: AIRun | None = None
+        else:
+            setup = build_assessor(settings)
+            self._assessor = setup.assessor
+            self._ai_unavailable = (
+                None
+                if setup.assessor is not None
+                else AIRun(
+                    status=setup.status,
+                    error=setup.reason if setup.status is AIStatus.UNAVAILABLE else None,
+                )
+            )
 
     def __enter__(self) -> Self:
         return self
@@ -80,6 +96,8 @@ class Analyzer:
         """Release network clients and the threat intelligence cache."""
         if self._intel is not None:
             self._intel.close()
+        if self._assessor is not None:
+            self._assessor.close()
 
     def analyze_file(self, path: Path) -> Report:
         """Read and analyze an ``.eml`` file."""
@@ -93,8 +111,9 @@ class Analyzer:
         indicators, warnings = self._run_checks(email)
         intel_indicators, intel_run = self._run_threat_intel(email)
         indicators = _merge(indicators, intel_indicators)
-        ai_run = self._run_ai()
-        verdict = score_indicators(indicators, self._settings.scoring)
+        ai_run = self._run_ai(email, indicators)
+        # The AI's answer can only add to the deterministic score (see scoring).
+        verdict = score_verdict(indicators, self._settings.scoring, ai_run.assessment)
         duration_ms = (time.perf_counter() - started) * 1000
         logger.info(
             "Analyzed %s: %s (score %.0f, %d indicators) in %.1f ms",
@@ -150,13 +169,20 @@ class Analyzer:
                 problems=(f"Threat intelligence failed and was skipped: {exc}",),
             )
 
-    def _run_ai(self) -> AIRun:
-        if not self._settings.ai_enabled:
-            return AIRun(status=AIStatus.DISABLED)
-        return AIRun(
-            status=AIStatus.UNAVAILABLE,
-            error="no language model provider is configured",
-        )
+    def _run_ai(self, email: ParsedEmail, indicators: tuple[Indicator, ...]) -> AIRun:
+        if self._assessor is None:
+            return self._ai_unavailable or AIRun(status=AIStatus.DISABLED)
+        try:
+            return self._assessor.assess(email, indicators)
+        except Exception as exc:
+            # Deliberately broad: the model is optional and must never abort the analysis.
+            logger.exception("AI assessment failed")
+            return AIRun(
+                status=AIStatus.FAILED,
+                provider=self._assessor.model.name,
+                model=self._assessor.model.model,
+                error=f"AI assessment failed and was skipped: {exc}",
+            )
 
 
 def _merge(first: tuple[Indicator, ...], second: tuple[Indicator, ...]) -> tuple[Indicator, ...]:

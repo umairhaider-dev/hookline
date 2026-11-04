@@ -30,8 +30,15 @@ MAX_RECEIVED_HOPS = 100
 MAX_LINKS = 500
 
 # The standard library's header parser can raise any of these on hostile input
-# instead of registering a defect.
-_HEADER_ERRORS = (HeaderParseError, ValueError, IndexError, TypeError, AttributeError)
+# instead of registering a defect (OverflowError comes from absurd time zones).
+_HEADER_ERRORS = (
+    HeaderParseError,
+    ValueError,
+    IndexError,
+    TypeError,
+    AttributeError,
+    OverflowError,
+)
 
 _FOLDING = re.compile(r"\r?\n[ \t]+")
 
@@ -91,6 +98,7 @@ def parse_email(raw: bytes) -> ParsedEmail:
         text_body=text_body,
         html_body=html_body,
         html_text=html.text,
+        hidden_text=html.hidden,
         links=tuple(links),
         attachments=tuple(body.attachments),
         defects=tuple(repair_text(defect) for defect in defects),
@@ -179,7 +187,7 @@ def _date(header: str | None, defects: list[str]) -> datetime | None:
         return header.datetime
     try:
         return parsedate_to_datetime(str(header))
-    except (TypeError, ValueError, IndexError):
+    except (TypeError, ValueError, IndexError, OverflowError):
         defects.append("Date header could not be parsed")
         return None
 

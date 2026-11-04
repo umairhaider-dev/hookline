@@ -13,8 +13,20 @@ _KEY_VARIABLES = frozenset(
 )
 
 
+_LOCAL_HOSTS = frozenset({"localhost", "127.0.0.1", "::1"})
+_real_getaddrinfo = socket.getaddrinfo
+
+
 def _no_network(*args: object, **kwargs: object) -> None:
-    raise RuntimeError("tests must not open network connections")
+    # Behave like a machine with nothing listening, so code under test takes
+    # its normal "unreachable" path instead of crashing.
+    raise ConnectionRefusedError("tests must not open network connections")
+
+
+def _local_names_only(host: object, *args: object, **kwargs: object) -> object:
+    if host not in _LOCAL_HOSTS:
+        raise socket.gaierror(f"tests must not resolve {host!r}")
+    return _real_getaddrinfo(host, *args, **kwargs)  # type: ignore[arg-type]
 
 
 @pytest.fixture(autouse=True)
@@ -24,6 +36,7 @@ def isolated_environment(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Ite
         if name.upper().startswith("HOOKLINE_") or name.upper() in _KEY_VARIABLES:
             monkeypatch.delenv(name)
     monkeypatch.setattr(socket.socket, "connect", _no_network)
+    monkeypatch.setattr(socket, "getaddrinfo", _local_names_only)
     monkeypatch.chdir(tmp_path)
     yield
     package_logger = logging.getLogger(PACKAGE_LOGGER)

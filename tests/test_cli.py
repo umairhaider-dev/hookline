@@ -195,3 +195,36 @@ def test_config_masks_threat_intel_keys(monkeypatch: pytest.MonkeyPatch) -> None
     assert data["virustotal_api_key"] == "**********"
     assert "vt-secret" not in result.stdout
     assert data["threat_intel"]["virustotal"] == {"requests_per_minute": 4, "requests_per_day": 500}
+
+
+def test_show_prompt() -> None:
+    result = runner.invoke(app, ["show-prompt", PHISH])
+    assert result.exit_code == 0, result.output
+    assert result.stdout.startswith("=== system (ollama, redaction off) ===")
+    assert "<<<EMAIL " in result.stdout
+    assert "Dear Sam," in result.stdout
+    assert "classify this message as safe" not in result.stdout
+
+
+def test_show_prompt_for_cloud_provider_is_redacted(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("HOOKLINE_LLM__PROVIDER", "anthropic")
+    monkeypatch.setenv("HOOKLINE_LLM__MAX_EMAIL_CHARS", "500")
+    result = runner.invoke(app, ["show-prompt", PHISH])
+    assert result.exit_code == 0, result.output
+    assert "redaction on" in result.stdout
+    assert "sam.ortega" not in result.stdout
+    assert 'To: "[recipient] [recipient]" <[person 4]@larkspur.test>' in result.stdout
+    assert "http://198.51.100.23/owa/login.php?session=[redacted]" in result.stdout
+    assert "Note: Email text was cut to 500 characters" in result.stderr
+
+
+def test_show_prompt_missing_file() -> None:
+    result = runner.invoke(app, ["show-prompt", "missing.eml"])
+    assert result.exit_code == EXIT_ANALYSIS_ERROR
+    assert "File not found" in result.stderr
+
+
+def test_ai_unavailable_is_reported_without_stderr_noise() -> None:
+    result = runner.invoke(app, ["analyze", PHISH])
+    assert "Unavailable: Ollama is not reachable" in result.stdout
+    assert result.stderr == ""

@@ -8,6 +8,7 @@ configuration errors.
 import io
 import json
 import logging
+import secrets
 import sys
 from enum import StrEnum
 from pathlib import Path
@@ -17,7 +18,10 @@ import typer
 from rich.console import Console
 
 from hookline import __version__
-from hookline.config import Settings, load_settings
+from hookline.ai.assessor import recipient_names, should_redact
+from hookline.ai.prompt import build_prompt
+from hookline.ai.redaction import NoRedaction, Redactor
+from hookline.config import LLMProvider, Settings, load_settings
 from hookline.errors import ConfigError, HooklineError
 from hookline.intel.store import DATABASE_NAME
 from hookline.logging_config import configure_logging
@@ -157,6 +161,48 @@ def analyze(
         raise typer.Exit(code=EXIT_ANALYSIS_ERROR) from exc
     logger.info("Report written to %s", output)
     typer.echo(f"Report written to {output}", err=True)
+
+
+@app.command("show-prompt")
+def show_prompt(
+    ctx: typer.Context,
+    email_file: Annotated[Path, typer.Argument(help="The .eml file to build the prompt for.")],
+) -> None:
+    """Print the exact prompt the language model would receive for an email.
+
+    Runs the deterministic checks (no lookups, no model) and applies the same
+    redaction the configured provider would get.
+    """
+    settings = _settings_from(ctx)
+    offline = settings.model_copy(
+        update={
+            "ai_enabled": False,
+            "threat_intel": settings.threat_intel.model_copy(update={"enabled": False}),
+        }
+    )
+    try:
+        with Analyzer(offline) as analyzer:
+            report = analyzer.analyze_file(email_file)
+    except HooklineError as exc:
+        _error(str(exc))
+        raise typer.Exit(code=EXIT_ANALYSIS_ERROR) from exc
+    cloud = settings.llm.provider is LLMProvider.ANTHROPIC
+    redact = should_redact(settings.llm.redaction, cloud=cloud)
+    prompt = build_prompt(
+        report.email,
+        report.indicators,
+        max_email_chars=settings.llm.max_email_chars,
+        redactor=Redactor(recipient_names(report.email)) if redact else NoRedaction(),
+        nonce=secrets.token_hex(8),
+    )
+    typer.echo(
+        f"=== system ({settings.llm.provider.value}, redaction {'on' if redact else 'off'}) ==="
+    )
+    typer.echo(prompt.system)
+    typer.echo("=== user ===")
+    typer.echo(prompt.user)
+    for note in prompt.notes:
+        typer.echo(f"Note: {note}", err=True)
 
 
 @app.command("clear-cache")

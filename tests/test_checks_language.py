@@ -1,8 +1,8 @@
 import pytest
 
 from hookline.checks import LanguageCheck, language
-from hookline.checks.language import normalize_text
 from hookline.models import Indicator, IndicatorSource, IndicatorType, Severity
+from hookline.textnorm import normalize_text
 from tests.factories import make_email
 
 ZERO_WIDTH_SPACE = "\N{ZERO WIDTH SPACE}"

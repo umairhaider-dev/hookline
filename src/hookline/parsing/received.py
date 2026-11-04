@@ -84,5 +84,5 @@ def _timestamp(text: str) -> datetime | None:
         return None
     try:
         return parsedate_to_datetime(text)
-    except (TypeError, ValueError, IndexError):
+    except (TypeError, ValueError, IndexError, OverflowError):
         return None
