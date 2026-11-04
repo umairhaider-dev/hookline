@@ -1,0 +1,28 @@
+Return-Path: <dana.whitfield.office@inboxmail.test>
+Received: from out-07.inboxmail.test (out-07.inboxmail.test [198.51.100.77])
+	by mx1.larkspur.test (Postfix) with ESMTPS id 7D21A3C0019
+	for <sam.ortega@larkspur.test>; Wed, 04 Nov 2026 09:41:05 +0000 (UTC)
+Authentication-Results: mx1.larkspur.test;
+	spf=pass smtp.mailfrom=inboxmail.test;
+	dkim=pass header.d=inboxmail.test header.s=s2026;
+	dmarc=pass header.from=inboxmail.test
+From: "Dana Whitfield | Larkspur" <dana.whitfield.office@inboxmail.test>
+To: "Sam Ortega" <sam.ortega@larkspur.test>
+Subject: Quick favor
+Date: Wed, 04 Nov 2026 09:41:02 +0000
+Message-ID: <c3e1f7a2-55d0-4b8e-9f31-2a6d0c8e4b17@inboxmail.test>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Sam,
+
+Are you at your desk? I need a quick favor before my next meeting.
+
+Please purchase five Apple gift cards ($200 each) for a client appreciation
+event. Scratch the back of each card and send me pictures of the codes by
+reply. Keep this confidential for now, I want it to be a surprise.
+
+I am in meetings all day so email is best.
+
+Dana
+Sent from my phone

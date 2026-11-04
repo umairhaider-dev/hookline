@@ -1,0 +1,25 @@
+Return-Path: <alerts@xn--frnhill-bank-sck.test>
+Received: from mail.xn--frnhill-bank-sck.test (mail.xn--frnhill-bank-sck.test [203.0.113.77])
+	by mx1.larkspur.test (Postfix) with ESMTPS id 5E8B21D0047
+	for <sam.ortega@larkspur.test>; Fri, 06 Nov 2026 07:02:31 +0000 (UTC)
+Authentication-Results: mx1.larkspur.test;
+	spf=pass smtp.mailfrom=xn--frnhill-bank-sck.test;
+	dkim=pass header.d=xn--frnhill-bank-sck.test header.s=k1;
+	dmarc=pass header.from=xn--frnhill-bank-sck.test
+From: "Fernhill Bank Security" <alerts@xn--frnhill-bank-sck.test>
+To: "Sam Ortega" <sam.ortega@larkspur.test>
+Subject: Unusual sign-in activity on your account
+Date: Fri, 06 Nov 2026 07:02:28 +0000
+Message-ID: <alert-55102@xn--frnhill-bank-sck.test>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html>
+  <body>
+    <p>Dear customer,</p>
+    <p>We detected unusual sign-in activity on your Fernhill Bank account.
+    Verify your identity within 24 hours to avoid suspension of online banking.</p>
+    <p><a href="https://online.xn--frnhill-bank-sck.test/secure/verify?u=c2FtLm9ydGVnYUBsYXJrc3B1ci50ZXN0">https://online.fernhill-bank.test/security</a></p>
+    <p>Fernhill Bank Security Team</p>
+  </body>
+</html>

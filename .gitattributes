@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Email fixtures are byte-exact test data; hashes depend on them.
+*.eml -text

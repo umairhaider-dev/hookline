@@ -1,0 +1,43 @@
+# Example Hookline configuration.
+#
+# Copy this file to hookline.toml in your working directory, or pass it with
+# --config. Environment variables (HOOKLINE_*) override anything set here.
+# API keys are never read from this file: set them in the environment or .env.
+
+log_level = "WARNING"        # DEBUG, INFO, WARNING or ERROR
+log_format = "text"          # "text" or "json"
+ai_enabled = true
+max_email_bytes = 26214400   # 25 MiB
+
+[llm]
+provider = "ollama"          # "ollama" (local) or "anthropic" (needs ANTHROPIC_API_KEY)
+ollama_url = "http://localhost:11434"
+ollama_model = "llama3.1:8b"
+anthropic_model = "claude-opus-5-5"
+timeout_seconds = 60
+max_retries = 2
+max_email_chars = 12000      # email text sent to the model is cut to this length
+redaction = "auto"           # "auto" (cloud providers only), "always" or "never"
+
+[checks]
+# Your organisation's domains, plus partners and brands worth protecting.
+# Lookalikes of these are flagged.
+protected_domains = ["larkspur.test", "fernhill-bank.test", "quillon-payroll.test"]
+suspicious_tlds = ["zip", "mov", "top", "xyz", "click", "link", "country", "gq", "tk"]
+url_shorteners = ["bit.ly", "tinyurl.com", "t.co", "is.gd", "ow.ly", "rb.gy"]
+# Free webmail providers; replies routed to these from a business sender are flagged.
+freemail_domains = ["gmail.com", "outlook.com", "hotmail.com", "yahoo.com", "proton.me", "inboxmail.test"]
+# Your own mail servers, as named in their Authentication-Results headers. Set
+# this so a forged header added by the sender further down is never trusted.
+trusted_authserv_ids = ["mx1.larkspur.test"]
+
+[scoring]
+suspicious_threshold = 35
+malicious_threshold = 70
+
+[scoring.severity_points]
+info = 0
+low = 5
+medium = 15
+high = 30
+critical = 50
