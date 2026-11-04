@@ -4,7 +4,7 @@ import pytest
 
 from hookline.checks import ReceivedChainCheck
 from hookline.checks import received as received_module
-from hookline.checks.received import is_internal
+from hookline.domains import is_internal_ip
 from hookline.models import IndicatorType, ReceivedHop, Severity
 from tests.factories import make_email
 
@@ -39,7 +39,7 @@ def hop(address: str | None, from_host: str | None = "relay.test") -> ReceivedHo
 )
 def test_is_internal(address: str, internal: bool) -> None:
     parsed: IPv4Address | IPv6Address = ip_address(address)
-    assert is_internal(parsed) is internal
+    assert is_internal_ip(parsed) is internal
 
 
 def test_external_ips_are_reported_newest_first() -> None:

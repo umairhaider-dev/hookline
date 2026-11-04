@@ -10,7 +10,7 @@ import ipaddress
 import unicodedata
 from dataclasses import dataclass
 from functools import lru_cache
-from ipaddress import IPv4Address, IPv6Address
+from ipaddress import IPv4Address, IPv6Address, ip_network
 
 import tldextract
 
@@ -21,6 +21,25 @@ _EXTRACT = tldextract.TLDExtract(cache_dir=None, suffix_list_urls=())
 # Reserved and internal top-level names (RFC 2606, RFC 6761 and common practice).
 # They are not on the public suffix list but still name real hosts.
 _RESERVED_TLDS = frozenset({"test", "example", "invalid", "localhost", "local", "internal"})
+
+# Addresses that never identify an outside sender. Documentation ranges such
+# as 192.0.2.0/24 are deliberately not listed: they stand in for public
+# addresses in examples and test data.
+_INTERNAL_NETWORKS = tuple(
+    ip_network(network)
+    for network in (
+        "0.0.0.0/8",
+        "10.0.0.0/8",
+        "100.64.0.0/10",
+        "127.0.0.0/8",
+        "169.254.0.0/16",
+        "172.16.0.0/12",
+        "192.168.0.0/16",
+        "::1/128",
+        "fc00::/7",
+        "fe80::/10",
+    )
+)
 
 # Labels of protected domains that are also ordinary words ("office.com").
 # Fuzzy matching on them would flag far too many unrelated names.
@@ -112,6 +131,19 @@ def parse_ip(host: str) -> IPv4Address | IPv6Address | None:
         return ipaddress.ip_address(normalize_host(host))
     except ValueError:
         return None
+
+
+def is_internal_ip(address: IPv4Address | IPv6Address) -> bool:
+    """True for loopback, private, carrier-grade NAT, link-local and similar addresses."""
+    if address.is_multicast or address.is_unspecified:
+        return True
+    return any(address.version == net.version and address in net for net in _INTERNAL_NETWORKS)
+
+
+def has_public_suffix(host: str) -> bool:
+    """True if ``host`` is a name under a public suffix (so not ``.test`` or ``.internal``)."""
+    host = normalize_host(host)
+    return bool(host) and parse_ip(host) is None and bool(_EXTRACT(host).suffix)
 
 
 @lru_cache(maxsize=4096)

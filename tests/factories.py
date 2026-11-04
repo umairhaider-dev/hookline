@@ -12,6 +12,8 @@ from hookline.models import (
     Indicator,
     IndicatorSource,
     IndicatorType,
+    IntelRun,
+    IntelStatus,
     ParsedEmail,
     Report,
     Severity,
@@ -65,11 +67,13 @@ def make_report(
     indicators: Sequence[Indicator] = (),
     email: ParsedEmail | None = None,
     ai: AIRun | None = None,
+    threat_intel: IntelRun | None = None,
     warnings: Sequence[str] = (),
 ) -> Report:
     return Report(
         email=email if email is not None else make_email(),
         indicators=tuple(indicators),
+        threat_intel=threat_intel or IntelRun(status=IntelStatus.DISABLED, note="No keys."),
         ai=ai if ai is not None else AIRun(status=AIStatus.DISABLED),
         verdict=score_indicators(indicators, ScoringSettings()),
         warnings=tuple(warnings),

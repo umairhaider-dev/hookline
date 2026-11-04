@@ -11,6 +11,7 @@ from hookline.models.ai import AIRun
 from hookline.models.base import FrozenModel
 from hookline.models.email import ParsedEmail
 from hookline.models.indicator import Indicator
+from hookline.models.intel import IntelRun, IntelStatus
 from hookline.models.verdict import Verdict
 
 
@@ -45,6 +46,7 @@ class Report(FrozenModel):
     source_file: str | None = Field(default=None, description="File name of the analyzed email.")
     email: ParsedEmail
     indicators: tuple[Indicator, ...] = ()
+    threat_intel: IntelRun = Field(default_factory=lambda: IntelRun(status=IntelStatus.DISABLED))
     ai: AIRun
     verdict: Verdict
     iocs: IOCSet = Field(default_factory=IOCSet)

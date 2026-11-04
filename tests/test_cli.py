@@ -127,3 +127,71 @@ def test_streams_tolerate_unencodable_text(monkeypatch: pytest.MonkeyPatch) -> N
     legacy.write("\u26a0 subject")
     legacy.flush()
     assert legacy.buffer.getvalue() == b"\\u26a0 subject"
+
+
+def test_no_intel_flag_disables_lookups(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("URLHAUS_AUTH_KEY", "uh-test")
+    result = runner.invoke(app, ["analyze", PHISH, "--no-intel", "-f", "json"])
+    assert result.exit_code == 0, result.output
+    intel = json.loads(result.stdout)["threat_intel"]
+    assert intel == {
+        "status": "disabled",
+        "providers": [],
+        "results": [],
+        "problems": [],
+        "note": "Threat intelligence is turned off.",
+        "duration_ms": 0.0,
+    }
+
+
+def test_samples_have_nothing_public_to_look_up(monkeypatch: pytest.MonkeyPatch) -> None:
+    # The samples only use reserved domains and documentation IPs, so even with
+    # a key set no request is made (the test environment blocks the network).
+    monkeypatch.setenv("URLHAUS_AUTH_KEY", "uh-test")
+    result = runner.invoke(app, ["analyze", PHISH, "-f", "json"])
+    intel = json.loads(result.stdout)["threat_intel"]
+    assert intel["status"] == "completed"
+    assert intel["providers"] == ["URLhaus"]
+    assert intel["results"] == []
+
+
+def test_terminal_shows_threat_intel_panel() -> None:
+    result = runner.invoke(app, ["analyze", PHISH])
+    assert "Threat intelligence" in result.stdout
+    assert "Not used. No threat intelligence API keys are set" in result.stdout
+
+
+def test_clear_cache(tmp_path: Path) -> None:
+    missing = runner.invoke(app, ["clear-cache"])
+    assert missing.exit_code == 0
+    assert "No cache at" in missing.stderr
+    cache = Path(".hookline-cache")
+    cache.mkdir()
+    (cache / "intel.sqlite3").write_bytes(b"x")
+    cleared = runner.invoke(app, ["clear-cache"])
+    assert cleared.exit_code == 0
+    assert "Deleted" in cleared.stderr
+    assert not (cache / "intel.sqlite3").exists()
+
+
+def test_clear_cache_failure(monkeypatch: pytest.MonkeyPatch) -> None:
+    cache = Path(".hookline-cache")
+    cache.mkdir()
+    (cache / "intel.sqlite3").write_bytes(b"x")
+
+    def deny(self: Path, missing_ok: bool = False) -> None:
+        raise PermissionError(13, "Permission denied")
+
+    monkeypatch.setattr(Path, "unlink", deny)
+    result = runner.invoke(app, ["clear-cache"])
+    assert result.exit_code == EXIT_ANALYSIS_ERROR
+    assert "Could not delete" in result.stderr
+
+
+def test_config_masks_threat_intel_keys(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("VIRUSTOTAL_API_KEY", "vt-secret")
+    result = runner.invoke(app, ["config"])
+    data = json.loads(result.stdout)
+    assert data["virustotal_api_key"] == "**********"
+    assert "vt-secret" not in result.stdout
+    assert data["threat_intel"]["virustotal"] == {"requests_per_minute": 4, "requests_per_day": 500}

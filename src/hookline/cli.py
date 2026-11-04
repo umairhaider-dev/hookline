@@ -19,6 +19,7 @@ from rich.console import Console
 from hookline import __version__
 from hookline.config import Settings, load_settings
 from hookline.errors import ConfigError, HooklineError
+from hookline.intel.store import DATABASE_NAME
 from hookline.logging_config import configure_logging
 from hookline.pipeline import Analyzer
 from hookline.reporting import render_json, render_terminal
@@ -121,6 +122,10 @@ def analyze(
     no_ai: Annotated[
         bool, typer.Option("--no-ai", help="Skip the language model; use rules only.")
     ] = False,
+    no_intel: Annotated[
+        bool,
+        typer.Option("--no-intel", help="Skip threat intelligence lookups (no network use)."),
+    ] = False,
 ) -> None:
     """Analyze one email file and report the verdict."""
     settings = _settings_from(ctx)
@@ -128,9 +133,13 @@ def analyze(
         raise typer.BadParameter("use --format json to write a report file", param_hint="--output")
     if no_ai:
         settings = settings.model_copy(update={"ai_enabled": False})
+    if no_intel:
+        intel = settings.threat_intel.model_copy(update={"enabled": False})
+        settings = settings.model_copy(update={"threat_intel": intel})
 
     try:
-        report = Analyzer(settings).analyze_file(email_file)
+        with Analyzer(settings) as analyzer:
+            report = analyzer.analyze_file(email_file)
     except HooklineError as exc:
         _error(str(exc))
         raise typer.Exit(code=EXIT_ANALYSIS_ERROR) from exc
@@ -148,6 +157,21 @@ def analyze(
         raise typer.Exit(code=EXIT_ANALYSIS_ERROR) from exc
     logger.info("Report written to %s", output)
     typer.echo(f"Report written to {output}", err=True)
+
+
+@app.command("clear-cache")
+def clear_cache(ctx: typer.Context) -> None:
+    """Delete cached threat intelligence answers and the request log."""
+    path = _settings_from(ctx).threat_intel.cache_dir / DATABASE_NAME
+    if not path.exists():
+        typer.echo(f"No cache at {path}", err=True)
+        return
+    try:
+        path.unlink()
+    except OSError as exc:
+        _error(f"Could not delete {path}: {exc.strerror or exc}")
+        raise typer.Exit(code=EXIT_ANALYSIS_ERROR) from exc
+    typer.echo(f"Deleted {path}", err=True)
 
 
 @app.command("config")

@@ -12,6 +12,14 @@ from hookline.models.email import (
     ReceivedHop,
 )
 from hookline.models.indicator import Indicator, IndicatorSource, IndicatorType, Severity
+from hookline.models.intel import (
+    IntelResult,
+    IntelRun,
+    IntelStatus,
+    IntelVerdict,
+    Observable,
+    ObservableKind,
+)
 from hookline.models.report import IOCSet, MitreTechnique, Report
 from hookline.models.verdict import (
     AnalysisMode,
@@ -36,9 +44,15 @@ __all__ = [
     "Indicator",
     "IndicatorSource",
     "IndicatorType",
+    "IntelResult",
+    "IntelRun",
+    "IntelStatus",
+    "IntelVerdict",
     "Link",
     "LinkOrigin",
     "MitreTechnique",
+    "Observable",
+    "ObservableKind",
     "ParsedEmail",
     "ReceivedHop",
     "Report",

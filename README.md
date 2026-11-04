@@ -66,6 +66,33 @@ Links are never fetched and attachments are never opened: URLs are analysed as
 text, and attachments are only hashed and identified from their leading bytes
 and, for ZIP files, their file list.
 
+## Threat intelligence (optional)
+
+With API keys set in the environment or `.env`, Hookline looks up the email's
+attachment hashes, URLs, sending IPs and domains:
+
+| Provider | Key variable | Looks up |
+| --- | --- | --- |
+| URLhaus (abuse.ch) | `URLHAUS_AUTH_KEY` | URLs, hosts, file hashes |
+| AbuseIPDB | `ABUSEIPDB_API_KEY` | IP addresses |
+| VirusTotal | `VIRUSTOTAL_API_KEY` | file hashes, URLs, domains, IP addresses |
+
+- Nothing runs without a key, and `--no-intel` turns lookups off for one run, so
+  the tool works fully offline.
+- Values are only looked up, never submitted for scanning, and URLs are never
+  visited. Private and reserved IPs, internal or reserved host names and the
+  protected domains never leave the machine. Set `lookup_urls = false` if URLs
+  in your mail carry tokens you would rather not share.
+- Answers are cached in `.hookline-cache/` (24 hours by default) and each
+  provider has a request budget that matches its free tier. The request log is
+  shared between runs, so the limits hold across separate commands.
+  `hookline clear-cache` empties it.
+- Timeouts, rejected keys and exhausted quotas are reported in the report, and
+  the provider is skipped for the rest of the message instead of failing every
+  lookup in turn.
+- A malicious answer adds a critical `threat_intel_match` indicator; a
+  suspicious one adds a medium one.
+
 ## Configuration
 
 Settings are read from, highest precedence first:

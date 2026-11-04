@@ -205,3 +205,46 @@ def test_ollama_url_trailing_slash_is_removed(monkeypatch: pytest.MonkeyPatch) -
 def test_example_config_file_is_valid() -> None:
     settings = load_settings(PROJECT_ROOT / "hookline.example.toml")
     assert "larkspur.test" in settings.checks.protected_domains
+
+
+@pytest.mark.parametrize(
+    ("variable", "field"),
+    [
+        ("VIRUSTOTAL_API_KEY", "virustotal_api_key"),
+        ("HOOKLINE_VIRUSTOTAL_API_KEY", "virustotal_api_key"),
+        ("ABUSEIPDB_API_KEY", "abuseipdb_api_key"),
+        ("URLHAUS_AUTH_KEY", "urlhaus_auth_key"),
+    ],
+)
+def test_threat_intel_keys_from_environment(
+    monkeypatch: pytest.MonkeyPatch, variable: str, field: str
+) -> None:
+    monkeypatch.setenv(variable, "key-123")
+    key = getattr(load_settings(), field)
+    assert key.get_secret_value() == "key-123"
+
+
+@pytest.mark.parametrize("field", ["virustotal_api_key", "abuseipdb_api_key", "urlhaus_auth_key"])
+def test_threat_intel_keys_are_refused_in_config_file(tmp_path: Path, field: str) -> None:
+    with pytest.raises(ConfigError, match="environment variables"):
+        load_settings(write_toml(tmp_path, f'{field} = "secret"\n'))
+
+
+def test_threat_intel_settings(tmp_path: Path) -> None:
+    path = write_toml(
+        tmp_path,
+        """
+        [threat_intel]
+        cache_dir = "cache/intel"
+        lookup_urls = false
+        [threat_intel.virustotal]
+        requests_per_day = 15000
+        """,
+    )
+    intel = load_settings(path).threat_intel
+    assert intel.cache_dir == Path("cache/intel")
+    assert not intel.lookup_urls
+    assert intel.virustotal.requests_per_minute == 4
+    assert intel.virustotal.requests_per_day == 15000
+    assert intel.abuseipdb.requests_per_day == 1000
+    assert intel.urlhaus.requests_per_day is None

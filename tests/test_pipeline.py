@@ -7,16 +7,20 @@ import pytest
 from hookline.checks import Check
 from hookline.config import Settings
 from hookline.errors import InputError
+from hookline.intel import ProviderAnswer
 from hookline.models import (
     AIStatus,
     Indicator,
     IndicatorType,
+    IntelStatus,
+    IntelVerdict,
     ParsedEmail,
     Severity,
     VerdictLabel,
 )
-from hookline.pipeline import Analyzer, read_email_file
+from hookline.pipeline import Analyzer, _merge, read_email_file
 from tests.factories import SAMPLES_DIR, build_eml, make_indicator
+from tests.intel_helpers import FakeProvider, make_service
 
 
 class StaticCheck:
@@ -152,3 +156,44 @@ def test_read_error_is_wrapped(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) 
     monkeypatch.setattr(Path, "open", deny)
     with pytest.raises(InputError, match=r"Could not read .*Permission denied"):
         read_email_file(path, max_bytes=10_000)
+
+
+def test_threat_intel_matches_are_scored() -> None:
+    provider = FakeProvider(answers={"example.net": ProviderAnswer(IntelVerdict.MALICIOUS, "Bad.")})
+    raw = build_eml(body="Read https://www.example.net/report today.")
+    with Analyzer(Settings(), threat_intel=make_service(provider)) as analyzer:
+        report = analyzer.analyze_bytes(raw)
+    assert provider.closed
+    assert report.threat_intel.status is IntelStatus.COMPLETED
+    match = [i for i in report.indicators if i.type is IndicatorType.THREAT_INTEL_MATCH]
+    assert [i.value for i in match] == ["example.net"]
+    assert report.verdict.contributions[0].indicator_id == match[0].id
+
+
+def test_threat_intel_is_disabled_without_keys() -> None:
+    report = Analyzer(Settings()).analyze_bytes(build_eml())
+    assert report.threat_intel.status is IntelStatus.DISABLED
+    assert report.threat_intel.note is not None
+    assert "No threat intelligence API keys" in report.threat_intel.note
+
+
+def test_threat_intel_crash_is_contained(caplog: pytest.LogCaptureFixture) -> None:
+    service = make_service()
+
+    def explode(email: ParsedEmail) -> object:
+        raise RuntimeError("bug in lookups")
+
+    service.investigate = explode  # type: ignore[method-assign,assignment]
+    with Analyzer(Settings(), threat_intel=service) as analyzer:
+        report = analyzer.analyze_bytes(build_eml())
+    assert report.threat_intel.status is IntelStatus.FAILED
+    assert report.threat_intel.problems == (
+        "Threat intelligence failed and was skipped: bug in lookups",
+    )
+    assert "Threat intelligence failed" in caplog.text
+
+
+def test_duplicate_intel_indicators_keep_the_first() -> None:
+    first = make_indicator(value="a")
+    second = make_indicator(value="b")
+    assert _merge((first, second), (first,)) == (first, second)

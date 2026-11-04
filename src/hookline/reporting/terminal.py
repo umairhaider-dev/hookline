@@ -12,6 +12,7 @@ from rich.text import Text
 from hookline.models.ai import AIRun, AIStatus
 from hookline.models.email import EmailAddress
 from hookline.models.indicator import Severity
+from hookline.models.intel import IntelRun, IntelStatus, IntelVerdict
 from hookline.models.report import Report
 from hookline.models.verdict import Verdict, VerdictLabel
 from hookline.reporting.escaping import escape_control_chars
@@ -38,6 +39,7 @@ def render_terminal(report: Report, console: Console) -> None:
     console.print(_verdict_panel(report.verdict))
     console.print(_message_table(report))
     console.print(_indicator_table(report))
+    console.print(_intel_panel(report.threat_intel))
     console.print(_ai_panel(report.ai))
     if report.verdict.contributions:
         console.print(_score_table(report.verdict))
@@ -104,6 +106,34 @@ def _indicator_table(report: Report) -> RenderableType:
             Text(safe_text(indicator.evidence, limit=400)),
         )
     return table
+
+
+def _intel_panel(run: IntelRun) -> Panel:
+    title = "Threat intelligence"
+    subtitle = ", ".join(run.providers) or None
+    if run.status is IntelStatus.DISABLED:
+        body = Text(f"Not used. {run.note or ''}".strip(), style="dim")
+        return Panel(body, title=title, title_align="left")
+
+    lines: list[RenderableType] = []
+    if run.results:
+        counts = dict.fromkeys(IntelVerdict, 0)
+        for result in run.results:
+            counts[result.verdict] += 1
+        cached = sum(result.from_cache for result in run.results)
+        summary = f"{len(run.results)} answer(s)"
+        if cached:
+            summary += f", {cached} from cache"
+        summary += (
+            f": {counts[IntelVerdict.MALICIOUS]} malicious, "
+            f"{counts[IntelVerdict.SUSPICIOUS]} suspicious, {counts[IntelVerdict.CLEAN]} clean, "
+            f"{counts[IntelVerdict.UNKNOWN]} not on record."
+        )
+        lines.append(Text(summary))
+    elif run.status is not IntelStatus.FAILED:
+        lines.append(Text(run.note or "No answers.", style="dim"))
+    lines.extend(Text(safe_text(problem, limit=300), style="yellow") for problem in run.problems)
+    return Panel(Group(*lines), title=title, title_align="left", subtitle=subtitle)
 
 
 def _ai_panel(run: AIRun) -> Panel:

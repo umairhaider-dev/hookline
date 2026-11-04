@@ -1,8 +1,22 @@
 import io
+from datetime import UTC, datetime
 
 from rich.console import Console
 
-from hookline.models import AIAssessment, AIRun, AIStatus, AttackType, EmailAddress, Severity
+from hookline.models import (
+    AIAssessment,
+    AIRun,
+    AIStatus,
+    AttackType,
+    EmailAddress,
+    IntelResult,
+    IntelRun,
+    IntelStatus,
+    IntelVerdict,
+    Observable,
+    ObservableKind,
+    Severity,
+)
 from hookline.models.report import Report
 from hookline.reporting import render_terminal
 from hookline.reporting.terminal import safe_text
@@ -89,3 +103,60 @@ def test_safe_text_truncates_long_values() -> None:
     assert len(shortened) == 20
     assert shortened.endswith("...")
     assert safe_text("short") == "short"
+
+
+def intel_result(verdict: IntelVerdict, *, cached: bool = False) -> IntelResult:
+    return IntelResult(
+        provider="URLhaus",
+        observable=Observable(kind=ObservableKind.DOMAIN, value="example.net"),
+        verdict=verdict,
+        summary="s",
+        checked_at=datetime(2026, 11, 4, tzinfo=UTC),
+        from_cache=cached,
+    )
+
+
+def test_disabled_threat_intel() -> None:
+    output = render(make_report())
+    assert "Threat intelligence" in output
+    assert "Not used. No keys." in output
+
+
+def test_threat_intel_counts_and_problems() -> None:
+    run = IntelRun(
+        status=IntelStatus.PARTIAL,
+        providers=("URLhaus", "VirusTotal"),
+        results=(
+            intel_result(IntelVerdict.MALICIOUS),
+            intel_result(IntelVerdict.CLEAN, cached=True),
+            intel_result(IntelVerdict.UNKNOWN),
+        ),
+        problems=("VirusTotal did not answer in time; 2 lookup(s) not made",),
+    )
+    output = render(make_report(threat_intel=run))
+    assert "3 answer(s), 1 from cache: 1 malicious, 0 suspicious, 1 clean, 1 not on record." in (
+        output
+    )
+    assert "VirusTotal did not answer in time" in output
+    assert "URLhaus, VirusTotal" in output
+
+
+def test_threat_intel_without_answers() -> None:
+    quiet = IntelRun(status=IntelStatus.COMPLETED, providers=("URLhaus",), note="Nothing to do.")
+    assert "Nothing to do." in render(make_report(threat_intel=quiet))
+    silent = IntelRun(status=IntelStatus.COMPLETED, providers=("URLhaus",))
+    assert "No answers." in render(make_report(threat_intel=silent))
+    failed = IntelRun(status=IntelStatus.FAILED, problems=("Threat intelligence failed: x",))
+    output = render(make_report(threat_intel=failed))
+    assert "Threat intelligence failed: x" in output
+    assert "No answers." not in output
+
+
+def test_threat_intel_counts_without_cache() -> None:
+    run = IntelRun(
+        status=IntelStatus.COMPLETED,
+        providers=("URLhaus",),
+        results=(intel_result(IntelVerdict.SUSPICIOUS),),
+    )
+    output = render(make_report(threat_intel=run))
+    assert "1 answer(s): 0 malicious, 1 suspicious" in output

@@ -129,7 +129,9 @@ DEFAULT_SEVERITY_POINTS: dict[Severity, float] = {
 }
 
 # Fields that hold credentials and must never be read from the config file.
-_SECRET_FIELDS = frozenset({"anthropic_api_key"})
+_SECRET_FIELDS = frozenset(
+    {"anthropic_api_key", "virustotal_api_key", "abuseipdb_api_key", "urlhaus_auth_key"}
+)
 
 
 class LogFormat(StrEnum):
@@ -228,6 +230,58 @@ class ScoringSettings(_Section):
         return self
 
 
+class ProviderLimits(_Section):
+    """Request budget for one threat intelligence provider.
+
+    The defaults match the providers' free tiers. Raise them for paid plans.
+    """
+
+    requests_per_minute: int = Field(default=60, gt=0)
+    requests_per_day: int | None = Field(default=None, gt=0)
+
+
+class AbuseIPDBLimits(ProviderLimits):
+    """AbuseIPDB's free tier allows 1,000 checks a day."""
+
+    requests_per_day: int | None = Field(default=1000, gt=0)
+
+
+class VirusTotalLimits(ProviderLimits):
+    """VirusTotal's public API allows 4 requests a minute and 500 a day."""
+
+    requests_per_minute: int = Field(default=4, gt=0)
+    requests_per_day: int | None = Field(default=500, gt=0)
+
+
+class ThreatIntelSettings(_Section):
+    """Optional lookups with URLhaus, AbuseIPDB and VirusTotal.
+
+    A provider is only used when its API key is set in the environment, so with
+    no keys Hookline makes no network requests at all.
+    """
+
+    enabled: bool = True
+    timeout_seconds: float = Field(default=10.0, gt=0, le=120)
+    cache_dir: Path = Path(".hookline-cache")
+    cache_ttl_hours: float = Field(
+        default=24.0, ge=0, description="How long answers are reused. 0 turns the cache off."
+    )
+    max_lookups_per_provider: int = Field(default=10, ge=1, le=200)
+    max_wait_seconds: float = Field(
+        default=15.0,
+        ge=0,
+        le=300,
+        description="Longest wait for a rate-limit slot before a lookup is skipped.",
+    )
+    lookup_urls: bool = True
+    lookup_domains: bool = True
+    lookup_ips: bool = True
+    lookup_hashes: bool = True
+    urlhaus: ProviderLimits = Field(default_factory=ProviderLimits)
+    abuseipdb: AbuseIPDBLimits = Field(default_factory=AbuseIPDBLimits)
+    virustotal: VirusTotalLimits = Field(default_factory=VirusTotalLimits)
+
+
 class Settings(BaseSettings):
     """All runtime settings. Build instances with :func:`load_settings`."""
 
@@ -251,10 +305,23 @@ class Settings(BaseSettings):
     llm: LLMSettings = Field(default_factory=LLMSettings)
     checks: CheckSettings = Field(default_factory=CheckSettings)
     scoring: ScoringSettings = Field(default_factory=ScoringSettings)
+    threat_intel: ThreatIntelSettings = Field(default_factory=ThreatIntelSettings)
 
     anthropic_api_key: SecretStr | None = Field(
         default=None,
         validation_alias=AliasChoices("HOOKLINE_ANTHROPIC_API_KEY", "ANTHROPIC_API_KEY"),
+    )
+    virustotal_api_key: SecretStr | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_VIRUSTOTAL_API_KEY", "VIRUSTOTAL_API_KEY"),
+    )
+    abuseipdb_api_key: SecretStr | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_ABUSEIPDB_API_KEY", "ABUSEIPDB_API_KEY"),
+    )
+    urlhaus_auth_key: SecretStr | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_URLHAUS_AUTH_KEY", "URLHAUS_AUTH_KEY"),
     )
 
     @field_validator("log_level", mode="before")

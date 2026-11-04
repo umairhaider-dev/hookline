@@ -7,6 +7,7 @@ from hookline.domains import (
     decode_punycode,
     edit_distance,
     encode_punycode,
+    has_public_suffix,
     has_punycode,
     looks_like_domain,
     normalize_host,
@@ -130,3 +131,19 @@ def test_edit_distance_stops_at_limit() -> None:
     assert edit_distance("paypal", "larkspur", limit=1) == 2
     assert edit_distance("abcdefgh", "zyxwvuts", limit=2) == 3
     assert edit_distance("a", "abcdef", limit=2) == 3
+
+
+@pytest.mark.parametrize(
+    ("host", "expected"),
+    [
+        ("paypal.com", True),
+        ("mail.example.co.uk", True),
+        ("portal.larkspur.test", False),
+        ("intranet.corp.internal", False),
+        ("localhost", False),
+        ("198.51.100.23", False),
+        ("", False),
+    ],
+)
+def test_has_public_suffix(host: str, expected: bool) -> None:
+    assert has_public_suffix(host) is expected
