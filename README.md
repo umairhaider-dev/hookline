@@ -132,6 +132,69 @@ The model assists; it never decides alone.
 - **Answers are validated.** Bounded fields, an enum for the attack type, one
   corrective retry, then rules-only.
 
+## Reports
+
+Every analysis yields the same report in three formats:
+
+```bash
+hookline analyze mail.eml                         # terminal summary
+hookline analyze mail.eml -f json -o report.json  # the full report for tools
+hookline analyze mail.eml -f html -o report.html  # a self-contained page to share
+```
+
+Each report has the verdict and score breakdown, the indicators with their
+evidence, the AI and threat intelligence results, recommended actions, MITRE
+ATT&CK techniques (T1566 Phishing and its sub-techniques, plus T1598.003,
+T1656 Impersonation and T1036 Masquerading where the findings support them)
+and IOCs: the URLs, domains, IPs, addresses and hashes worth blocking. The
+organisation's own domains (protected and recipient domains) and internal IPs
+are left out of the IOCs. The HTML page escapes everything from the email,
+shows indicators defanged (`hxxp://evil[.]test`), and has a policy that blocks
+scripts and external content.
+
+### Scoring
+
+| Severity | Points |
+| --- | --- |
+| critical | 50 |
+| high | 30 |
+| medium | 15 |
+| low | 5 |
+| info | 0 |
+
+Each indicator type counts once, at its most severe instance. The AI adds up
+to 40 points above a likelihood of 50 and never subtracts. Totals are capped
+at 100; 35 or more is suspicious, 70 or more malicious. All of it is set in
+`[scoring]`, including `type_points` to weight one type differently.
+
+## Web interface
+
+```bash
+pip install -e ".[web]"
+hookline serve                    # http://127.0.0.1:8000
+```
+
+The page takes an `.eml` upload and returns the HTML report; `POST
+/api/v1/analyze` (multipart field `file`) returns the JSON report, and
+`GET /api/v1/health` reports the version. Uploads are analysed in memory, never
+stored, and capped at `max_email_bytes`. Responses carry a strict
+Content-Security-Policy and `Cache-Control: no-store`. It listens on localhost
+by default; set `HOOKLINE_WEB_TOKEN` before exposing it, and send the token as
+`Authorization: Bearer ...` (or in the form's token field).
+
+## Watchpost
+
+`hookline push` sends analysed emails to Watchpost, the self-hosted SOC
+platform, through its ingest API; the rules in `integrations/watchpost/rules/`
+turn them into alerts, one per email. See
+[integrations/watchpost/README.md](integrations/watchpost/README.md).
+
+```bash
+export WATCHPOST_TOKEN=...
+hookline push suspicious.eml --url https://watchpost.example.com --wait
+hookline push report.json --dry-run
+```
+
 ## Configuration
 
 Settings are read from, highest precedence first:

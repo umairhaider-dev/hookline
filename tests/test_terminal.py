@@ -188,3 +188,12 @@ def test_ai_failure_panel_shows_notes() -> None:
     output = render(make_report(ai=run))
     assert "Invalid output: bad answers" in output
     assert "Answer 1 was invalid." in output
+
+
+def test_long_ioc_lists_are_shortened() -> None:
+    from hookline.models import IOCSet
+
+    iocs = IOCSet(domains=tuple(f"d{n}.evil.test" for n in range(20)))
+    output = render(make_report().model_copy(update={"iocs": iocs}))
+    assert "IOCs (20, defanged)" in output
+    assert "and 5 more in the JSON report" in output

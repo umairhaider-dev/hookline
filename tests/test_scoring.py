@@ -163,3 +163,19 @@ def test_ai_modes_need_an_assessment(mode: AnalysisMode) -> None:
 def test_ai_weight_is_configurable() -> None:
     verdict = score_verdict([], ScoringSettings(ai_max_points=0), assessment(100))
     assert verdict.score == 0
+
+
+def test_points_can_be_set_per_indicator_type() -> None:
+    settings = ScoringSettings(
+        type_points={IndicatorType.DMARC_FAIL: 45, IndicatorType.SPF_FAIL: 0}
+    )
+    verdict = score_verdict(
+        [
+            make_indicator(type=IndicatorType.DMARC_FAIL, severity=Severity.HIGH),
+            make_indicator(type=IndicatorType.SPF_FAIL, severity=Severity.MEDIUM),
+        ],
+        settings,
+    )
+    (line,) = verdict.contributions
+    assert (line.label, line.points) == ("dmarc_fail", 45)
+    assert line.note == "high severity; points set for this type in the configuration"

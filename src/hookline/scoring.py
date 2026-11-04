@@ -1,9 +1,10 @@
 """Turns indicators and the AI assessment into a transparent score and verdict.
 
 Each indicator type adds the points configured for the severity of its most
-severe instance. Repeats of the same type (ten long tracking links, say) add
-nothing more, so a busy but harmless newsletter is not scored like ten separate
-warning signs.
+severe instance, or the points configured for that type in ``type_points``,
+which lets a team weight one kind of finding up or down. Repeats of the same
+type (ten long tracking links, say) add nothing more, so a busy but harmless
+newsletter is not scored like ten separate warning signs.
 
 The AI assessment can only add. A likelihood of 50 or below adds nothing, and
 above that it adds up to ``ai_max_points``; the contribution is clamped at zero,
@@ -99,10 +100,15 @@ def _indicator_contributions(
     contributions = []
     for group in by_type.values():
         strongest = max(group, key=lambda item: item.severity.rank)
-        points = settings.severity_points[strongest.severity]
+        configured = settings.type_points.get(strongest.type)
+        points = (
+            configured if configured is not None else settings.severity_points[strongest.severity]
+        )
         if points <= 0:
             continue
         note = f"{strongest.severity.value} severity"
+        if configured is not None:
+            note += "; points set for this type in the configuration"
         if len(group) > 1:
             note += f"; {len(group) - 1} more of this type not counted again"
         contributions.append(

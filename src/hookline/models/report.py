@@ -34,6 +34,7 @@ class MitreTechnique(FrozenModel):
 
     technique_id: str = Field(pattern=r"^T\d{4}(?:\.\d{3})?$")
     name: str
+    tactic: str = Field(default="", description="The ATT&CK tactic, such as Initial Access.")
     indicator_ids: tuple[str, ...] = ()
 
 

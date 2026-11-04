@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="{{ csp }}">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hookline report: {{ verdict_title | lower }} ({{ report.verdict.score | number }}/100)</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2433; --muted: #5d6677; --line: #e2e5ea;
+    --code: #f0f2f5; --critical: #9f1d20; --high: #c4320a; --medium: #a15c07; --low: #2463a8;
+    --info: #667085; --malicious: #b42318; --suspicious: #b54708; --safe: #067647;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11141a; --panel: #1a1f28; --text: #e6e9ef; --muted: #9aa3b2; --line: #2b313d;
+      --code: #232a35; --critical: #ff6b6b; --high: #ff8a4c; --medium: #f5b74e; --low: #6aa8ff;
+      --info: #9aa3b2; --malicious: #ff6b6b; --suspicious: #f5b74e; --safe: #4ccf8f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+  header.top { display: flex; justify-content: space-between; align-items: baseline;
+               flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .brand { font-weight: 700; font-size: 20px; letter-spacing: .02em; }
+  .meta { color: var(--muted); font-size: 13px; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+            padding: 18px 20px; margin: 16px 0; }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  h3 { font-size: 14px; margin: 16px 0 8px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 7px 8px; border-top: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; border-top: none; }
+  td.num { text-align: right; white-space: nowrap; }
+  code, .mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 13px;
+                background: var(--code); padding: 1px 5px; border-radius: 4px; word-break: break-all; }
+  code.name { word-break: normal; white-space: nowrap; }
+  .verdict { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; }
+  .label { font-size: 26px; font-weight: 800; padding: 10px 18px; border-radius: 8px; color: #fff; }
+  .label.malicious { background: var(--malicious); }
+  .label.suspicious { background: var(--suspicious); }
+  .label.likely_safe { background: var(--safe); }
+  .bar { position: relative; height: 12px; background: var(--code); border-radius: 6px; margin: 8px 0 4px; }
+  .bar .fill { height: 100%; border-radius: 6px; background: var(--text); }
+  .bar .mark { position: absolute; top: -4px; width: 2px; height: 20px; background: var(--muted); }
+  .facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 14px; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; word-break: break-word; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px;
+          font-weight: 700; color: #fff; text-transform: uppercase; }
+  .sev-critical { background: var(--critical); } .sev-high { background: var(--high); }
+  .sev-medium { background: var(--medium); } .sev-low { background: var(--low); }
+  .sev-info { background: var(--info); }
+  .chips span { display: inline-block; border: 1px solid var(--line); border-radius: 999px;
+                padding: 1px 10px; margin: 2px 4px 2px 0; font-size: 13px; }
+  .note { color: var(--muted); font-size: 13px; }
+  .explanation { white-space: pre-wrap; }
+  ol, ul { margin: 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  details summary { cursor: pointer; color: var(--muted); }
+  .warn { color: var(--suspicious); }
+  footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
+  @media (max-width: 640px) { .verdict { grid-template-columns: 1fr; } }
+  @media print { body { background: #fff; } section { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+  <div class="brand">Hookline</div>
+  <div class="meta">
+    Report {{ report.report_id }} &middot; {{ generated }} &middot; v{{ report.tool_version }}
+    {% if report.source_file %}&middot; {{ report.source_file | clean }}{% endif %}
+  </div>
+</header>
+
+<section aria-label="Verdict">
+  <div class="verdict">
+    <div class="label {{ report.verdict.label.value }}">{{ verdict_title }}</div>
+    <div>
+      <div><strong>Score {{ report.verdict.score | number }}/100</strong>
+        <span class="note">({{ report.verdict.mode.value | replace("_", " ") }})</span></div>
+      <div class="bar" role="img" aria-label="Score {{ report.verdict.score }} of 100">
+        <div class="fill" style="width: {{ report.verdict.score }}%"></div>
+        <div class="mark" style="left: {{ report.verdict.suspicious_threshold }}%"></div>
+        <div class="mark" style="left: {{ report.verdict.malicious_threshold }}%"></div>
+      </div>
+      <div class="note">{{ report.verdict.summary }}</div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Message">
+  <h2>Message</h2>
+  <dl class="facts">
+    <dt>Subject</dt><dd>{{ report.email.subject | clean }}</dd>
+    {% if report.email.from_address %}<dt>From</dt><dd>{{ report.email.from_address | defang }}</dd>{% endif %}
+    {% for address in report.email.reply_to %}<dt>Reply-To</dt><dd>{{ address | defang }}</dd>{% endfor %}
+    {% if report.email.return_path %}<dt>Return-Path</dt><dd>{{ report.email.return_path | defang }}</dd>{% endif %}
+    {% for address in report.email.to %}<dt>To</dt><dd>{{ address | clean }}</dd>{% endfor %}
+    {% for address in report.email.cc %}<dt>Cc</dt><dd>{{ address | clean }}</dd>{% endfor %}
+    {% if report.email.date %}<dt>Date</dt><dd>{{ report.email.date.isoformat() }}</dd>{% endif %}
+    {% if report.email.message_id %}<dt>Message-ID</dt><dd><code>{{ report.email.message_id | clean }}</code></dd>{% endif %}
+    <dt>SHA-256</dt><dd><code>{{ report.email.sha256 }}</code></dd>
+    <dt>Size</dt><dd>{{ "{:,}".format(report.email.size_bytes) }} bytes</dd>
+  </dl>
+</section>
+
+<section aria-label="Recommended actions">
+  <h2>Recommended actions</h2>
+  <ol>
+    {% for action in report.recommended_actions %}<li>{{ action | clean }}</li>{% endfor %}
+  </ol>
+  {% if report.ai.assessment and report.ai.assessment.recommended_actions %}
+  <h3>Suggested by the language model</h3>
+  <ul>
+    {% for action in report.ai.assessment.recommended_actions %}<li>{{ action | clean }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+</section>
+
+<section aria-label="Score breakdown">
+  <h2>Score breakdown</h2>
+  {% if report.verdict.contributions %}
+  <table>
+    <thead><tr><th class="num">Points</th><th>Factor</th><th>How it was counted</th></tr></thead>
+    <tbody>
+    {% for item in report.verdict.contributions %}
+      <tr><td class="num">+{{ item.points | number }}</td><td><code class="name">{{ item.label }}</code></td><td>{{ item.note | clean }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="note">Nothing added to the score.</p>
+  {% endif %}
+  <p class="note">Suspicious from {{ report.verdict.suspicious_threshold | number }}, malicious from
+    {{ report.verdict.malicious_threshold | number }}. Repeated findings of one type count once.
+    The language model can add to the score but never lower it.</p>
+</section>
+
+<section aria-label="Indicators">
+  <h2>Indicators ({{ report.indicators | length }})</h2>
+  {% if report.indicators %}
+  <table>
+    <thead><tr><th>Severity</th><th>Type</th><th>Value</th><th>Evidence</th></tr></thead>
+    <tbody>
+    {% for indicator in report.indicators_by_severity() %}
+      <tr>
+        <td><span class="pill sev-{{ indicator.severity.value }}">{{ indicator.severity.value }}</span></td>
+        <td><code class="name">{{ indicator.type.value }}</code><div class="note">{{ indicator.source.value }}</div></td>
+        <td><code>{{ indicator.value | defang_value }}</code></td>
+        <td>{{ indicator.evidence | clean }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="note">No indicators found.</p>
+  {% endif %}
+</section>
+
+<section aria-label="AI assessment">
+  <h2>AI assessment</h2>
+  {% set ai = report.ai %}
+  {% if ai.assessment %}
+  <dl class="facts">
+    <dt>Likelihood</dt><dd><strong>{{ ai.assessment.phishing_likelihood }}/100</strong></dd>
+    <dt>Attack type</dt><dd>{{ ai.assessment.attack_type.value | replace("_", " ") }}</dd>
+    <dt>Model</dt><dd>{{ ai.provider | clean }} / {{ ai.model | clean }}{% if ai.redacted %} (personal data redacted){% endif %}</dd>
+  </dl>
+  {% if ai.assessment.tactics %}
+  <h3>Tactics</h3>
+  <div class="chips">{% for tactic in ai.assessment.tactics %}<span>{{ tactic | clean }}</span>{% endfor %}</div>
+  {% endif %}
+  <h3>Explanation</h3>
+  <p class="explanation">{{ ai.assessment.explanation | clean(true) }}</p>
+  {% else %}
+  <p><strong>{{ ai.status.value | replace("_", " ") | capitalize }}</strong>{% if ai.error %}: {{ ai.error | clean }}{% endif %}</p>
+  <p class="note">The verdict is based on deterministic checks only.</p>
+  {% endif %}
+  {% for note in ai.notes %}<p class="note">{{ note | clean }}</p>{% endfor %}
+</section>
+
+<section aria-label="Threat intelligence">
+  <h2>Threat intelligence</h2>
+  {% set intel = report.threat_intel %}
+  {% if intel.status.value == "disabled" %}
+  <p class="note">Not used. {{ intel.note or "" }}</p>
+  {% else %}
+  {% if intel.results %}
+  <table>
+    <thead><tr><th>Provider</th><th>Value</th><th>Verdict</th><th>Details</th></tr></thead>
+    <tbody>
+    {% for result in intel.results %}
+      <tr>
+        <td>{{ result.provider | clean }}{% if result.from_cache %}<div class="note">cached</div>{% endif %}</td>
+        <td><code>{{ result.observable.value | defang }}</code><div class="note">{{ result.observable.kind.value }}</div></td>
+        <td>{% if result.verdict in flagged_verdicts %}<strong class="warn">{{ result.verdict.value }}</strong>{% else %}{{ result.verdict.value }}{% endif %}</td>
+        <td>{{ result.summary | clean }}
+          {% set reference = result.reference | trusted_reference %}
+          {% if reference %}<div><a href="{{ reference }}" rel="noopener noreferrer" target="_blank">Provider record</a></div>{% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% elif intel.note %}
+  <p class="note">{{ intel.note }}</p>
+  {% endif %}
+  {% for problem in intel.problems %}<p class="warn">{{ problem | clean }}</p>{% endfor %}
+  {% endif %}
+</section>
+
+{% if report.mitre_techniques %}
+<section aria-label="MITRE ATT&amp;CK">
+  <h2>MITRE ATT&amp;CK</h2>
+  <table>
+    <thead><tr><th>Technique</th><th>Name</th><th>Tactic</th><th class="num">Evidence</th></tr></thead>
+    <tbody>
+    {% for technique in report.mitre_techniques %}
+      <tr>
+        <td><a href="{{ technique.technique_id | mitre_url }}" rel="noopener noreferrer" target="_blank">{{ technique.technique_id }}</a></td>
+        <td>{{ technique.name }}</td>
+        <td>{{ technique.tactic }}</td>
+        <td class="num">{{ technique.indicator_ids | length }} indicator(s)</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+<section aria-label="Indicators of compromise">
+  <h2>{% if is_safe %}Observables{% else %}Indicators of compromise{% endif %} (defanged)</h2>
+  {% set groups = [("URLs", report.iocs.urls), ("Domains", report.iocs.domains), ("IP addresses", report.iocs.ip_addresses), ("Email addresses", report.iocs.email_addresses), ("SHA-256", report.iocs.sha256_hashes)] %}
+  {% set ns = namespace(any=false) %}
+  {% for title, values in groups %}{% if values %}{% set ns.any = true %}
+  <h3>{{ title }}</h3>
+  <ul>{% for value in values %}<li><code>{{ value | defang }}</code></li>{% endfor %}</ul>
+  {% endif %}{% endfor %}
+  {% if not ns.any %}<p class="note">None.</p>{% endif %}
+</section>
+
+{% if report.email.links %}
+<section aria-label="Links">
+  <h2>Links ({{ report.email.links | length }})</h2>
+  <table>
+    <thead><tr><th>Text shown</th><th>Real destination (defanged)</th><th>Found in</th></tr></thead>
+    <tbody>
+    {% for link in report.email.links %}
+      <tr><td>{{ link.text | clean }}</td><td><code>{{ link.url | defang }}</code></td><td>{{ link.origin.value | replace("_", " ") }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+{% if report.email.attachments %}
+<section aria-label="Attachments">
+  <h2>Attachments ({{ report.email.attachments | length }})</h2>
+  <p class="note">Attachments are never opened; they are only hashed and identified from their bytes.</p>
+  <table>
+    <thead><tr><th>Name</th><th>Declared</th><th>Content</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
+    <tbody>
+    {% for attachment in report.email.attachments %}
+      <tr>
+        <td>{{ (attachment.filename or "(no name)") | clean }}{% if attachment.encrypted %}<div class="warn">password protected</div>{% endif %}</td>
+        <td><code class="name">{{ attachment.content_type | clean }}</code></td>
+        <td>{% if attachment.detected_type %}<code class="name">{{ attachment.detected_type }}</code>{% else %}<span class="note">not recognised</span>{% endif %}</td>
+        <td class="num">{{ "{:,}".format(attachment.size) }}</td>
+        <td><code>{{ attachment.sha256 }}</code></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+{% if report.email.hidden_text %}
+<section aria-label="Hidden text">
+  <h2>Hidden text ({{ report.email.hidden_text | length }})</h2>
+  <p class="note">Invisible to the reader and never shown to the language model.</p>
+  <table>
+    <thead><tr><th>Why it is hidden</th><th>Text</th></tr></thead>
+    <tbody>
+    {% for segment in report.email.hidden_text %}<tr><td>{{ segment.reason }}</td><td>{{ segment.text | clean }}</td></tr>{% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+<section aria-label="Delivery">
+  <h2>Delivery details</h2>
+  <details>
+    <summary>Authentication results ({{ report.email.authentication_results | length }}) and Received chain ({{ report.email.received | length }})</summary>
+    {% if report.email.authentication_results %}
+    <h3>Authentication-Results</h3>
+    <table>
+      <thead><tr><th>Header</th><th>Server</th><th>Method</th><th>Result</th></tr></thead>
+      <tbody>
+      {% for result in report.email.authentication_results %}
+        <tr><td>{{ result.header_index + 1 }}</td><td>{{ (result.authserv_id or "") | clean }}</td><td>{{ result.method | clean }}</td><td><code>{{ result.result | clean }}</code></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if report.email.received %}
+    <h3>Received (newest first)</h3>
+    <table>
+      <thead><tr><th>From</th><th>IP</th><th>By</th><th>Time</th></tr></thead>
+      <tbody>
+      {% for hop in report.email.received %}
+        <tr><td>{{ (hop.from_host or "") | defang }}</td><td>{% if hop.from_ip %}<code>{{ hop.from_ip | defang }}</code>{% endif %}</td><td>{{ (hop.by_host or "") | clean }}</td><td>{% if hop.timestamp %}{{ hop.timestamp.isoformat() }}{% endif %}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </details>
+</section>
+
+{% if report.email.defects or report.warnings %}
+<section aria-label="Problems">
+  <h2>Problems</h2>
+  <ul>
+    {% for warning in report.warnings %}<li class="warn">{{ warning | clean }}</li>{% endfor %}
+    {% for defect in report.email.defects %}<li>{{ defect | clean }}</li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<footer>
+  Generated by Hookline {{ report.tool_version }} in {{ report.duration_ms | round | int }} ms.
+  Values from the email are escaped and defanged, and this page loads no external content.
+</footer>
+</main>
+</body>
+</html>

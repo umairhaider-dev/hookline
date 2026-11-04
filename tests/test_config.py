@@ -11,7 +11,7 @@ from hookline.config import (
     load_settings,
 )
 from hookline.errors import ConfigError
-from hookline.models import Severity
+from hookline.models import IndicatorType, Severity
 from tests.factories import PROJECT_ROOT
 
 
@@ -248,3 +248,33 @@ def test_threat_intel_settings(tmp_path: Path) -> None:
     assert intel.virustotal.requests_per_day == 15000
     assert intel.abuseipdb.requests_per_day == 1000
     assert intel.urlhaus.requests_per_day is None
+
+
+def test_type_points_from_config(tmp_path: Path) -> None:
+    settings = load_settings(write_toml(tmp_path, "[scoring.type_points]\ndmarc_fail = 45\n"))
+    assert settings.scoring.type_points == {IndicatorType.DMARC_FAIL: 45}
+    with pytest.raises(ConfigError, match="Invalid configuration"):
+        load_settings(write_toml(tmp_path, "[scoring.type_points]\nnot_a_type = 1\n", "bad.toml"))
+
+
+@pytest.mark.parametrize("field", ["watchpost_token", "watchpost_password", "web_token"])
+def test_web_and_watchpost_secrets_are_refused_in_config_file(tmp_path: Path, field: str) -> None:
+    with pytest.raises(ConfigError, match="environment variables"):
+        load_settings(write_toml(tmp_path, f'{field} = "secret"' + chr(10)))
+
+
+def test_watchpost_settings(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("WATCHPOST_USERNAME", "hookline")
+    monkeypatch.setenv("WATCHPOST_PASSWORD", "pw")
+    monkeypatch.setenv("HOOKLINE_WEB_TOKEN", "web")
+    lines = ["[watchpost]", 'url = "https://w.example.net/"', 'min_verdict = "malicious"', ""]
+    settings = load_settings(write_toml(tmp_path, chr(10).join(lines)))
+    assert settings.watchpost.url == "https://w.example.net"
+    assert settings.watchpost.min_verdict == "malicious"
+    assert settings.watchpost_username == "hookline"
+    assert settings.watchpost_password is not None
+    assert settings.web_token is not None
+    with pytest.raises(ConfigError, match="token"):
+        load_settings(
+            write_toml(tmp_path, "[watchpost]" + chr(10) + 'token = "x"' + chr(10), "bad.toml")
+        )

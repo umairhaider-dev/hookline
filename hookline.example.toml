@@ -73,3 +73,16 @@ low = 5
 medium = 15
 high = 30
 critical = 50
+
+# Points for particular indicator types, overriding their severity's points.
+[scoring.type_points]
+dmarc_fail = 35
+
+[watchpost]
+# url = "https://watchpost.example.com"   # or --url, or WATCHPOST_URL
+verify_tls = true
+# ca_bundle = "certs/internal-ca.pem"
+timeout_seconds = 30
+max_retries = 2
+min_verdict = "suspicious"    # "likely_safe", "suspicious" or "malicious"
+host_name = "hookline"

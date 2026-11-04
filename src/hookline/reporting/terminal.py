@@ -13,11 +13,13 @@ from hookline.models.ai import AIRun, AIStatus
 from hookline.models.email import EmailAddress
 from hookline.models.indicator import Severity
 from hookline.models.intel import IntelRun, IntelStatus, IntelVerdict
-from hookline.models.report import Report
+from hookline.models.report import IOCSet, MitreTechnique, Report
 from hookline.models.verdict import Verdict, VerdictLabel
+from hookline.reporting.defang import defang
 from hookline.reporting.escaping import escape_control_chars
 
 MAX_CELL_CHARS = 160
+MAX_IOCS_SHOWN = 15
 
 _VERDICT_STYLES = {
     VerdictLabel.MALICIOUS: "bold white on red",
@@ -43,6 +45,13 @@ def render_terminal(report: Report, console: Console) -> None:
     console.print(_ai_panel(report.ai))
     if report.verdict.contributions:
         console.print(_score_table(report.verdict))
+    if report.recommended_actions:
+        console.print(_actions(report.recommended_actions))
+    if report.mitre_techniques:
+        console.print(_mitre_table(report.mitre_techniques))
+    iocs = _ioc_table(report.iocs)
+    if iocs is not None:
+        console.print(iocs)
     for warning in report.warnings:
         console.print(Text(f"Warning: {safe_text(warning)}", style="yellow"))
 
@@ -165,6 +174,51 @@ def _ai_panel(run: AIRun) -> Panel:
         body.append(f"\n{safe_text(note, limit=300)}", style="dim")
     body.append("\nThe verdict is based on deterministic checks only.", style="dim")
     return Panel(body, title="AI assessment", title_align="left")
+
+
+def _actions(actions: tuple[str, ...]) -> Panel:
+    lines = Text("\n".join(f"- {safe_text(action, limit=400)}" for action in actions))
+    return Panel(lines, title="Recommended actions", title_align="left")
+
+
+def _mitre_table(techniques: tuple[MitreTechnique, ...]) -> Table:
+    table = Table(title="MITRE ATT&CK", title_justify="left")
+    table.add_column("Technique", no_wrap=True)
+    table.add_column("Name")
+    table.add_column("Tactic")
+    table.add_column("Evidence", justify="right")
+    for technique in techniques:
+        table.add_row(
+            technique.technique_id,
+            technique.name,
+            technique.tactic,
+            f"{len(technique.indicator_ids)} indicator(s)",
+        )
+    return table
+
+
+def _ioc_table(iocs: IOCSet) -> Table | None:
+    rows = [
+        (kind, value)
+        for kind, values in (
+            ("URL", iocs.urls),
+            ("Domain", iocs.domains),
+            ("IP", iocs.ip_addresses),
+            ("Email", iocs.email_addresses),
+            ("SHA-256", iocs.sha256_hashes),
+        )
+        for value in values
+    ]
+    if not rows:
+        return None
+    table = Table(title=f"IOCs ({len(rows)}, defanged)", title_justify="left")
+    table.add_column("Type", no_wrap=True)
+    table.add_column("Value", overflow="fold")
+    for kind, value in rows[:MAX_IOCS_SHOWN]:
+        table.add_row(kind, Text(safe_text(defang(value), limit=200)))
+    if len(rows) > MAX_IOCS_SHOWN:
+        table.add_row("", Text(f"and {len(rows) - MAX_IOCS_SHOWN} more in the JSON report"))
+    return table
 
 
 def _score_table(verdict: Verdict) -> Table:

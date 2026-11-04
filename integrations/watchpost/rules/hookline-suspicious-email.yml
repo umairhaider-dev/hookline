@@ -1,0 +1,23 @@
+id: hookline-suspicious-email
+title: Suspicious email reported by Hookline
+description: |
+  Hookline analysed a reported email and found enough warning signs to treat
+  it as suspicious, but not enough to call it malicious. Review the findings
+  under "hookline" in the event and confirm with the sender through a known
+  channel before releasing it. One alert is raised per email, identified by
+  its SHA-256 in event.code.
+severity: medium
+mitre:
+  tactics: [TA0001]
+  techniques: [T1566]
+logsource:
+  source: json
+detection:
+  verdict:
+    event.action: hookline_email_suspicious
+  condition: verdict
+group_by: [event.code]
+falsepositives:
+  - Newsletters and notifications with urgent wording or link trackers
+references:
+  - https://attack.mitre.org/techniques/T1566/

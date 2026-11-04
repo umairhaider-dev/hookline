@@ -1,0 +1,23 @@
+id: hookline-malicious-email
+title: Malicious email reported by Hookline
+description: |
+  Hookline analysed a reported email and judged it malicious. The event
+  holds the deterministic findings, IOCs, ATT&CK techniques and recommended
+  actions under "hookline". Hookline's verdict comes from its rule-based score;
+  a language model can add to that score but never lower it. One alert is
+  raised per email, identified by its SHA-256 in event.code.
+severity: high
+mitre:
+  tactics: [TA0001]
+  techniques: [T1566]
+logsource:
+  source: json
+detection:
+  verdict:
+    event.action: hookline_email_malicious
+  condition: verdict
+group_by: [event.code]
+falsepositives:
+  - Legitimate bulk mail that copies phishing patterns, such as a security awareness test
+references:
+  - https://attack.mitre.org/techniques/T1566/

@@ -34,7 +34,7 @@ from pydantic import (
 from pydantic_settings import BaseSettings, PydanticBaseSettingsSource, SettingsConfigDict
 
 from hookline.errors import ConfigError
-from hookline.models.indicator import Severity
+from hookline.models.indicator import IndicatorType, Severity
 
 logger = logging.getLogger(__name__)
 
@@ -131,7 +131,16 @@ DEFAULT_SEVERITY_POINTS: dict[Severity, float] = {
 
 # Fields that hold credentials and must never be read from the config file.
 _SECRET_FIELDS = frozenset(
-    {"anthropic_api_key", "virustotal_api_key", "abuseipdb_api_key", "urlhaus_auth_key"}
+    {
+        "anthropic_api_key",
+        "virustotal_api_key",
+        "abuseipdb_api_key",
+        "urlhaus_auth_key",
+        "web_token",
+        "watchpost_token",
+        "watchpost_username",
+        "watchpost_password",
+    }
 )
 
 
@@ -235,6 +244,10 @@ class ScoringSettings(_Section):
     severity_points: dict[Severity, NonNegativeFloat] = Field(
         default_factory=lambda: dict(DEFAULT_SEVERITY_POINTS)
     )
+    type_points: dict[IndicatorType, NonNegativeFloat] = Field(
+        default_factory=dict,
+        description="Points for specific indicator types, overriding their severity's points.",
+    )
     suspicious_threshold: float = Field(default=35.0, gt=0, lt=100)
     malicious_threshold: float = Field(default=70.0, gt=0, le=100)
     ai_max_points: float = Field(
@@ -312,6 +325,37 @@ class ThreatIntelSettings(_Section):
     virustotal: VirusTotalLimits = Field(default_factory=VirusTotalLimits)
 
 
+class WatchpostSettings(_Section):
+    """Where and how ``hookline push`` sends analysed emails to Watchpost.
+
+    Credentials come only from the environment: ``WATCHPOST_TOKEN``, or
+    ``WATCHPOST_USERNAME`` and ``WATCHPOST_PASSWORD``.
+    """
+
+    url: str | None = Field(
+        default=None, description="Watchpost base URL; --url and WATCHPOST_URL take precedence."
+    )
+    verify_tls: bool = True
+    ca_bundle: Path | None = Field(default=None, description="Extra CA bundle for a private CA.")
+    timeout_seconds: float = Field(default=30.0, gt=0, le=300)
+    max_retries: int = Field(default=2, ge=0, le=5)
+    min_verdict: Literal["likely_safe", "suspicious", "malicious"] = Field(
+        default="suspicious", description="Only emails with at least this verdict are pushed."
+    )
+    host_name: str = Field(
+        default="hookline",
+        pattern=r"^[A-Za-z0-9][A-Za-z0-9._-]{0,254}$",
+        description="Host name Watchpost records for the pushed events.",
+    )
+
+    @field_validator("url")
+    @classmethod
+    def _http_url(cls, value: str | None) -> str | None:
+        if value is not None and not value.startswith(("http://", "https://")):
+            raise ValueError("must start with http:// or https://")
+        return value.rstrip("/") if value else value
+
+
 class Settings(BaseSettings):
     """All runtime settings. Build instances with :func:`load_settings`."""
 
@@ -336,6 +380,7 @@ class Settings(BaseSettings):
     checks: CheckSettings = Field(default_factory=CheckSettings)
     scoring: ScoringSettings = Field(default_factory=ScoringSettings)
     threat_intel: ThreatIntelSettings = Field(default_factory=ThreatIntelSettings)
+    watchpost: WatchpostSettings = Field(default_factory=WatchpostSettings)
 
     anthropic_api_key: SecretStr | None = Field(
         default=None,
@@ -352,6 +397,22 @@ class Settings(BaseSettings):
     urlhaus_auth_key: SecretStr | None = Field(
         default=None,
         validation_alias=AliasChoices("HOOKLINE_URLHAUS_AUTH_KEY", "URLHAUS_AUTH_KEY"),
+    )
+    web_token: SecretStr | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_WEB_TOKEN"),
+        description="Bearer token the web interface requires for uploads, if set.",
+    )
+    watchpost_token: SecretStr | None = Field(
+        default=None, validation_alias=AliasChoices("HOOKLINE_WATCHPOST_TOKEN", "WATCHPOST_TOKEN")
+    )
+    watchpost_username: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_WATCHPOST_USERNAME", "WATCHPOST_USERNAME"),
+    )
+    watchpost_password: SecretStr | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_WATCHPOST_PASSWORD", "WATCHPOST_PASSWORD"),
     )
 
     @field_validator("log_level", mode="before")

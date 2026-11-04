@@ -1,6 +1,7 @@
 import logging
 import os
 import socket
+import threading
 from collections.abc import Iterator
 from pathlib import Path
 
@@ -15,12 +16,28 @@ _KEY_VARIABLES = frozenset(
 
 _LOCAL_HOSTS = frozenset({"localhost", "127.0.0.1", "::1"})
 _real_getaddrinfo = socket.getaddrinfo
+_real_connect = socket.socket.connect
+_real_socketpair = socket.socketpair
+_inside_socketpair = threading.local()
 
 
-def _no_network(*args: object, **kwargs: object) -> None:
+def _no_network(self: socket.socket, address: object) -> None:
+    if getattr(_inside_socketpair, "active", False):
+        _real_connect(self, address)  # type: ignore[arg-type]
+        return
     # Behave like a machine with nothing listening, so code under test takes
     # its normal "unreachable" path instead of crashing.
     raise ConnectionRefusedError("tests must not open network connections")
+
+
+def _socketpair(*args: object, **kwargs: object) -> tuple[socket.socket, socket.socket]:
+    # asyncio's event loop needs a socket pair, which Windows builds from a
+    # loopback connection; that one connection is allowed.
+    _inside_socketpair.active = True
+    try:
+        return _real_socketpair(*args, **kwargs)  # type: ignore[arg-type]
+    finally:
+        _inside_socketpair.active = False
 
 
 def _local_names_only(host: object, *args: object, **kwargs: object) -> object:
@@ -36,6 +53,7 @@ def isolated_environment(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Ite
         if name.upper().startswith("HOOKLINE_") or name.upper() in _KEY_VARIABLES:
             monkeypatch.delenv(name)
     monkeypatch.setattr(socket.socket, "connect", _no_network)
+    monkeypatch.setattr(socket, "socketpair", _socketpair)
     monkeypatch.setattr(socket, "getaddrinfo", _local_names_only)
     monkeypatch.chdir(tmp_path)
     yield

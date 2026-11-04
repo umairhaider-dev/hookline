@@ -10,6 +10,7 @@ from typing import Self
 from hookline.ai import Assessor, build_assessor
 from hookline.checks import Check, build_checks
 from hookline.config import Settings
+from hookline.enrichment import extract_iocs, map_mitre, recommend_actions
 from hookline.errors import InputError
 from hookline.intel import ThreatIntel, build_threat_intel, disabled_reason
 from hookline.models.ai import AIRun, AIStatus
@@ -114,6 +115,7 @@ class Analyzer:
         ai_run = self._run_ai(email, indicators)
         # The AI's answer can only add to the deterministic score (see scoring).
         verdict = score_verdict(indicators, self._settings.scoring, ai_run.assessment)
+        iocs = extract_iocs(email, self._settings.checks.protected_domains)
         duration_ms = (time.perf_counter() - started) * 1000
         logger.info(
             "Analyzed %s: %s (score %.0f, %d indicators) in %.1f ms",
@@ -130,6 +132,9 @@ class Analyzer:
             threat_intel=intel_run,
             ai=ai_run,
             verdict=verdict,
+            iocs=iocs,
+            mitre_techniques=map_mitre(verdict, indicators),
+            recommended_actions=recommend_actions(verdict, indicators, iocs),
             warnings=warnings,
             duration_ms=duration_ms,
         )
