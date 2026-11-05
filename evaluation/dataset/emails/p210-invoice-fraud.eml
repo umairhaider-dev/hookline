@@ -1,0 +1,39 @@
+Return-Path: <accounts@mail-corvel-insurance.test>
+Received: from mail.mail-corvel-insurance.test
+ (mail.mail-corvel-insurance.test [203.0.113.12]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id ZUSFNMS8QC for <aisha.karim@larkspur.test>; Sun, 20
+ Sep 2026 15:47:12 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail-corvel-insurance.test; dkim=pass
+ header.d=mail-corvel-insurance.test; dmarc=pass
+ header.from=mail-corvel-insurance.test
+From: Corvel Insurance Accounts <accounts@mail-corvel-insurance.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Overdue: INV-2026-5463
+Date: Sun, 20 Sep 2026 15:47:00 +0000
+Message-ID: <6rmqkrc7t5f4tqd2@mail-corvel-insurance.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_64aa07786d6b0b6ac112ade5"
+
+--=_hookline_64aa07786d6b0b6ac112ade5
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Invoice INV-2026-5463 is past due. Please note our new banking information be=
+low and remit payment today to avoid a late fee.
+
+IBAN: XX67 0000 0000 6261 00
+
+Corvel Insurance Accounts
+
+--=_hookline_64aa07786d6b0b6ac112ade5
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-5463.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_64aa07786d6b0b6ac112ade5--

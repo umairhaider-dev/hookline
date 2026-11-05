@@ -1,0 +1,35 @@
+Return-Path: <orders@copperleaf-coffee.test>
+Received: from mail.copperleaf-coffee.test (mail.copperleaf-coffee.test
+ [203.0.113.52]) by mx1.larkspur.test (Postfix) with ESMTPS id VANX4P6QVC for
+ <ivan.sorensen@larkspur.test>; Sat, 12 Sep 2026 23:49:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=copperleaf-coffee.test; dkim=pass
+ header.d=copperleaf-coffee.test; dmarc=pass
+ header.from=copperleaf-coffee.test
+From: Copperleaf Coffee <orders@copperleaf-coffee.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Your Copperleaf Coffee order #163234
+Date: Sat, 12 Sep 2026 23:49:00 +0000
+Message-ID: <x2q42efggvh9dfcp@copperleaf-coffee.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_634f73ffb1cc8e2f8775a010"
+
+--=_hookline_634f73ffb1cc8e2f8775a010
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order #163234. Total paid: EUR 189.55.
+https://copperleaf-coffee.test/orders/163234
+
+--=_hookline_634f73ffb1cc8e2f8775a010
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Thanks for your order #163234.</p><p>Total paid: EUR 189.55</p=
+><p><a href=3D"https://copperleaf-coffee.test/orders/163234">View your order<=
+/a></p><p style=3D"color:#666;font-size:12px">Copperleaf Coffee, 12 Example S=
+treet</p></body></html>
+
+--=_hookline_634f73ffb1cc8e2f8775a010--

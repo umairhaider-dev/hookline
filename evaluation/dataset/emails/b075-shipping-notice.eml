@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [203.0.113.80]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id 943DAWC5NQ for <ivan.sorensen@larkspur.test>; Tue,
+ 22 Sep 2026 23:29:21 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Parcel BW28557733 is out for delivery
+Date: Tue, 22 Sep 2026 23:29:00 +0000
+Message-ID: <xabgd599zg2wa2s4@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Ivan,
+
+Your parcel BW28557733 is out for delivery.
+Track it here: https://track.brightwater-logistics.test/BW28557733
+
+Brightwater Logistics

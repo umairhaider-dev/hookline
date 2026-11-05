@@ -1,0 +1,25 @@
+Return-Path: <priya.raman@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.228]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id 3PFD46IU9D for
+ <sam.ortega@larkspur.test>; Sat, 10 Oct 2026 06:25:01 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Priya Raman <priya.raman@larkspur.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Customer feedback
+Date: Sat, 10 Oct 2026 06:25:00 +0000
+Message-ID: <ik84xuvss3rv83hk@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Sam,
+
+Quick note: I summarised last week's customer feedback. Let me know if anythi=
+ng is missing or if you want to go through it together.
+
+Notes: https://wiki.larkspur.test/pages/jrt5wn
+
+Thanks,
+Priya

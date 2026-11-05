@@ -12,8 +12,9 @@ from typer.testing import CliRunner
 
 import hookline.cli as cli_module
 from hookline.cli import EXIT_ANALYSIS_ERROR, EXIT_USAGE_ERROR, app
+from hookline.evaluation import generate, write_dataset
 from hookline.watchpost import WatchpostClient
-from tests.factories import SAMPLES_DIR
+from tests.factories import PROJECT_ROOT, SAMPLES_DIR
 
 PHISH = str(SAMPLES_DIR / "credential-phish.eml")
 BENIGN = str(SAMPLES_DIR / "benign-meeting.eml")
@@ -177,3 +178,49 @@ def test_serve_without_the_web_extra(monkeypatch: pytest.MonkeyPatch) -> None:
     result = runner.invoke(app, ["serve"])
     assert result.exit_code == EXIT_USAGE_ERROR
     assert "hookline[web]" in result.stderr
+
+
+EVAL_CONFIG = str(PROJECT_ROOT / "evaluation" / "hookline-eval.toml")
+
+
+def test_eval_generate(tmp_path: Path) -> None:
+    result = runner.invoke(app, ["eval", "generate", str(tmp_path / "dataset"), "--seed", "3"])
+    assert result.exit_code == 0, result.output
+    assert "Wrote 240 emails (120 phishing, 120 benign; 20 with an injection twin)" in result.stdout
+    assert (tmp_path / "dataset" / "labels.csv").is_file()
+
+
+def test_eval_run_falls_back_to_rules_without_a_model(tmp_path: Path) -> None:
+    samples = generate(7)
+    write_dataset(
+        [samples[0], samples[200], *[s for s in samples if s.injection][:1]], tmp_path / "d"
+    )
+    out = tmp_path / "results"
+    result = runner.invoke(
+        app, ["--config", EVAL_CONFIG, "eval", "run", str(tmp_path / "d"), "-o", str(out)]
+    )
+    assert result.exit_code == 0, result.output
+    assert "Language model not used (Ollama is not reachable" in result.stderr
+    assert "| Rules only |" in result.stdout
+    assert "not run: no language model was available" in result.stdout
+    assert {path.name for path in out.iterdir()} == {
+        "RESULTS.md",
+        "results.json",
+        "predictions.csv",
+    }
+    quiet = runner.invoke(app, ["eval", "run", str(tmp_path / "d"), "-o", str(out), "--no-ai"])
+    assert quiet.exit_code == 0
+    assert "Language model not used" not in quiet.stderr
+
+
+def test_eval_run_reports_missing_key(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    write_dataset(generate(7)[:1], tmp_path / "d")
+    monkeypatch.setenv("HOOKLINE_LLM__PROVIDER", "anthropic")
+    result = runner.invoke(app, ["eval", "run", str(tmp_path / "d"), "-o", str(tmp_path / "o")])
+    assert "ANTHROPIC_API_KEY is not set" in result.stderr
+
+
+def test_eval_run_needs_a_dataset(tmp_path: Path) -> None:
+    result = runner.invoke(app, ["eval", "run", str(tmp_path)])
+    assert result.exit_code == EXIT_ANALYSIS_ERROR
+    assert "No labels.csv" in result.stderr

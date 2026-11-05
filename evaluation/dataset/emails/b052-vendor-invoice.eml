@@ -1,0 +1,35 @@
+Return-Path: <accounts@tamsin.test>
+Received: from mail.tamsin.test (mail.tamsin.test [198.51.100.109]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id PEPHRHUGNA for
+ <lena.okafor@larkspur.test>; Sat, 24 Oct 2026 17:21:01 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass smtp.mailfrom=tamsin.test;
+ dkim=pass header.d=tamsin.test; dmarc=pass header.from=tamsin.test
+From: Tamsin Cloud Accounts <accounts@tamsin.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Invoice INV-2026-5001
+Date: Sat, 24 Oct 2026 17:21:00 +0000
+Message-ID: <td5ftwa4ymanmqgp@tamsin.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_9f29e137004e1ec7ce7717c5"
+
+--=_hookline_9f29e137004e1ec7ce7717c5
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please find invoice INV-2026-5001 attached. Payment is due within 30 days.
+
+Questions? Reply to this email or call your account manager.
+
+Tamsin Cloud Accounts
+
+--=_hookline_9f29e137004e1ec7ce7717c5
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-5001.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_9f29e137004e1ec7ce7717c5--

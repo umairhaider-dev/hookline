@@ -1,0 +1,23 @@
+Return-Path: <aisha.karim@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.202]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id GDRNTCG6BE for
+ <sam.ortega@larkspur.test>; Thu, 15 Oct 2026 06:00:25 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Aisha Karim <aisha.karim@larkspur.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Office move
+Date: Thu, 15 Oct 2026 06:00:00 +0000
+Message-ID: <6wnt68rsn6i4h36w@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Sam,
+
+Quick note: the office move is confirmed for the second week of next month. L=
+et me know if anything is missing or if you want to go through it together.
+
+Thanks,
+Aisha

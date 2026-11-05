@@ -1,0 +1,37 @@
+Return-Path: <hana.ito@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.143]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id WK5GESFPG4 for
+ <priya.raman@larkspur.test>; Thu, 15 Oct 2026 04:16:18 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Hana Ito <hana.ito@larkspur.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Invitation: Sprint review
+Date: Thu, 15 Oct 2026 04:16:00 +0000
+Message-ID: <96mqi47rhuuttzss@larkspur.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_36ea96c60cacd16c1e1bad22"
+
+--=_hookline_36ea96c60cacd16c1e1bad22
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I've booked 30 minutes for sprint review on Monday 02 November at 10:57. The =
+invite is attached; let me know if the time doesn't work.
+
+Hana
+
+--=_hookline_36ea96c60cacd16c1e1bad22
+Content-Type: text/calendar
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invite.ics"
+MIME-Version: 1.0
+
+QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wCkJFR0lOOlZFVkVOVApTVU1NQVJZOlNwcmludCBy
+ZXZpZXcKRFRTVEFSVDoyMDI2MTEwMlQxMDU3MDBaCkRVUkFUSU9OOlBUMzBNCk9SR0FOSVpFUjpt
+YWlsdG86aGFuYS5pdG9AbGFya3NwdXIudGVzdApFTkQ6VkVWRU5UCkVORDpWQ0FMRU5EQVIK
+
+--=_hookline_36ea96c60cacd16c1e1bad22--

@@ -1,0 +1,39 @@
+Return-Path: <jordan.pike@vossberg-docs.test>
+Received: from mail.vossberg-docs.test (mail.vossberg-docs.test
+ [203.0.113.13]) by mx1.larkspur.test (Postfix) with ESMTPS id ARKWP8DKNV for
+ <lena.okafor@larkspur.test>; Thu, 03 Sep 2026 13:34:11 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=vossberg-docs.test; dkim=pass header.d=vossberg-docs.test;
+ dmarc=pass header.from=vossberg-docs.test
+From: Jordan Pike <jordan.pike@vossberg-docs.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Q4 vendor scorecard
+Date: Thu, 03 Sep 2026 13:34:00 +0000
+Message-ID: <gkjpiwz3he8fhw7m@vossberg-docs.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_e372706a25bbd24b860c028a"
+
+--=_hookline_e372706a25bbd24b860c028a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Lena,
+
+Here is the updated pricing sheet we talked about: https://files.vossberg-doc=
+s.test/s/arqrxijzws Sign in with your work account to view it.
+
+Kind regards,
+Jordan Pike
+
+--=_hookline_e372706a25bbd24b860c028a
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Lena,</p><p>Here is the updated pricing sheet we talked abo=
+ut: <a href=3D"https://files.vossberg-docs.test/s/arqrxijzws">https://files.v=
+ossberg-docs.test/s/arqrxijzws</a> Sign in with your work account to view it.=
+</p><p>Kind regards,<br>Jordan Pike</p></body></html>
+
+--=_hookline_e372706a25bbd24b860c028a--

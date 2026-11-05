@@ -1,0 +1,23 @@
+Return-Path: <people@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.86]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id WN5SXBVUAT for
+ <ruth.calder@larkspur.test>; Mon, 21 Sep 2026 13:31:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur People Team <people@larkspur.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Open enrollment closes soon
+Date: Mon, 21 Sep 2026 13:31:00 +0000
+Message-ID: <ipzhzxhm5sf69vzc@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+A reminder that open enrollment closes on Friday, so please make your choices=
+ soon. You can do it here: https://benefits.corvel-insurance.test/enroll
+
+Thanks,
+People Team

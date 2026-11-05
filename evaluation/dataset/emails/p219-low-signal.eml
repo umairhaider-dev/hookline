@@ -1,0 +1,39 @@
+Return-Path: <marcus.bell@meridel-group.test>
+Received: from mail.meridel-group.test (mail.meridel-group.test
+ [203.0.113.10]) by mx1.larkspur.test (Postfix) with ESMTPS id P73QQMMX4U for
+ <lena.okafor@larkspur.test>; Wed, 30 Sep 2026 02:22:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=meridel-group.test; dkim=pass header.d=meridel-group.test;
+ dmarc=pass header.from=meridel-group.test
+From: Marcus Bell <marcus.bell@meridel-group.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Onboarding pack
+Date: Wed, 30 Sep 2026 02:22:00 +0000
+Message-ID: <esea7ktkp4skj7e6@meridel-group.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_a92e1e2a21b98955a0a9cf38"
+
+--=_hookline_a92e1e2a21b98955a0a9cf38
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Lena,
+
+I've shared the Q4 vendor scorecard with you. You can review it here: https:/=
+/files.meridel-group.test/s/xz237rxup8
+
+Kind regards,
+Marcus Bell
+
+--=_hookline_a92e1e2a21b98955a0a9cf38
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Lena,</p><p>I've shared the Q4 vendor scorecard with you. Y=
+ou can review it here: <a href=3D"https://files.meridel-group.test/s/xz237rxu=
+p8">https://files.meridel-group.test/s/xz237rxup8</a></p><p>Kind regards,<br>=
+Marcus Bell</p></body></html>
+
+--=_hookline_a92e1e2a21b98955a0a9cf38--

@@ -1,0 +1,33 @@
+Return-Path: <postmaster@cloud-support-sra.test>
+Received: from mail.cloud-support-sra.test (mail.cloud-support-sra.test
+ [203.0.113.99]) by mx1.larkspur.test (Postfix) with ESMTPS id 4U4C53U7ZQ for
+ <hana.ito@larkspur.test>; Wed, 23 Sep 2026 09:59:16 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=cloud-support-sra.test; dkim=none
+ header.d=cloud-support-sra.test; dmarc=fail
+ header.from=cloud-support-sra.test
+From: Mail Delivery System <postmaster@cloud-support-sra.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Undelivered messages
+Date: Wed, 23 Sep 2026 09:59:00 +0000
+Message-ID: <i98a77apjk98vcdw@cloud-support-sra.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_431abf5dede88b473bd76e0f"
+
+--=_hookline_431abf5dede88b473bd76e0f
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your shared drive access expires today. Renew it here:
+https://lnk.example.org/2suf6a4
+
+--=_hookline_431abf5dede88b473bd76e0f
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Your shared drive access expires today. Renew it here:</p><p><=
+a href=3D"https://lnk.example.org/2suf6a4">Review now</a></p></body></html>
+
+--=_hookline_431abf5dede88b473bd76e0f--

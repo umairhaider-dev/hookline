@@ -1,0 +1,39 @@
+Return-Path: <sam@vossberg-legal.test>
+Received: from mail.vossberg-legal.test (mail.vossberg-legal.test
+ [198.51.100.232]) by mx1.larkspur.test (Postfix) with ESMTPS id VZ49U2ZNTQ
+ for <omar.haddad@larkspur.test>; Sat, 24 Oct 2026 07:38:24 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=vossberg-legal.test; dkim=pass header.d=vossberg-legal.test;
+ dmarc=pass header.from=vossberg-legal.test
+From: Sam Ortega <sam@vossberg-legal.test>
+To: Omar Haddad <omar.haddad@larkspur.test>
+Subject: Re: Draft proposal
+Date: Sat, 24 Oct 2026 07:38:00 +0000
+Message-ID: <q9tm9hp8e4sehgy9@vossberg-legal.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_2ed951855aac20d4a447b39c"
+
+--=_hookline_2ed951855aac20d4a447b39c
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Omar,
+
+Thanks, that works for us. I've attached the revised draft proposal with the =
+changes we discussed.
+
+Best,
+Sam
+
+On Monday, Omar Haddad wrote:
+> Could you send the revised draft proposal when it's ready?
+
+--=_hookline_2ed951855aac20d4a447b39c
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="draft-proposal.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_2ed951855aac20d4a447b39c--

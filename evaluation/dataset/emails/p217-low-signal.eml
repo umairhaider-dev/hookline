@@ -1,0 +1,39 @@
+Return-Path: <tomas.reyes@orrin-group.test>
+Received: from mail.orrin-group.test (mail.orrin-group.test [203.0.113.209])
+ by mx1.larkspur.test (Postfix) with ESMTPS id DPYK9DACFQ for
+ <priya.raman@larkspur.test>; Thu, 24 Sep 2026 11:29:26 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=orrin-group.test; dkim=pass header.d=orrin-group.test;
+ dmarc=pass header.from=orrin-group.test
+From: Tomas Reyes <tomas.reyes@orrin-group.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Onboarding pack
+Date: Thu, 24 Sep 2026 11:29:00 +0000
+Message-ID: <65hut97hr2vbkp7c@orrin-group.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_c87eeb1e91071abc45ed2301"
+
+--=_hookline_c87eeb1e91071abc45ed2301
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Priya,
+
+Here is the updated pricing sheet we talked about: https://files.orrin-group.=
+test/s/iqntfa9z3r Sign in with your work account to view it.
+
+Kind regards,
+Tomas Reyes
+
+--=_hookline_c87eeb1e91071abc45ed2301
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Priya,</p><p>Here is the updated pricing sheet we talked ab=
+out: <a href=3D"https://files.orrin-group.test/s/iqntfa9z3r">https://files.or=
+rin-group.test/s/iqntfa9z3r</a> Sign in with your work account to view it.</p=
+><p>Kind regards,<br>Tomas Reyes</p></body></html>
+
+--=_hookline_c87eeb1e91071abc45ed2301--

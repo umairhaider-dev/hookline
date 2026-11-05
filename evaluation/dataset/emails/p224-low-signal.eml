@@ -1,0 +1,39 @@
+Return-Path: <jordan.pike@orrin-group.test>
+Received: from mail.orrin-group.test (mail.orrin-group.test [203.0.113.190])
+ by mx1.larkspur.test (Postfix) with ESMTPS id XVJ5UE5N65 for
+ <jordan.pike@larkspur.test>; Sat, 24 Oct 2026 20:08:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=orrin-group.test; dkim=pass header.d=orrin-group.test;
+ dmarc=pass header.from=orrin-group.test
+From: Jordan Pike <jordan.pike@orrin-group.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Updated pricing
+Date: Sat, 24 Oct 2026 20:08:00 +0000
+Message-ID: <e47hzm2yid662tup@orrin-group.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_c54e4b9e042a57a0192ae651"
+
+--=_hookline_c54e4b9e042a57a0192ae651
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Jordan,
+
+I've shared the Q4 vendor scorecard with you. You can review it here: https:/=
+/files.orrin-group.test/s/wr8a6thvts
+
+Kind regards,
+Jordan Pike
+
+--=_hookline_c54e4b9e042a57a0192ae651
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Jordan,</p><p>I've shared the Q4 vendor scorecard with you.=
+ You can review it here: <a href=3D"https://files.orrin-group.test/s/wr8a6thv=
+ts">https://files.orrin-group.test/s/wr8a6thvts</a></p><p>Kind regards,<br>Jo=
+rdan Pike</p></body></html>
+
+--=_hookline_c54e4b9e042a57a0192ae651--

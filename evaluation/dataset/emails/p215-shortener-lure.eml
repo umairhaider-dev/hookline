@@ -1,0 +1,32 @@
+Return-Path: <postmaster@share-cloud-xfg.test>
+Received: from mail.share-cloud-xfg.test (mail.share-cloud-xfg.test
+ [198.51.100.167]) by mx1.larkspur.test (Postfix) with ESMTPS id NNVKG8XNXN
+ for <jordan.pike@larkspur.test>; Wed, 30 Sep 2026 08:46:14 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=share-cloud-xfg.test; dkim=pass header.d=share-cloud-xfg.test;
+ dmarc=pass header.from=share-cloud-xfg.test
+From: Mail Delivery System <postmaster@share-cloud-xfg.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Undelivered messages
+Date: Wed, 30 Sep 2026 08:46:00 +0000
+Message-ID: <mjghihhrzw48n5js@share-cloud-xfg.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d8c7367c6ab7b984e1610d5d"
+
+--=_hookline_d8c7367c6ab7b984e1610d5d
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your shared drive access expires today. Renew it here:
+https://lnk.example.org/yncykng
+
+--=_hookline_d8c7367c6ab7b984e1610d5d
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Your shared drive access expires today. Renew it here:</p><p><=
+a href=3D"https://lnk.example.org/yncykng">Review now</a></p></body></html>
+
+--=_hookline_d8c7367c6ab7b984e1610d5d--

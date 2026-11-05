@@ -1,0 +1,27 @@
+Return-Path: <felix@harrow-consulting.test>
+Received: from mail.harrow-consulting.test (mail.harrow-consulting.test
+ [203.0.113.137]) by mx1.larkspur.test (Postfix) with ESMTPS id BNVEHK6YHN for
+ <aisha.karim@larkspur.test>; Tue, 27 Oct 2026 18:59:03 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=harrow-consulting.test; dkim=pass
+ header.d=harrow-consulting.test; dmarc=pass
+ header.from=harrow-consulting.test
+From: Felix Novak <felix@harrow-consulting.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Re: Draft proposal
+Date: Tue, 27 Oct 2026 18:59:00 +0000
+Message-ID: <2tns3h4qs24g5mki@harrow-consulting.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Aisha,
+
+Thanks, that works for us. I've attached the revised draft proposal with the =
+changes we discussed.
+
+Best,
+Felix
+
+On Monday, Aisha Karim wrote:
+> Could you send the revised draft proposal when it's ready?

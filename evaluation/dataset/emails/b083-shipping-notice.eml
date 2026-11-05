@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [203.0.113.94]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id JW5QHCF9WC for <grace.lund@larkspur.test>; Tue, 15
+ Sep 2026 05:49:03 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Parcel BW37799605 is out for delivery
+Date: Tue, 15 Sep 2026 05:49:00 +0000
+Message-ID: <3tz6qtm7mk7yi3en@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Grace,
+
+Your parcel BW37799605 is out for delivery.
+Track it here: https://track.brightwater-logistics.test/BW37799605
+
+Brightwater Logistics

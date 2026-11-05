@@ -1,0 +1,43 @@
+Return-Path: <bounce-gmuhtq@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [203.0.113.92]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id C3CK5NVJ2C for
+ <hana.ito@larkspur.test>; Wed, 23 Sep 2026 22:41:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass header.d=weekly-ledger.test;
+ dmarc=pass header.from=weekly-ledger.test
+From: The Weekly Ledger <news@weekly-ledger.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Members' weekend
+Date: Wed, 23 Sep 2026 22:41:00 +0000
+Message-ID: <vmq9s5yahucdrhcw@weekly-ledger.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_27612dcc87b198e0a8794b34"
+
+--=_hookline_27612dcc87b198e0a8794b34
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Members get early access this weekend.
+
+View online: https://weekly-ledger.test/newsletter/bzy4b7
+
+--=_hookline_27612dcc87b198e0a8794b34
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Members =
+get early access this weekend.</div><p>Members get early access this weekend.=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-=
+ledger.test%2Fp%2F6drrqckm&id=3Dwa7v4s9er2q4v39brfmky2ma">Read more</a></p><p=
+><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger=
+.test%2Fp%2F3zhx2x3e&id=3Dh5yr2n7uyr5ctbxjrifnti67">Shop now</a></p><p><a hre=
+f=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2=
+Fp%2Fkzyp32pv&id=3D8pq6is6zr3pihft2bjva2fmq">Read more</a></p><p>Thanks for r=
+eading.</p><p style=3D"color:#666;font-size:12px">You receive this because yo=
+u signed up at weekly-ledger.test. <a href=3D"https://click.sendwave-esp.test=
+/unsub?u=3Dngezvnevfqui3uy37itm">Unsubscribe</a></p></body></html>
+
+--=_hookline_27612dcc87b198e0a8794b34--

@@ -1,0 +1,39 @@
+Return-Path: <accounts@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [203.0.113.11]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id MD55NJZHHT for <tomas.reyes@larkspur.test>; Wed, 23
+ Sep 2026 16:02:28 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics Accounts <accounts@brightwater-logistics.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: Invoice INV-2026-5602 - payment reminder
+Date: Wed, 23 Sep 2026 16:02:00 +0000
+Message-ID: <63sb32m2azhwxicn@brightwater-logistics.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_b94fbf796404de6abefec295"
+
+--=_hookline_b94fbf796404de6abefec295
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+This is a friendly reminder that invoice INV-2026-5602 is now overdue. If you=
+ have already paid, please ignore this message.
+
+Questions? Reply to this email or call your account manager.
+
+Brightwater Logistics Accounts
+
+--=_hookline_b94fbf796404de6abefec295
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-5602.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_b94fbf796404de6abefec295--

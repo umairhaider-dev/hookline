@@ -1,0 +1,41 @@
+Return-Path: <ruth@vossberg-1egal.test>
+Received: from mail.vossberg-1egal.test (mail.vossberg-1egal.test
+ [203.0.113.16]) by mx1.larkspur.test (Postfix) with ESMTPS id X25668XN7D for
+ <sam.ortega@larkspur.test>; Thu, 17 Sep 2026 18:01:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=vossberg-1egal.test; dkim=pass header.d=vossberg-1egal.test;
+ dmarc=pass header.from=vossberg-1egal.test
+From: Ruth Calder <ruth@vossberg-1egal.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Re: Contract renewal
+Date: Thu, 17 Sep 2026 18:01:00 +0000
+Message-ID: <kq5f3zueepkqqwrq@vossberg-1egal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_8f99c3f53780c421ba0576d8"
+
+--=_hookline_8f99c3f53780c421ba0576d8
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Sam,
+
+As discussed, here is the contract renewal with the new payment details: http=
+s://online-access-zxw.test/doc/k34hna6y
+
+Best,
+Ruth
+
+On Tuesday, Sam Ortega wrote:
+> Thanks, please send the contract renewal when ready.
+
+--=_hookline_8f99c3f53780c421ba0576d8
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Sam,</p><p>As discussed, here is the contract renewal with =
+the new payment details: <a href=3D"https://online-access-zxw.test/doc/k34hna=
+6y">the document</a></p><p>Best,<br>Ruth</p></body></html>
+
+--=_hookline_8f99c3f53780c421ba0576d8--

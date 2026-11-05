@@ -1,0 +1,23 @@
+Return-Path: <tomas.reyes@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.124]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id YFH2N8M5XF for
+ <marcus.bell@larkspur.test>; Tue, 01 Sep 2026 12:10:21 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Tomas Reyes <tomas.reyes@larkspur.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Budget figures
+Date: Tue, 01 Sep 2026 12:10:00 +0000
+Message-ID: <373fkkibj7j8yjib@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Marcus,
+
+Quick note: the updated budget figures look about right to me. Let me know if=
+ anything is missing or if you want to go through it together.
+
+Thanks,
+Tomas

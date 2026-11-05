@@ -1,0 +1,38 @@
+Return-Path: <accounts@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [203.0.113.107]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id ADR5IRARYR for <lena.okafor@larkspur.test>; Thu, 10
+ Sep 2026 01:51:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics Accounts <accounts@brightwater-logistics.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Invoice INV-2026-9237
+Date: Thu, 10 Sep 2026 01:51:00 +0000
+Message-ID: <f825x8cqd6rcmnes@brightwater-logistics.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_f1a83afa2dcee1aee2db7981"
+
+--=_hookline_f1a83afa2dcee1aee2db7981
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please find invoice INV-2026-9237 attached. Payment is due within 30 days.
+
+Questions? Reply to this email or call your account manager.
+
+Brightwater Logistics Accounts
+
+--=_hookline_f1a83afa2dcee1aee2db7981
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-9237.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_f1a83afa2dcee1aee2db7981--

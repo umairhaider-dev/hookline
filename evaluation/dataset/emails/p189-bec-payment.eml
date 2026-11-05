@@ -1,0 +1,24 @@
+Return-Path: <ruth.calder.coo@inboxmail.test>
+Received: from mail.inboxmail.test (mail.inboxmail.test [203.0.113.228]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id 4D2WI6SF9V for
+ <ivan.sorensen@larkspur.test>; Sat, 17 Oct 2026 23:40:17 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=inboxmail.test; dkim=pass header.d=inboxmail.test; dmarc=pass
+ header.from=inboxmail.test
+From: Ruth Calder <ruth.calder.coo@inboxmail.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Vendor bank change
+Date: Sat, 17 Oct 2026 23:40:00 +0000
+Message-ID: <r6agfrf3dcpx55kf@inboxmail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ivan,
+
+Please hold the transfer to the old account. The vendor sent updated banking =
+information and the payment must go to the new account.
+
+Thanks,
+Ruth
+Sent from my phone

@@ -1,0 +1,47 @@
+Return-Path: <bounce-qk4y5v@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.52])
+ by mx1.larkspur.test (Postfix) with ESMTPS id KP6FJNWHUM for
+ <dana.whitfield@larkspur.test>; Thu, 08 Oct 2026 11:50:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass header.d=weekly-ledger.test;
+ dmarc=pass header.from=weekly-ledger.test
+From: The Weekly Ledger <news@weekly-ledger.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Subject: Members' weekend
+Date: Thu, 08 Oct 2026 11:50:00 +0000
+Message-ID: <48698t8n8jkqey2e@weekly-ledger.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_249b158f3b2cefece5b60b02"
+
+--=_hookline_249b158f3b2cefece5b60b02
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Members get early access this weekend.
+
+View online: https://weekly-ledger.test/newsletter/jw7kpx
+
+--=_hookline_249b158f3b2cefece5b60b02
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Members =
+get early access this weekend.</div><p>Members get early access this weekend.=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-=
+ledger.test%2Fp%2F73nin9gx&id=3Drbs8jwwmxn4daqyasccwqwtz">Read more</a></p><p=
+><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger=
+.test%2Fp%2Fzy32uhqa&id=3D4rdkjvsw25virxdymwid7x87">See details</a></p><p><a =
+href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.tes=
+t%2Fp%2Fpxzreghw&id=3Dbbqzee9dn73v82v8wyvyge86">Read more</a></p><p><a href=
+=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2F=
+p%2Faqppzzhc&id=3D75bi5fmuygqdqz5k2e4nwvxm">Read more</a></p><p><a href=3D"ht=
+tps://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2Faj=
+2kmbhz&id=3Dddpbp7jpjj6b5istq4p7dfax">See details</a></p><p>Thanks for readin=
+g.</p><p style=3D"color:#666;font-size:12px">You receive this because you sig=
+ned up at weekly-ledger.test. <a href=3D"https://click.sendwave-esp.test/unsu=
+b?u=3Dkrsqmqmnh7pt5d9a6fe4">Unsubscribe</a></p></body></html>
+
+--=_hookline_249b158f3b2cefece5b60b02--

@@ -1,0 +1,38 @@
+Return-Path: <accounts@my-quillon-payroll.test>
+Received: from mail.my-quillon-payroll.test (mail.my-quillon-payroll.test
+ [198.51.100.11]) by mx1.larkspur.test (Postfix) with ESMTPS id YFPFXCJVHR for
+ <grace.lund@larkspur.test>; Sun, 06 Sep 2026 20:32:12 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=my-quillon-payroll.test; dkim=none
+ header.d=my-quillon-payroll.test; dmarc=none
+ header.from=my-quillon-payroll.test
+From: Quillon Payroll Accounts <accounts@my-quillon-payroll.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Overdue: INV-2026-6860
+Date: Sun, 06 Sep 2026 20:32:00 +0000
+Message-ID: <cmqxtd9w6sh4miyc@my-quillon-payroll.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_b60044ac2b34cf143168cbce"
+
+--=_hookline_b60044ac2b34cf143168cbce
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Invoice INV-2026-6860 is past due. Please note our new banking information be=
+low and remit payment today to avoid a late fee.
+
+IBAN: XX90 0000 0000 2202 00
+
+Quillon Payroll Accounts
+
+--=_hookline_b60044ac2b34cf143168cbce
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-6860.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_b60044ac2b34cf143168cbce--

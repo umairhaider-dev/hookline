@@ -1,0 +1,43 @@
+Return-Path: <omar@harrow-consulting-billing.test>
+Received: from mail.harrow-consulting-billing.test
+ (mail.harrow-consulting-billing.test [203.0.113.163]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id YEWW3MJG2N for <lena.okafor@larkspur.test>; Sun, 06
+ Sep 2026 03:02:13 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=harrow-consulting-billing.test; dkim=pass
+ header.d=harrow-consulting-billing.test; dmarc=pass
+ header.from=harrow-consulting-billing.test
+From: Omar Haddad <omar@harrow-consulting-billing.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Re: Contract renewal
+Date: Sun, 06 Sep 2026 03:02:00 +0000
+Message-ID: <hyav4e5n5jd5k37b@harrow-consulting-billing.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_7a6dd45291be06652d470cae"
+
+--=_hookline_7a6dd45291be06652d470cae
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Lena,
+
+Please use the updated contract renewal at https://account-cloud-59x.test/doc=
+/5ebcnjpr; the old version is out of date.
+
+Best,
+Omar
+
+On Tuesday, Lena Okafor wrote:
+> Thanks, please send the contract renewal when ready.
+
+--=_hookline_7a6dd45291be06652d470cae
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Lena,</p><p>Please use the updated contract renewal at <a h=
+ref=3D"https://account-cloud-59x.test/doc/5ebcnjpr">the document</a>; the old=
+ version is out of date.</p><p>Best,<br>Omar</p></body></html>
+
+--=_hookline_7a6dd45291be06652d470cae--

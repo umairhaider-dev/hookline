@@ -1,0 +1,37 @@
+Return-Path: <jordan.pike@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.15]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id J3FZKJYUKK for
+ <ruth.calder@larkspur.test>; Wed, 02 Sep 2026 16:24:18 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Jordan Pike <jordan.pike@larkspur.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Invitation: Monthly sync
+Date: Wed, 02 Sep 2026 16:24:00 +0000
+Message-ID: <eg29nvic8wd2fkq3@larkspur.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_8bc87199ce1bc14ec3ddcd77"
+
+--=_hookline_8bc87199ce1bc14ec3ddcd77
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I've booked 30 minutes for monthly sync on Saturday 19 September at 03:05. Th=
+e invite is attached; let me know if the time doesn't work.
+
+Jordan
+
+--=_hookline_8bc87199ce1bc14ec3ddcd77
+Content-Type: text/calendar
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invite.ics"
+MIME-Version: 1.0
+
+QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wCkJFR0lOOlZFVkVOVApTVU1NQVJZOk1vbnRobHkg
+c3luYwpEVFNUQVJUOjIwMjYwOTE5VDAzMDUwMFoKRFVSQVRJT046UFQzME0KT1JHQU5JWkVSOm1h
+aWx0bzpqb3JkYW4ucGlrZUBsYXJrc3B1ci50ZXN0CkVORDpWRVZFTlQKRU5EOlZDQUxFTkRBUgo=
+
+--=_hookline_8bc87199ce1bc14ec3ddcd77--

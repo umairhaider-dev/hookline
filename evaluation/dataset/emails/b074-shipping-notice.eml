@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [198.51.100.209]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id RIPIP9XNX6 for <lena.okafor@larkspur.test>; Tue, 27
+ Oct 2026 17:39:04 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Parcel BW96662911 is on its way
+Date: Tue, 27 Oct 2026 17:39:00 +0000
+Message-ID: <8cmdm6ee6bb84f4q@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Lena,
+
+Your parcel BW96662911 is on its way.
+Track it here: https://lnk.example.org/t56677w
+
+Brightwater Logistics

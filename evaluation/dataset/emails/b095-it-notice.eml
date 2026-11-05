@@ -1,0 +1,25 @@
+Return-Path: <servicedesk@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.110]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id SMXP2TIIZ7 for
+ <ruth.calder@larkspur.test>; Sat, 05 Sep 2026 17:46:27 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur IT Service Desk <servicedesk@larkspur.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Your password expires in 7 days
+Date: Sat, 05 Sep 2026 17:46:00 +0000
+Message-ID: <pimxsa5mesfpgu9w@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Ruth,
+
+Your network password will expire in 7 days. Change it any time before then f=
+rom the self-service portal at https://sso.larkspur.test/password, or press C=
+trl+Alt+Del on your laptop.
+
+IT will never ask for your password by email.
+
+Larkspur IT Service Desk

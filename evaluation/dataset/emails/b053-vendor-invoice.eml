@@ -1,0 +1,36 @@
+Return-Path: <accounts@quillon-payroll.test>
+Received: from mail.quillon-payroll.test (mail.quillon-payroll.test
+ [203.0.113.180]) by mx1.larkspur.test (Postfix) with ESMTPS id E5HTJ5ZBBD for
+ <lena.okafor@larkspur.test>; Tue, 06 Oct 2026 07:11:01 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quillon-payroll.test; dkim=pass header.d=quillon-payroll.test;
+ dmarc=pass header.from=quillon-payroll.test
+From: Quillon Payroll Accounts <accounts@quillon-payroll.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Invoice INV-2026-9446
+Date: Tue, 06 Oct 2026 07:11:00 +0000
+Message-ID: <52kzziyzsjkkjjhh@quillon-payroll.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_b92797eebbfa2fe4a32d6e82"
+
+--=_hookline_b92797eebbfa2fe4a32d6e82
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please find invoice INV-2026-9446 attached. Payment is due within 30 days.
+
+Questions? Reply to this email or call your account manager.
+
+Quillon Payroll Accounts
+
+--=_hookline_b92797eebbfa2fe4a32d6e82
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-9446.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_b92797eebbfa2fe4a32d6e82--

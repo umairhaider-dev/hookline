@@ -1,0 +1,45 @@
+Return-Path: <bounce-b8cq9i@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.162])
+ by mx1.larkspur.test (Postfix) with ESMTPS id ZJ2WCZMQB7 for
+ <ruth.calder@larkspur.test>; Sat, 17 Oct 2026 17:05:21 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=northpine-books.test; dmarc=pass header.from=northpine-books.test
+From: Northpine Books <news@northpine-books.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Last chance: free shipping
+Date: Sat, 17 Oct 2026 17:05:00 +0000
+Message-ID: <f6pcu6invwne3bka@northpine-books.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_9f8184a25bf91a8e2c5c1daa"
+
+--=_hookline_9f8184a25bf91a8e2c5c1daa
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Free shipping ends today. Last chance!
+
+View online: https://northpine-books.test/newsletter/eh88sm
+
+--=_hookline_9f8184a25bf91a8e2c5c1daa
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Free shi=
+pping ends today. Last chance!</div><p>Free shipping ends today. Last chance!=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpi=
+ne-books.test%2Fp%2Fxsbfpsje&id=3De3veeeaezejh9t6mgsv34m6g">Read more</a></p>=
+<p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-b=
+ooks.test%2Fp%2Fxwpb2qgp&id=3Dyxtanefkvsmcj8gd2sfqdeua">Read more</a></p><p><=
+a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books=
+.test%2Fp%2Fiyzmizsz&id=3Dzkhrku2bqnq2zr8sadg2zrub">Read more</a></p><p><a hr=
+ef=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books.tes=
+t%2Fp%2F69hh79f3&id=3Dh98mq56dhnetz68rxdeq8p2h">Shop now</a></p><p>Thanks for=
+ reading.</p><p style=3D"color:#666;font-size:12px">You receive this because =
+you signed up at northpine-books.test. <a href=3D"https://click.sendwave-esp.=
+test/unsub?u=3D5drkwpgf8s77ie6wgptz">Unsubscribe</a></p></body></html>
+
+--=_hookline_9f8184a25bf91a8e2c5c1daa--

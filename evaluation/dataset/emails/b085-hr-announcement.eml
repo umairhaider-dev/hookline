@@ -1,0 +1,23 @@
+Return-Path: <people@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.179]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id UI6PU9MNV3 for
+ <ruth.calder@larkspur.test>; Tue, 01 Sep 2026 09:12:09 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur People Team <people@larkspur.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Reminder: annual security training
+Date: Tue, 01 Sep 2026 09:12:00 +0000
+Message-ID: <xbguynjm4uhzjgvs@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+A reminder that the annual security training is due by the end of the month. =
+You can do it here: https://hr.larkspur.test/forms/9c8pw
+
+Thanks,
+People Team

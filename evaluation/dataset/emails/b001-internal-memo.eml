@@ -1,0 +1,24 @@
+Return-Path: <tomas.reyes@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.95]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id DPCF54ERF5 for
+ <dana.whitfield@larkspur.test>; Wed, 09 Sep 2026 21:37:19 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Tomas Reyes <tomas.reyes@larkspur.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Cc: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Budget figures
+Date: Wed, 09 Sep 2026 21:37:00 +0000
+Message-ID: <dhqd3dqciu4jhvmg@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Dana,
+
+Quick note: the updated budget figures look about right to me. Let me know if=
+ anything is missing or if you want to go through it together.
+
+Thanks,
+Tomas

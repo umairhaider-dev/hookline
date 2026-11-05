@@ -1,0 +1,38 @@
+Return-Path: <accounts@brightwater-logisics.test>
+Received: from mail.brightwater-logisics.test (mail.brightwater-logisics.test
+ [203.0.113.223]) by mx1.larkspur.test (Postfix) with ESMTPS id WBX2DHJVPK for
+ <dana.whitfield@larkspur.test>; Thu, 10 Sep 2026 00:29:05 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logisics.test; dkim=pass
+ header.d=brightwater-logisics.test; dmarc=pass
+ header.from=brightwater-logisics.test
+From: Brightwater Logistics Accounts <accounts@brightwater-logisics.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Subject: Overdue: INV-2026-1833
+Date: Thu, 10 Sep 2026 00:29:00 +0000
+Message-ID: <3zrrppmprjprq4cr@brightwater-logisics.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_7c3409918aa7c01108b1d707"
+
+--=_hookline_7c3409918aa7c01108b1d707
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Invoice INV-2026-1833 is past due. Please note our new banking information be=
+low and remit payment today to avoid a late fee.
+
+IBAN: XX82 0000 0000 7235 00
+
+Brightwater Logistics Accounts
+
+--=_hookline_7c3409918aa7c01108b1d707
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-1833.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_7c3409918aa7c01108b1d707--

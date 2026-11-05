@@ -1,0 +1,45 @@
+Return-Path: <bounce-qezi6g@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.42])
+ by mx1.larkspur.test (Postfix) with ESMTPS id BE6XWQ8HZJ for
+ <dana.whitfield@larkspur.test>; Sat, 19 Sep 2026 02:12:13 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=copperleaf-coffee.test; dmarc=pass
+ header.from=copperleaf-coffee.test
+From: Copperleaf Coffee <news@copperleaf-coffee.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Subject: Members' weekend
+Date: Sat, 19 Sep 2026 02:12:00 +0000
+Message-ID: <xqdm6j6jt44rjbtu@copperleaf-coffee.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_63cb875c758540ca889e6dd2"
+
+--=_hookline_63cb875c758540ca889e6dd2
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Members get early access this weekend.
+
+View online: https://copperleaf-coffee.test/newsletter/k6rja7
+
+--=_hookline_63cb875c758540ca889e6dd2
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Members =
+get early access this weekend.</div><p>Members get early access this weekend.=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperl=
+eaf-coffee.test%2Fp%2Fujjt9yf9&id=3D2nqvd37psa27fyeq3sw8nnpn">Shop now</a></p=
+><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf=
+-coffee.test%2Fp%2Fmuzy3jrc&id=3D9zgz7fjwbytbgcp9pst5g6is">Shop now</a></p><p=
+><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-co=
+ffee.test%2Fp%2Fxnm2fbdc&id=3Dz79e3hfswqf3m6kzrqmcsydb">Shop now</a></p><p>Th=
+anks for reading.</p><p style=3D"color:#666;font-size:12px">You receive this =
+because you signed up at copperleaf-coffee.test. <a href=3D"https://click.sen=
+dwave-esp.test/unsub?u=3Ds8dgjwanv6g8wzs2hz82">Unsubscribe</a></p></body></ht=
+ml>
+
+--=_hookline_63cb875c758540ca889e6dd2--

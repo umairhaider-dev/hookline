@@ -1,0 +1,26 @@
+Return-Path: <aisha.karim@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.23]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id J2W9JUJC5I for
+ <ruth.calder@larkspur.test>; Tue, 22 Sep 2026 12:34:19 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Aisha Karim <aisha.karim@larkspur.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Cc: Grace Lund <grace.lund@larkspur.test>
+Subject: Q4 planning notes
+Date: Tue, 22 Sep 2026 12:34:00 +0000
+Message-ID: <bqfbcizg26dbr9sa@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ruth,
+
+Quick note: the planning notes from this morning are in the shared folder. Le=
+t me know if anything is missing or if you want to go through it together.
+
+Notes: https://wiki.larkspur.test/pages/fj3c3b
+
+Thanks,
+Aisha

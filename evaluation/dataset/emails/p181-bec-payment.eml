@@ -1,0 +1,24 @@
+Return-Path: <dana.whitfield.ceo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [198.51.100.111]) by mx1.larkspur.test (Postfix) with ESMTPS id EMNP9HEQ8A
+ for <tomas.reyes@larkspur.test>; Wed, 16 Sep 2026 05:25:28 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Dana Whitfield <dana.whitfield.ceo@quickpost-mail.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: Quick request
+Date: Wed, 16 Sep 2026 05:25:00 +0000
+Message-ID: <r36tmyqfc4v5i8wq@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Tomas,
+
+Can you handle a payment for me this afternoon? I'm in meetings all day, so e=
+mail only. I'll send the IBAN and amount once you confirm.
+
+Thanks,
+Dana
+Sent from my phone

@@ -1,0 +1,33 @@
+Return-Path: <notifications@tamsins.test>
+Received: from mail.tamsins.test (mail.tamsins.test [198.51.100.146]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id 8HAHS6SXY5 for
+ <grace.lund@larkspur.test>; Tue, 15 Sep 2026 03:25:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=tamsins.test; dkim=none header.d=tamsins.test; dmarc=fail
+ header.from=tamsins.test
+From: Tamsin Cloud <notifications@tamsins.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Tamsin Cloud: new document
+Date: Tue, 15 Sep 2026 03:25:00 +0000
+Message-ID: <s65qyxd2vpnamtjx@tamsins.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_0a85db45a023401b1ffb7a90"
+
+--=_hookline_0a85db45a023401b1ffb7a90
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A new statement is available in online banking.
+https://portal.tamsins.test/statements/login?ref=xygtxedrdy
+
+--=_hookline_0a85db45a023401b1ffb7a90
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Grace,</p><p>A new statement is available in online bank=
+ing.</p><p><a href=3D"https://portal.tamsins.test/statements/login?ref=3Dxygt=
+xedrdy">Open Tamsin Cloud</a></p></body></html>
+
+--=_hookline_0a85db45a023401b1ffb7a90--

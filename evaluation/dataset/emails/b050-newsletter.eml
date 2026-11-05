@@ -1,0 +1,50 @@
+Return-Path: <bounce-q8qssd@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.43])
+ by mx1.larkspur.test (Postfix) with ESMTPS id KVE26PG48W for
+ <priya.raman@larkspur.test>; Thu, 01 Oct 2026 22:45:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=copperleaf-coffee.test; dmarc=pass
+ header.from=copperleaf-coffee.test
+From: Copperleaf Coffee <news@copperleaf-coffee.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Your monthly reading list
+Date: Thu, 01 Oct 2026 22:45:00 +0000
+Message-ID: <d2q78nskhw3ki889@copperleaf-coffee.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d0cd8987decf1ca82da27cc4"
+
+--=_hookline_d0cd8987decf1ca82da27cc4
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Here are this month's picks.
+
+View online: https://copperleaf-coffee.test/newsletter/xmihms
+
+--=_hookline_d0cd8987decf1ca82da27cc4
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Here are=
+ this month's picks.</div><p>Here are this month's picks.</p><p><a href=3D"ht=
+tps://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-coffee.test%2Fp%=
+2Fxy3j7ac8&id=3Dy35vkajz3wqxk3muhibw869t">Read more</a></p><p><a href=3D"http=
+s://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-coffee.test%2Fp%2F=
+byw8hxs2&id=3Dsbz2ezatxu9k2benpdijvqqd">Read more</a></p><p><a href=3D"https:=
+//click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-coffee.test%2Fp%2Fsh=
+gjfj5n&id=3Dc925fmivcfdkhcbwkh7kgmny">See details</a></p><p><a href=3D"https:=
+//click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-coffee.test%2Fp%2Fnz=
+h5w34s&id=3D6q8bmkmjyd6c6a66bx3jdj9m">See details</a></p><p><a href=3D"https:=
+//click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-coffee.test%2Fp%2F2k=
+aaz4n2&id=3D4x8kw2ntpawwsxk9tf9cj5f4">Read more</a></p><p><a href=3D"https://=
+click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperleaf-coffee.test%2Fp%2F5afi=
+g2th&id=3D56sf6zgc9vpestzp5t7w38hc">See details</a></p><p>Thanks for reading.=
+</p><p style=3D"color:#666;font-size:12px">You receive this because you signe=
+d up at copperleaf-coffee.test. <a href=3D"https://click.sendwave-esp.test/un=
+sub?u=3Djudiy2rsc68bffcp78fu">Unsubscribe</a></p></body></html>
+
+--=_hookline_d0cd8987decf1ca82da27cc4--

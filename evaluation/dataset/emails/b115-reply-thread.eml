@@ -1,0 +1,39 @@
+Return-Path: <dana@meridel-design.test>
+Received: from mail.meridel-design.test (mail.meridel-design.test
+ [203.0.113.138]) by mx1.larkspur.test (Postfix) with ESMTPS id PRMJ3E8YWF for
+ <grace.lund@larkspur.test>; Sun, 20 Sep 2026 10:13:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=meridel-design.test; dkim=pass header.d=meridel-design.test;
+ dmarc=pass header.from=meridel-design.test
+From: Dana Whitfield <dana@meridel-design.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Re: Draft proposal
+Date: Sun, 20 Sep 2026 10:13:00 +0000
+Message-ID: <qebbgfgzr4xz35kc@meridel-design.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_b098e8807a44bf99ceb98046"
+
+--=_hookline_b098e8807a44bf99ceb98046
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Grace,
+
+Thanks, that works for us. I've attached the revised draft proposal with the =
+changes we discussed.
+
+Best,
+Dana
+
+On Monday, Grace Lund wrote:
+> Could you send the revised draft proposal when it's ready?
+
+--=_hookline_b098e8807a44bf99ceb98046
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="draft-proposal.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_b098e8807a44bf99ceb98046--

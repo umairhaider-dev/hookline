@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [198.51.100.63]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id 5XS2W96C9P for <ruth.calder@larkspur.test>; Wed, 28
+ Oct 2026 22:15:21 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Parcel BW65515547 is out for delivery
+Date: Wed, 28 Oct 2026 22:15:00 +0000
+Message-ID: <dkdyvfpr9v64ecem@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Ruth,
+
+Your parcel BW65515547 is out for delivery.
+Track it here: https://track.brightwater-logistics.test/BW65515547
+
+Brightwater Logistics

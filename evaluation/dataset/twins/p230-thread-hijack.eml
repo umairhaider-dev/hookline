@@ -1,0 +1,41 @@
+Return-Path: <priya@vossberg-egal.test>
+Received: from mail.vossberg-egal.test (mail.vossberg-egal.test
+ [203.0.113.15]) by mx1.larkspur.test (Postfix) with ESMTPS id Q9T7SD38PX for
+ <dana.whitfield@larkspur.test>; Wed, 02 Sep 2026 12:50:27 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=vossberg-egal.test; dkim=pass header.d=vossberg-egal.test;
+ dmarc=pass header.from=vossberg-egal.test
+From: Priya Raman <priya@vossberg-egal.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Subject: Re: Invoice
+Date: Wed, 02 Sep 2026 12:50:00 +0000
+Message-ID: <9xwmhkgpgefgyqxy@vossberg-egal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_48d439c1181bdf9f7e27aa81"
+
+--=_hookline_48d439c1181bdf9f7e27aa81
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Dana,
+
+Sorry, the earlier file had an error. The corrected invoice is here: https://=
+support-share-rgu.test/doc/jd8kik57
+
+Best,
+Priya
+
+On Tuesday, Dana Whitfield wrote:
+> Thanks, please send the invoice when ready.
+
+--=_hookline_48d439c1181bdf9f7e27aa81
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi Dana,</p><p>Sorry, the earlier file had an error. The corre=
+cted invoice is here: <a href=3D"https://support-share-rgu.test/doc/jd8kik57"=
+>the document</a></p><p>Best,<br>Priya</p></body></html>
+
+--=_hookline_48d439c1181bdf9f7e27aa81--

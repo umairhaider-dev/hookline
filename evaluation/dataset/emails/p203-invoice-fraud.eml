@@ -1,0 +1,37 @@
+Return-Path: <accounts@tamsin-billing.test>
+Received: from mail.tamsin-billing.test (mail.tamsin-billing.test
+ [198.51.100.230]) by mx1.larkspur.test (Postfix) with ESMTPS id I6MRG3V27M
+ for <lena.okafor@larkspur.test>; Wed, 30 Sep 2026 01:39:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=tamsin-billing.test; dkim=none header.d=tamsin-billing.test;
+ dmarc=fail header.from=tamsin-billing.test
+From: Tamsin Cloud Accounts <accounts@tamsin-billing.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Overdue: INV-2026-9443
+Date: Wed, 30 Sep 2026 01:39:00 +0000
+Message-ID: <qh43jb855nv8dvsn@tamsin-billing.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_648a704be7ac30c991f0da38"
+
+--=_hookline_648a704be7ac30c991f0da38
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Invoice INV-2026-9443 is past due. Please note our new banking information be=
+low and remit payment today to avoid a late fee.
+
+IBAN: XX67 0000 0000 9678 00
+
+Tamsin Cloud Accounts
+
+--=_hookline_648a704be7ac30c991f0da38
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-9443.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_648a704be7ac30c991f0da38--

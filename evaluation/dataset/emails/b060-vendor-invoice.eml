@@ -1,0 +1,36 @@
+Return-Path: <accounts@tamsin.test>
+Received: from mail.tamsin.test (mail.tamsin.test [203.0.113.94]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id C5VQXX8GM9 for
+ <omar.haddad@larkspur.test>; Sun, 06 Sep 2026 20:58:14 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass smtp.mailfrom=tamsin.test;
+ dkim=pass header.d=tamsin.test; dmarc=pass header.from=tamsin.test
+From: Tamsin Cloud Accounts <accounts@tamsin.test>
+To: Omar Haddad <omar.haddad@larkspur.test>
+Subject: Invoice INV-2026-1274 - payment reminder
+Date: Sun, 06 Sep 2026 20:58:00 +0000
+Message-ID: <gznt9cix46u4jwjm@tamsin.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_7a60c8d183e8d53c927c16b0"
+
+--=_hookline_7a60c8d183e8d53c927c16b0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+This is a friendly reminder that invoice INV-2026-1274 is now overdue. If you=
+ have already paid, please ignore this message.
+
+Questions? Reply to this email or call your account manager.
+
+Tamsin Cloud Accounts
+
+--=_hookline_7a60c8d183e8d53c927c16b0
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-1274.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_7a60c8d183e8d53c927c16b0--

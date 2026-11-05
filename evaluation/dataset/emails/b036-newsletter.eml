@@ -1,0 +1,43 @@
+Return-Path: <bounce-tjn4hj@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [203.0.113.198])
+ by mx1.larkspur.test (Postfix) with ESMTPS id GBGEK975DA for
+ <marcus.bell@larkspur.test>; Thu, 17 Sep 2026 06:43:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=northpine-books.test; dmarc=pass header.from=northpine-books.test
+From: Northpine Books <news@northpine-books.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Your monthly reading list
+Date: Thu, 17 Sep 2026 06:43:00 +0000
+Message-ID: <wjrytkctgeyn62bd@northpine-books.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d10e177a62d949db15a8b1f0"
+
+--=_hookline_d10e177a62d949db15a8b1f0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Here are this month's picks.
+
+View online: https://northpine-books.test/newsletter/v3gabn
+
+--=_hookline_d10e177a62d949db15a8b1f0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Here are=
+ this month's picks.</div><p>Here are this month's picks.</p><p><a href=3D"ht=
+tps://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books.test%2Fp%2F=
+bkey6d26&id=3Dygqj4xyintg8ti4ga4h93j4t">See details</a></p><p><a href=3D"http=
+s://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books.test%2Fp%2Fh2=
+67uyuy&id=3D32wa926vmvj52qfxwrwp5abd">Read more</a></p><p><a href=3D"https://=
+click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books.test%2Fp%2F9vv552=
+7y&id=3Dcy6aeqg4z3jn4936xfkzwzev">See details</a></p><p>Thanks for reading.</=
+p><p style=3D"color:#666;font-size:12px">You receive this because you signed =
+up at northpine-books.test. <a href=3D"https://click.sendwave-esp.test/unsub?=
+u=3Dmhux4kupn4mdgyc4aava">Unsubscribe</a></p></body></html>
+
+--=_hookline_d10e177a62d949db15a8b1f0--

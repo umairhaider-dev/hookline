@@ -1,0 +1,26 @@
+Return-Path: <lena.okafor@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.66]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id ABN8R6G593 for
+ <sam.ortega@larkspur.test>; Wed, 02 Sep 2026 23:40:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Lena Okafor <lena.okafor@larkspur.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Cc: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Vendor shortlist
+Date: Wed, 02 Sep 2026 23:40:00 +0000
+Message-ID: <vpqxni3ydiaes5kd@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Sam,
+
+Quick note: I narrowed the vendor shortlist down to three options. Let me kno=
+w if anything is missing or if you want to go through it together.
+
+Notes: https://wiki.larkspur.test/pages/vvpu6m
+
+Thanks,
+Lena

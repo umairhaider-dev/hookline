@@ -1,0 +1,36 @@
+Return-Path: <accounts@quillon-payroll.test>
+Received: from mail.quillon-payroll.test (mail.quillon-payroll.test
+ [198.51.100.138]) by mx1.larkspur.test (Postfix) with ESMTPS id TH6Z8R2UU3
+ for <hana.ito@larkspur.test>; Fri, 18 Sep 2026 05:05:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quillon-payroll.test; dkim=pass header.d=quillon-payroll.test;
+ dmarc=pass header.from=quillon-payroll.test
+From: Quillon Payroll Accounts <accounts@quillon-payroll.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Invoice INV-2026-8040
+Date: Fri, 18 Sep 2026 05:05:00 +0000
+Message-ID: <cs8wp6yv7zfzpq5s@quillon-payroll.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_6a09ae0d2a0347af9f88ea60"
+
+--=_hookline_6a09ae0d2a0347af9f88ea60
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please find invoice INV-2026-8040 attached. Payment is due within 30 days.
+
+Questions? Reply to this email or call your account manager.
+
+Quillon Payroll Accounts
+
+--=_hookline_6a09ae0d2a0347af9f88ea60
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-8040.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_6a09ae0d2a0347af9f88ea60--

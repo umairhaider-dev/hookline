@@ -1,0 +1,48 @@
+Return-Path: <bounce-a7363v@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.54])
+ by mx1.larkspur.test (Postfix) with ESMTPS id EJVVSXENFM for
+ <jordan.pike@larkspur.test>; Tue, 15 Sep 2026 01:26:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=cartwheel-outdoor.test; dmarc=pass
+ header.from=cartwheel-outdoor.test
+From: Cartwheel Outdoor <news@cartwheel-outdoor.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Members' weekend
+Date: Tue, 15 Sep 2026 01:26:00 +0000
+Message-ID: <vy7y5e9wmtsbktrb@cartwheel-outdoor.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_6fcc1015356f59b1d7b715fe"
+
+--=_hookline_6fcc1015356f59b1d7b715fe
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Members get early access this weekend.
+
+View online: https://cartwheel-outdoor.test/newsletter/w8zrry
+
+--=_hookline_6fcc1015356f59b1d7b715fe
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Members =
+get early access this weekend.</div><p>Members get early access this weekend.=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwhe=
+el-outdoor.test%2Fp%2Fn8fw75j3&id=3Dfdxv4z8ivxbnq6fjz4zr63sh">Shop now</a></p=
+><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-=
+outdoor.test%2Fp%2Fmnhqsgns&id=3D9q7qhf4e6ihg73kn8fizd3rd">Read more</a></p><=
+p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-ou=
+tdoor.test%2Fp%2Fcap7vhi5&id=3Dfnhykzxashrzy9cygywhcrsy">Shop now</a></p><p><=
+a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-outdo=
+or.test%2Fp%2F6b6hb9he&id=3Dsmju2jst6abxj98ccem38k63">Shop now</a></p><p><a h=
+ref=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-outdoor.=
+test%2Fp%2Fezxpvicp&id=3Dkz7x72ywax8xqbr7cjjt2tes">Read more</a></p><p>Thanks=
+ for reading.</p><p style=3D"color:#666;font-size:12px">You receive this beca=
+use you signed up at cartwheel-outdoor.test. <a href=3D"https://click.sendwav=
+e-esp.test/unsub?u=3Dicgn5gzurjevxzry3xdx">Unsubscribe</a></p></body></html>
+
+--=_hookline_6fcc1015356f59b1d7b715fe--

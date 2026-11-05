@@ -1,0 +1,34 @@
+Return-Path: <notifications@fernhill-bank-secure.test>
+Received: from mail.fernhill-bank-secure.test (mail.fernhill-bank-secure.test
+ [203.0.113.64]) by mx1.larkspur.test (Postfix) with ESMTPS id IGUIE8BJ6P for
+ <tomas.reyes@larkspur.test>; Sat, 12 Sep 2026 10:21:28 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=fernhill-bank-secure.test; dkim=pass
+ header.d=fernhill-bank-secure.test; dmarc=pass
+ header.from=fernhill-bank-secure.test
+From: Fernhill Bank <notifications@fernhill-bank-secure.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: Fernhill Bank: new document
+Date: Sat, 12 Sep 2026 10:21:00 +0000
+Message-ID: <snv7ndwad9gim5bd@fernhill-bank-secure.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_e0fe5b8538653767c6f9615b"
+
+--=_hookline_e0fe5b8538653767c6f9615b
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A document was shared with you. Sign in to open it.
+https://portal.fernhill-bank-secure.test/share/open?ref=fvwgnrd84p
+
+--=_hookline_e0fe5b8538653767c6f9615b
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Tomas,</p><p>A document was shared with you. Sign in to =
+open it.</p><p><a href=3D"https://portal.fernhill-bank-secure.test/share/open=
+?ref=3Dfvwgnrd84p">Open Fernhill Bank</a></p></body></html>
+
+--=_hookline_e0fe5b8538653767c6f9615b--

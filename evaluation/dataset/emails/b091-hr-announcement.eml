@@ -1,0 +1,23 @@
+Return-Path: <people@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.237]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id 8P4VPJ78KC for
+ <marcus.bell@larkspur.test>; Wed, 09 Sep 2026 18:14:16 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur People Team <people@larkspur.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Action required: confirm your emergency contact
+Date: Wed, 09 Sep 2026 18:14:00 +0000
+Message-ID: <ypxhp6ghxjdta94d@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+A reminder that please confirm your emergency contact details this week. You =
+can do it here: https://benefits.corvel-insurance.test/enroll
+
+Thanks,
+People Team

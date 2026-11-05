@@ -1,0 +1,35 @@
+Return-Path: <notifications@login-quillon-payroll.test>
+Received: from mail.login-quillon-payroll.test
+ (mail.login-quillon-payroll.test [203.0.113.210]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id HHPDEXK2QB for <felix.novak@larkspur.test>; Fri, 18
+ Sep 2026 12:31:28 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=login-quillon-payroll.test; dkim=pass
+ header.d=login-quillon-payroll.test; dmarc=pass
+ header.from=login-quillon-payroll.test
+From: Quillon Payroll <notifications@login-quillon-payroll.test>
+To: Felix Novak <felix.novak@larkspur.test>
+Subject: Quillon Payroll: new document
+Date: Fri, 18 Sep 2026 12:31:00 +0000
+Message-ID: <gimw7x7aszfdaj3k@login-quillon-payroll.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_83ca499edb2c2236fca80ef4"
+
+--=_hookline_83ca499edb2c2236fca80ef4
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A new statement is available in online banking.
+https://portal.login-quillon-payroll.test/statements/login?ref=gwpf6gs6db
+
+--=_hookline_83ca499edb2c2236fca80ef4
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Felix,</p><p>A new statement is available in online bank=
+ing.</p><p><a href=3D"https://portal.login-quillon-payroll.test/statements/lo=
+gin?ref=3Dgwpf6gs6db">Open Quillon Payroll</a></p></body></html>
+
+--=_hookline_83ca499edb2c2236fca80ef4--

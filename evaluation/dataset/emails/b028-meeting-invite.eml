@@ -1,0 +1,37 @@
+Return-Path: <aisha.karim@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.68]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id AGYPCZXJCP for
+ <ivan.sorensen@larkspur.test>; Mon, 26 Oct 2026 05:21:25 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Aisha Karim <aisha.karim@larkspur.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Invitation: 1:1 catch-up
+Date: Mon, 26 Oct 2026 05:21:00 +0000
+Message-ID: <scpaw4zmvepc98e4@larkspur.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_583f543029f0891bc54482be"
+
+--=_hookline_583f543029f0891bc54482be
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I've booked 30 minutes for 1:1 catch-up on Sunday 20 September at 12:19. The =
+invite is attached; let me know if the time doesn't work.
+
+Aisha
+
+--=_hookline_583f543029f0891bc54482be
+Content-Type: text/calendar
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invite.ics"
+MIME-Version: 1.0
+
+QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wCkJFR0lOOlZFVkVOVApTVU1NQVJZOjE6MSBjYXRj
+aC11cApEVFNUQVJUOjIwMjYwOTIwVDEyMTkwMFoKRFVSQVRJT046UFQzME0KT1JHQU5JWkVSOm1h
+aWx0bzphaXNoYS5rYXJpbUBsYXJrc3B1ci50ZXN0CkVORDpWRVZFTlQKRU5EOlZDQUxFTkRBUgo=
+
+--=_hookline_583f543029f0891bc54482be--

@@ -1,0 +1,38 @@
+Return-Path: <accounts@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [198.51.100.233]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id AQ3GN4FUZX for <hana.ito@larkspur.test>; Wed, 09 Sep
+ 2026 15:47:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics Accounts <accounts@brightwater-logistics.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Invoice INV-2026-5242
+Date: Wed, 09 Sep 2026 15:47:00 +0000
+Message-ID: <rtxqc345ejfednsg@brightwater-logistics.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_3fd7cd2e2d9eea78fb2bc249"
+
+--=_hookline_3fd7cd2e2d9eea78fb2bc249
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Please find invoice INV-2026-5242 attached. Payment is due within 30 days.
+
+Questions? Reply to this email or call your account manager.
+
+Brightwater Logistics Accounts
+
+--=_hookline_3fd7cd2e2d9eea78fb2bc249
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-5242.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_3fd7cd2e2d9eea78fb2bc249--

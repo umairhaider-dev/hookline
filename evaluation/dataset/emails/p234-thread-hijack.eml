@@ -1,0 +1,43 @@
+Return-Path: <ruth@meridel-design-notify.test>
+Received: from mail.meridel-design-notify.test
+ (mail.meridel-design-notify.test [198.51.100.38]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id BBAA9JFD4D for <marcus.bell@larkspur.test>; Mon, 07
+ Sep 2026 14:15:21 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=meridel-design-notify.test; dkim=none
+ header.d=meridel-design-notify.test; dmarc=fail
+ header.from=meridel-design-notify.test
+From: Ruth Calder <ruth@meridel-design-notify.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Re: Project budget
+Date: Mon, 07 Sep 2026 14:15:00 +0000
+Message-ID: <wnmgczjdint6jbh5@meridel-design-notify.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d774543da7986d8e877e9493"
+
+--=_hookline_d774543da7986d8e877e9493
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Marcus,
+
+As discussed, here is the project budget with the new payment details: https:=
+//docs-access-ucq.test/doc/mnrerhdi
+
+Best,
+Ruth
+
+On Tuesday, Marcus Bell wrote:
+> Thanks, please send the project budget when ready.
+
+--=_hookline_d774543da7986d8e877e9493
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Marcus,</p><p>As discussed, here is the project budget with=
+ the new payment details: <a href=3D"https://docs-access-ucq.test/doc/mnrerhd=
+i">the document</a></p><p>Best,<br>Ruth</p></body></html>
+
+--=_hookline_d774543da7986d8e877e9493--

@@ -1,0 +1,40 @@
+Return-Path: <omar@harrow-consulting.test>
+Received: from mail.harrow-consulting.test (mail.harrow-consulting.test
+ [203.0.113.120]) by mx1.larkspur.test (Postfix) with ESMTPS id Q2S6JSHIRP for
+ <ruth.calder@larkspur.test>; Sun, 06 Sep 2026 00:38:03 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=harrow-consulting.test; dkim=pass
+ header.d=harrow-consulting.test; dmarc=pass
+ header.from=harrow-consulting.test
+From: Omar Haddad <omar@harrow-consulting.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Re: Contract renewal
+Date: Sun, 06 Sep 2026 00:38:00 +0000
+Message-ID: <6kgw7w2mmjt3a8ge@harrow-consulting.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_d3ecf4ee47dc190d7218cd04"
+
+--=_hookline_d3ecf4ee47dc190d7218cd04
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ruth,
+
+Thanks, that works for us. I've attached the revised contract renewal with th=
+e changes we discussed.
+
+Best,
+Omar
+
+On Monday, Ruth Calder wrote:
+> Could you send the revised contract renewal when it's ready?
+
+--=_hookline_d3ecf4ee47dc190d7218cd04
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="contract-renewal.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_d3ecf4ee47dc190d7218cd04--

@@ -1,0 +1,31 @@
+Return-Path: <notifications@quillon-payroll-portal.test>
+Received: from mail.quillon-payroll-portal.test
+ (mail.quillon-payroll-portal.test [198.51.100.35]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id TKQ8A9C9E3 for <jordan.pike@larkspur.test>; Wed, 02
+ Sep 2026 21:47:08 +0000
+From: Quillon Payroll <notifications@quillon-payroll-portal.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Quillon Payroll notification
+Date: Wed, 02 Sep 2026 21:47:00 +0000
+Message-ID: <xqj5hjhwt43dqdwc@quillon-payroll-portal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_19c432e5f31d048c4276f26e"
+
+--=_hookline_19c432e5f31d048c4276f26e
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A new statement is available in online banking.
+https://portal.quillon-payroll-portal.test/statements/login?ref=i5t2jugdf3
+
+--=_hookline_19c432e5f31d048c4276f26e
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hello Jordan,</p><p>A new statement is available in online ban=
+king.</p><p><a href=3D"https://portal.quillon-payroll-portal.test/statements/=
+login?ref=3Di5t2jugdf3">Open Quillon Payroll</a></p></body></html>
+
+--=_hookline_19c432e5f31d048c4276f26e--

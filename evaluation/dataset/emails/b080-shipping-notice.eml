@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [203.0.113.79]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id FH6E65S9S3 for <hana.ito@larkspur.test>; Fri, 18 Sep
+ 2026 09:51:13 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Parcel BW18993652 was delivered
+Date: Fri, 18 Sep 2026 09:51:00 +0000
+Message-ID: <gqk5na82x2hf3jv4@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Hana,
+
+Your parcel BW18993652 was delivered.
+Track it here: https://lnk.example.org/uuhp5w6
+
+Brightwater Logistics

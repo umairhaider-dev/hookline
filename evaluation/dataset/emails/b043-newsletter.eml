@@ -1,0 +1,47 @@
+Return-Path: <bounce-atjnc3@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [203.0.113.37]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id TRUB44F29Z for
+ <grace.lund@larkspur.test>; Wed, 30 Sep 2026 22:24:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=cartwheel-outdoor.test; dmarc=pass
+ header.from=cartwheel-outdoor.test
+From: Cartwheel Outdoor <news@cartwheel-outdoor.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Members' weekend
+Date: Wed, 30 Sep 2026 22:24:00 +0000
+Message-ID: <twk9dyindkvkvdv2@cartwheel-outdoor.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_ddac4eda92ab38f5e379fef0"
+
+--=_hookline_ddac4eda92ab38f5e379fef0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Members get early access this weekend.
+
+View online: https://cartwheel-outdoor.test/newsletter/26vj7c
+
+--=_hookline_ddac4eda92ab38f5e379fef0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Members =
+get early access this weekend.</div><p>Members get early access this weekend.=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwhe=
+el-outdoor.test%2Fp%2Fqrdrexgc&id=3Dpmvxf7maw44cfrjkjyipnqxe">Shop now</a></p=
+><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-=
+outdoor.test%2Fp%2F8c9xeend&id=3Dz4fyk99isvd7k52vhesqrn7r">Read more</a></p><=
+p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-ou=
+tdoor.test%2Fp%2Fd33x23fq&id=3Dx5vav9bh844v7jxpfy37cuxf">Read more</a></p><p>=
+<a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcartwheel-outd=
+oor.test%2Fp%2Fm64rhpc2&id=3Dm2txjzkqy3v9wnk3aamgr7sy">See details</a></p><p>=
+Thanks for reading.</p><p style=3D"color:#666;font-size:12px">You receive thi=
+s because you signed up at cartwheel-outdoor.test. <a href=3D"https://click.s=
+endwave-esp.test/unsub?u=3Dg2is4ex6tuzv2d99zbdh">Unsubscribe</a></p></body></=
+html>
+
+--=_hookline_ddac4eda92ab38f5e379fef0--

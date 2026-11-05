@@ -1,0 +1,33 @@
+Return-Path: <security@xn--tmsin-4ve.test>
+Received: from mail.xn--tmsin-4ve.test (mail.xn--tmsin-4ve.test
+ [198.51.100.110]) by mx1.larkspur.test (Postfix) with ESMTPS id JKMUAD93F8
+ for <marcus.bell@larkspur.test>; Thu, 17 Sep 2026 22:17:17 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=xn--tmsin-4ve.test; dkim=pass header.d=xn--tmsin-4ve.test;
+ dmarc=pass header.from=xn--tmsin-4ve.test
+From: Security Team <security@xn--tmsin-4ve.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: New sign-in to your account
+Date: Thu, 17 Sep 2026 22:17:00 +0000
+Message-ID: <xbkyigj2y9fn3y92@xn--tmsin-4ve.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_e1a39d6cf179c7f6148debbe"
+
+--=_hookline_e1a39d6cf179c7f6148debbe
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+We noticed a sign-in from a new device. Verify your account: https://login.xn=
+--tmsin-4ve.test/session/twfzs7xs4i
+
+--=_hookline_e1a39d6cf179c7f6148debbe
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>We noticed a sign-in from a new device.</p><p>If this was not =
+you, verify your account: <a href=3D"https://login.xn--tmsin-4ve.test/session=
+/twfzs7xs4i">https://login.tamsin.test/security</a></p></body></html>
+
+--=_hookline_e1a39d6cf179c7f6148debbe--

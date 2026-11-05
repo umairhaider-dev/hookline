@@ -1,0 +1,24 @@
+Return-Path: <ruth.calder.coo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [203.0.113.37]) by mx1.larkspur.test (Postfix) with ESMTPS id MUDKFRFUTU for
+ <jordan.pike@larkspur.test>; Mon, 05 Oct 2026 04:33:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Ruth Calder <ruth.calder.coo@quickpost-mail.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Urgent payment
+Date: Mon, 05 Oct 2026 04:33:00 +0000
+Message-ID: <uwxp5gap2sn6asqh@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Jordan,
+
+Our supplier has changed banks. Please update their bank details before this =
+week's payment run; I'll send the new account number shortly.
+
+Thanks,
+Ruth
+Sent from my phone

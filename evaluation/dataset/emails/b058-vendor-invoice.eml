@@ -1,0 +1,37 @@
+Return-Path: <accounts@corvel-insurance.test>
+Received: from mail.corvel-insurance.test (mail.corvel-insurance.test
+ [203.0.113.223]) by mx1.larkspur.test (Postfix) with ESMTPS id JSHH2FQAJC for
+ <jordan.pike@larkspur.test>; Wed, 09 Sep 2026 15:48:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=corvel-insurance.test; dkim=pass
+ header.d=corvel-insurance.test; dmarc=pass header.from=corvel-insurance.test
+From: Corvel Insurance Accounts <accounts@corvel-insurance.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Invoice INV-2026-3943 - payment reminder
+Date: Wed, 09 Sep 2026 15:48:00 +0000
+Message-ID: <yfvw6nvp8xizyqti@corvel-insurance.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_b622d606b5326fdce27c07ac"
+
+--=_hookline_b622d606b5326fdce27c07ac
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+This is a friendly reminder that invoice INV-2026-3943 is now overdue. If you=
+ have already paid, please ignore this message.
+
+Questions? Reply to this email or call your account manager.
+
+Corvel Insurance Accounts
+
+--=_hookline_b622d606b5326fdce27c07ac
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-3943.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_b622d606b5326fdce27c07ac--

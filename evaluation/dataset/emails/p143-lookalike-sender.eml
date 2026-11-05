@@ -1,0 +1,33 @@
+Return-Path: <notifications@login-tamsin.test>
+Received: from mail.login-tamsin.test (mail.login-tamsin.test
+ [198.51.100.162]) by mx1.larkspur.test (Postfix) with ESMTPS id T3U8UECZK3
+ for <aisha.karim@larkspur.test>; Tue, 13 Oct 2026 10:41:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=login-tamsin.test; dkim=pass header.d=login-tamsin.test;
+ dmarc=pass header.from=login-tamsin.test
+From: Tamsin Cloud <notifications@login-tamsin.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Tamsin Cloud: new document
+Date: Tue, 13 Oct 2026 10:41:00 +0000
+Message-ID: <izq2k6uebbh5v8ij@login-tamsin.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_bbd36c29cdbc7d45cf364c1e"
+
+--=_hookline_bbd36c29cdbc7d45cf364c1e
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your payslip for this month is ready. Sign in to view it.
+https://portal.login-tamsin.test/payslip/view?ref=q9a9k679zh
+
+--=_hookline_bbd36c29cdbc7d45cf364c1e
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Aisha,</p><p>Your payslip for this month is ready. Sign =
+in to view it.</p><p><a href=3D"https://portal.login-tamsin.test/payslip/view=
+?ref=3Dq9a9k679zh">Open Tamsin Cloud</a></p></body></html>
+
+--=_hookline_bbd36c29cdbc7d45cf364c1e--

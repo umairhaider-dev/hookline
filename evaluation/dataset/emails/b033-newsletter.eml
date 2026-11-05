@@ -1,0 +1,49 @@
+Return-Path: <bounce-68kjhz@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [203.0.113.244])
+ by mx1.larkspur.test (Postfix) with ESMTPS id K4826TXUTD for
+ <felix.novak@larkspur.test>; Wed, 30 Sep 2026 02:55:21 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=copperleaf-coffee.test; dmarc=pass
+ header.from=copperleaf-coffee.test
+From: Copperleaf Coffee <news@copperleaf-coffee.test>
+To: Felix Novak <felix.novak@larkspur.test>
+Subject: Autumn sale: up to 40% off
+Date: Wed, 30 Sep 2026 02:55:00 +0000
+Message-ID: <xajv5r222q6uawst@copperleaf-coffee.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_7d4353451ff9ab5d82887695"
+
+--=_hookline_7d4353451ff9ab5d82887695
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Our autumn sale ends tonight, so act now.
+
+View online: https://copperleaf-coffee.test/newsletter/2vvk9d
+
+--=_hookline_7d4353451ff9ab5d82887695
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Our autu=
+mn sale ends tonight, so act now.</div><p>Our autumn sale ends tonight, so ac=
+t now.</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fc=
+opperleaf-coffee.test%2Fp%2Fjv2dfwiy&id=3Daapeusgjqm6yjp3kfvn9pf6h">See detai=
+ls</a></p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fc=
+opperleaf-coffee.test%2Fp%2Fhs4qi89d&id=3D87j9r9kakw79u7z54emzbbcx">Shop now<=
+/a></p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopp=
+erleaf-coffee.test%2Fp%2F89jcp4ix&id=3Dgzx8pu5x5sduuy93xtyp9hxn">Read more</a=
+></p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopper=
+leaf-coffee.test%2Fp%2Fvifc33d3&id=3Dvgacn8d2jfpc7mgmc4gazivs">Read more</a><=
+/p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcopperle=
+af-coffee.test%2Fp%2Fm4cwb5d9&id=3Dch436ea2j84gf8pja5aahfph">Shop now</a></p>=
+<p>Thanks for reading.</p><p style=3D"color:#666;font-size:12px">You receive =
+this because you signed up at copperleaf-coffee.test. <a href=3D"https://clic=
+k.sendwave-esp.test/unsub?u=3D8btr6mdzjfu97sdcadaf">Unsubscribe</a></p></body=
+></html>
+
+--=_hookline_7d4353451ff9ab5d82887695--

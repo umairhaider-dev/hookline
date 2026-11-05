@@ -195,6 +195,54 @@ hookline push suspicious.eml --url https://watchpost.example.com --wait
 hookline push report.json --dry-run
 ```
 
+## Evaluation
+
+`evaluation/` holds a synthetic, labelled dataset of 240 emails (120 phishing,
+120 benign) and the harness that scores each analysis mode. All of it is
+fictional, and it is reproducible from a seed. See
+[evaluation/README.md](evaluation/README.md) for the categories and caveats, and
+[evaluation/results/RESULTS.md](evaluation/results/RESULTS.md) for the full
+results, including per-category rates and every misclassified email.
+
+An email counts as flagged when its verdict is suspicious or malicious.
+
+| Mode | Precision | Recall | F1 | False positive rate | Mean time per email |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Rules only | 1.000 | 0.700 | 0.824 | 0.000 | 7 ms |
+| AI only | not run | | | | |
+| Combined | not run | | | | |
+
+The AI-only and combined modes need a language model, and none was available
+when these results were produced, so those rows are left empty rather than
+estimated. Reproduce all three with a local model:
+
+```bash
+ollama pull llama3.1:8b
+hookline --config evaluation/hookline-eval.toml eval run
+```
+
+What the rules-only run shows:
+
+- **No false positives** on the 120 benign emails, including 72 deliberately
+  awkward ones: newsletters with trackers, hidden preview text and sale
+  deadlines, overdue-invoice reminders and internal password-expiry notices.
+- **Strong on loud attacks**: credential links, homoglyph senders and gift card
+  requests are all caught, as are 90% of invoice frauds.
+- **Weak where rules lack context**: HTML attachments (12%; attachments are
+  never opened, so the login form inside is unseen), quiet lures from properly
+  authenticated domains (25%), vendor lookalikes that are spotted but score too
+  low on their own (50%), hijacked threads from lookalikes of partners outside
+  the protected list (58%), and executive impersonation from free webmail (58%;
+  there is no executive directory to compare names against). These are the
+  cases the language model is there to help with.
+- **Prompt injection backfires on the sender**: the `prompt_injection` check
+  fired on 16 of 20 hidden instructions, and 20 of 20 injected emails were
+  flagged against 12 of 20 of their otherwise identical twins.
+
+The dataset was written by the same author as the rules, so treat these
+numbers as a regression baseline and a way to compare modes, not as a
+benchmark of real-world accuracy.
+
 ## Configuration
 
 Settings are read from, highest precedence first:

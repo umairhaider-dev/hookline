@@ -1,0 +1,35 @@
+Return-Path: <orders@cartwheel-outdoor.test>
+Received: from mail.cartwheel-outdoor.test (mail.cartwheel-outdoor.test
+ [198.51.100.233]) by mx1.larkspur.test (Postfix) with ESMTPS id A4H8FHTA2F
+ for <lena.okafor@larkspur.test>; Mon, 07 Sep 2026 11:41:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=cartwheel-outdoor.test; dkim=pass
+ header.d=cartwheel-outdoor.test; dmarc=pass
+ header.from=cartwheel-outdoor.test
+From: Cartwheel Outdoor <orders@cartwheel-outdoor.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Your Cartwheel Outdoor order #457023
+Date: Mon, 07 Sep 2026 11:41:00 +0000
+Message-ID: <r3qhwa4kafmqqmwx@cartwheel-outdoor.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_32b8032c8bcbf5df611b036f"
+
+--=_hookline_32b8032c8bcbf5df611b036f
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order #457023. Total paid: EUR 190.02.
+https://cartwheel-outdoor.test/orders/457023
+
+--=_hookline_32b8032c8bcbf5df611b036f
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Thanks for your order #457023.</p><p>Total paid: EUR 190.02</p=
+><p><a href=3D"https://cartwheel-outdoor.test/orders/457023">View your order<=
+/a></p><p style=3D"color:#666;font-size:12px">Cartwheel Outdoor, 12 Example S=
+treet</p></body></html>
+
+--=_hookline_32b8032c8bcbf5df611b036f--

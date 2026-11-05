@@ -1,0 +1,34 @@
+Return-Path: <orders@weekly-ledger.test>
+Received: from mail.weekly-ledger.test (mail.weekly-ledger.test
+ [203.0.113.72]) by mx1.larkspur.test (Postfix) with ESMTPS id DA4V2VK877 for
+ <marcus.bell@larkspur.test>; Thu, 03 Sep 2026 11:06:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=weekly-ledger.test; dkim=pass header.d=weekly-ledger.test;
+ dmarc=pass header.from=weekly-ledger.test
+From: The Weekly Ledger <orders@weekly-ledger.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Your The Weekly Ledger order #351946
+Date: Thu, 03 Sep 2026 11:06:00 +0000
+Message-ID: <u3cg7wmb9mqtzhxa@weekly-ledger.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d3f0b1f023dab57c797ead07"
+
+--=_hookline_d3f0b1f023dab57c797ead07
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order #351946. Total paid: EUR 125.43.
+https://weekly-ledger.test/orders/351946
+
+--=_hookline_d3f0b1f023dab57c797ead07
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Thanks for your order #351946.</p><p>Total paid: EUR 125.43</p=
+><p><a href=3D"https://weekly-ledger.test/orders/351946">View your order</a><=
+/p><p style=3D"color:#666;font-size:12px">The Weekly Ledger, 12 Example Stree=
+t</p></body></html>
+
+--=_hookline_d3f0b1f023dab57c797ead07--

@@ -1,0 +1,37 @@
+Return-Path: <accounts@corvel-insurance.test>
+Received: from mail.corvel-insurance.test (mail.corvel-insurance.test
+ [203.0.113.146]) by mx1.larkspur.test (Postfix) with ESMTPS id 6UE8IJE85I for
+ <aisha.karim@larkspur.test>; Thu, 10 Sep 2026 08:41:26 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=corvel-insurance.test; dkim=pass
+ header.d=corvel-insurance.test; dmarc=pass header.from=corvel-insurance.test
+From: Corvel Insurance Accounts <accounts@corvel-insurance.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Invoice INV-2026-9002 - payment reminder
+Date: Thu, 10 Sep 2026 08:41:00 +0000
+Message-ID: <bmcehwrdqtykz4tk@corvel-insurance.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_b34ef1f7c49c59207d860513"
+
+--=_hookline_b34ef1f7c49c59207d860513
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+This is a friendly reminder that invoice INV-2026-9002 is now overdue. If you=
+ have already paid, please ignore this message.
+
+Questions? Reply to this email or call your account manager.
+
+Corvel Insurance Accounts
+
+--=_hookline_b34ef1f7c49c59207d860513
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-9002.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_b34ef1f7c49c59207d860513--

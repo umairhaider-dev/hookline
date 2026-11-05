@@ -1,0 +1,43 @@
+Return-Path: <grace@harrow-consulting-portal.test>
+Received: from mail.harrow-consulting-portal.test
+ (mail.harrow-consulting-portal.test [203.0.113.18]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id MW3QVDSNF5 for <aisha.karim@larkspur.test>; Fri, 18
+ Sep 2026 13:52:22 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=harrow-consulting-portal.test; dkim=none
+ header.d=harrow-consulting-portal.test; dmarc=none
+ header.from=harrow-consulting-portal.test
+From: Grace Lund <grace@harrow-consulting-portal.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Re: Invoice
+Date: Fri, 18 Sep 2026 13:52:00 +0000
+Message-ID: <2ati66baqs83djas@harrow-consulting-portal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_02bb49141c204594f093955f"
+
+--=_hookline_02bb49141c204594f093955f
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Aisha,
+
+As discussed, here is the invoice with the new payment details: https://porta=
+l-review-mbn.test/doc/gewbrvm9
+
+Best,
+Grace
+
+On Tuesday, Aisha Karim wrote:
+> Thanks, please send the invoice when ready.
+
+--=_hookline_02bb49141c204594f093955f
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Aisha,</p><p>As discussed, here is the invoice with the new=
+ payment details: <a href=3D"https://portal-review-mbn.test/doc/gewbrvm9">the=
+ document</a></p><p>Best,<br>Grace</p></body></html>
+
+--=_hookline_02bb49141c204594f093955f--

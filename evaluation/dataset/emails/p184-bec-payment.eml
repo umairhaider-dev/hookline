@@ -1,0 +1,24 @@
+Return-Path: <marcus.bell.cfo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [203.0.113.170]) by mx1.larkspur.test (Postfix) with ESMTPS id X73QQJ78QG for
+ <felix.novak@larkspur.test>; Mon, 26 Oct 2026 10:19:14 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Marcus Bell <marcus.bell.cfo@quickpost-mail.test>
+To: Felix Novak <felix.novak@larkspur.test>
+Subject: Today
+Date: Mon, 26 Oct 2026 10:19:00 +0000
+Message-ID: <8hmysf3x2f6pxi46@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Felix,
+
+Please hold the transfer to the old account. The vendor sent updated banking =
+information and the payment must go to the new account.
+
+Thanks,
+Marcus
+Sent from my phone

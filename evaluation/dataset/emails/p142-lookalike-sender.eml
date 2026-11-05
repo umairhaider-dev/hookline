@@ -1,0 +1,33 @@
+Return-Path: <notifications@tamsin-billing.test>
+Received: from mail.tamsin-billing.test (mail.tamsin-billing.test
+ [198.51.100.130]) by mx1.larkspur.test (Postfix) with ESMTPS id 4BT2FUP7WB
+ for <omar.haddad@larkspur.test>; Fri, 02 Oct 2026 13:29:05 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=tamsin-billing.test; dkim=pass header.d=tamsin-billing.test;
+ dmarc=pass header.from=tamsin-billing.test
+From: Tamsin Cloud <notifications@tamsin-billing.test>
+To: Omar Haddad <omar.haddad@larkspur.test>
+Subject: Tamsin Cloud: new document
+Date: Fri, 02 Oct 2026 13:29:00 +0000
+Message-ID: <erxjmq9itwwjtf48@tamsin-billing.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d83fa0c09d6921e801d19f21"
+
+--=_hookline_d83fa0c09d6921e801d19f21
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your policy renewal needs your confirmation.
+https://portal.tamsin-billing.test/renewal/confirm?ref=azk82tu338
+
+--=_hookline_d83fa0c09d6921e801d19f21
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Omar,</p><p>Your policy renewal needs your confirmation.=
+</p><p><a href=3D"https://portal.tamsin-billing.test/renewal/confirm?ref=3Daz=
+k82tu338">Open Tamsin Cloud</a></p></body></html>
+
+--=_hookline_d83fa0c09d6921e801d19f21--

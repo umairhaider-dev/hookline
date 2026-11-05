@@ -1,0 +1,40 @@
+Return-Path: <jordan@harrow-consulting.test>
+Received: from mail.harrow-consulting.test (mail.harrow-consulting.test
+ [203.0.113.34]) by mx1.larkspur.test (Postfix) with ESMTPS id KN9JQ8T7AG for
+ <priya.raman@larkspur.test>; Tue, 15 Sep 2026 01:09:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=harrow-consulting.test; dkim=pass
+ header.d=harrow-consulting.test; dmarc=pass
+ header.from=harrow-consulting.test
+From: Jordan Pike <jordan@harrow-consulting.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Re: Workshop agenda
+Date: Tue, 15 Sep 2026 01:09:00 +0000
+Message-ID: <3srugudskri7i8aj@harrow-consulting.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_553f6fa44037c062ed72562a"
+
+--=_hookline_553f6fa44037c062ed72562a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Priya,
+
+Thanks, that works for us. I've attached the revised workshop agenda with the=
+ changes we discussed.
+
+Best,
+Jordan
+
+On Monday, Priya Raman wrote:
+> Could you send the revised workshop agenda when it's ready?
+
+--=_hookline_553f6fa44037c062ed72562a
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="workshop-agenda.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_553f6fa44037c062ed72562a--

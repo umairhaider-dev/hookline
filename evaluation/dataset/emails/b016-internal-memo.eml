@@ -1,0 +1,23 @@
+Return-Path: <lena.okafor@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.183]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id U777HNVF8B for
+ <grace.lund@larkspur.test>; Sun, 27 Sep 2026 19:23:17 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Lena Okafor <lena.okafor@larkspur.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Q4 planning notes
+Date: Sun, 27 Sep 2026 19:23:00 +0000
+Message-ID: <u7e6t2ppefjszith@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Grace,
+
+Quick note: the planning notes from this morning are in the shared folder. Le=
+t me know if anything is missing or if you want to go through it together.
+
+Thanks,
+Lena

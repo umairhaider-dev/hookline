@@ -1,0 +1,39 @@
+Return-Path: <accounts@brightwater-1ogistics.test>
+Received: from mail.brightwater-1ogistics.test
+ (mail.brightwater-1ogistics.test [198.51.100.45]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id F8APSDV8NV for <jordan.pike@larkspur.test>; Fri, 09
+ Oct 2026 10:44:11 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-1ogistics.test; dkim=pass
+ header.d=brightwater-1ogistics.test; dmarc=pass
+ header.from=brightwater-1ogistics.test
+From: Brightwater Logistics Accounts <accounts@brightwater-1ogistics.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Overdue: INV-2026-8844
+Date: Fri, 09 Oct 2026 10:44:00 +0000
+Message-ID: <35wdykmjp4x2gknf@brightwater-1ogistics.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_9d3809b8414f4fb762735782"
+
+--=_hookline_9d3809b8414f4fb762735782
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Invoice INV-2026-8844 is past due. Please note our new banking information be=
+low and remit payment today to avoid a late fee.
+
+IBAN: XX44 0000 0000 8057 00
+
+Brightwater Logistics Accounts
+
+--=_hookline_9d3809b8414f4fb762735782
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-8844.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_9d3809b8414f4fb762735782--

@@ -1,0 +1,24 @@
+Return-Path: <omar.haddad@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.23]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id JQQA9MSUAJ for
+ <hana.ito@larkspur.test>; Tue, 15 Sep 2026 01:41:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Omar Haddad <omar.haddad@larkspur.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Cc: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Office move
+Date: Tue, 15 Sep 2026 01:41:00 +0000
+Message-ID: <4zwid73333g83dne@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Hana,
+
+Quick note: the office move is confirmed for the second week of next month. L=
+et me know if anything is missing or if you want to go through it together.
+
+Thanks,
+Omar

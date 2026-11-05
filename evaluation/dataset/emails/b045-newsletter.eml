@@ -1,0 +1,44 @@
+Return-Path: <bounce-yxarxf@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.141])
+ by mx1.larkspur.test (Postfix) with ESMTPS id KGCW5XZEH7 for
+ <hana.ito@larkspur.test>; Fri, 02 Oct 2026 08:17:18 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=northpine-books.test; dmarc=pass header.from=northpine-books.test
+From: Northpine Books <news@northpine-books.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Autumn sale: up to 40% off
+Date: Fri, 02 Oct 2026 08:17:00 +0000
+Message-ID: <kpdr4fppuas5hm6k@northpine-books.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_d0d54b189560cf7fa8615a88"
+
+--=_hookline_d0d54b189560cf7fa8615a88
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Our autumn sale ends tonight, so act now.
+
+View online: https://northpine-books.test/newsletter/wtra4b
+
+--=_hookline_d0d54b189560cf7fa8615a88
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Our autu=
+mn sale ends tonight, so act now.</div><p>Our autumn sale ends tonight, so ac=
+t now.</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fn=
+orthpine-books.test%2Fp%2Fin676ed8&id=3Dk3r88jh92erqa3qcrgnac7d3">Shop now</a=
+></p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthp=
+ine-books.test%2Fp%2Fqc4scj7b&id=3D8ggmjkwg2aebfedu73apbm7p">Shop now</a></p>=
+<p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-b=
+ooks.test%2Fp%2Fp5hfygfr&id=3Dgfztvvuj9xnafechp274pfbd">See details</a></p><p=
+>Thanks for reading.</p><p style=3D"color:#666;font-size:12px">You receive th=
+is because you signed up at northpine-books.test. <a href=3D"https://click.se=
+ndwave-esp.test/unsub?u=3Dbi5dmu6sisvybw2gk6k8">Unsubscribe</a></p></body></h=
+tml>
+
+--=_hookline_d0d54b189560cf7fa8615a88--

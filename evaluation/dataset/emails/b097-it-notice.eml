@@ -1,0 +1,25 @@
+Return-Path: <servicedesk@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.201]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id F2YM5XTRKU for
+ <lena.okafor@larkspur.test>; Tue, 22 Sep 2026 15:23:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur IT Service Desk <servicedesk@larkspur.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Your password expires in 3 days
+Date: Tue, 22 Sep 2026 15:23:00 +0000
+Message-ID: <mhmbrz8i47kczfbw@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Lena,
+
+Your network password will expire in 3 days. Change it any time before then f=
+rom the self-service portal at https://sso.larkspur.test/password, or press C=
+trl+Alt+Del on your laptop.
+
+IT will never ask for your password by email.
+
+Larkspur IT Service Desk

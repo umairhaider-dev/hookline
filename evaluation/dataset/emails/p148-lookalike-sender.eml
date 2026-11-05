@@ -1,0 +1,33 @@
+Return-Path: <notifications@quilln-payroll.test>
+Received: from mail.quilln-payroll.test (mail.quilln-payroll.test
+ [203.0.113.150]) by mx1.larkspur.test (Postfix) with ESMTPS id IDWXETJGK3 for
+ <priya.raman@larkspur.test>; Sat, 05 Sep 2026 07:40:04 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=quilln-payroll.test; dkim=none header.d=quilln-payroll.test;
+ dmarc=fail header.from=quilln-payroll.test
+From: Quillon Payroll <notifications@quilln-payroll.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Quillon Payroll notification
+Date: Sat, 05 Sep 2026 07:40:00 +0000
+Message-ID: <4dfyc7w93v3yyx53@quilln-payroll.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_aefbdc1e7369fbb16b7dcec8"
+
+--=_hookline_aefbdc1e7369fbb16b7dcec8
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your policy renewal needs your confirmation.
+https://portal.quilln-payroll.test/renewal/confirm?ref=wm6uezewyj
+
+--=_hookline_aefbdc1e7369fbb16b7dcec8
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Priya,</p><p>Your policy renewal needs your confirmation=
+.</p><p><a href=3D"https://portal.quilln-payroll.test/renewal/confirm?ref=3Dw=
+m6uezewyj">Open Quillon Payroll</a></p></body></html>
+
+--=_hookline_aefbdc1e7369fbb16b7dcec8--

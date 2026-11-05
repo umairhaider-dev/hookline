@@ -1,0 +1,25 @@
+Return-Path: <servicedesk@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.156]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id MIVUGK4JUW for
+ <ivan.sorensen@larkspur.test>; Thu, 03 Sep 2026 16:04:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur IT Service Desk <servicedesk@larkspur.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Your password expires in 5 days
+Date: Thu, 03 Sep 2026 16:04:00 +0000
+Message-ID: <mi6k63miv2iwr3zf@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Ivan,
+
+Your network password will expire in 5 days. Change it any time before then f=
+rom the self-service portal at https://sso.larkspur.test/password, or press C=
+trl+Alt+Del on your laptop.
+
+IT will never ask for your password by email.
+
+Larkspur IT Service Desk

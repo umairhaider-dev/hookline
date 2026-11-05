@@ -1,0 +1,49 @@
+Return-Path: <bounce-s2rnhf@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.63])
+ by mx1.larkspur.test (Postfix) with ESMTPS id CD3W6W7A88 for
+ <sam.ortega@larkspur.test>; Mon, 14 Sep 2026 08:30:27 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass header.d=weekly-ledger.test;
+ dmarc=pass header.from=weekly-ledger.test
+From: The Weekly Ledger <news@weekly-ledger.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Last chance: free shipping
+Date: Mon, 14 Sep 2026 08:30:00 +0000
+Message-ID: <x2r2ye3tweqss8y8@weekly-ledger.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_bcc26f0467fd8a64ff99e7a7"
+
+--=_hookline_bcc26f0467fd8a64ff99e7a7
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Free shipping ends today. Last chance!
+
+View online: https://weekly-ledger.test/newsletter/42j224
+
+--=_hookline_bcc26f0467fd8a64ff99e7a7
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Free shi=
+pping ends today. Last chance!</div><p>Free shipping ends today. Last chance!=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-=
+ledger.test%2Fp%2Fnugnrdid&id=3Dfexiantawbpwwb93xmd4cfx9">See details</a></p>=
+<p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledg=
+er.test%2Fp%2F3s7abwwd&id=3D4xkfbjpjfyz5yjxqs8cv7tzt">Shop now</a></p><p><a h=
+ref=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test=
+%2Fp%2Fsa8gzjq3&id=3Dfbihdpmszjmkbyr69py27pwb">Shop now</a></p><p><a href=3D"=
+https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2F=
+ae3ydq24&id=3D2qbsbs5rqypw5tv9pk8tivuf">Read more</a></p><p><a href=3D"https:=
+//click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2Fa9rkw6=
+pd&id=3Dpzc6m5ivbhjaivjygk73f4x3">Read more</a></p><p><a href=3D"https://clic=
+k.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2Fcrnaciq5&id=
+=3Dgbdwehh9i5amqjhy9eypqetm">Shop now</a></p><p>Thanks for reading.</p><p sty=
+le=3D"color:#666;font-size:12px">You receive this because you signed up at we=
+ekly-ledger.test. <a href=3D"https://click.sendwave-esp.test/unsub?u=3Dstecnd=
+4ztawc7ux4t35w">Unsubscribe</a></p></body></html>
+
+--=_hookline_bcc26f0467fd8a64ff99e7a7--

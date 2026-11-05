@@ -1,0 +1,26 @@
+Return-Path: <grace.lund@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.25]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id XFWRZSNB42 for
+ <dana.whitfield@larkspur.test>; Wed, 23 Sep 2026 13:12:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Grace Lund <grace.lund@larkspur.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Cc: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Q4 planning notes
+Date: Wed, 23 Sep 2026 13:12:00 +0000
+Message-ID: <4p2txd9tzipftr23@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Dana,
+
+Quick note: the planning notes from this morning are in the shared folder. Le=
+t me know if anything is missing or if you want to go through it together.
+
+Notes: https://wiki.larkspur.test/pages/9q6x65
+
+Thanks,
+Grace

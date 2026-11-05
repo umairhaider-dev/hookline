@@ -1,0 +1,25 @@
+Return-Path: <dana.whitfield@larksur.test>
+Received: from mail.larksur.test (mail.larksur.test [203.0.113.112]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id YV5MHVU776 for
+ <sam.ortega@larkspur.test>; Wed, 23 Sep 2026 07:10:09 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larksur.test; dkim=pass header.d=larksur.test; dmarc=pass
+ header.from=larksur.test
+From: Dana Whitfield <dana.whitfield@larksur.test>
+Reply-To: Dana Whitfield <dana21@quickpost-mail.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Vendor bank change
+Date: Wed, 23 Sep 2026 07:10:00 +0000
+Message-ID: <uivfu33qat2tcx5b@larksur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Sam,
+
+Can you handle a payment for me this afternoon? I'm in meetings all day, so e=
+mail only. I'll send the IBAN and amount once you confirm.
+
+Thanks,
+Dana
+Sent from my phone

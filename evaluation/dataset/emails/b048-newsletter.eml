@@ -1,0 +1,45 @@
+Return-Path: <bounce-cvex5f@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [203.0.113.177])
+ by mx1.larkspur.test (Postfix) with ESMTPS id 3GDCUIGEWK for
+ <sam.ortega@larkspur.test>; Mon, 07 Sep 2026 02:03:05 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=cartwheel-outdoor.test; dmarc=pass
+ header.from=cartwheel-outdoor.test
+From: Cartwheel Outdoor <news@cartwheel-outdoor.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Autumn sale: up to 40% off
+Date: Mon, 07 Sep 2026 02:03:00 +0000
+Message-ID: <4krm25xzhr7hfs28@cartwheel-outdoor.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_429d66223754ed227e9329b8"
+
+--=_hookline_429d66223754ed227e9329b8
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Our autumn sale ends tonight, so act now.
+
+View online: https://cartwheel-outdoor.test/newsletter/7ftici
+
+--=_hookline_429d66223754ed227e9329b8
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Our autu=
+mn sale ends tonight, so act now.</div><p>Our autumn sale ends tonight, so ac=
+t now.</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fc=
+artwheel-outdoor.test%2Fp%2Ffnj8xeyw&id=3Du48sxdfsksfedsixx9jndj52">Read more=
+</a></p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcar=
+twheel-outdoor.test%2Fp%2Fbqve8gej&id=3Dn67qf85ianpg7rs5xdbqbqup">See details=
+</a></p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fcar=
+twheel-outdoor.test%2Fp%2F7nmpvsik&id=3Ddq7xv3wvdwfudwrjmr7bnwhz">See details=
+</a></p><p>Thanks for reading.</p><p style=3D"color:#666;font-size:12px">You =
+receive this because you signed up at cartwheel-outdoor.test. <a href=3D"http=
+s://click.sendwave-esp.test/unsub?u=3D8vege258esq6w84z6wdg">Unsubscribe</a></=
+p></body></html>
+
+--=_hookline_429d66223754ed227e9329b8--

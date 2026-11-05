@@ -1,0 +1,39 @@
+Return-Path: <accounts@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [198.51.100.61]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id WHCWF7HRP6 for <sam.ortega@larkspur.test>; Sat, 19
+ Sep 2026 13:19:16 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics Accounts <accounts@brightwater-logistics.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Invoice INV-2026-4796 - payment reminder
+Date: Sat, 19 Sep 2026 13:19:00 +0000
+Message-ID: <v4zaqhx3r5rxr2cv@brightwater-logistics.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_c41ef275a9a0297ac5ede3ef"
+
+--=_hookline_c41ef275a9a0297ac5ede3ef
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+This is a friendly reminder that invoice INV-2026-4796 is now overdue. If you=
+ have already paid, please ignore this message.
+
+Questions? Reply to this email or call your account manager.
+
+Brightwater Logistics Accounts
+
+--=_hookline_c41ef275a9a0297ac5ede3ef
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-4796.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_c41ef275a9a0297ac5ede3ef--

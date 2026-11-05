@@ -1,0 +1,35 @@
+Return-Path: <security@xn--frnhill-bank-sck.test>
+Received: from mail.xn--frnhill-bank-sck.test (mail.xn--frnhill-bank-sck.test
+ [203.0.113.32]) by mx1.larkspur.test (Postfix) with ESMTPS id XEZ4XXGM7S for
+ <tomas.reyes@larkspur.test>; Fri, 18 Sep 2026 09:17:01 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=xn--frnhill-bank-sck.test; dkim=pass
+ header.d=xn--frnhill-bank-sck.test; dmarc=pass
+ header.from=xn--frnhill-bank-sck.test
+From: Security Team <security@xn--frnhill-bank-sck.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: New sign-in to your account
+Date: Fri, 18 Sep 2026 09:17:00 +0000
+Message-ID: <mjybz7hg5w474jkd@xn--frnhill-bank-sck.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_2aaa97150413441b9a135715"
+
+--=_hookline_2aaa97150413441b9a135715
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+We noticed a sign-in from a new device. Verify your account: https://login.xn=
+--frnhill-bank-sck.test/session/wci9i3ddt4
+
+--=_hookline_2aaa97150413441b9a135715
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>We noticed a sign-in from a new device.</p><p>If this was not =
+you, verify your account: <a href=3D"https://login.xn--frnhill-bank-sck.test/=
+session/wci9i3ddt4">https://login.fernhill-bank.test/security</a></p></body><=
+/html>
+
+--=_hookline_2aaa97150413441b9a135715--

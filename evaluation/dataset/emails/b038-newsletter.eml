@@ -1,0 +1,43 @@
+Return-Path: <bounce-9kvfjq@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [203.0.113.110])
+ by mx1.larkspur.test (Postfix) with ESMTPS id I63FC68NPZ for
+ <ruth.calder@larkspur.test>; Mon, 21 Sep 2026 00:49:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass header.d=weekly-ledger.test;
+ dmarc=pass header.from=weekly-ledger.test
+From: The Weekly Ledger <news@weekly-ledger.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Your monthly reading list
+Date: Mon, 21 Sep 2026 00:49:00 +0000
+Message-ID: <ac5jued4xe6amk2u@weekly-ledger.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_143c73d674e22e1ad820073c"
+
+--=_hookline_143c73d674e22e1ad820073c
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Here are this month's picks.
+
+View online: https://weekly-ledger.test/newsletter/rdcg3d
+
+--=_hookline_143c73d674e22e1ad820073c
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Here are=
+ this month's picks.</div><p>Here are this month's picks.</p><p><a href=3D"ht=
+tps://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2F43=
+qtfy56&id=3Dx6dp5i9ncsmkrsrdkyy4fnvi">Shop now</a></p><p><a href=3D"https://c=
+lick.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2F98rra6iy&=
+id=3Dvijrxh5kj73phuaz9pcdtvnh">See details</a></p><p><a href=3D"https://click=
+.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fweekly-ledger.test%2Fp%2Fv6hkw67z&id=
+=3Dukeca79fxsg959nwayfusrfi">See details</a></p><p>Thanks for reading.</p><p =
+style=3D"color:#666;font-size:12px">You receive this because you signed up at=
+ weekly-ledger.test. <a href=3D"https://click.sendwave-esp.test/unsub?u=3Dbb3=
+juzmkgvw2mywqzizs">Unsubscribe</a></p></body></html>
+
+--=_hookline_143c73d674e22e1ad820073c--

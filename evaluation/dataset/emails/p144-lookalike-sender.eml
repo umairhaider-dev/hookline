@@ -1,0 +1,36 @@
+Return-Path: <notifications@brightwater-logistics-billing.test>
+Received: from mail.brightwater-logistics-billing.test
+ (mail.brightwater-logistics-billing.test [203.0.113.7]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id WWAUFUZXQ3 for <hana.ito@larkspur.test>; Tue, 27 Oct
+ 2026 15:08:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics-billing.test; dkim=pass
+ header.d=brightwater-logistics-billing.test; dmarc=pass
+ header.from=brightwater-logistics-billing.test
+From: Brightwater Logistics <notifications@brightwater-logistics-billing.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Brightwater Logistics: new document
+Date: Tue, 27 Oct 2026 15:08:00 +0000
+Message-ID: <zqn568vj8qg3s5zz@brightwater-logistics-billing.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_e7564357261d609473177f62"
+
+--=_hookline_e7564357261d609473177f62
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your payslip for this month is ready. Sign in to view it.
+https://portal.brightwater-logistics-billing.test/payslip/view?ref=4i8jbuikjc
+
+--=_hookline_e7564357261d609473177f62
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Hana,</p><p>Your payslip for this month is ready. Sign i=
+n to view it.</p><p><a href=3D"https://portal.brightwater-logistics-billing.t=
+est/payslip/view?ref=3D4i8jbuikjc">Open Brightwater Logistics</a></p></body><=
+/html>
+
+--=_hookline_e7564357261d609473177f62--

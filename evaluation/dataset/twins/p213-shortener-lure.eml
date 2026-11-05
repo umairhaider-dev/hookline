@@ -1,0 +1,32 @@
+Return-Path: <postmaster@online-auth-qdc.test>
+Received: from mail.online-auth-qdc.test (mail.online-auth-qdc.test
+ [198.51.100.202]) by mx1.larkspur.test (Postfix) with ESMTPS id SRHPHXPVUB
+ for <lena.okafor@larkspur.test>; Thu, 22 Oct 2026 21:03:26 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=online-auth-qdc.test; dkim=none header.d=online-auth-qdc.test;
+ dmarc=fail header.from=online-auth-qdc.test
+From: Mail Delivery System <postmaster@online-auth-qdc.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Mailbox full
+Date: Thu, 22 Oct 2026 21:03:00 +0000
+Message-ID: <vmgyneavexxr69zk@online-auth-qdc.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_c8629a23de860fb67073732a"
+
+--=_hookline_c8629a23de860fb67073732a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your shared drive access expires today. Renew it here:
+https://lnk.example.org/bm5tu37
+
+--=_hookline_c8629a23de860fb67073732a
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Your shared drive access expires today. Renew it here:</p><p><=
+a href=3D"https://lnk.example.org/bm5tu37">Review now</a></p></body></html>
+
+--=_hookline_c8629a23de860fb67073732a--

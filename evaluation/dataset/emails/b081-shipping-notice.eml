@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [198.51.100.72]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id 9ZP5B74NFF for <aisha.karim@larkspur.test>; Thu, 08
+ Oct 2026 22:58:28 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Parcel BW27214738 is on its way
+Date: Thu, 08 Oct 2026 22:58:00 +0000
+Message-ID: <qv2n4z75z2gqevh6@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Aisha,
+
+Your parcel BW27214738 is on its way.
+Track it here: https://lnk.example.org/67u8ims
+
+Brightwater Logistics

@@ -1,0 +1,40 @@
+Return-Path: <priya.raman@meridel-workspace.test>
+Received: from mail.meridel-workspace.test (mail.meridel-workspace.test
+ [203.0.113.179]) by mx1.larkspur.test (Postfix) with ESMTPS id HE4XQQQ9JU for
+ <marcus.bell@larkspur.test>; Mon, 12 Oct 2026 14:40:09 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=meridel-workspace.test; dkim=pass
+ header.d=meridel-workspace.test; dmarc=pass
+ header.from=meridel-workspace.test
+From: Priya Raman <priya.raman@meridel-workspace.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Q4 vendor scorecard
+Date: Mon, 12 Oct 2026 14:40:00 +0000
+Message-ID: <9zqzsi5kzngaugzm@meridel-workspace.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_c7e0ec47e5fc339fef326f4c"
+
+--=_hookline_c7e0ec47e5fc339fef326f4c
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Marcus,
+
+Sharing the onboarding pack for the new project. It's here: https://files.mer=
+idel-workspace.test/s/3azhnqycis
+
+Kind regards,
+Priya Raman
+
+--=_hookline_c7e0ec47e5fc339fef326f4c
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Marcus,</p><p>Sharing the onboarding pack for the new proje=
+ct. It's here: <a href=3D"https://files.meridel-workspace.test/s/3azhnqycis">=
+https://files.meridel-workspace.test/s/3azhnqycis</a></p><p>Kind regards,<br>=
+Priya Raman</p></body></html>
+
+--=_hookline_c7e0ec47e5fc339fef326f4c--

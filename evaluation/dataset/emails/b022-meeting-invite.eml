@@ -1,0 +1,38 @@
+Return-Path: <omar.haddad@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.52]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id UEP9NVNQ7Q for
+ <tomas.reyes@larkspur.test>; Wed, 07 Oct 2026 09:51:01 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Omar Haddad <omar.haddad@larkspur.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: Invitation: Design walkthrough
+Date: Wed, 07 Oct 2026 09:51:00 +0000
+Message-ID: <sug9mq94dj3dpbj4@larkspur.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_2d944bd6c85a4797760b0fe0"
+
+--=_hookline_2d944bd6c85a4797760b0fe0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I've booked 30 minutes for design walkthrough on Monday 12 October at 14:43. =
+The invite is attached; let me know if the time doesn't work.
+
+Omar
+
+--=_hookline_2d944bd6c85a4797760b0fe0
+Content-Type: text/calendar
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invite.ics"
+MIME-Version: 1.0
+
+QkVHSU46VkNBTEVOREFSClZFUlNJT046Mi4wCkJFR0lOOlZFVkVOVApTVU1NQVJZOkRlc2lnbiB3
+YWxrdGhyb3VnaApEVFNUQVJUOjIwMjYxMDEyVDE0NDMwMFoKRFVSQVRJT046UFQzME0KT1JHQU5J
+WkVSOm1haWx0bzpvbWFyLmhhZGRhZEBsYXJrc3B1ci50ZXN0CkVORDpWRVZFTlQKRU5EOlZDQUxF
+TkRBUgo=
+
+--=_hookline_2d944bd6c85a4797760b0fe0--

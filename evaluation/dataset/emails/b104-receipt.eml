@@ -1,0 +1,34 @@
+Return-Path: <orders@halden-travel.test>
+Received: from mail.halden-travel.test (mail.halden-travel.test
+ [203.0.113.86]) by mx1.larkspur.test (Postfix) with ESMTPS id XVJMBE7WQG for
+ <tomas.reyes@larkspur.test>; Fri, 11 Sep 2026 13:22:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=halden-travel.test; dkim=pass header.d=halden-travel.test;
+ dmarc=pass header.from=halden-travel.test
+From: Halden Travel <orders@halden-travel.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: Your Halden Travel order #466218
+Date: Fri, 11 Sep 2026 13:22:00 +0000
+Message-ID: <azp4sxsbesze2sby@halden-travel.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_0d4ea8b6973972b04c71b410"
+
+--=_hookline_0d4ea8b6973972b04c71b410
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order #466218. Total paid: EUR 210.76.
+https://halden-travel.test/orders/466218
+
+--=_hookline_0d4ea8b6973972b04c71b410
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Thanks for your order #466218.</p><p>Total paid: EUR 210.76</p=
+><p><a href=3D"https://halden-travel.test/orders/466218">View your order</a><=
+/p><p style=3D"color:#666;font-size:12px">Halden Travel, 12 Example Street</p=
+></body></html>
+
+--=_hookline_0d4ea8b6973972b04c71b410--

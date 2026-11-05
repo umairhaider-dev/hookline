@@ -1,0 +1,40 @@
+Return-Path: <ivan.sorensen@meridel-workspace.test>
+Received: from mail.meridel-workspace.test (mail.meridel-workspace.test
+ [203.0.113.244]) by mx1.larkspur.test (Postfix) with ESMTPS id Z9T7KE4RN6 for
+ <priya.raman@larkspur.test>; Tue, 27 Oct 2026 19:08:29 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=meridel-workspace.test; dkim=pass
+ header.d=meridel-workspace.test; dmarc=pass
+ header.from=meridel-workspace.test
+From: Ivan Sorensen <ivan.sorensen@meridel-workspace.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Onboarding pack
+Date: Tue, 27 Oct 2026 19:08:00 +0000
+Message-ID: <kfvwbjifcpinuyeb@meridel-workspace.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_9aac0ba777761262040a8285"
+
+--=_hookline_9aac0ba777761262040a8285
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Priya,
+
+I've shared the Q4 vendor scorecard with you. You can review it here: https:/=
+/files.meridel-workspace.test/s/brcb8hrfq5
+
+Kind regards,
+Ivan Sorensen
+
+--=_hookline_9aac0ba777761262040a8285
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Priya,</p><p>I've shared the Q4 vendor scorecard with you. =
+You can review it here: <a href=3D"https://files.meridel-workspace.test/s/brc=
+b8hrfq5">https://files.meridel-workspace.test/s/brcb8hrfq5</a></p><p>Kind reg=
+ards,<br>Ivan Sorensen</p></body></html>
+
+--=_hookline_9aac0ba777761262040a8285--

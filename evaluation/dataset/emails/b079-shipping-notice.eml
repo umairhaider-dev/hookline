@@ -1,0 +1,24 @@
+Return-Path: <notifications@brightwater-logistics.test>
+Received: from mail.brightwater-logistics.test
+ (mail.brightwater-logistics.test [198.51.100.25]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id 3MKPEAF3FI for <grace.lund@larkspur.test>; Sun, 11
+ Oct 2026 15:09:12 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics.test; dkim=pass
+ header.d=brightwater-logistics.test; dmarc=pass
+ header.from=brightwater-logistics.test
+From: Brightwater Logistics <notifications@brightwater-logistics.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Parcel BW26355375 will arrive tomorrow
+Date: Sun, 11 Oct 2026 15:09:00 +0000
+Message-ID: <r7d46hb3xnr5y7zi@brightwater-logistics.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello Grace,
+
+Your parcel BW26355375 will arrive tomorrow.
+Track it here: https://lnk.example.org/vavwgu7
+
+Brightwater Logistics

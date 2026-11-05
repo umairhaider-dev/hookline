@@ -1,0 +1,39 @@
+Return-Path: <ruth@meridel-design.test>
+Received: from mail.meridel-design.test (mail.meridel-design.test
+ [203.0.113.234]) by mx1.larkspur.test (Postfix) with ESMTPS id 58QE954TV5 for
+ <marcus.bell@larkspur.test>; Wed, 07 Oct 2026 14:02:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=meridel-design.test; dkim=pass header.d=meridel-design.test;
+ dmarc=pass header.from=meridel-design.test
+From: Ruth Calder <ruth@meridel-design.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Re: Draft proposal
+Date: Wed, 07 Oct 2026 14:02:00 +0000
+Message-ID: <s9c69yb8kvvg98ee@meridel-design.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_fabd8c058567b1dc371777fe"
+
+--=_hookline_fabd8c058567b1dc371777fe
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Marcus,
+
+Thanks, that works for us. I've attached the revised draft proposal with the =
+changes we discussed.
+
+Best,
+Ruth
+
+On Monday, Marcus Bell wrote:
+> Could you send the revised draft proposal when it's ready?
+
+--=_hookline_fabd8c058567b1dc371777fe
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="draft-proposal.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_fabd8c058567b1dc371777fe--

@@ -1,0 +1,47 @@
+Return-Path: <bounce-s2pysb@mail.sendwave-esp.test>
+Received: from out.sendwave-esp.test (out.sendwave-esp.test [198.51.100.137])
+ by mx1.larkspur.test (Postfix) with ESMTPS id T52K5IIAHP for
+ <omar.haddad@larkspur.test>; Sun, 13 Sep 2026 00:18:07 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail.sendwave-esp.test; dkim=pass
+ header.d=northpine-books.test; dmarc=pass header.from=northpine-books.test
+From: Northpine Books <news@northpine-books.test>
+To: Omar Haddad <omar.haddad@larkspur.test>
+Subject: New arrivals this week
+Date: Sun, 13 Sep 2026 00:18:00 +0000
+Message-ID: <2baf7cpewx79parp@northpine-books.test>
+List-Unsubscribe: <https://click.sendwave-esp.test/unsub>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_c1b0509f13104b54362398da"
+
+--=_hookline_c1b0509f13104b54362398da
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Take a look at what arrived this week.
+
+View online: https://northpine-books.test/newsletter/89fxw8
+
+--=_hookline_c1b0509f13104b54362398da
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><div style=3D"display:none;max-height:0;overflow:hidden">Take a l=
+ook at what arrived this week.</div><p>Take a look at what arrived this week.=
+</p><p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpi=
+ne-books.test%2Fp%2Fv8nw63gs&id=3Dz3w28thp64kwcjt84et3z3uh">Read more</a></p>=
+<p><a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-b=
+ooks.test%2Fp%2F6acvyzsr&id=3Deg4hvkmh33x339xymj4uipxe">Read more</a></p><p><=
+a href=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books=
+.test%2Fp%2Fear53pti&id=3Djqrhuc2ui2tetpqvgzfzbehw">Shop now</a></p><p><a hre=
+f=3D"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books.test=
+%2Fp%2Fa7i6td6c&id=3Dc7h8quxxqppubqmbt5zetfh3">Read more</a></p><p><a href=3D=
+"https://click.sendwave-esp.test/c?u=3Dhttps%3A%2F%2Fnorthpine-books.test%2Fp=
+%2F4qdzxse8&id=3Di577nxnh3kuneb6nnsnubbey">Shop now</a></p><p>Thanks for read=
+ing.</p><p style=3D"color:#666;font-size:12px">You receive this because you s=
+igned up at northpine-books.test. <a href=3D"https://click.sendwave-esp.test/=
+unsub?u=3D4asykwyvgcmy4b7gxgjz">Unsubscribe</a></p></body></html>
+
+--=_hookline_c1b0509f13104b54362398da--

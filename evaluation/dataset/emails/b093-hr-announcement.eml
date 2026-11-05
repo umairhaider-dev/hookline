@@ -1,0 +1,23 @@
+Return-Path: <people@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.31]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id 7JD5PE68IG for
+ <jordan.pike@larkspur.test>; Sun, 04 Oct 2026 14:17:12 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur People Team <people@larkspur.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Action required: confirm your emergency contact
+Date: Sun, 04 Oct 2026 14:17:00 +0000
+Message-ID: <a44rhq6xpwf6mxew@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+A reminder that please confirm your emergency contact details this week. You =
+can do it here: https://benefits.corvel-insurance.test/enroll
+
+Thanks,
+People Team

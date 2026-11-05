@@ -1,0 +1,42 @@
+Return-Path: <marcus@harrow-consu1ting.test>
+Received: from mail.harrow-consu1ting.test (mail.harrow-consu1ting.test
+ [203.0.113.200]) by mx1.larkspur.test (Postfix) with ESMTPS id IQ4DVMP7X4 for
+ <jordan.pike@larkspur.test>; Sun, 20 Sep 2026 01:31:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=harrow-consu1ting.test; dkim=none
+ header.d=harrow-consu1ting.test; dmarc=none
+ header.from=harrow-consu1ting.test
+From: Marcus Bell <marcus@harrow-consu1ting.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Re: Contract renewal
+Date: Sun, 20 Sep 2026 01:31:00 +0000
+Message-ID: <dkc4x25x7r784smq@harrow-consu1ting.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_0e5c17606bdf57b20ec117a5"
+
+--=_hookline_0e5c17606bdf57b20ec117a5
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Jordan,
+
+As discussed, here is the contract renewal with the new payment details: http=
+s://share-update-26k.test/doc/mvvezwg8
+
+Best,
+Marcus
+
+On Tuesday, Jordan Pike wrote:
+> Thanks, please send the contract renewal when ready.
+
+--=_hookline_0e5c17606bdf57b20ec117a5
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hi Jordan,</p><p>As discussed, here is the contract renewal wi=
+th the new payment details: <a href=3D"https://share-update-26k.test/doc/mvve=
+zwg8">the document</a></p><p>Best,<br>Marcus</p></body></html>
+
+--=_hookline_0e5c17606bdf57b20ec117a5--

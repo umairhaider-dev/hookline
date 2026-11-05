@@ -1,0 +1,23 @@
+Return-Path: <people@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.197]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id 8F8X3PYB99 for
+ <dana.whitfield@larkspur.test>; Sat, 24 Oct 2026 08:50:11 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Larkspur People Team <people@larkspur.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Subject: Reminder: annual security training
+Date: Sat, 24 Oct 2026 08:50:00 +0000
+Message-ID: <nnh7qgxjgnwzf4gc@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+A reminder that the annual security training is due by the end of the month. =
+You can do it here: https://benefits.corvel-insurance.test/enroll
+
+Thanks,
+People Team

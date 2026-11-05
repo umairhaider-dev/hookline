@@ -1,0 +1,24 @@
+Return-Path: <ruth.calder.coo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [198.51.100.61]) by mx1.larkspur.test (Postfix) with ESMTPS id HV2NW2Y595 for
+ <grace.lund@larkspur.test>; Wed, 28 Oct 2026 14:11:24 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Ruth Calder <ruth.calder.coo@quickpost-mail.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Urgent payment
+Date: Wed, 28 Oct 2026 14:11:00 +0000
+Message-ID: <htuzkpsneguwk69i@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Grace,
+
+I need you to process a wire transfer to a new vendor today. Keep this confid=
+ential until the deal is announced.
+
+Thanks,
+Ruth
+Sent from my phone

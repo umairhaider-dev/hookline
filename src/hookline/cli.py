@@ -20,11 +20,21 @@ from pydantic import ValidationError
 from rich.console import Console
 
 from hookline import __version__
+from hookline.ai import build_assessor
 from hookline.ai.assessor import recipient_names, should_redact
 from hookline.ai.prompt import build_prompt
 from hookline.ai.redaction import NoRedaction, Redactor
 from hookline.config import LLMProvider, Settings, load_settings
 from hookline.errors import ConfigError, HooklineError
+from hookline.evaluation import (
+    generate,
+    load_dataset,
+    render_markdown,
+    run_evaluation,
+    summary_table,
+    write_dataset,
+)
+from hookline.evaluation.runner import probe_assessor, write_predictions
 from hookline.intel.store import DATABASE_NAME
 from hookline.logging_config import configure_logging
 from hookline.models.report import Report
@@ -364,6 +374,79 @@ def serve(
             err=True,
         )
     uvicorn.run(create_app(settings), host=host, port=port, log_level="warning")
+
+
+eval_app = typer.Typer(
+    help="Build the synthetic dataset and measure detection quality.", no_args_is_help=True
+)
+app.add_typer(eval_app, name="eval")
+
+DEFAULT_DATASET = Path("evaluation/dataset")
+DEFAULT_RESULTS = Path("evaluation/results")
+
+
+@eval_app.command("generate")
+def eval_generate(
+    directory: Annotated[
+        Path, typer.Argument(help="Where to write the dataset.")
+    ] = DEFAULT_DATASET,
+    seed: Annotated[int, typer.Option(help="Random seed; the same seed gives the same bytes.")] = 7,
+) -> None:
+    """Write the synthetic labelled dataset (fictional names, reserved domains)."""
+    samples = generate(seed)
+    write_dataset(samples, directory)
+    phishing = sum(sample.label == "phishing" for sample in samples)
+    twins = sum(sample.twin is not None for sample in samples)
+    typer.echo(
+        f"Wrote {len(samples)} emails ({phishing} phishing, {len(samples) - phishing} benign; "
+        f"{twins} with an injection twin) to {directory}"
+    )
+
+
+@eval_app.command("run")
+def eval_run(
+    ctx: typer.Context,
+    directory: Annotated[Path, typer.Argument(help="The dataset to evaluate.")] = DEFAULT_DATASET,
+    output: Annotated[
+        Path, typer.Option("--output", "-o", help="Folder for the result files.")
+    ] = DEFAULT_RESULTS,
+    use_ai: Annotated[
+        bool, typer.Option("--ai/--no-ai", help="Also evaluate the AI-only and combined modes.")
+    ] = True,
+) -> None:
+    """Measure precision, recall, F1 and false positives for each analysis mode."""
+    settings = _settings_from(ctx)
+    try:
+        entries = load_dataset(directory)
+    except HooklineError as exc:
+        _error(str(exc))
+        raise typer.Exit(code=EXIT_ANALYSIS_ERROR) from exc
+    assessor = None
+    if use_ai:
+        setup = build_assessor(settings)
+        reason = (
+            setup.reason if setup.assessor is None else probe_assessor(setup.assessor, entries[0])
+        )
+        if reason is None:
+            assessor = setup.assessor
+        else:
+            typer.echo(f"Language model not used ({reason}); evaluating rules only.", err=True)
+
+    def progress(done: int, total: int) -> None:
+        if done % 20 == 0 or done == total:
+            typer.echo(f"Analysed {done}/{total}", err=True)
+
+    try:
+        result = run_evaluation(entries, settings, assessor=assessor, on_progress=progress)
+    finally:
+        if assessor is not None:
+            assessor.close()
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "results.json").write_text(result.model_dump_json(indent=2) + "\n", encoding="utf-8")
+    (output / "RESULTS.md").write_text(render_markdown(result), encoding="utf-8")
+    write_predictions(result, output / "predictions.csv")
+    typer.echo(summary_table(result))
+    typer.echo(f"Results written to {output}", err=True)
 
 
 @app.command("config")

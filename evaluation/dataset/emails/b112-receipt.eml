@@ -1,0 +1,35 @@
+Return-Path: <orders@cartwheel-outdoor.test>
+Received: from mail.cartwheel-outdoor.test (mail.cartwheel-outdoor.test
+ [203.0.113.103]) by mx1.larkspur.test (Postfix) with ESMTPS id TYJX7M6S7D for
+ <omar.haddad@larkspur.test>; Tue, 22 Sep 2026 00:49:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=cartwheel-outdoor.test; dkim=pass
+ header.d=cartwheel-outdoor.test; dmarc=pass
+ header.from=cartwheel-outdoor.test
+From: Cartwheel Outdoor <orders@cartwheel-outdoor.test>
+To: Omar Haddad <omar.haddad@larkspur.test>
+Subject: Your Cartwheel Outdoor order #231248
+Date: Tue, 22 Sep 2026 00:49:00 +0000
+Message-ID: <vpq8vzaiehqibk9k@cartwheel-outdoor.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_c31f257185994e875b8020f1"
+
+--=_hookline_c31f257185994e875b8020f1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order #231248. Total paid: EUR 329.67.
+https://cartwheel-outdoor.test/orders/231248
+
+--=_hookline_c31f257185994e875b8020f1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Thanks for your order #231248.</p><p>Total paid: EUR 329.67</p=
+><p><a href=3D"https://cartwheel-outdoor.test/orders/231248">View your order<=
+/a></p><p style=3D"color:#666;font-size:12px">Cartwheel Outdoor, 12 Example S=
+treet</p></body></html>
+
+--=_hookline_c31f257185994e875b8020f1--

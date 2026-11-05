@@ -1,0 +1,16 @@
+# Configuration for the evaluation dataset's fictional organisation, Larkspur.
+# Use with: hookline --config evaluation/hookline-eval.toml eval run
+
+[checks]
+protected_domains = [
+    "larkspur.test",
+    "quillon-payroll.test",
+    "brightwater-logistics.test",
+    "tamsin.test",
+    "corvel-insurance.test",
+    "fernhill-bank.test",
+    "orrin-analytics.test",
+]
+freemail_domains = ["inboxmail.test", "quickpost-mail.test"]
+url_shorteners = ["lnk.example.org"]
+trusted_authserv_ids = ["mx1.larkspur.test"]

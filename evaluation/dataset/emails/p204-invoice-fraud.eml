@@ -1,0 +1,37 @@
+Return-Path: <accounts@tamsins.test>
+Received: from mail.tamsins.test (mail.tamsins.test [198.51.100.182]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id MRAXK6DJBS for
+ <ruth.calder@larkspur.test>; Wed, 16 Sep 2026 18:22:27 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=tamsins.test; dkim=pass header.d=tamsins.test; dmarc=pass
+ header.from=tamsins.test
+From: Tamsin Cloud Accounts <accounts@tamsins.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Overdue: INV-2026-5962
+Date: Wed, 16 Sep 2026 18:22:00 +0000
+Message-ID: <sk3srbtwrh3xggai@tamsins.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_90834bddffc67caf669e6f9d"
+
+--=_hookline_90834bddffc67caf669e6f9d
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Invoice INV-2026-5962 is past due. Please note our new banking information be=
+low and remit payment today to avoid a late fee.
+
+IBAN: XX25 0000 0000 2870 00
+
+Tamsin Cloud Accounts
+
+--=_hookline_90834bddffc67caf669e6f9d
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="INV-2026-5962.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_90834bddffc67caf669e6f9d--

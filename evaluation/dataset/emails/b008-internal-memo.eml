@@ -1,0 +1,23 @@
+Return-Path: <sam.ortega@larkspur.test>
+Received: from mail.larkspur.test (mail.larkspur.test [192.0.2.113]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id NPBSPURWS4 for
+ <ruth.calder@larkspur.test>; Mon, 14 Sep 2026 00:11:28 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur.test; dkim=pass header.d=larkspur.test; dmarc=pass
+ header.from=larkspur.test
+From: Sam Ortega <sam.ortega@larkspur.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Customer feedback
+Date: Mon, 14 Sep 2026 00:11:00 +0000
+Message-ID: <idy74ijb6majmj8h@larkspur.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ruth,
+
+Quick note: I summarised last week's customer feedback. Let me know if anythi=
+ng is missing or if you want to go through it together.
+
+Thanks,
+Sam

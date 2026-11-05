@@ -1,0 +1,40 @@
+Return-Path: <jordan@harrow-consulting.test>
+Received: from mail.harrow-consulting.test (mail.harrow-consulting.test
+ [203.0.113.101]) by mx1.larkspur.test (Postfix) with ESMTPS id I7BFZUJYWW for
+ <jordan.pike@larkspur.test>; Sat, 26 Sep 2026 13:15:20 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=harrow-consulting.test; dkim=pass
+ header.d=harrow-consulting.test; dmarc=pass
+ header.from=harrow-consulting.test
+From: Jordan Pike <jordan@harrow-consulting.test>
+To: Jordan Pike <jordan.pike@larkspur.test>
+Subject: Re: Contract renewal
+Date: Sat, 26 Sep 2026 13:15:00 +0000
+Message-ID: <49ajipzq3x2i6crx@harrow-consulting.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_15e53c226e267ef4735eb0b5"
+
+--=_hookline_15e53c226e267ef4735eb0b5
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Jordan,
+
+Thanks, that works for us. I've attached the revised contract renewal with th=
+e changes we discussed.
+
+Best,
+Jordan
+
+On Monday, Jordan Pike wrote:
+> Could you send the revised contract renewal when it's ready?
+
+--=_hookline_15e53c226e267ef4735eb0b5
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="contract-renewal.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
+
+--=_hookline_15e53c226e267ef4735eb0b5--
