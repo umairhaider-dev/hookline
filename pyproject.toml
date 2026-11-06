@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling>=1.25"]
+requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
@@ -7,6 +7,8 @@ name = "hookline"
 version = "0.1.0"
 description = "Phishing email analyzer that pairs deterministic security checks with language model explanations."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 keywords = ["phishing", "email", "security", "soc", "threat-analysis"]
 classifiers = [
