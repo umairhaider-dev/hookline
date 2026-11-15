@@ -878,6 +878,63 @@ def _gift_card(kit: _Kit) -> Draft:
     return _envelope(kit, draft, ip=kit.public_ip())
 
 
+def _scam(kit: _Kit) -> Draft:
+    """Prize, advance-fee and callback scams: no links or attachments, only a story."""
+    recipient = kit.staff()
+    number = kit.rng.randrange(10, 99)
+    kind = kit.rng.randrange(3)
+    if kind == 2:
+        # Callback scam: a fake renewal from an authenticated domain, with a phone
+        # number from the fictional 555-01xx range as the only way to act.
+        domain = f"{kit.pick(('renewguard', 'pcshield', 'carelink'))}-{kit.token(3)}.test"
+        phone = f"+1 202 555 01{number}"
+        text = (
+            f"Hello {recipient.name.split()[0]},\n\nThank you for renewing your Total Device "
+            "Protection plan. USD 399.99 will be charged to your account today.\n\nIf you did "
+            f"not authorise this renewal, call our billing team on {phone} within 24 hours to "
+            "cancel and receive a full refund.\n\nBilling Support\n"
+        )
+        draft = Draft(
+            Mailbox("Billing Support", f"billing@{domain}"),
+            [recipient],
+            f"Order confirmation #{kit.rng.randrange(100000, 999999)}",
+            kit.date(),
+            text,
+        )
+        return _envelope(kit, draft, ip=kit.public_ip())
+
+    freemail = kit.pick(FREEMAIL)
+    other = next(domain for domain in FREEMAIL if domain != freemail)
+    if kind == 0:
+        sender = Mailbox("Online Promotions Board", f"awards.desk{number}@{freemail}")
+        reply_to = Mailbox("Claims Agent", f"claims.agent{number}@{other}")
+        subject = "Winning notification"
+        body = (
+            "Your email address was selected in our annual online draw and has won "
+            "USD 750,000.00. To claim your prize, reply with your full name, address and phone "
+            "number. A processing fee of USD 185 is payable before the funds are released."
+        )
+    else:
+        sender = Mailbox("Adrian Mercer, Esq.", f"adrian.mercer.esq@{freemail}")
+        reply_to = Mailbox("Adrian Mercer", f"a.mercer{number}@{other}")
+        subject = "Confidential proposal"
+        body = (
+            "I am a solicitor handling the estate of a late client who shares your surname. "
+            "The unclaimed balance of GBP 4.2 million will be forfeited unless a beneficiary "
+            "comes forward, and I propose that we share it. Kindly reply with your direct "
+            "telephone number so we can proceed."
+        )
+    draft = Draft(
+        sender,
+        [recipient],
+        subject,
+        kit.date(),
+        f"Dear {recipient.name.split()[0]},\n\n{body}\n\nRegards,\n{sender.name}\n",
+        reply_to=reply_to,
+    )
+    return _envelope(kit, draft, ip=kit.public_ip())
+
+
 def _invoice_fraud(kit: _Kit) -> Draft:
     recipient = kit.staff()
     vendor = kit.pick(VENDORS[:4])
@@ -1034,14 +1091,15 @@ BENIGN: tuple[tuple[str, Generator, int, Difficulty], ...] = (
     ("reply_thread", _reply_thread, 8, "easy"),
 )
 PHISHING: tuple[tuple[str, Generator, int, Difficulty], ...] = (
-    ("credential_link", _credential_link, 18, "easy"),
+    ("credential_link", _credential_link, 12, "easy"),
     ("lookalike_sender", _lookalike_sender, 12, "easy"),
-    ("homoglyph_sender", _homoglyph_sender, 8, "easy"),
+    ("homoglyph_sender", _homoglyph_sender, 6, "easy"),
     ("html_attachment", _html_attachment, 8, "easy"),
     ("malware_attachment", _malware_attachment, 12, "easy"),
     ("bec_payment", _bec_payment, 12, "hard"),
-    ("gift_card", _gift_card, 10, "easy"),
-    ("invoice_fraud", _invoice_fraud, 10, "hard"),
+    ("gift_card", _gift_card, 8, "easy"),
+    ("scam", _scam, 12, "hard"),
+    ("invoice_fraud", _invoice_fraud, 8, "hard"),
     ("shortener_lure", _shortener_lure, 6, "easy"),
     ("low_signal", _low_signal, 12, "hard"),
     ("thread_hijack", _thread_hijack, 12, "hard"),

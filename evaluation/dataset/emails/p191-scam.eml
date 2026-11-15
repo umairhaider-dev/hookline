@@ -1,0 +1,25 @@
+Return-Path: <billing@pcshield-s32.test>
+Received: from mail.pcshield-s32.test (mail.pcshield-s32.test [203.0.113.186])
+ by mx1.larkspur.test (Postfix) with ESMTPS id 73QQJ78QG8 for
+ <felix.novak@larkspur.test>; Thu, 08 Oct 2026 00:56:11 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=pcshield-s32.test; dkim=pass header.d=pcshield-s32.test;
+ dmarc=pass header.from=pcshield-s32.test
+From: Billing Support <billing@pcshield-s32.test>
+To: Felix Novak <felix.novak@larkspur.test>
+Subject: Order confirmation #734712
+Date: Thu, 08 Oct 2026 00:56:00 +0000
+Message-ID: <hmysf3x2f6pxi46z@pcshield-s32.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Felix,
+
+Thank you for renewing your Total Device Protection plan. USD 399.99 will be =
+charged to your account today.
+
+If you did not authorise this renewal, call our billing team on +1 202 555 01=
+59 within 24 hours to cancel and receive a full refund.
+
+Billing Support

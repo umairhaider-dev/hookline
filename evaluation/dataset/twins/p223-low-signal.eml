@@ -1,39 +1,39 @@
-Return-Path: <sam.ortega@harrow-docs.test>
-Received: from mail.harrow-docs.test (mail.harrow-docs.test [203.0.113.123])
- by mx1.larkspur.test (Postfix) with ESMTPS id Q7YAPTMFDA for
- <sam.ortega@larkspur.test>; Sat, 12 Sep 2026 22:27:24 +0000
+Return-Path: <sam.ortega@orrin-partners.test>
+Received: from mail.orrin-partners.test (mail.orrin-partners.test
+ [198.51.100.159]) by mx1.larkspur.test (Postfix) with ESMTPS id P7CRW7RZ9W
+ for <sam.ortega@larkspur.test>; Sun, 18 Oct 2026 08:28:06 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=harrow-docs.test; dkim=pass header.d=harrow-docs.test;
- dmarc=pass header.from=harrow-docs.test
-From: Sam Ortega <sam.ortega@harrow-docs.test>
+ smtp.mailfrom=orrin-partners.test; dkim=pass header.d=orrin-partners.test;
+ dmarc=pass header.from=orrin-partners.test
+From: Sam Ortega <sam.ortega@orrin-partners.test>
 To: Sam Ortega <sam.ortega@larkspur.test>
-Subject: Onboarding pack
-Date: Sat, 12 Sep 2026 22:27:00 +0000
-Message-ID: <ehpi2rvqsa4yf85b@harrow-docs.test>
+Subject: Agreement for review
+Date: Sun, 18 Oct 2026 08:28:00 +0000
+Message-ID: <4wy9kv2hrbz7yhbg@orrin-partners.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_f08305de1d7a6dd687c67181"
+ boundary="=_hookline_bacbedf387e6f7a9c642f23d"
 
---=_hookline_f08305de1d7a6dd687c67181
+--=_hookline_bacbedf387e6f7a9c642f23d
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 Hi Sam,
 
-I've shared the Q4 vendor scorecard with you. You can review it here: https:/=
-/files.harrow-docs.test/s/gy86waka2e
+Sharing the onboarding pack for the new project. It's here: https://files.orr=
+in-partners.test/s/q65hut97hr
 
 Kind regards,
 Sam Ortega
 
---=_hookline_f08305de1d7a6dd687c67181
+--=_hookline_bacbedf387e6f7a9c642f23d
 MIME-Version: 1.0
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-<html><body><p>Hi Sam,</p><p>I've shared the Q4 vendor scorecard with you. Yo=
-u can review it here: <a href=3D"https://files.harrow-docs.test/s/gy86waka2e"=
->https://files.harrow-docs.test/s/gy86waka2e</a></p><p>Kind regards,<br>Sam O=
-rtega</p></body></html>
+<html><body><p>Hi Sam,</p><p>Sharing the onboarding pack for the new project.=
+ It's here: <a href=3D"https://files.orrin-partners.test/s/q65hut97hr">https:=
+//files.orrin-partners.test/s/q65hut97hr</a></p><p>Kind regards,<br>Sam Orteg=
+a</p></body></html>
 
---=_hookline_f08305de1d7a6dd687c67181--
+--=_hookline_bacbedf387e6f7a9c642f23d--

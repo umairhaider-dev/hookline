@@ -1,38 +1,37 @@
-Return-Path: <accounts@my-corvel-insurance.test>
-Received: from mail.my-corvel-insurance.test (mail.my-corvel-insurance.test
- [198.51.100.115]) by mx1.larkspur.test (Postfix) with ESMTPS id 689BDZXUI6
- for <hana.ito@larkspur.test>; Sat, 12 Sep 2026 03:45:29 +0000
-Authentication-Results: mx1.larkspur.test; spf=fail
- smtp.mailfrom=my-corvel-insurance.test; dkim=none
- header.d=my-corvel-insurance.test; dmarc=fail
- header.from=my-corvel-insurance.test
-From: Corvel Insurance Accounts <accounts@my-corvel-insurance.test>
+Return-Path: <accounts@corvl-insurance.test>
+Received: from mail.corvl-insurance.test (mail.corvl-insurance.test
+ [203.0.113.16]) by mx1.larkspur.test (Postfix) with ESMTPS id KNZ8JXEXMS for
+ <hana.ito@larkspur.test>; Tue, 20 Oct 2026 18:24:18 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=corvl-insurance.test; dkim=none header.d=corvl-insurance.test;
+ dmarc=none header.from=corvl-insurance.test
+From: Corvel Insurance Accounts <accounts@corvl-insurance.test>
 To: Hana Ito <hana.ito@larkspur.test>
-Subject: Overdue: INV-2026-6602
-Date: Sat, 12 Sep 2026 03:45:00 +0000
-Message-ID: <s7ikde9w4yt67e8f@my-corvel-insurance.test>
+Subject: Overdue: INV-2026-2140
+Date: Tue, 20 Oct 2026 18:24:00 +0000
+Message-ID: <biu5gimpfq9aysxp@corvl-insurance.test>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="=_hookline_b65a495048bff3777d318b72"
+Content-Type: multipart/mixed; boundary="=_hookline_a30dfa7420de339c94a28adf"
 
---=_hookline_b65a495048bff3777d318b72
+--=_hookline_a30dfa7420de339c94a28adf
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 Hello,
 
-Invoice INV-2026-6602 is past due. Please note our new banking information be=
+Invoice INV-2026-2140 is past due. Please note our new banking information be=
 low and remit payment today to avoid a late fee.
 
-IBAN: XX50 0000 0000 9325 00
+IBAN: XX26 0000 0000 3257 00
 
 Corvel Insurance Accounts
 
---=_hookline_b65a495048bff3777d318b72
+--=_hookline_a30dfa7420de339c94a28adf
 Content-Type: application/pdf
 Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="INV-2026-6602.pdf"
+Content-Disposition: attachment; filename="INV-2026-2140.pdf"
 MIME-Version: 1.0
 
 JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
 
---=_hookline_b65a495048bff3777d318b72--
+--=_hookline_a30dfa7420de339c94a28adf--

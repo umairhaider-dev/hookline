@@ -8,8 +8,8 @@ starts with ``hookline_`` because the parser keeps no provider field), and the
 the stored event. The bundled Watchpost rules turn these events into alerts,
 one per email (grouped by its SHA-256 in ``event.code``).
 
-The event holds nothing that changes between runs of the same analysis, so
-pushing the same report twice stores it once.
+The event holds nothing that changes when the same report is pushed again, so
+pushing a saved report twice stores it once.
 """
 
 import json

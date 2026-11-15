@@ -1,0 +1,39 @@
+Return-Path: <grace.lund@harrow-group.test>
+Received: from mail.harrow-group.test (mail.harrow-group.test [203.0.113.248])
+ by mx1.larkspur.test (Postfix) with ESMTPS id XJFPWSPXIX for
+ <hana.ito@larkspur.test>; Fri, 16 Oct 2026 11:31:25 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=harrow-group.test; dkim=pass header.d=harrow-group.test;
+ dmarc=pass header.from=harrow-group.test
+From: Grace Lund <grace.lund@harrow-group.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Updated pricing
+Date: Fri, 16 Oct 2026 11:31:00 +0000
+Message-ID: <z237rxup8c3wuc7p@harrow-group.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_4cb7abb907ae68347b760ad8"
+
+--=_hookline_4cb7abb907ae68347b760ad8
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Hana,
+
+Here is the updated pricing sheet we talked about: https://files.harrow-group=
+.test/s/s4asj3wwcf Sign in with your work account to view it.
+
+Kind regards,
+Grace Lund
+
+--=_hookline_4cb7abb907ae68347b760ad8
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi Hana,</p><p>Here is the updated pricing sheet we talked abo=
+ut: <a href=3D"https://files.harrow-group.test/s/s4asj3wwcf">https://files.ha=
+rrow-group.test/s/s4asj3wwcf</a> Sign in with your work account to view it.</=
+p><p>Kind regards,<br>Grace Lund</p></body></html>
+
+--=_hookline_4cb7abb907ae68347b760ad8--

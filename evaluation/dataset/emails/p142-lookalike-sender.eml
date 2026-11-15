@@ -1,33 +1,34 @@
-Return-Path: <notifications@tamsin-billing.test>
-Received: from mail.tamsin-billing.test (mail.tamsin-billing.test
- [198.51.100.130]) by mx1.larkspur.test (Postfix) with ESMTPS id 4BT2FUP7WB
- for <omar.haddad@larkspur.test>; Fri, 02 Oct 2026 13:29:05 +0000
-Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=tamsin-billing.test; dkim=pass header.d=tamsin-billing.test;
- dmarc=pass header.from=tamsin-billing.test
-From: Tamsin Cloud <notifications@tamsin-billing.test>
-To: Omar Haddad <omar.haddad@larkspur.test>
-Subject: Tamsin Cloud: new document
-Date: Fri, 02 Oct 2026 13:29:00 +0000
-Message-ID: <erxjmq9itwwjtf48@tamsin-billing.test>
+Return-Path: <notifications@my-quillon-payroll.test>
+Received: from mail.my-quillon-payroll.test (mail.my-quillon-payroll.test
+ [198.51.100.37]) by mx1.larkspur.test (Postfix) with ESMTPS id WXXBRFVWGN for
+ <ivan.sorensen@larkspur.test>; Sun, 04 Oct 2026 18:05:25 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=my-quillon-payroll.test; dkim=none
+ header.d=my-quillon-payroll.test; dmarc=none
+ header.from=my-quillon-payroll.test
+From: Quillon Payroll <notifications@my-quillon-payroll.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Quillon Payroll notification
+Date: Sun, 04 Oct 2026 18:05:00 +0000
+Message-ID: <rd84pmh6r4iguie8@my-quillon-payroll.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_d83fa0c09d6921e801d19f21"
+ boundary="=_hookline_9925ebd98590e98ffc46d649"
 
---=_hookline_d83fa0c09d6921e801d19f21
+--=_hookline_9925ebd98590e98ffc46d649
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
-Your policy renewal needs your confirmation.
-https://portal.tamsin-billing.test/renewal/confirm?ref=azk82tu338
+A new statement is available in online banking.
+https://portal.my-quillon-payroll.test/statements/login?ref=39egykc5nt
 
---=_hookline_d83fa0c09d6921e801d19f21
+--=_hookline_9925ebd98590e98ffc46d649
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hello Omar,</p><p>Your policy renewal needs your confirmation.=
-</p><p><a href=3D"https://portal.tamsin-billing.test/renewal/confirm?ref=3Daz=
-k82tu338">Open Tamsin Cloud</a></p></body></html>
+<html><body><p>Hello Ivan,</p><p>A new statement is available in online banki=
+ng.</p><p><a href=3D"https://portal.my-quillon-payroll.test/statements/login?=
+ref=3D39egykc5nt">Open Quillon Payroll</a></p></body></html>
 
---=_hookline_d83fa0c09d6921e801d19f21--
+--=_hookline_9925ebd98590e98ffc46d649--

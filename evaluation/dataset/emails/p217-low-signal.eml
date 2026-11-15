@@ -1,39 +1,39 @@
-Return-Path: <tomas.reyes@orrin-group.test>
-Received: from mail.orrin-group.test (mail.orrin-group.test [203.0.113.209])
- by mx1.larkspur.test (Postfix) with ESMTPS id DPYK9DACFQ for
- <priya.raman@larkspur.test>; Thu, 24 Sep 2026 11:29:26 +0000
+Return-Path: <marcus.bell@harrow-docs.test>
+Received: from mail.harrow-docs.test (mail.harrow-docs.test [198.51.100.101])
+ by mx1.larkspur.test (Postfix) with ESMTPS id 2SPTASGJSY for
+ <ruth.calder@larkspur.test>; Sun, 04 Oct 2026 18:37:15 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=orrin-group.test; dkim=pass header.d=orrin-group.test;
- dmarc=pass header.from=orrin-group.test
-From: Tomas Reyes <tomas.reyes@orrin-group.test>
-To: Priya Raman <priya.raman@larkspur.test>
-Subject: Onboarding pack
-Date: Thu, 24 Sep 2026 11:29:00 +0000
-Message-ID: <65hut97hr2vbkp7c@orrin-group.test>
+ smtp.mailfrom=harrow-docs.test; dkim=pass header.d=harrow-docs.test;
+ dmarc=pass header.from=harrow-docs.test
+From: Marcus Bell <marcus.bell@harrow-docs.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Agreement for review
+Date: Sun, 04 Oct 2026 18:37:00 +0000
+Message-ID: <qf23e56tyvq23qut@harrow-docs.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_c87eeb1e91071abc45ed2301"
+ boundary="=_hookline_987100b67d4e01263b4c2bcc"
 
---=_hookline_c87eeb1e91071abc45ed2301
+--=_hookline_987100b67d4e01263b4c2bcc
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Priya,
+Hi Ruth,
 
-Here is the updated pricing sheet we talked about: https://files.orrin-group.=
-test/s/iqntfa9z3r Sign in with your work account to view it.
+Sharing the onboarding pack for the new project. It's here: https://files.har=
+row-docs.test/s/npqyzv6296
 
 Kind regards,
-Tomas Reyes
+Marcus Bell
 
---=_hookline_c87eeb1e91071abc45ed2301
+--=_hookline_987100b67d4e01263b4c2bcc
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Priya,</p><p>Here is the updated pricing sheet we talked ab=
-out: <a href=3D"https://files.orrin-group.test/s/iqntfa9z3r">https://files.or=
-rin-group.test/s/iqntfa9z3r</a> Sign in with your work account to view it.</p=
-><p>Kind regards,<br>Tomas Reyes</p></body></html>
+<html><body><p>Hi Ruth,</p><p>Sharing the onboarding pack for the new project=
+. It's here: <a href=3D"https://files.harrow-docs.test/s/npqyzv6296">https://=
+files.harrow-docs.test/s/npqyzv6296</a></p><p>Kind regards,<br>Marcus Bell</p=
+></body></html>
 
---=_hookline_c87eeb1e91071abc45ed2301--
+--=_hookline_987100b67d4e01263b4c2bcc--

@@ -45,7 +45,11 @@ alert per email:
 | `hookline` | Findings, IOCs, ATT&CK techniques, recommended actions and the AI summary |
 
 Only emails with at least the `suspicious` verdict are pushed by default
-(`--min-verdict` or `min_verdict` in `[watchpost]`). The event contains nothing
-that changes between runs, so pushing the same report twice stores it once.
-The URL comes from `--url`, then `WATCHPOST_URL`, then `url` in `[watchpost]`;
-HTTPS is verified (`ca_bundle` adds a private CA).
+(`--min-verdict` or `min_verdict` in `[watchpost]`). The event holds nothing
+that changes when the same report is pushed again, so pushing a saved report
+twice stores it once. Analysing the same `.eml` again gives the same event too,
+unless the email has no Date header (the analysis time is used instead), a
+language model answered differently, or Hookline was upgraded in between.
+
+The URL comes from `--url`, then `WATCHPOST_URL` (environment or `.env`), then
+`url` in `[watchpost]`; HTTPS is verified (`ca_bundle` adds a private CA).

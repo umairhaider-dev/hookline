@@ -92,14 +92,22 @@ _TECHNIQUES = (
 )
 
 
-def extract_iocs(email: ParsedEmail, protected_domains: Iterable[str]) -> IOCSet:
+def extract_iocs(
+    email: ParsedEmail, protected_domains: Iterable[str], *, shared_domains: Iterable[str] = ()
+) -> IOCSet:
     """Collect the URLs, domains, IPs, addresses and hashes worth blocking or hunting.
 
     The organisation's own domains (the protected domains and the recipients'
     domains) and internal IP addresses are left out: blocking them would hurt,
-    and they say nothing about the sender.
+    and they say nothing about the sender. Shared domains, such as free webmail
+    providers and URL shorteners, serve everyone: the sender's address and the
+    full URL are still IOCs, but the domain itself is not listed for blocking,
+    and neither are the sending IPs of mail from a webmail address, since they
+    belong to the provider. (If the sender forged such an address, the
+    authentication findings say so, and the IP stays in the Received findings.)
     """
     protected = {registrable_domain(domain) for domain in protected_domains}
+    shared = {registrable_domain(domain) for domain in shared_domains}
     protected |= {
         registrable_domain(recipient.domain)
         for recipient in (*email.to, *email.cc)
@@ -112,7 +120,7 @@ def extract_iocs(email: ParsedEmail, protected_domains: Iterable[str]) -> IOCSet
 
     def add_domain(host: str) -> None:
         domain = registrable_domain(host)
-        if domain and domain not in protected:
+        if domain and domain not in protected and domain not in shared:
             domains.append(domain)
 
     def add_address(address: str) -> None:
@@ -127,9 +135,11 @@ def extract_iocs(email: ParsedEmail, protected_domains: Iterable[str]) -> IOCSet
         add_address(reply_to.address)
     if email.return_path:
         add_address(email.return_path)
-    for hop in email.received:
-        if hop.from_ip is not None and not is_internal_ip(hop.from_ip):
-            ips.append(str(hop.from_ip))
+    sender = email.from_address.domain if email.from_address else ""
+    if not sender or registrable_domain(sender) not in shared:
+        for hop in email.received:
+            if hop.from_ip is not None and not is_internal_ip(hop.from_ip):
+                ips.append(str(hop.from_ip))
     for link in email.links:
         url = parse_url(link.url)
         if url is None or not url.is_web:
@@ -205,6 +215,14 @@ def recommend_actions(
         )
         if iocs.domains:
             actions.append(f"Block the sender and link domains: {_named(iocs.domains)}.")
+        # Addresses at a domain that is not blocked, such as a free webmail account.
+        addresses = [
+            address
+            for address in iocs.email_addresses
+            if registrable_domain(address.rpartition("@")[2]) not in iocs.domains
+        ]
+        if addresses:
+            actions.append(f"Block the sender addresses: {_named(addresses)}.")
         if iocs.urls or iocs.ip_addresses:
             actions.append(
                 "Block the URLs and IP addresses listed as IOCs at the proxy and firewall."

@@ -19,22 +19,25 @@ hookline --config evaluation/hookline-eval.toml eval run --no-ai
 
 | Benign | Count | | Phishing | Count |
 | --- | ---: | --- | --- | ---: |
-| internal memo | 20 | | credential link | 18 |
+| internal memo | 20 | | credential link | 12 |
 | meeting invite | 10 | | lookalike sender | 12 |
-| newsletter (trackers, hidden preview, sale deadlines) | 20 | | homoglyph sender | 8 |
+| newsletter (trackers, hidden preview, sale deadlines) | 20 | | homoglyph sender | 6 |
 | vendor invoice (some overdue reminders) | 12 | | HTML attachment | 8 |
 | password reset the user asked for | 10 | | malware attachment | 12 |
 | shipping notice (some via a shortener) | 12 | | business email compromise | 12 |
-| HR announcement with a deadline | 10 | | gift card request | 10 |
-| internal password-expiry notice | 8 | | invoice fraud | 10 |
-| receipt | 10 | | shortener lure | 6 |
-| reply in a thread with a partner | 8 | | low-signal lure | 12 |
+| HR announcement with a deadline | 10 | | gift card request | 8 |
+| internal password-expiry notice | 8 | | scam (prize, inheritance, callback) | 12 |
+| receipt | 10 | | invoice fraud | 8 |
+| reply in a thread with a partner | 8 | | shortener lure | 6 |
+| | | | low-signal lure | 12 |
 | | | | thread hijack | 12 |
 
 Benign categories marked hard in `labels.csv` contain the wording or link
 patterns phishing uses. Hard phishing categories (business email compromise,
-invoice fraud, low-signal lures, thread hijacks) come from properly
-authenticated domains with little for rules to catch.
+scams, invoice fraud, low-signal lures, thread hijacks) come from properly
+authenticated domains with little for rules to catch. The scams carry no links
+or attachments at all; the callback ones only give a phone number from the
+fictional 555-01xx range.
 
 Twenty phishing emails carry a hidden instruction aimed at AI tools (hidden
 with `display:none`, white text, a zero font size, opacity or an HTML comment).

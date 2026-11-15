@@ -1,0 +1,39 @@
+Return-Path: <hana.ito@meridel-docs.test>
+Received: from mail.meridel-docs.test (mail.meridel-docs.test [203.0.113.169])
+ by mx1.larkspur.test (Postfix) with ESMTPS id CDWFYGIIQN for
+ <felix.novak@larkspur.test>; Fri, 16 Oct 2026 19:58:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=meridel-docs.test; dkim=pass header.d=meridel-docs.test;
+ dmarc=pass header.from=meridel-docs.test
+From: Hana Ito <hana.ito@meridel-docs.test>
+To: Felix Novak <felix.novak@larkspur.test>
+Subject: Updated pricing
+Date: Fri, 16 Oct 2026 19:58:00 +0000
+Message-ID: <tfa9z3rq7s9dpyk9@meridel-docs.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_546180ae3ee18c8f8553dfd8"
+
+--=_hookline_546180ae3ee18c8f8553dfd8
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Felix,
+
+Here is the updated pricing sheet we talked about: https://files.meridel-docs=
+.test/s/zqi98a77ap Sign in with your work account to view it.
+
+Kind regards,
+Hana Ito
+
+--=_hookline_546180ae3ee18c8f8553dfd8
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi Felix,</p><p>Here is the updated pricing sheet we talked ab=
+out: <a href=3D"https://files.meridel-docs.test/s/zqi98a77ap">https://files.m=
+eridel-docs.test/s/zqi98a77ap</a> Sign in with your work account to view it.<=
+/p><p>Kind regards,<br>Hana Ito</p></body></html>
+
+--=_hookline_546180ae3ee18c8f8553dfd8--

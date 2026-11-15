@@ -8,10 +8,12 @@ Routes:
   JSON report.
 * ``GET /api/v1/health``: liveness and version.
 
-Uploaded emails are analysed in memory and never stored. Every response
-carries a strict Content-Security-Policy and ``Cache-Control: no-store``,
-because reports contain email content. When ``HOOKLINE_WEB_TOKEN`` is set,
-uploads need it: as a bearer token for the API, or in the form's token field.
+Uploaded emails are never saved: each is discarded once the response is sent
+(the multipart parser keeps uploads over 1 MB in a temporary file until then),
+and request bodies are capped while they stream in. Every response carries a
+strict Content-Security-Policy and ``Cache-Control: no-store``, because reports
+contain email content. When ``HOOKLINE_WEB_TOKEN`` is set, uploads need it: as
+a bearer token for the API, or in the form's token field.
 """
 
 import logging
@@ -25,6 +27,7 @@ from typing import Annotated
 from fastapi import FastAPI, File, Form, Header, HTTPException, Request, UploadFile, status
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from jinja2 import Environment, PackageLoader, select_autoescape
+from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from hookline import __version__
 from hookline.config import Settings
@@ -79,6 +82,8 @@ def create_app(settings: Settings, analyzer: Analyzer | None = None) -> FastAPI:
     )
     token = settings.web_token.get_secret_value() if settings.web_token else None
     max_bytes = settings.max_email_bytes
+
+    app.add_middleware(_BodyLimit, max_bytes=max_bytes)
 
     @app.middleware("http")
     async def guard(
@@ -148,6 +153,39 @@ def create_app(settings: Settings, analyzer: Analyzer | None = None) -> FastAPI:
         return {"status": "ok", "version": __version__}
 
     return app
+
+
+class _BodyLimit:
+    """Stops reading a request body once it grows past the upload limit.
+
+    ``guard`` refuses requests whose Content-Length is too large, but a chunked
+    upload declares no length, and the multipart parser would spool all of it
+    to disk before the route could refuse it.
+    """
+
+    def __init__(self, app: ASGIApp, max_bytes: int) -> None:
+        self._app = app
+        self._max_bytes = max_bytes
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self._app(scope, receive, send)
+            return
+        received = 0
+
+        async def limited_receive() -> Message:
+            nonlocal received
+            message = await receive()
+            if message["type"] == "http.request":
+                received += len(message.get("body", b""))
+                if received > self._max_bytes + MULTIPART_OVERHEAD_BYTES:
+                    raise HTTPException(
+                        status.HTTP_413_CONTENT_TOO_LARGE,
+                        f"upload is larger than the {self._max_bytes:,}-byte limit",
+                    )
+            return message
+
+        await self._app(scope, limited_receive, send)
 
 
 class _UploadError(Exception):

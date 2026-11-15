@@ -163,6 +163,20 @@ def test_write_and_load_round_trip(tmp_path: Path) -> None:
         assert next(csv.reader(handle))[0] == "id"
 
 
+def test_rewriting_removes_emails_from_an_earlier_dataset(tmp_path: Path) -> None:
+    samples = dataset()
+    injected = next(sample for sample in samples if sample.injection)
+    write_dataset([samples[0], injected], tmp_path)
+    notes = tmp_path / "notes.txt"
+    notes.write_text("keep me", encoding="utf-8")
+    write_dataset([samples[1]], tmp_path)
+    assert [path.name for path in (tmp_path / "emails").iterdir()] == [
+        f"{samples[1].sample_id}.eml"
+    ]
+    assert list((tmp_path / "twins").iterdir()) == []
+    assert notes.is_file()
+
+
 @pytest.mark.parametrize(
     ("content", "message"),
     [
@@ -267,13 +281,16 @@ def test_run_with_a_model(tmp_path: Path) -> None:
     rules = result.modes[0]
     assert combined.tp >= rules.tp
     assert result.ai_answers == 6
+    assert result.injection.ai_pairs_answered == 2
+    assert result.injection.ai_answer_changed == 2
     assert result.injection.ai_likelihood_lowered == 2
     assert result.injection.mean_ai_likelihood_with_injection == 20
     assert result.injection.mean_ai_likelihood_without_injection == 85
     assert result.injection.flagged_with_injection[AnalysisMode.COMBINED] == 2
     markdown = render_markdown(result)
     assert "| AI only |" in summary_table(result)
-    assert "lowered it by 10 or more in 2 pairs" in markdown
+    assert "changed the model's answer in 2 of 2 pairs" in markdown
+    assert "lowered the likelihood by 10 or more in 2." in markdown
     assert "The model answered 6 of 6 emails" in markdown
     target = tmp_path / "predictions.csv"
     write_predictions(result, target)
@@ -281,6 +298,22 @@ def test_run_with_a_model(tmp_path: Path) -> None:
         rows = list(csv.DictReader(handle))
     assert len(rows) == 18
     assert {row["mode"] for row in rows} == {"rules_only", "ai_only", "combined"}
+
+
+class AttackTypeSwitchingModel(FakeModel):
+    """Equally sure either way, but calls the email benign once an injection is reported."""
+
+    def complete(self, request: ModelRequest) -> str:
+        self.requests.append(request)
+        fooled = '"type": "prompt_injection"' in request.turns[-1].text
+        return answer(phishing_likelihood=85, attack_type="benign" if fooled else "scam")
+
+
+def test_a_different_attack_type_counts_as_a_changed_answer(tmp_path: Path) -> None:
+    entries = load_dataset(small_dataset(tmp_path))
+    assessor, _ = make_assessor(AttackTypeSwitchingModel())
+    injection = run_evaluation(entries, eval_settings(), assessor=assessor).injection
+    assert (injection.ai_answer_changed, injection.ai_likelihood_lowered) == (2, 0)
 
 
 def test_model_failures_count_as_unflagged(tmp_path: Path) -> None:

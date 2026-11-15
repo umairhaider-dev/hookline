@@ -1,0 +1,35 @@
+Return-Path: <security@xn--fernhill-bnk-69j.test>
+Received: from mail.xn--fernhill-bnk-69j.test (mail.xn--fernhill-bnk-69j.test
+ [203.0.113.82]) by mx1.larkspur.test (Postfix) with ESMTPS id 98XP22AG2Y for
+ <sam.ortega@larkspur.test>; Fri, 09 Oct 2026 22:58:16 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=xn--fernhill-bnk-69j.test; dkim=pass
+ header.d=xn--fernhill-bnk-69j.test; dmarc=pass
+ header.from=xn--fernhill-bnk-69j.test
+From: Security Team <security@xn--fernhill-bnk-69j.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: New sign-in to your account
+Date: Fri, 09 Oct 2026 22:58:00 +0000
+Message-ID: <5cuepz3c64hnjp97@xn--fernhill-bnk-69j.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_4317cdf44e17cecfa2eed2a3"
+
+--=_hookline_4317cdf44e17cecfa2eed2a3
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+We noticed a sign-in from a new device. Verify your account: https://login.xn=
+--fernhill-bnk-69j.test/session/ubzax9fj8k
+
+--=_hookline_4317cdf44e17cecfa2eed2a3
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>We noticed a sign-in from a new device.</p><p>If this was not =
+you, verify your account: <a href=3D"https://login.xn--fernhill-bnk-69j.test/=
+session/ubzax9fj8k">https://login.fernhill-bank.test/security</a></p></body><=
+/html>
+
+--=_hookline_4317cdf44e17cecfa2eed2a3--

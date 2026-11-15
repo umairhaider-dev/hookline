@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 
-from hookline.evaluation.runner import EvaluationResult, ModeResult, Prediction
+from hookline.evaluation.runner import LIKELIHOOD_CHANGE, EvaluationResult, ModeResult, Prediction
 from hookline.models.verdict import AnalysisMode
 
 MODE_NAMES = {
@@ -113,11 +113,14 @@ def _injection(result: EvaluationResult) -> str:
             f"{without} without it."
         )
     if injection.mean_ai_likelihood_with_injection is not None:
-        lines.append(
+        lines += [
             f"- Mean AI likelihood: {injection.mean_ai_likelihood_with_injection:.1f} with the "
-            f"injection, {injection.mean_ai_likelihood_without_injection:.1f} without; the "
-            f"injection lowered it by 10 or more in {injection.ai_likelihood_lowered} pairs."
-        )
+            f"injection, {injection.mean_ai_likelihood_without_injection:.1f} without.",
+            f"- The injection changed the model's answer in {injection.ai_answer_changed} of "
+            f"{injection.ai_pairs_answered} pairs where it answered both (likelihood moved by "
+            f"{LIKELIHOOD_CHANGE} or more, or a different attack type), and lowered the "
+            f"likelihood by {LIKELIHOOD_CHANGE} or more in {injection.ai_likelihood_lowered}.",
+        ]
     return "\n".join(lines)
 
 

@@ -10,7 +10,16 @@ import pytest
 from hookline.logging_config import PACKAGE_LOGGER
 
 _KEY_VARIABLES = frozenset(
-    {"ANTHROPIC_API_KEY", "VIRUSTOTAL_API_KEY", "ABUSEIPDB_API_KEY", "URLHAUS_AUTH_KEY"}
+    {
+        "ANTHROPIC_API_KEY",
+        "VIRUSTOTAL_API_KEY",
+        "ABUSEIPDB_API_KEY",
+        "URLHAUS_AUTH_KEY",
+        "WATCHPOST_URL",
+        "WATCHPOST_TOKEN",
+        "WATCHPOST_USERNAME",
+        "WATCHPOST_PASSWORD",
+    }
 )
 
 

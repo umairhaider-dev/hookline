@@ -1,34 +1,33 @@
-Return-Path: <notifications@fernhill-bank-secure.test>
-Received: from mail.fernhill-bank-secure.test (mail.fernhill-bank-secure.test
- [203.0.113.64]) by mx1.larkspur.test (Postfix) with ESMTPS id IGUIE8BJ6P for
- <tomas.reyes@larkspur.test>; Sat, 12 Sep 2026 10:21:28 +0000
-Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=fernhill-bank-secure.test; dkim=pass
- header.d=fernhill-bank-secure.test; dmarc=pass
- header.from=fernhill-bank-secure.test
-From: Fernhill Bank <notifications@fernhill-bank-secure.test>
-To: Tomas Reyes <tomas.reyes@larkspur.test>
-Subject: Fernhill Bank: new document
-Date: Sat, 12 Sep 2026 10:21:00 +0000
-Message-ID: <snv7ndwad9gim5bd@fernhill-bank-secure.test>
+Return-Path: <notifications@qui1lon-payroll.test>
+Received: from mail.qui1lon-payroll.test (mail.qui1lon-payroll.test
+ [203.0.113.136]) by mx1.larkspur.test (Postfix) with ESMTPS id 3F4IG3T3A2 for
+ <ruth.calder@larkspur.test>; Sun, 11 Oct 2026 01:52:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=qui1lon-payroll.test; dkim=none header.d=qui1lon-payroll.test;
+ dmarc=fail header.from=qui1lon-payroll.test
+From: Quillon Payroll <notifications@qui1lon-payroll.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Action needed on your account
+Date: Sun, 11 Oct 2026 01:52:00 +0000
+Message-ID: <dnrqbnmvyhbfgye6@qui1lon-payroll.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_e0fe5b8538653767c6f9615b"
+ boundary="=_hookline_3e1cc3b4608eba4edea0cc36"
 
---=_hookline_e0fe5b8538653767c6f9615b
+--=_hookline_3e1cc3b4608eba4edea0cc36
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
-A document was shared with you. Sign in to open it.
-https://portal.fernhill-bank-secure.test/share/open?ref=fvwgnrd84p
+Your payslip for this month is ready. Sign in to view it.
+https://portal.qui1lon-payroll.test/payslip/view?ref=eb3hrysb7s
 
---=_hookline_e0fe5b8538653767c6f9615b
+--=_hookline_3e1cc3b4608eba4edea0cc36
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hello Tomas,</p><p>A document was shared with you. Sign in to =
-open it.</p><p><a href=3D"https://portal.fernhill-bank-secure.test/share/open=
-?ref=3Dfvwgnrd84p">Open Fernhill Bank</a></p></body></html>
+<html><body><p>Hello Ruth,</p><p>Your payslip for this month is ready. Sign i=
+n to view it.</p><p><a href=3D"https://portal.qui1lon-payroll.test/payslip/vi=
+ew?ref=3Deb3hrysb7s">Open Quillon Payroll</a></p></body></html>
 
---=_hookline_e0fe5b8538653767c6f9615b--
+--=_hookline_3e1cc3b4608eba4edea0cc36--

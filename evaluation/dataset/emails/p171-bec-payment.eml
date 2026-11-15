@@ -1,0 +1,24 @@
+Return-Path: <marcus.bell.cfo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [203.0.113.52]) by mx1.larkspur.test (Postfix) with ESMTPS id BEIC65WN44 for
+ <dana.whitfield@larkspur.test>; Tue, 13 Oct 2026 12:47:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Marcus Bell <marcus.bell.cfo@quickpost-mail.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
+Subject: Today
+Date: Tue, 13 Oct 2026 12:47:00 +0000
+Message-ID: <x5zp7bzy9q47grqs@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Dana,
+
+Our supplier has changed banks. Please update their bank details before this =
+week's payment run; I'll send the new account number shortly.
+
+Thanks,
+Marcus
+Sent from my phone

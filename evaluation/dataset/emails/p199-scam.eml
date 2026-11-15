@@ -1,0 +1,25 @@
+Return-Path: <billing@carelink-qgs.test>
+Received: from mail.carelink-qgs.test (mail.carelink-qgs.test
+ [198.51.100.187]) by mx1.larkspur.test (Postfix) with ESMTPS id AHCIPI9MAZ
+ for <marcus.bell@larkspur.test>; Thu, 15 Oct 2026 07:20:25 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=carelink-qgs.test; dkim=pass header.d=carelink-qgs.test;
+ dmarc=pass header.from=carelink-qgs.test
+From: Billing Support <billing@carelink-qgs.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Order confirmation #409003
+Date: Thu, 15 Oct 2026 07:20:00 +0000
+Message-ID: <zeftimu99v8in7hx@carelink-qgs.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Marcus,
+
+Thank you for renewing your Total Device Protection plan. USD 399.99 will be =
+charged to your account today.
+
+If you did not authorise this renewal, call our billing team on +1 202 555 01=
+42 within 24 hours to cancel and receive a full refund.
+
+Billing Support

@@ -1,42 +1,42 @@
-Return-Path: <lena@my-meridel-design.test>
-Received: from mail.my-meridel-design.test (mail.my-meridel-design.test
- [198.51.100.46]) by mx1.larkspur.test (Postfix) with ESMTPS id UGDPQM4NTR for
- <felix.novak@larkspur.test>; Sun, 06 Sep 2026 17:20:10 +0000
-Authentication-Results: mx1.larkspur.test; spf=fail
- smtp.mailfrom=my-meridel-design.test; dkim=none
- header.d=my-meridel-design.test; dmarc=fail
- header.from=my-meridel-design.test
-From: Lena Okafor <lena@my-meridel-design.test>
-To: Felix Novak <felix.novak@larkspur.test>
-Subject: Re: Project budget
-Date: Sun, 06 Sep 2026 17:20:00 +0000
-Message-ID: <jg5ag37npb397zdp@my-meridel-design.test>
+Return-Path: <ivan@my-vossberg-legal.test>
+Received: from mail.my-vossberg-legal.test (mail.my-vossberg-legal.test
+ [203.0.113.40]) by mx1.larkspur.test (Postfix) with ESMTPS id IK57JA9DZQ for
+ <marcus.bell@larkspur.test>; Wed, 21 Oct 2026 11:26:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=my-vossberg-legal.test; dkim=pass
+ header.d=my-vossberg-legal.test; dmarc=pass
+ header.from=my-vossberg-legal.test
+From: Ivan Sorensen <ivan@my-vossberg-legal.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Re: Statement of work
+Date: Wed, 21 Oct 2026 11:26:00 +0000
+Message-ID: <9t7sd38px9xwmhkg@my-vossberg-legal.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_122f45e4f9d386ed58615abb"
+ boundary="=_hookline_fd271798b443caefa884d633"
 
---=_hookline_122f45e4f9d386ed58615abb
+--=_hookline_fd271798b443caefa884d633
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Felix,
+Hi Marcus,
 
-As discussed, here is the project budget with the new payment details: https:=
-//review-secure-292.test/doc/ke778ija
+As discussed, here is the statement of work with the new payment details: htt=
+ps://files-verify-37b.test/doc/mcfi84rg
 
 Best,
-Lena
+Ivan
 
-On Tuesday, Felix Novak wrote:
-> Thanks, please send the project budget when ready.
+On Tuesday, Marcus Bell wrote:
+> Thanks, please send the statement of work when ready.
 
---=_hookline_122f45e4f9d386ed58615abb
+--=_hookline_fd271798b443caefa884d633
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Felix,</p><p>As discussed, here is the project budget with =
-the new payment details: <a href=3D"https://review-secure-292.test/doc/ke778i=
-ja">the document</a></p><p>Best,<br>Lena</p></body></html>
+<html><body><p>Hi Marcus,</p><p>As discussed, here is the statement of work w=
+ith the new payment details: <a href=3D"https://files-verify-37b.test/doc/mcf=
+i84rg">the document</a></p><p>Best,<br>Ivan</p></body></html>
 
---=_hookline_122f45e4f9d386ed58615abb--
+--=_hookline_fd271798b443caefa884d633--

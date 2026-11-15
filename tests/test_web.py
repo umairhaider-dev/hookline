@@ -1,13 +1,17 @@
+import asyncio
 from collections.abc import Iterator
 
 import pytest
+from fastapi import HTTPException
 from fastapi.testclient import TestClient
 from pydantic import SecretStr
+from starlette.types import Message, Receive, Scope, Send
 
 from hookline import __version__
 from hookline.config import Settings
 from hookline.pipeline import Analyzer
 from hookline.web import API_PREFIX, create_app
+from hookline.web.app import MULTIPART_OVERHEAD_BYTES, _BodyLimit
 from tests.factories import SAMPLES_DIR
 
 PHISH = (SAMPLES_DIR / "credential-phish.eml").read_bytes()
@@ -86,6 +90,46 @@ def test_huge_request_is_refused_before_reading() -> None:
             content=b"x" * 70_000,
             headers={"content-type": "multipart/form-data; boundary=x"},
         )
+        assert response.status_code == 413
+        assert "limit" in response.json()["detail"]
+        assert response.headers["cache-control"] == "no-store"
+
+
+def test_body_limit_stops_reading_once_the_limit_is_passed() -> None:
+    chunk = b"x" * (MULTIPART_OVERHEAD_BYTES // 2 + 1000)
+    pulled: list[int] = []
+
+    async def receive() -> Message:
+        pulled.append(len(pulled))
+        return {"type": "http.request", "body": chunk, "more_body": len(pulled) < 10}
+
+    async def app(scope: Scope, receive: Receive, send: Send) -> None:
+        while (await receive()).get("more_body"):
+            pass
+
+    async def send(message: Message) -> None:
+        raise AssertionError("nothing should be sent")
+
+    limited = _BodyLimit(app, max_bytes=1000)
+    with pytest.raises(HTTPException) as caught:
+        asyncio.run(limited({"type": "http"}, receive, send))
+    assert caught.value.status_code == 413
+    assert len(pulled) == 2
+
+
+def test_chunked_request_without_a_length_is_refused_while_streaming() -> None:
+    def body() -> Iterator[bytes]:
+        yield b'--x\r\nContent-Disposition: form-data; name="file"; filename="a.eml"\r\n\r\n'
+        yield b"x" * 70_000
+        yield b"\r\n--x--\r\n"
+
+    for client in client_for(max_email_bytes=1000):
+        response = client.post(
+            f"{API_PREFIX}/analyze",
+            content=body(),
+            headers={"content-type": "multipart/form-data; boundary=x"},
+        )
+        assert "content-length" not in response.request.headers
         assert response.status_code == 413
         assert "limit" in response.json()["detail"]
         assert response.headers["cache-control"] == "no-store"

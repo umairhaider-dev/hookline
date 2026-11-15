@@ -1,37 +1,37 @@
-Return-Path: <accounts@tamsin-billing.test>
-Received: from mail.tamsin-billing.test (mail.tamsin-billing.test
- [198.51.100.230]) by mx1.larkspur.test (Postfix) with ESMTPS id I6MRG3V27M
- for <lena.okafor@larkspur.test>; Wed, 30 Sep 2026 01:39:15 +0000
-Authentication-Results: mx1.larkspur.test; spf=fail
- smtp.mailfrom=tamsin-billing.test; dkim=none header.d=tamsin-billing.test;
- dmarc=fail header.from=tamsin-billing.test
-From: Tamsin Cloud Accounts <accounts@tamsin-billing.test>
-To: Lena Okafor <lena.okafor@larkspur.test>
-Subject: Overdue: INV-2026-9443
-Date: Wed, 30 Sep 2026 01:39:00 +0000
-Message-ID: <qh43jb855nv8dvsn@tamsin-billing.test>
+Return-Path: <accounts@mail-tamsin.test>
+Received: from mail.mail-tamsin.test (mail.mail-tamsin.test [198.51.100.182])
+ by mx1.larkspur.test (Postfix) with ESMTPS id CHCBF2CP6Q for
+ <aisha.karim@larkspur.test>; Sun, 06 Sep 2026 20:11:10 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=mail-tamsin.test; dkim=pass header.d=mail-tamsin.test;
+ dmarc=pass header.from=mail-tamsin.test
+From: Tamsin Cloud Accounts <accounts@mail-tamsin.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Overdue: INV-2026-3062
+Date: Sun, 06 Sep 2026 20:11:00 +0000
+Message-ID: <zsifnp66sh4yn45i@mail-tamsin.test>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="=_hookline_648a704be7ac30c991f0da38"
+Content-Type: multipart/mixed; boundary="=_hookline_ee798f92180e8d1f9a3a5daa"
 
---=_hookline_648a704be7ac30c991f0da38
+--=_hookline_ee798f92180e8d1f9a3a5daa
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 Hello,
 
-Invoice INV-2026-9443 is past due. Please note our new banking information be=
+Invoice INV-2026-3062 is past due. Please note our new banking information be=
 low and remit payment today to avoid a late fee.
 
-IBAN: XX67 0000 0000 9678 00
+IBAN: XX89 0000 0000 3688 00
 
 Tamsin Cloud Accounts
 
---=_hookline_648a704be7ac30c991f0da38
+--=_hookline_ee798f92180e8d1f9a3a5daa
 Content-Type: application/pdf
 Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="INV-2026-9443.pdf"
+Content-Disposition: attachment; filename="INV-2026-3062.pdf"
 MIME-Version: 1.0
 
 JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
 
---=_hookline_648a704be7ac30c991f0da38--
+--=_hookline_ee798f92180e8d1f9a3a5daa--

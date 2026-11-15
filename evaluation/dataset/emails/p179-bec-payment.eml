@@ -1,24 +1,24 @@
-Return-Path: <marcus.bell.cfo@inboxmail.test>
-Received: from mail.inboxmail.test (mail.inboxmail.test [198.51.100.22]) by
- mx1.larkspur.test (Postfix) with ESMTPS id 2QF3U38XBC for
- <omar.haddad@larkspur.test>; Wed, 16 Sep 2026 12:24:07 +0000
+Return-Path: <dana.whitfield.ceo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [203.0.113.236]) by mx1.larkspur.test (Postfix) with ESMTPS id X6TKZTTSME for
+ <felix.novak@larkspur.test>; Tue, 13 Oct 2026 04:53:14 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=inboxmail.test; dkim=pass header.d=inboxmail.test; dmarc=pass
- header.from=inboxmail.test
-From: Marcus Bell <marcus.bell.cfo@inboxmail.test>
-To: Omar Haddad <omar.haddad@larkspur.test>
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Dana Whitfield <dana.whitfield.ceo@quickpost-mail.test>
+To: Felix Novak <felix.novak@larkspur.test>
 Subject: Today
-Date: Wed, 16 Sep 2026 12:24:00 +0000
-Message-ID: <k2smcqdmvr4pyekx@inboxmail.test>
+Date: Tue, 13 Oct 2026 04:53:00 +0000
+Message-ID: <5vwah6ubt6zuvugx@quickpost-mail.test>
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-Hi Omar,
+Hi Felix,
 
-Can you handle a payment for me this afternoon? I'm in meetings all day, so e=
-mail only. I'll send the IBAN and amount once you confirm.
+I need you to process a wire transfer to a new vendor today. Keep this confid=
+ential until the deal is announced.
 
 Thanks,
-Marcus
+Dana
 Sent from my phone

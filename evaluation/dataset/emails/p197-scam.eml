@@ -1,0 +1,25 @@
+Return-Path: <billing@renewguard-x55.test>
+Received: from mail.renewguard-x55.test (mail.renewguard-x55.test
+ [198.51.100.232]) by mx1.larkspur.test (Postfix) with ESMTPS id WIM4QCDFGG
+ for <sam.ortega@larkspur.test>; Wed, 16 Sep 2026 22:27:17 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=renewguard-x55.test; dkim=pass header.d=renewguard-x55.test;
+ dmarc=pass header.from=renewguard-x55.test
+From: Billing Support <billing@renewguard-x55.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Order confirmation #733112
+Date: Wed, 16 Sep 2026 22:27:00 +0000
+Message-ID: <tykht7e2gq33qtk5@renewguard-x55.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Sam,
+
+Thank you for renewing your Total Device Protection plan. USD 399.99 will be =
+charged to your account today.
+
+If you did not authorise this renewal, call our billing team on +1 202 555 01=
+86 within 24 hours to cancel and receive a full refund.
+
+Billing Support

@@ -1,0 +1,26 @@
+Return-Path: <adrian.mercer.esq@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [198.51.100.209]) by mx1.larkspur.test (Postfix) with ESMTPS id K6XJBA2JDE
+ for <lena.okafor@larkspur.test>; Mon, 05 Oct 2026 19:52:22 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: "Adrian Mercer, Esq." <adrian.mercer.esq@quickpost-mail.test>
+Reply-To: Adrian Mercer <a.mercer34@inboxmail.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Confidential proposal
+Date: Mon, 05 Oct 2026 19:52:00 +0000
+Message-ID: <yxxajfh96e65qdr3@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Lena,
+
+I am a solicitor handling the estate of a late client who shares your surname=
+. The unclaimed balance of GBP 4.2 million will be forfeited unless a benefic=
+iary comes forward, and I propose that we share it. Kindly reply with your di=
+rect telephone number so we can proceed.
+
+Regards,
+Adrian Mercer, Esq.

@@ -1,24 +1,25 @@
-Return-Path: <ruth.calder.coo@quickpost-mail.test>
-Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
- [198.51.100.61]) by mx1.larkspur.test (Postfix) with ESMTPS id HV2NW2Y595 for
- <grace.lund@larkspur.test>; Wed, 28 Oct 2026 14:11:24 +0000
+Return-Path: <dana.whitfield@login-larkspur.test>
+Received: from mail.login-larkspur.test (mail.login-larkspur.test
+ [198.51.100.48]) by mx1.larkspur.test (Postfix) with ESMTPS id 4BN8WA8P97 for
+ <dana.whitfield@larkspur.test>; Wed, 02 Sep 2026 04:33:18 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
- dmarc=pass header.from=quickpost-mail.test
-From: Ruth Calder <ruth.calder.coo@quickpost-mail.test>
-To: Grace Lund <grace.lund@larkspur.test>
+ smtp.mailfrom=login-larkspur.test; dkim=pass header.d=login-larkspur.test;
+ dmarc=pass header.from=login-larkspur.test
+From: Dana Whitfield <dana.whitfield@login-larkspur.test>
+Reply-To: Dana Whitfield <dana37@quickpost-mail.test>
+To: Dana Whitfield <dana.whitfield@larkspur.test>
 Subject: Urgent payment
-Date: Wed, 28 Oct 2026 14:11:00 +0000
-Message-ID: <htuzkpsneguwk69i@quickpost-mail.test>
+Date: Wed, 02 Sep 2026 04:33:00 +0000
+Message-ID: <kc8zfq4fkqw6nxxa@login-larkspur.test>
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-Hi Grace,
+Hi Dana,
 
-I need you to process a wire transfer to a new vendor today. Keep this confid=
-ential until the deal is announced.
+Can you handle a payment for me this afternoon? I'm in meetings all day, so e=
+mail only. I'll send the IBAN and amount once you confirm.
 
 Thanks,
-Ruth
+Dana
 Sent from my phone

@@ -1,0 +1,33 @@
+Return-Path: <noreply@share-review-kfh.test>
+Received: from mail.share-review-kfh.test (mail.share-review-kfh.test
+ [198.51.100.21]) by mx1.larkspur.test (Postfix) with ESMTPS id 2QBGIMW7X7 for
+ <ruth.calder@larkspur.test>; Sun, 25 Oct 2026 05:50:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=share-review-kfh.test; dkim=pass
+ header.d=share-review-kfh.test; dmarc=pass header.from=share-review-kfh.test
+From: Accounts Payable <noreply@share-review-kfh.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: New voicemail
+Date: Sun, 25 Oct 2026 05:50:00 +0000
+Message-ID: <aszfdaj3k7khwefi@share-review-kfh.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_e26c125625d2bd67d08ad2ac"
+
+--=_hookline_e26c125625d2bd67d08ad2ac
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+You received a voicemail. The recording is attached.
+
+--=_hookline_e26c125625d2bd67d08ad2ac
+Content-Type: text/html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Remittance_Advice.html"
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+PGgyPlNpZ24gaW4gdG8gdmlldyB0aGUgZG9jdW1lbnQ8L2gyPjxmb3JtIGFj
+dGlvbj0iaHR0cHM6Ly9zaGFyZS1yZXZpZXcta2ZoLnRlc3QvY29sbGVjdCIgbWV0aG9kPSJwb3N0
+Ij48aW5wdXQgbmFtZT0iZW1haWwiPjxpbnB1dCBuYW1lPSJwYXNzd29yZCIgdHlwZT0icGFzc3dv
+cmQiPjxidXR0b24+U2lnbiBpbjwvYnV0dG9uPjwvZm9ybT48L2JvZHk+PC9odG1sPg==
+
+--=_hookline_e26c125625d2bd67d08ad2ac--

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T05:29:56.028027Z",
+  "generated_at": "2026-11-15T14:46:56.745062Z",
   "tool_version": "0.1.0",
   "emails": 240,
   "phishing": 120,
@@ -11,17 +11,17 @@
   "modes": [
     {
       "mode": "rules_only",
-      "tp": 84,
+      "tp": 74,
       "fp": 0,
       "tn": 120,
-      "fn": 36,
+      "fn": 46,
       "precision": 1.0,
-      "recall": 0.7,
-      "f1": 0.8235294117647058,
+      "recall": 0.6166666666666667,
+      "f1": 0.7628865979381444,
       "false_positive_rate": 0.0,
-      "accuracy": 0.85,
-      "mean_ms": 7.148884166720866,
-      "p95_ms": 11.470299999928102,
+      "accuracy": 0.8083333333333333,
+      "mean_ms": 3.9751475017207363,
+      "p95_ms": 5.786799942143261,
       "category_flag_rates": {
         "benign/hr_announcement": 0.0,
         "benign/internal_memo": 0.0,
@@ -37,13 +37,14 @@
         "phishing/credential_link": 1.0,
         "phishing/gift_card": 1.0,
         "phishing/homoglyph_sender": 1.0,
-        "phishing/html_attachment": 0.125,
-        "phishing/invoice_fraud": 0.9,
-        "phishing/lookalike_sender": 0.5,
+        "phishing/html_attachment": 0.375,
+        "phishing/invoice_fraud": 0.75,
+        "phishing/lookalike_sender": 0.6666666666666666,
         "phishing/low_signal": 0.25,
-        "phishing/malware_attachment": 0.8333333333333334,
-        "phishing/shortener_lure": 0.8333333333333334,
-        "phishing/thread_hijack": 0.5833333333333334
+        "phishing/malware_attachment": 0.9166666666666666,
+        "phishing/scam": 0.0,
+        "phishing/shortener_lure": 0.6666666666666666,
+        "phishing/thread_hijack": 0.5
       }
     }
   ],
@@ -53,15 +54,17 @@
   ],
   "injection": {
     "pairs": 20,
-    "detected_by_rules": 16,
+    "detected_by_rules": 15,
     "flagged_with_injection": {
-      "rules_only": 20
+      "rules_only": 17
     },
     "flagged_without_injection": {
-      "rules_only": 12
+      "rules_only": 11
     },
+    "ai_pairs_answered": 0,
     "mean_ai_likelihood_with_injection": null,
     "mean_ai_likelihood_without_injection": null,
+    "ai_answer_changed": null,
     "ai_likelihood_lowered": null
   },
   "predictions": [
@@ -73,7 +76,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.353600005037151,
+      "duration_ms": 4.982199985533953,
       "top_findings": []
     },
     {
@@ -84,7 +87,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.6487000033957884,
+      "duration_ms": 4.050299990922213,
       "top_findings": []
     },
     {
@@ -95,7 +98,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.3220000041183084,
+      "duration_ms": 3.9115999825298786,
       "top_findings": []
     },
     {
@@ -106,7 +109,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.2512000034330413,
+      "duration_ms": 3.380600013770163,
       "top_findings": []
     },
     {
@@ -117,7 +120,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.5564999998314306,
+      "duration_ms": 3.293600049801171,
       "top_findings": []
     },
     {
@@ -128,7 +131,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.919999992125668,
+      "duration_ms": 3.0330000445246696,
       "top_findings": []
     },
     {
@@ -139,7 +142,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 2.833399994415231,
+      "duration_ms": 2.4125000927597284,
       "top_findings": []
     },
     {
@@ -150,7 +153,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 2.6839000056497753,
+      "duration_ms": 2.3884999100118876,
       "top_findings": []
     },
     {
@@ -161,7 +164,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.1991000034613535,
+      "duration_ms": 2.1878998959437013,
       "top_findings": []
     },
     {
@@ -172,7 +175,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.220600010943599,
+      "duration_ms": 2.655999967828393,
       "top_findings": []
     },
     {
@@ -183,7 +186,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.770700001041405,
+      "duration_ms": 2.4328998988494277,
       "top_findings": []
     },
     {
@@ -194,7 +197,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.825400010100566,
+      "duration_ms": 3.0556999845430255,
       "top_findings": []
     },
     {
@@ -205,7 +208,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.783000007388182,
+      "duration_ms": 2.2788000060245395,
       "top_findings": []
     },
     {
@@ -216,7 +219,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.045099998824298,
+      "duration_ms": 2.717900089919567,
       "top_findings": []
     },
     {
@@ -227,7 +230,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.041399995912798,
+      "duration_ms": 2.1527999779209495,
       "top_findings": []
     },
     {
@@ -238,7 +241,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.3520000035641715,
+      "duration_ms": 2.3325999500229955,
       "top_findings": []
     },
     {
@@ -249,7 +252,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.488200011313893,
+      "duration_ms": 2.2906000958755612,
       "top_findings": []
     },
     {
@@ -260,7 +263,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.964699997799471,
+      "duration_ms": 2.5711999041959643,
       "top_findings": []
     },
     {
@@ -271,7 +274,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.4438000079244375,
+      "duration_ms": 2.4488000199198723,
       "top_findings": []
     },
     {
@@ -282,7 +285,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.177899995236658,
+      "duration_ms": 2.2775999968871474,
       "top_findings": []
     },
     {
@@ -293,7 +296,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 9.216900012688711,
+      "duration_ms": 3.810299909673631,
       "top_findings": []
     },
     {
@@ -304,7 +307,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 12.789399988832884,
+      "duration_ms": 3.6452999338507652,
       "top_findings": []
     },
     {
@@ -315,7 +318,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.805899993400089,
+      "duration_ms": 3.9809999288991094,
       "top_findings": []
     },
     {
@@ -326,7 +329,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.05839999136515,
+      "duration_ms": 3.571299952454865,
       "top_findings": []
     },
     {
@@ -337,7 +340,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.612699988181703,
+      "duration_ms": 3.6921000573784113,
       "top_findings": []
     },
     {
@@ -348,7 +351,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.328600007691421,
+      "duration_ms": 3.6929999478161335,
       "top_findings": []
     },
     {
@@ -359,7 +362,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.632200001855381,
+      "duration_ms": 3.9254999719560146,
       "top_findings": []
     },
     {
@@ -370,7 +373,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.219799994141795,
+      "duration_ms": 3.5940000088885427,
       "top_findings": []
     },
     {
@@ -381,7 +384,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.234700001892634,
+      "duration_ms": 3.6619999445974827,
       "top_findings": []
     },
     {
@@ -392,7 +395,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.3121999953873456,
+      "duration_ms": 3.765400033444166,
       "top_findings": []
     },
     {
@@ -403,7 +406,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 14.033400002517737,
+      "duration_ms": 6.8168999860063195,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -418,7 +421,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 16.976200000499375,
+      "duration_ms": 5.798500031232834,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -433,7 +436,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 13.099399991915561,
+      "duration_ms": 5.5365998996421695,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -448,7 +451,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 10.412000003270805,
+      "duration_ms": 5.443000001832843,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -463,7 +466,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 8.14449999597855,
+      "duration_ms": 5.820299964398146,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -478,7 +481,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 9.221100001013838,
+      "duration_ms": 5.215600016526878,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -493,7 +496,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 6.851999991340563,
+      "duration_ms": 5.523400031961501,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -508,7 +511,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 8.830000006128103,
+      "duration_ms": 5.083400057628751,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -523,7 +526,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 7.411600003251806,
+      "duration_ms": 5.869399989023805,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -538,7 +541,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 9.774699996341951,
+      "duration_ms": 5.6801000609993935,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -553,7 +556,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 7.48359999852255,
+      "duration_ms": 5.304899998009205,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -568,7 +571,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 9.183300004224293,
+      "duration_ms": 7.171700010076165,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -583,7 +586,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 7.085499993991107,
+      "duration_ms": 5.839799996465445,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -598,7 +601,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 10.887899989029393,
+      "duration_ms": 5.5550000397488475,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -613,7 +616,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 7.178700005169958,
+      "duration_ms": 5.593699985183775,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -628,7 +631,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 8.832099993014708,
+      "duration_ms": 5.272499984130263,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -643,7 +646,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 6.89980000606738,
+      "duration_ms": 5.474900011904538,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -658,7 +661,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 8.339299994986504,
+      "duration_ms": 5.435999948531389,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -673,7 +676,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 6.836100001237355,
+      "duration_ms": 5.523400031961501,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -688,7 +691,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 9.426499993423931,
+      "duration_ms": 5.77980000525713,
       "top_findings": [
         "return_path_mismatch",
         "obfuscated_url",
@@ -703,7 +706,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.415999996126629,
+      "duration_ms": 4.160700016655028,
       "top_findings": []
     },
     {
@@ -714,7 +717,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 8.875400002580136,
+      "duration_ms": 3.6078999983146787,
       "top_findings": [
         "urgency_language"
       ]
@@ -727,7 +730,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 9.69479999912437,
+      "duration_ms": 3.7176000187173486,
       "top_findings": [
         "urgency_language"
       ]
@@ -740,7 +743,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 10.391800009529106,
+      "duration_ms": 3.7738000974059105,
       "top_findings": [
         "urgency_language"
       ]
@@ -753,7 +756,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 9.993100000428967,
+      "duration_ms": 3.9661999326199293,
       "top_findings": [
         "urgency_language"
       ]
@@ -766,7 +769,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 6.286899995757267,
+      "duration_ms": 3.673700033687055,
       "top_findings": [
         "urgency_language"
       ]
@@ -779,7 +782,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.822800001828,
+      "duration_ms": 3.9099000860005617,
       "top_findings": []
     },
     {
@@ -790,7 +793,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.640999996103346,
+      "duration_ms": 3.68749990593642,
       "top_findings": []
     },
     {
@@ -801,7 +804,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.511000006459653,
+      "duration_ms": 4.663200001232326,
       "top_findings": [
         "urgency_language"
       ]
@@ -814,7 +817,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 8.225199999287724,
+      "duration_ms": 4.814499989151955,
       "top_findings": []
     },
     {
@@ -825,7 +828,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.321499993442558,
+      "duration_ms": 4.736099974252284,
       "top_findings": []
     },
     {
@@ -836,7 +839,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.255900007090531,
+      "duration_ms": 3.998400061391294,
       "top_findings": []
     },
     {
@@ -847,7 +850,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 5.745100002968684,
+      "duration_ms": 2.5119000347331166,
       "top_findings": [
         "urgency_language"
       ]
@@ -860,7 +863,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 3.766100009670481,
+      "duration_ms": 2.512499922886491,
       "top_findings": [
         "urgency_language"
       ]
@@ -873,7 +876,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 3.6249999975552782,
+      "duration_ms": 2.4483000161126256,
       "top_findings": [
         "urgency_language"
       ]
@@ -886,7 +889,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 5.209199996897951,
+      "duration_ms": 2.51409993506968,
       "top_findings": [
         "urgency_language"
       ]
@@ -899,7 +902,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.435900002135895,
+      "duration_ms": 2.38389999140054,
       "top_findings": [
         "urgency_language"
       ]
@@ -912,7 +915,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.566999996313825,
+      "duration_ms": 2.9566000448539853,
       "top_findings": [
         "urgency_language"
       ]
@@ -925,7 +928,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 6.73320000350941,
+      "duration_ms": 2.4634000146761537,
       "top_findings": [
         "urgency_language"
       ]
@@ -938,7 +941,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.3631000007735565,
+      "duration_ms": 2.4311000015586615,
       "top_findings": [
         "urgency_language"
       ]
@@ -951,7 +954,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 3.918700007488951,
+      "duration_ms": 2.4006000021472573,
       "top_findings": [
         "urgency_language"
       ]
@@ -964,7 +967,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 5.554000003030524,
+      "duration_ms": 2.595400088466704,
       "top_findings": [
         "urgency_language"
       ]
@@ -977,7 +980,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.531700004008599,
+      "duration_ms": 2.325399895198643,
       "top_findings": []
     },
     {
@@ -988,7 +991,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 5.105899996124208,
+      "duration_ms": 2.487399964593351,
       "top_findings": [
         "url_shortener"
       ]
@@ -1001,7 +1004,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.803899999591522,
+      "duration_ms": 3.2232000958174467,
       "top_findings": []
     },
     {
@@ -1012,7 +1015,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 5.257799988612533,
+      "duration_ms": 2.630900009535253,
       "top_findings": [
         "url_shortener"
       ]
@@ -1025,7 +1028,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 4.453400004422292,
+      "duration_ms": 2.3882000241428614,
       "top_findings": [
         "url_shortener"
       ]
@@ -1038,7 +1041,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.40560000424739,
+      "duration_ms": 2.3887999122962356,
       "top_findings": []
     },
     {
@@ -1049,7 +1052,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 5.269500004942529,
+      "duration_ms": 2.425599959678948,
       "top_findings": [
         "url_shortener"
       ]
@@ -1062,7 +1065,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 3.8035999896237627,
+      "duration_ms": 2.6760000037029386,
       "top_findings": [
         "url_shortener"
       ]
@@ -1075,7 +1078,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 3.627999991294928,
+      "duration_ms": 2.399899996817112,
       "top_findings": [
         "url_shortener"
       ]
@@ -1088,7 +1091,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.493900007219054,
+      "duration_ms": 2.3409000132232904,
       "top_findings": []
     },
     {
@@ -1099,7 +1102,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.714400008902885,
+      "duration_ms": 2.2817000281065702,
       "top_findings": []
     },
     {
@@ -1110,7 +1113,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.53449999622535,
+      "duration_ms": 2.6151000056415796,
       "top_findings": []
     },
     {
@@ -1121,7 +1124,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 3.4109999978682026,
+      "duration_ms": 2.347300061956048,
       "top_findings": []
     },
     {
@@ -1132,7 +1135,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.796600002213381,
+      "duration_ms": 2.341600018553436,
       "top_findings": []
     },
     {
@@ -1143,7 +1146,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.128400003537536,
+      "duration_ms": 2.558700041845441,
       "top_findings": []
     },
     {
@@ -1154,7 +1157,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.2889999895123765,
+      "duration_ms": 2.4141999892890453,
       "top_findings": []
     },
     {
@@ -1165,7 +1168,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.07379999908153,
+      "duration_ms": 2.271900069899857,
       "top_findings": []
     },
     {
@@ -1176,7 +1179,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 3.8801999908173457,
+      "duration_ms": 2.407000050880015,
       "top_findings": [
         "urgency_language"
       ]
@@ -1189,7 +1192,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 3.560299999662675,
+      "duration_ms": 2.316900063306093,
       "top_findings": [
         "urgency_language"
       ]
@@ -1202,7 +1205,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.768799990415573,
+      "duration_ms": 2.4344000266864896,
       "top_findings": [
         "urgency_language"
       ]
@@ -1215,7 +1218,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.485100012971088,
+      "duration_ms": 2.593899960629642,
       "top_findings": [
         "urgency_language"
       ]
@@ -1228,7 +1231,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 4.0551999991294,
+      "duration_ms": 2.648300025612116,
       "top_findings": [
         "urgency_language"
       ]
@@ -1241,7 +1244,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 3.595300004235469,
+      "duration_ms": 2.7236000169068575,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1255,7 +1258,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 4.563499998766929,
+      "duration_ms": 2.4737000931054354,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1269,7 +1272,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 4.636900004697964,
+      "duration_ms": 2.389799919910729,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1283,7 +1286,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 4.731099994387478,
+      "duration_ms": 2.5556000182405114,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1297,7 +1300,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 4.624399996828288,
+      "duration_ms": 2.8992999577894807,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1311,7 +1314,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 4.422300000442192,
+      "duration_ms": 2.642700099386275,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1325,7 +1328,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 3.8255999970715493,
+      "duration_ms": 2.5435000425204635,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1339,7 +1342,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 3.564300001016818,
+      "duration_ms": 2.45820009149611,
       "top_findings": [
         "credential_request",
         "urgency_language"
@@ -1353,7 +1356,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.4247000011382625,
+      "duration_ms": 4.4114000629633665,
       "top_findings": []
     },
     {
@@ -1364,7 +1367,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.009599998127669,
+      "duration_ms": 4.704799968749285,
       "top_findings": []
     },
     {
@@ -1375,7 +1378,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.739999997080304,
+      "duration_ms": 4.310199990868568,
       "top_findings": []
     },
     {
@@ -1386,7 +1389,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.815599990659393,
+      "duration_ms": 4.3759000254794955,
       "top_findings": []
     },
     {
@@ -1397,7 +1400,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.2830999959260225,
+      "duration_ms": 4.310499993152916,
       "top_findings": []
     },
     {
@@ -1408,7 +1411,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.040200012852438,
+      "duration_ms": 4.746500053443015,
       "top_findings": []
     },
     {
@@ -1419,7 +1422,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.757199997082353,
+      "duration_ms": 4.209500038996339,
       "top_findings": []
     },
     {
@@ -1430,7 +1433,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.70810000540223,
+      "duration_ms": 4.371899995021522,
       "top_findings": []
     },
     {
@@ -1441,7 +1444,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.909499992616475,
+      "duration_ms": 4.937899997457862,
       "top_findings": []
     },
     {
@@ -1452,7 +1455,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 8.501899996190332,
+      "duration_ms": 4.431899986229837,
       "top_findings": []
     },
     {
@@ -1463,7 +1466,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.48430000001099,
+      "duration_ms": 3.833599970676005,
       "top_findings": []
     },
     {
@@ -1474,7 +1477,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 4.722899990156293,
+      "duration_ms": 2.403699909336865,
       "top_findings": []
     },
     {
@@ -1485,7 +1488,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.523400010541081,
+      "duration_ms": 4.5943999430164695,
       "top_findings": []
     },
     {
@@ -1496,7 +1499,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.660900005954318,
+      "duration_ms": 3.9701000787317753,
       "top_findings": []
     },
     {
@@ -1507,7 +1510,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 8.75629999791272,
+      "duration_ms": 3.852900001220405,
       "top_findings": []
     },
     {
@@ -1518,7 +1521,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.434700000681914,
+      "duration_ms": 3.7721000844612718,
       "top_findings": []
     },
     {
@@ -1529,7 +1532,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 9.683999989647418,
+      "duration_ms": 4.276899970136583,
       "top_findings": []
     },
     {
@@ -1540,7 +1543,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 11.046300001908094,
+      "duration_ms": 3.7921000039204955,
       "top_findings": []
     },
     {
@@ -1551,7 +1554,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 11.470299999928102,
+      "duration_ms": 5.090299993753433,
       "top_findings": [
         "prompt_injection",
         "dmarc_fail",
@@ -1566,11 +1569,11 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 9.395000000949949,
+      "duration_ms": 5.129900062456727,
       "top_findings": [
+        "prompt_injection",
         "dmarc_fail",
-        "link_text_mismatch",
-        "credential_request"
+        "link_text_mismatch"
       ]
     },
     {
@@ -1581,7 +1584,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 95.0,
-      "duration_ms": 7.52140000986401,
+      "duration_ms": 4.621000029146671,
       "top_findings": [
         "ip_address_url",
         "credential_request",
@@ -1596,7 +1599,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 90.0,
-      "duration_ms": 7.52729999658186,
+      "duration_ms": 5.185999907553196,
       "top_findings": [
         "lookalike_domain",
         "credential_request",
@@ -1611,7 +1614,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 8.227099999203347,
+      "duration_ms": 4.58850001450628,
       "top_findings": [
         "dmarc_fail",
         "credential_request",
@@ -1626,7 +1629,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 80.0,
-      "duration_ms": 7.3191999981645495,
+      "duration_ms": 5.112399929203093,
       "top_findings": [
         "credential_request",
         "lookalike_domain",
@@ -1640,12 +1643,12 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 7.977200002642348,
+      "score": 100.0,
+      "duration_ms": 5.2801999263465405,
       "top_findings": [
+        "prompt_injection",
         "homoglyph_domain",
-        "credential_request",
-        "credential_login_path"
+        "credential_request"
       ]
     },
     {
@@ -1656,7 +1659,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 7.705799987888895,
+      "duration_ms": 4.5998001005500555,
       "top_findings": [
         "dmarc_fail",
         "ip_address_url",
@@ -1670,12 +1673,12 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 8.634300000267103,
+      "score": 75.0,
+      "duration_ms": 5.17540005967021,
       "top_findings": [
-        "prompt_injection",
         "credential_request",
-        "lookalike_domain"
+        "lookalike_domain",
+        "credential_login_path"
       ]
     },
     {
@@ -1686,7 +1689,7 @@
       "flagged": true,
       "verdict": "suspicious",
       "score": 60.0,
-      "duration_ms": 8.392399991862476,
+      "duration_ms": 4.559700028039515,
       "top_findings": [
         "credential_request",
         "credential_login_path",
@@ -1699,13 +1702,13 @@
       "category": "credential_link",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.288699998753145,
+      "verdict": "suspicious",
+      "score": 60.0,
+      "duration_ms": 4.625899950042367,
       "top_findings": [
-        "prompt_injection",
         "credential_request",
-        "credential_login_path"
+        "credential_login_path",
+        "urgency_language"
       ]
     },
     {
@@ -1716,7 +1719,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 7.828100002370775,
+      "duration_ms": 4.959900048561394,
       "top_findings": [
         "dmarc_fail",
         "ip_address_url",
@@ -1724,93 +1727,90 @@
       ]
     },
     {
-      "sample_id": "p133-credential-link",
+      "sample_id": "p133-lookalike-sender",
       "label": "phishing",
-      "category": "credential_link",
+      "category": "lookalike_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 9.806300004129298,
-      "top_findings": [
-        "dmarc_fail",
-        "lookalike_domain",
-        "link_text_mismatch"
-      ]
-    },
-    {
-      "sample_id": "p134-credential-link",
-      "label": "phishing",
-      "category": "credential_link",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.3201000050175935,
-      "top_findings": [
-        "dmarc_fail",
-        "lookalike_domain",
-        "credential_request"
-      ]
-    },
-    {
-      "sample_id": "p135-credential-link",
-      "label": "phishing",
-      "category": "credential_link",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 8.329799995408393,
-      "top_findings": [
-        "link_text_mismatch",
-        "credential_request",
-        "display_name_spoofing"
-      ]
-    },
-    {
-      "sample_id": "p136-credential-link",
-      "label": "phishing",
-      "category": "credential_link",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.724700000835583,
-      "top_findings": [
-        "dmarc_fail",
-        "link_text_mismatch",
-        "credential_request"
-      ]
-    },
-    {
-      "sample_id": "p137-credential-link",
-      "label": "phishing",
-      "category": "credential_link",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 6.753600013325922,
+      "score": 85.0,
+      "duration_ms": 4.355599987320602,
       "top_findings": [
         "prompt_injection",
-        "ip_address_url",
-        "credential_request"
+        "lookalike_domain",
+        "credential_login_path"
       ]
     },
     {
-      "sample_id": "p138-credential-link",
+      "sample_id": "p134-lookalike-sender",
       "label": "phishing",
-      "category": "credential_link",
+      "category": "lookalike_sender",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 4.778599948622286,
+      "top_findings": [
+        "lookalike_domain"
+      ]
+    },
+    {
+      "sample_id": "p135-lookalike-sender",
+      "label": "phishing",
+      "category": "lookalike_sender",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 30.0,
+      "duration_ms": 4.563999944366515,
+      "top_findings": [
+        "lookalike_domain",
+        "credential_login_path"
+      ]
+    },
+    {
+      "sample_id": "p136-lookalike-sender",
+      "label": "phishing",
+      "category": "lookalike_sender",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 75.0,
+      "duration_ms": 4.331400035880506,
+      "top_findings": [
+        "dmarc_fail",
+        "homoglyph_domain",
+        "spf_fail"
+      ]
+    },
+    {
+      "sample_id": "p137-lookalike-sender",
+      "label": "phishing",
+      "category": "lookalike_sender",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 35.0,
+      "duration_ms": 4.304099944420159,
+      "top_findings": [
+        "display_name_spoofing",
+        "lookalike_domain",
+        "spf_fail"
+      ]
+    },
+    {
+      "sample_id": "p138-lookalike-sender",
+      "label": "phishing",
+      "category": "lookalike_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 8.863800001563504,
+      "duration_ms": 4.421900026500225,
       "top_findings": [
         "prompt_injection",
-        "ip_address_url",
-        "credential_request"
+        "display_name_spoofing",
+        "lookalike_domain"
       ]
     },
     {
@@ -1818,12 +1818,14 @@
       "label": "phishing",
       "category": "lookalike_sender",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 14.856400011922233,
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 75.0,
+      "duration_ms": 4.508999991230667,
       "top_findings": [
-        "lookalike_domain"
+        "dmarc_fail",
+        "homoglyph_domain",
+        "spf_fail"
       ]
     },
     {
@@ -1832,12 +1834,12 @@
       "category": "lookalike_sender",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.634399997186847,
+      "verdict": "suspicious",
+      "score": 50.0,
+      "duration_ms": 4.364400054328144,
       "top_findings": [
-        "dmarc_fail",
         "lookalike_domain",
+        "credential_login_path",
         "spf_fail"
       ]
     },
@@ -1846,14 +1848,13 @@
       "label": "phishing",
       "category": "lookalike_sender",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 40.0,
-      "duration_ms": 7.7264999999897555,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 30.0,
+      "duration_ms": 4.361800034530461,
       "top_findings": [
         "lookalike_domain",
-        "credential_login_path",
-        "auth_results_missing"
+        "credential_login_path"
       ]
     },
     {
@@ -1863,12 +1864,12 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 9.799799998290837,
+      "score": 35.0,
+      "duration_ms": 4.5282000210136175,
       "top_findings": [
-        "display_name_spoofing",
         "lookalike_domain",
-        "credential_login_path"
+        "credential_login_path",
+        "spf_fail"
       ]
     },
     {
@@ -1879,10 +1880,10 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 30.0,
-      "duration_ms": 40.17629999725614,
+      "duration_ms": 4.385399981401861,
       "top_findings": [
-        "display_name_spoofing",
-        "lookalike_domain"
+        "lookalike_domain",
+        "credential_login_path"
       ]
     },
     {
@@ -1890,109 +1891,25 @@
       "label": "phishing",
       "category": "lookalike_sender",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 8.433900002273731,
-      "top_findings": [
-        "lookalike_domain"
-      ]
-    },
-    {
-      "sample_id": "p145-lookalike-sender",
-      "label": "phishing",
-      "category": "lookalike_sender",
-      "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 75.0,
-      "duration_ms": 8.64230000297539,
-      "top_findings": [
-        "prompt_injection",
-        "lookalike_domain",
-        "spf_fail"
-      ]
-    },
-    {
-      "sample_id": "p146-lookalike-sender",
-      "label": "phishing",
-      "category": "lookalike_sender",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 75.0,
-      "duration_ms": 9.119099995587021,
-      "top_findings": [
-        "prompt_injection",
-        "lookalike_domain",
-        "spf_fail"
-      ]
-    },
-    {
-      "sample_id": "p147-lookalike-sender",
-      "label": "phishing",
-      "category": "lookalike_sender",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 30.0,
-      "duration_ms": 11.30469999043271,
-      "top_findings": [
-        "lookalike_domain"
-      ]
-    },
-    {
-      "sample_id": "p148-lookalike-sender",
-      "label": "phishing",
-      "category": "lookalike_sender",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 10.82319999113679,
+      "duration_ms": 4.2842000257223845,
       "top_findings": [
         "dmarc_fail",
-        "lookalike_domain",
-        "spf_fail"
+        "spf_fail",
+        "lookalike_domain"
       ]
     },
     {
-      "sample_id": "p149-lookalike-sender",
-      "label": "phishing",
-      "category": "lookalike_sender",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 30.0,
-      "duration_ms": 11.773199992603622,
-      "top_findings": [
-        "lookalike_domain",
-        "credential_login_path"
-      ]
-    },
-    {
-      "sample_id": "p150-lookalike-sender",
-      "label": "phishing",
-      "category": "lookalike_sender",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 30.0,
-      "duration_ms": 8.423100007348694,
-      "top_findings": [
-        "lookalike_domain",
-        "credential_login_path"
-      ]
-    },
-    {
-      "sample_id": "p151-homoglyph-sender",
+      "sample_id": "p145-homoglyph-sender",
       "label": "phishing",
       "category": "homoglyph_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 10.675099998479709,
+      "duration_ms": 7.237299927510321,
       "top_findings": [
         "homoglyph_domain",
         "link_text_mismatch",
@@ -2000,14 +1917,14 @@
       ]
     },
     {
-      "sample_id": "p152-homoglyph-sender",
+      "sample_id": "p146-homoglyph-sender",
       "label": "phishing",
       "category": "homoglyph_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 8.066999987931922,
+      "duration_ms": 5.069699953310192,
       "top_findings": [
         "homoglyph_domain",
         "link_text_mismatch",
@@ -2015,14 +1932,14 @@
       ]
     },
     {
-      "sample_id": "p153-homoglyph-sender",
+      "sample_id": "p147-homoglyph-sender",
       "label": "phishing",
       "category": "homoglyph_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 7.92139999975916,
+      "duration_ms": 4.730799933895469,
       "top_findings": [
         "homoglyph_domain",
         "link_text_mismatch",
@@ -2030,14 +1947,14 @@
       ]
     },
     {
-      "sample_id": "p154-homoglyph-sender",
+      "sample_id": "p148-homoglyph-sender",
       "label": "phishing",
       "category": "homoglyph_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 7.572599992272444,
+      "duration_ms": 5.11770008597523,
       "top_findings": [
         "homoglyph_domain",
         "link_text_mismatch",
@@ -2045,14 +1962,14 @@
       ]
     },
     {
-      "sample_id": "p155-homoglyph-sender",
+      "sample_id": "p149-homoglyph-sender",
       "label": "phishing",
       "category": "homoglyph_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 8.1272999959765,
+      "duration_ms": 4.709800006821752,
       "top_findings": [
         "homoglyph_domain",
         "link_text_mismatch",
@@ -2060,14 +1977,14 @@
       ]
     },
     {
-      "sample_id": "p156-homoglyph-sender",
+      "sample_id": "p150-homoglyph-sender",
       "label": "phishing",
       "category": "homoglyph_sender",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 7.463200003257953,
+      "duration_ms": 4.525299998931587,
       "top_findings": [
         "homoglyph_domain",
         "link_text_mismatch",
@@ -2075,124 +1992,14 @@
       ]
     },
     {
-      "sample_id": "p157-homoglyph-sender",
-      "label": "phishing",
-      "category": "homoglyph_sender",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 8.684500004164875,
-      "top_findings": [
-        "homoglyph_domain",
-        "link_text_mismatch",
-        "punycode_domain"
-      ]
-    },
-    {
-      "sample_id": "p158-homoglyph-sender",
-      "label": "phishing",
-      "category": "homoglyph_sender",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.479200008674525,
-      "top_findings": [
-        "homoglyph_domain",
-        "link_text_mismatch",
-        "punycode_domain"
-      ]
-    },
-    {
-      "sample_id": "p159-html-attachment",
-      "label": "phishing",
-      "category": "html_attachment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 6.510599996545352,
-      "top_findings": [
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p160-html-attachment",
-      "label": "phishing",
-      "category": "html_attachment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 5.837700009578839,
-      "top_findings": [
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p161-html-attachment",
-      "label": "phishing",
-      "category": "html_attachment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 9.24680000753142,
-      "top_findings": [
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p162-html-attachment",
-      "label": "phishing",
-      "category": "html_attachment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 20.0,
-      "duration_ms": 6.828099998529069,
-      "top_findings": [
-        "risky_attachment",
-        "spf_fail"
-      ]
-    },
-    {
-      "sample_id": "p163-html-attachment",
-      "label": "phishing",
-      "category": "html_attachment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 7.660500006750226,
-      "top_findings": [
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p164-html-attachment",
-      "label": "phishing",
-      "category": "html_attachment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 20.0,
-      "duration_ms": 6.959799997275695,
-      "top_findings": [
-        "risky_attachment",
-        "auth_results_missing"
-      ]
-    },
-    {
-      "sample_id": "p165-html-attachment",
+      "sample_id": "p151-html-attachment",
       "label": "phishing",
       "category": "html_attachment",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
       "score": 60.0,
-      "duration_ms": 5.892000001040287,
+      "duration_ms": 4.429199965670705,
       "top_findings": [
         "dmarc_fail",
         "spf_fail",
@@ -2200,17 +2007,216 @@
       ]
     },
     {
-      "sample_id": "p166-html-attachment",
+      "sample_id": "p152-html-attachment",
+      "label": "phishing",
+      "category": "html_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 60.0,
+      "duration_ms": 3.921799943782389,
+      "top_findings": [
+        "dmarc_fail",
+        "spf_fail",
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p153-html-attachment",
+      "label": "phishing",
+      "category": "html_attachment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 3.6106000188738108,
+      "top_findings": [
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p154-html-attachment",
       "label": "phishing",
       "category": "html_attachment",
       "mode": "rules_only",
       "flagged": false,
       "verdict": "likely_safe",
       "score": 20.0,
-      "duration_ms": 8.984400003100745,
+      "duration_ms": 22.14669995009899,
       "top_findings": [
         "risky_attachment",
         "auth_results_missing"
+      ]
+    },
+    {
+      "sample_id": "p155-html-attachment",
+      "label": "phishing",
+      "category": "html_attachment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 5.1654999842867255,
+      "top_findings": [
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p156-html-attachment",
+      "label": "phishing",
+      "category": "html_attachment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 4.777099937200546,
+      "top_findings": [
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p157-html-attachment",
+      "label": "phishing",
+      "category": "html_attachment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 4.337799968197942,
+      "top_findings": [
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p158-html-attachment",
+      "label": "phishing",
+      "category": "html_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 60.0,
+      "duration_ms": 4.7058999771252275,
+      "top_findings": [
+        "dmarc_fail",
+        "spf_fail",
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p159-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 35.0,
+      "duration_ms": 5.9643000131472945,
+      "top_findings": [
+        "risky_attachment",
+        "spf_fail"
+      ]
+    },
+    {
+      "sample_id": "p160-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 100.0,
+      "duration_ms": 4.168800078332424,
+      "top_findings": [
+        "double_extension",
+        "file_type_mismatch",
+        "risky_attachment"
+      ]
+    },
+    {
+      "sample_id": "p161-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 75.0,
+      "duration_ms": 4.299500025808811,
+      "top_findings": [
+        "file_type_mismatch",
+        "risky_attachment",
+        "lookalike_domain"
+      ]
+    },
+    {
+      "sample_id": "p162-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 80.0,
+      "duration_ms": 4.70549997407943,
+      "top_findings": [
+        "file_type_mismatch",
+        "risky_attachment",
+        "lookalike_domain"
+      ]
+    },
+    {
+      "sample_id": "p163-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 100.0,
+      "duration_ms": 3.7167000118643045,
+      "top_findings": [
+        "double_extension",
+        "dmarc_fail",
+        "file_type_mismatch"
+      ]
+    },
+    {
+      "sample_id": "p164-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 80.0,
+      "duration_ms": 3.6789000732824206,
+      "top_findings": [
+        "file_type_mismatch",
+        "risky_attachment",
+        "lookalike_domain"
+      ]
+    },
+    {
+      "sample_id": "p165-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 65.0,
+      "duration_ms": 4.289900069124997,
+      "top_findings": [
+        "file_type_mismatch",
+        "risky_attachment",
+        "spf_fail"
+      ]
+    },
+    {
+      "sample_id": "p166-malware-attachment",
+      "label": "phishing",
+      "category": "malware_attachment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 30.0,
+      "duration_ms": 4.981299978680909,
+      "top_findings": [
+        "risky_attachment"
       ]
     },
     {
@@ -2221,7 +2227,7 @@
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 8.396500008529983,
+      "duration_ms": 3.917100024409592,
       "top_findings": [
         "double_extension",
         "dmarc_fail",
@@ -2234,10 +2240,11 @@
       "category": "malware_attachment",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 10.580500005744398,
+      "verdict": "malicious",
+      "score": 90.0,
+      "duration_ms": 3.960800007916987,
       "top_findings": [
+        "homoglyph_domain",
         "file_type_mismatch",
         "risky_attachment"
       ]
@@ -2248,12 +2255,13 @@
       "category": "malware_attachment",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 9.572899987688288,
+      "verdict": "malicious",
+      "score": 75.0,
+      "duration_ms": 5.5158999748528,
       "top_findings": [
-        "file_type_mismatch",
-        "risky_attachment"
+        "dmarc_fail",
+        "risky_attachment",
+        "spf_fail"
       ]
     },
     {
@@ -2261,130 +2269,118 @@
       "label": "phishing",
       "category": "malware_attachment",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 30.0,
-      "duration_ms": 8.062599998083897,
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 60.0,
+      "duration_ms": 4.864400019869208,
       "top_findings": [
+        "lookalike_domain",
         "risky_attachment"
       ]
     },
     {
-      "sample_id": "p171-malware-attachment",
+      "sample_id": "p171-bec-payment",
       "label": "phishing",
-      "category": "malware_attachment",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 12.943900001118891,
-      "top_findings": [
-        "dmarc_fail",
-        "risky_attachment",
-        "spf_fail"
-      ]
-    },
-    {
-      "sample_id": "p172-malware-attachment",
-      "label": "phishing",
-      "category": "malware_attachment",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 11.19799999287352,
-      "top_findings": [
-        "dmarc_fail",
-        "risky_attachment",
-        "spf_fail"
-      ]
-    },
-    {
-      "sample_id": "p173-malware-attachment",
-      "label": "phishing",
-      "category": "malware_attachment",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 6.998700002441183,
-      "top_findings": [
-        "double_extension",
-        "file_type_mismatch",
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p174-malware-attachment",
-      "label": "phishing",
-      "category": "malware_attachment",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 6.925699999555945,
-      "top_findings": [
-        "double_extension",
-        "dmarc_fail",
-        "file_type_mismatch"
-      ]
-    },
-    {
-      "sample_id": "p175-malware-attachment",
-      "label": "phishing",
-      "category": "malware_attachment",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 6.428399996366352,
-      "top_findings": [
-        "dmarc_fail",
-        "file_type_mismatch",
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p176-malware-attachment",
-      "label": "phishing",
-      "category": "malware_attachment",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.580900011816993,
-      "top_findings": [
-        "double_extension",
-        "file_type_mismatch",
-        "risky_attachment"
-      ]
-    },
-    {
-      "sample_id": "p177-malware-attachment",
-      "label": "phishing",
-      "category": "malware_attachment",
+      "category": "bec_payment",
       "mode": "rules_only",
       "flagged": false,
       "verdict": "likely_safe",
-      "score": 30.0,
-      "duration_ms": 6.658800004515797,
+      "score": 0.0,
+      "duration_ms": 2.6675000553950667,
+      "top_findings": []
+    },
+    {
+      "sample_id": "p172-bec-payment",
+      "label": "phishing",
+      "category": "bec_payment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 5.0,
+      "duration_ms": 2.420300035737455,
       "top_findings": [
-        "risky_attachment"
+        "urgency_language"
       ]
     },
     {
-      "sample_id": "p178-malware-attachment",
+      "sample_id": "p173-bec-payment",
       "label": "phishing",
-      "category": "malware_attachment",
+      "category": "bec_payment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 80.0,
+      "duration_ms": 2.8950999258086085,
+      "top_findings": [
+        "reply_to_mismatch",
+        "payment_request",
+        "lookalike_domain"
+      ]
+    },
+    {
+      "sample_id": "p174-bec-payment",
+      "label": "phishing",
+      "category": "bec_payment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 0.0,
+      "duration_ms": 2.4861000711098313,
+      "top_findings": []
+    },
+    {
+      "sample_id": "p175-bec-payment",
+      "label": "phishing",
+      "category": "bec_payment",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 45.0,
+      "duration_ms": 2.4076999397948384,
+      "top_findings": [
+        "payment_request",
+        "urgency_language"
+      ]
+    },
+    {
+      "sample_id": "p176-bec-payment",
+      "label": "phishing",
+      "category": "bec_payment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 2.3637000704184175,
+      "top_findings": [
+        "payment_request"
+      ]
+    },
+    {
+      "sample_id": "p177-bec-payment",
+      "label": "phishing",
+      "category": "bec_payment",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
       "score": 65.0,
-      "duration_ms": 6.81829999666661,
+      "duration_ms": 3.2529999734833837,
       "top_findings": [
-        "homoglyph_domain",
-        "risky_attachment",
-        "spf_fail"
+        "reply_to_mismatch",
+        "lookalike_domain",
+        "payment_request"
+      ]
+    },
+    {
+      "sample_id": "p178-bec-payment",
+      "label": "phishing",
+      "category": "bec_payment",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 2.6150000048801303,
+      "top_findings": [
+        "payment_request"
       ]
     },
     {
@@ -2392,11 +2388,14 @@
       "label": "phishing",
       "category": "bec_payment",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 0.0,
-      "duration_ms": 4.1477999911876395,
-      "top_findings": []
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 35.0,
+      "duration_ms": 2.545699942857027,
+      "top_findings": [
+        "payment_request",
+        "urgency_language"
+      ]
     },
     {
       "sample_id": "p180-bec-payment",
@@ -2405,10 +2404,11 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 4.443699988769367,
+      "score": 50.0,
+      "duration_ms": 2.888699993491173,
       "top_findings": [
-        "payment_request",
+        "reply_to_mismatch",
+        "lookalike_domain",
         "urgency_language"
       ]
     },
@@ -2417,11 +2417,14 @@
       "label": "phishing",
       "category": "bec_payment",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 0.0,
-      "duration_ms": 3.815300005953759,
-      "top_findings": []
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 60.0,
+      "duration_ms": 2.575299935415387,
+      "top_findings": [
+        "reply_to_mismatch",
+        "homoglyph_domain"
+      ]
     },
     {
       "sample_id": "p182-bec-payment",
@@ -2430,293 +2433,279 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 5.363700009183958,
+      "score": 35.0,
+      "duration_ms": 2.4800000246614218,
       "top_findings": [
-        "reply_to_mismatch",
-        "lookalike_domain"
+        "payment_request",
+        "urgency_language"
       ]
     },
     {
-      "sample_id": "p183-bec-payment",
+      "sample_id": "p183-gift-card",
       "label": "phishing",
-      "category": "bec_payment",
+      "category": "gift_card",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 4.4135999924037606,
+      "score": 35.0,
+      "duration_ms": 2.44040007237345,
       "top_findings": [
-        "reply_to_mismatch",
-        "lookalike_domain"
+        "gift_card_request",
+        "urgency_language"
       ]
     },
     {
-      "sample_id": "p184-bec-payment",
+      "sample_id": "p184-gift-card",
       "label": "phishing",
-      "category": "bec_payment",
-      "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 4.6864000032655895,
-      "top_findings": [
-        "payment_request"
-      ]
-    },
-    {
-      "sample_id": "p185-bec-payment",
-      "label": "phishing",
-      "category": "bec_payment",
+      "category": "gift_card",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 5.585699997027405,
+      "score": 35.0,
+      "duration_ms": 2.5410999078303576,
       "top_findings": [
-        "reply_to_mismatch",
-        "lookalike_domain",
-        "payment_request"
+        "gift_card_request",
+        "urgency_language"
       ]
     },
     {
-      "sample_id": "p186-bec-payment",
+      "sample_id": "p185-gift-card",
       "label": "phishing",
-      "category": "bec_payment",
+      "category": "gift_card",
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
       "score": 45.0,
-      "duration_ms": 4.712599999038503,
+      "duration_ms": 2.790300059132278,
       "top_findings": [
-        "reply_to_mismatch",
-        "lookalike_domain"
+        "gift_card_request",
+        "urgency_language"
       ]
     },
     {
-      "sample_id": "p187-bec-payment",
+      "sample_id": "p186-gift-card",
       "label": "phishing",
-      "category": "bec_payment",
+      "category": "gift_card",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 4.5002999977441505,
+      "verdict": "suspicious",
+      "score": 45.0,
+      "duration_ms": 2.5906000519171357,
       "top_findings": [
-        "reply_to_mismatch",
-        "payment_request",
-        "lookalike_domain"
+        "gift_card_request",
+        "urgency_language"
       ]
     },
     {
-      "sample_id": "p188-bec-payment",
+      "sample_id": "p187-gift-card",
       "label": "phishing",
-      "category": "bec_payment",
+      "category": "gift_card",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 45.0,
+      "duration_ms": 2.45789997279644,
+      "top_findings": [
+        "gift_card_request",
+        "urgency_language"
+      ]
+    },
+    {
+      "sample_id": "p188-gift-card",
+      "label": "phishing",
+      "category": "gift_card",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 35.0,
+      "duration_ms": 2.6871999725699425,
+      "top_findings": [
+        "gift_card_request",
+        "urgency_language"
+      ]
+    },
+    {
+      "sample_id": "p189-gift-card",
+      "label": "phishing",
+      "category": "gift_card",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 35.0,
+      "duration_ms": 2.4248999543488026,
+      "top_findings": [
+        "gift_card_request",
+        "urgency_language"
+      ]
+    },
+    {
+      "sample_id": "p190-gift-card",
+      "label": "phishing",
+      "category": "gift_card",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 35.0,
+      "duration_ms": 2.365299966186285,
+      "top_findings": [
+        "gift_card_request",
+        "urgency_language"
+      ]
+    },
+    {
+      "sample_id": "p191-scam",
+      "label": "phishing",
+      "category": "scam",
       "mode": "rules_only",
       "flagged": false,
       "verdict": "likely_safe",
       "score": 5.0,
-      "duration_ms": 5.927799997152761,
+      "duration_ms": 2.6089000748470426,
       "top_findings": [
         "urgency_language"
       ]
     },
     {
-      "sample_id": "p189-bec-payment",
+      "sample_id": "p192-scam",
       "label": "phishing",
-      "category": "bec_payment",
+      "category": "scam",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 5.0,
+      "duration_ms": 2.5935000739991665,
+      "top_findings": [
+        "urgency_language"
+      ]
+    },
+    {
+      "sample_id": "p193-scam",
+      "label": "phishing",
+      "category": "scam",
       "mode": "rules_only",
       "flagged": false,
       "verdict": "likely_safe",
       "score": 15.0,
-      "duration_ms": 6.728099993779324,
+      "duration_ms": 2.7501999866217375,
       "top_findings": [
-        "payment_request"
+        "reply_to_mismatch"
       ]
     },
     {
-      "sample_id": "p190-bec-payment",
+      "sample_id": "p194-scam",
       "label": "phishing",
-      "category": "bec_payment",
+      "category": "scam",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 75.0,
-      "duration_ms": 5.5635000026086345,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 3.153500030748546,
       "top_findings": [
-        "reply_to_mismatch",
-        "homoglyph_domain",
-        "payment_request"
+        "reply_to_mismatch"
       ]
     },
     {
-      "sample_id": "p191-gift-card",
+      "sample_id": "p195-scam",
       "label": "phishing",
-      "category": "gift_card",
+      "category": "scam",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 5.272900001727976,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 2.7510999934747815,
       "top_findings": [
-        "gift_card_request",
+        "reply_to_mismatch"
+      ]
+    },
+    {
+      "sample_id": "p196-scam",
+      "label": "phishing",
+      "category": "scam",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 3.4691999899223447,
+      "top_findings": [
+        "reply_to_mismatch"
+      ]
+    },
+    {
+      "sample_id": "p197-scam",
+      "label": "phishing",
+      "category": "scam",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 5.0,
+      "duration_ms": 2.7002000715583563,
+      "top_findings": [
         "urgency_language"
       ]
     },
     {
-      "sample_id": "p192-gift-card",
+      "sample_id": "p198-scam",
       "label": "phishing",
-      "category": "gift_card",
+      "category": "scam",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 4.048899994813837,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 2.7338999789208174,
       "top_findings": [
-        "gift_card_request",
+        "reply_to_mismatch"
+      ]
+    },
+    {
+      "sample_id": "p199-scam",
+      "label": "phishing",
+      "category": "scam",
+      "mode": "rules_only",
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 5.0,
+      "duration_ms": 2.473300090059638,
+      "top_findings": [
         "urgency_language"
       ]
     },
     {
-      "sample_id": "p193-gift-card",
+      "sample_id": "p200-scam",
       "label": "phishing",
-      "category": "gift_card",
+      "category": "scam",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 4.245100004482083,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 2.8943000361323357,
       "top_findings": [
-        "gift_card_request",
-        "urgency_language"
+        "reply_to_mismatch"
       ]
     },
     {
-      "sample_id": "p194-gift-card",
+      "sample_id": "p201-scam",
       "label": "phishing",
-      "category": "gift_card",
+      "category": "scam",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 5.229999995208345,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 2.70389998331666,
       "top_findings": [
-        "gift_card_request",
-        "urgency_language"
+        "reply_to_mismatch"
       ]
     },
     {
-      "sample_id": "p195-gift-card",
+      "sample_id": "p202-scam",
       "label": "phishing",
-      "category": "gift_card",
+      "category": "scam",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 4.241600006935187,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 4.033299977891147,
       "top_findings": [
-        "gift_card_request",
-        "urgency_language"
-      ]
-    },
-    {
-      "sample_id": "p196-gift-card",
-      "label": "phishing",
-      "category": "gift_card",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 3.891999993356876,
-      "top_findings": [
-        "gift_card_request",
-        "urgency_language"
-      ]
-    },
-    {
-      "sample_id": "p197-gift-card",
-      "label": "phishing",
-      "category": "gift_card",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 35.0,
-      "duration_ms": 5.202799991820939,
-      "top_findings": [
-        "gift_card_request",
-        "urgency_language"
-      ]
-    },
-    {
-      "sample_id": "p198-gift-card",
-      "label": "phishing",
-      "category": "gift_card",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 35.0,
-      "duration_ms": 6.891700002597645,
-      "top_findings": [
-        "gift_card_request",
-        "urgency_language"
-      ]
-    },
-    {
-      "sample_id": "p199-gift-card",
-      "label": "phishing",
-      "category": "gift_card",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 35.0,
-      "duration_ms": 5.520200007595122,
-      "top_findings": [
-        "gift_card_request",
-        "urgency_language"
-      ]
-    },
-    {
-      "sample_id": "p200-gift-card",
-      "label": "phishing",
-      "category": "gift_card",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 35.0,
-      "duration_ms": 4.897200007690117,
-      "top_findings": [
-        "gift_card_request",
-        "urgency_language"
-      ]
-    },
-    {
-      "sample_id": "p201-invoice-fraud",
-      "label": "phishing",
-      "category": "invoice_fraud",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 6.836799992015585,
-      "top_findings": [
-        "dmarc_fail",
-        "lookalike_domain",
-        "spf_fail"
-      ]
-    },
-    {
-      "sample_id": "p202-invoice-fraud",
-      "label": "phishing",
-      "category": "invoice_fraud",
-      "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 35.0,
-      "duration_ms": 6.600799999432638,
-      "top_findings": [
-        "lookalike_domain",
-        "payment_request",
-        "spf_fail"
+        "reply_to_mismatch"
       ]
     },
     {
@@ -2725,13 +2714,13 @@
       "category": "invoice_fraud",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 7.272300004842691,
+      "verdict": "suspicious",
+      "score": 45.0,
+      "duration_ms": 4.812499973922968,
       "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
-        "display_name_spoofing"
+        "display_name_spoofing",
+        "lookalike_domain",
+        "payment_request"
       ]
     },
     {
@@ -2739,13 +2728,12 @@
       "label": "phishing",
       "category": "invoice_fraud",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 7.520600003772415,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 30.0,
+      "duration_ms": 4.092299961484969,
       "top_findings": [
         "lookalike_domain",
-        "display_name_spoofing",
         "payment_request"
       ]
     },
@@ -2756,11 +2744,12 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 7.228699992992915,
+      "score": 50.0,
+      "duration_ms": 4.196800058707595,
       "top_findings": [
-        "lookalike_domain",
-        "payment_request"
+        "homoglyph_domain",
+        "payment_request",
+        "auth_results_missing"
       ]
     },
     {
@@ -2770,10 +2759,11 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 7.038200012175366,
+      "score": 60.0,
+      "duration_ms": 4.086800036020577,
       "top_findings": [
-        "homoglyph_domain",
+        "lookalike_domain",
+        "display_name_spoofing",
         "payment_request"
       ]
     },
@@ -2783,13 +2773,13 @@
       "category": "invoice_fraud",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "malicious",
-      "score": 75.0,
-      "duration_ms": 6.95909999194555,
+      "verdict": "suspicious",
+      "score": 50.0,
+      "duration_ms": 4.088000045157969,
       "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
-        "lookalike_domain"
+        "lookalike_domain",
+        "payment_request",
+        "spf_fail"
       ]
     },
     {
@@ -2798,12 +2788,13 @@
       "category": "invoice_fraud",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "suspicious",
-      "score": 45.0,
-      "duration_ms": 6.853599988971837,
+      "verdict": "malicious",
+      "score": 75.0,
+      "duration_ms": 4.096499993465841,
       "top_findings": [
-        "lookalike_domain",
-        "payment_request"
+        "dmarc_fail",
+        "spf_fail",
+        "lookalike_domain"
       ]
     },
     {
@@ -2814,9 +2805,9 @@
       "flagged": true,
       "verdict": "suspicious",
       "score": 45.0,
-      "duration_ms": 6.990400012000464,
+      "duration_ms": 4.315700032748282,
       "top_findings": [
-        "homoglyph_domain",
+        "lookalike_domain",
         "payment_request"
       ]
     },
@@ -2828,7 +2819,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 30.0,
-      "duration_ms": 6.610900003579445,
+      "duration_ms": 4.033500095829368,
       "top_findings": [
         "lookalike_domain",
         "payment_request"
@@ -2840,13 +2831,13 @@
       "category": "shortener_lure",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 8.317100000567734,
+      "verdict": "suspicious",
+      "score": 50.0,
+      "duration_ms": 4.3898000149056315,
       "top_findings": [
-        "prompt_injection",
         "credential_request",
-        "url_shortener"
+        "url_shortener",
+        "spf_fail"
       ]
     },
     {
@@ -2854,14 +2845,14 @@
       "label": "phishing",
       "category": "shortener_lure",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 8.267799988971092,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 25.0,
+      "duration_ms": 4.624499939382076,
       "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
-        "url_shortener"
+        "url_shortener",
+        "urgency_language",
+        "hidden_text"
       ]
     },
     {
@@ -2869,14 +2860,12 @@
       "label": "phishing",
       "category": "shortener_lure",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "malicious",
-      "score": 100.0,
-      "duration_ms": 7.912200002465397,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 4.433599999174476,
       "top_findings": [
-        "prompt_injection",
-        "dmarc_fail",
-        "spf_fail"
+        "url_shortener"
       ]
     },
     {
@@ -2886,12 +2875,12 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
-      "score": 90.0,
-      "duration_ms": 7.342600001720712,
+      "score": 100.0,
+      "duration_ms": 4.451500019058585,
       "top_findings": [
-        "dmarc_fail",
+        "prompt_injection",
         "credential_request",
-        "spf_fail"
+        "url_shortener"
       ]
     },
     {
@@ -2899,13 +2888,14 @@
       "label": "phishing",
       "category": "shortener_lure",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 20.0,
-      "duration_ms": 8.19759999285452,
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 60.0,
+      "duration_ms": 4.3249999871477485,
       "top_findings": [
-        "url_shortener",
-        "urgency_language"
+        "dmarc_fail",
+        "spf_fail",
+        "url_shortener"
       ]
     },
     {
@@ -2914,12 +2904,12 @@
       "category": "shortener_lure",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "suspicious",
-      "score": 65.0,
-      "duration_ms": 7.550299997092225,
+      "verdict": "malicious",
+      "score": 100.0,
+      "duration_ms": 4.53959999140352,
       "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
+        "prompt_injection",
+        "credential_request",
         "url_shortener"
       ]
     },
@@ -2931,7 +2921,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.9960000002756715,
+      "duration_ms": 4.870000062510371,
       "top_findings": []
     },
     {
@@ -2942,7 +2932,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 6.30789999559056,
+      "duration_ms": 4.529200028628111,
       "top_findings": []
     },
     {
@@ -2953,7 +2943,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 7.918800009065308,
+      "duration_ms": 4.766799975186586,
       "top_findings": []
     },
     {
@@ -2964,7 +2954,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 5.855099996551871,
+      "duration_ms": 4.8674000427126884,
       "top_findings": []
     },
     {
@@ -2972,25 +2962,25 @@
       "label": "phishing",
       "category": "low_signal",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 55.0,
-      "duration_ms": 6.313800011412241,
-      "top_findings": [
-        "prompt_injection",
-        "hidden_text"
-      ]
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 0.0,
+      "duration_ms": 4.51610004529357,
+      "top_findings": []
     },
     {
       "sample_id": "p222-low-signal",
       "label": "phishing",
       "category": "low_signal",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 0.0,
-      "duration_ms": 6.391400005668402,
-      "top_findings": []
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 55.0,
+      "duration_ms": 5.296600051224232,
+      "top_findings": [
+        "prompt_injection",
+        "hidden_text"
+      ]
     },
     {
       "sample_id": "p223-low-signal",
@@ -3000,7 +2990,7 @@
       "flagged": true,
       "verdict": "suspicious",
       "score": 55.0,
-      "duration_ms": 8.925599991925992,
+      "duration_ms": 4.983299993909895,
       "top_findings": [
         "prompt_injection",
         "hidden_text"
@@ -3011,11 +3001,14 @@
       "label": "phishing",
       "category": "low_signal",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 0.0,
-      "duration_ms": 8.85030000063125,
-      "top_findings": []
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 55.0,
+      "duration_ms": 4.5597999123856425,
+      "top_findings": [
+        "prompt_injection",
+        "hidden_text"
+      ]
     },
     {
       "sample_id": "p225-low-signal",
@@ -3025,7 +3018,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 8.48509999923408,
+      "duration_ms": 5.9090000577270985,
       "top_findings": []
     },
     {
@@ -3036,7 +3029,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 8.549300007871352,
+      "duration_ms": 6.2812999822199345,
       "top_findings": []
     },
     {
@@ -3047,7 +3040,7 @@
       "flagged": false,
       "verdict": "likely_safe",
       "score": 0.0,
-      "duration_ms": 9.650199994212016,
+      "duration_ms": 5.768399918451905,
       "top_findings": []
     },
     {
@@ -3055,14 +3048,11 @@
       "label": "phishing",
       "category": "low_signal",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 55.0,
-      "duration_ms": 9.030600005644374,
-      "top_findings": [
-        "prompt_injection",
-        "hidden_text"
-      ]
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 0.0,
+      "duration_ms": 5.645899916999042,
+      "top_findings": []
     },
     {
       "sample_id": "p229-thread-hijack",
@@ -3071,52 +3061,46 @@
       "mode": "rules_only",
       "flagged": false,
       "verdict": "likely_safe",
-      "score": 0.0,
-      "duration_ms": 8.655500001623295,
-      "top_findings": []
+      "score": 20.0,
+      "duration_ms": 5.010599968954921,
+      "top_findings": [
+        "payment_request",
+        "spf_fail"
+      ]
     },
     {
       "sample_id": "p230-thread-hijack",
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 55.0,
-      "duration_ms": 12.819499999750406,
-      "top_findings": [
-        "prompt_injection",
-        "hidden_text"
-      ]
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 0.0,
+      "duration_ms": 4.920599982142448,
+      "top_findings": []
     },
     {
       "sample_id": "p231-thread-hijack",
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 50.0,
-      "duration_ms": 8.535700006177649,
-      "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
-        "hidden_text"
-      ]
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 0.0,
+      "duration_ms": 4.985300009138882,
+      "top_findings": []
     },
     {
       "sample_id": "p232-thread-hijack",
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 13.936199989984743,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 6.180499913170934,
       "top_findings": [
-        "prompt_injection",
-        "spf_fail",
-        "hidden_text"
+        "payment_request"
       ]
     },
     {
@@ -3126,12 +3110,10 @@
       "mode": "rules_only",
       "flagged": true,
       "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 12.678300001425669,
+      "score": 50.0,
+      "duration_ms": 4.926000023260713,
       "top_findings": [
-        "prompt_injection",
-        "spf_fail",
-        "hidden_text"
+        "prompt_injection"
       ]
     },
     {
@@ -3140,13 +3122,13 @@
       "category": "thread_hijack",
       "mode": "rules_only",
       "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 11.584100007894449,
+      "verdict": "malicious",
+      "score": 70.0,
+      "duration_ms": 4.873999976553023,
       "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
-        "payment_request"
+        "prompt_injection",
+        "payment_request",
+        "hidden_text"
       ]
     },
     {
@@ -3154,13 +3136,11 @@
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": true,
-      "verdict": "suspicious",
-      "score": 60.0,
-      "duration_ms": 8.784200006630272,
+      "flagged": false,
+      "verdict": "likely_safe",
+      "score": 15.0,
+      "duration_ms": 5.194200086407363,
       "top_findings": [
-        "dmarc_fail",
-        "spf_fail",
         "payment_request"
       ]
     },
@@ -3169,12 +3149,12 @@
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 20.0,
-      "duration_ms": 9.241799998562783,
+      "flagged": true,
+      "verdict": "suspicious",
+      "score": 45.0,
+      "duration_ms": 5.786799942143261,
       "top_findings": [
-        "payment_request",
+        "dmarc_fail",
         "spf_fail"
       ]
     },
@@ -3183,21 +3163,10 @@
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 0.0,
-      "duration_ms": 9.300300007453188,
-      "top_findings": []
-    },
-    {
-      "sample_id": "p238-thread-hijack",
-      "label": "phishing",
-      "category": "thread_hijack",
-      "mode": "rules_only",
       "flagged": true,
       "verdict": "malicious",
       "score": 100.0,
-      "duration_ms": 9.7719000041252,
+      "duration_ms": 5.303999991156161,
       "top_findings": [
         "prompt_injection",
         "dmarc_fail",
@@ -3205,16 +3174,28 @@
       ]
     },
     {
-      "sample_id": "p239-thread-hijack",
+      "sample_id": "p238-thread-hijack",
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
       "flagged": false,
       "verdict": "likely_safe",
-      "score": 20.0,
-      "duration_ms": 10.962700005620718,
+      "score": 0.0,
+      "duration_ms": 4.750799969770014,
+      "top_findings": []
+    },
+    {
+      "sample_id": "p239-thread-hijack",
+      "label": "phishing",
+      "category": "thread_hijack",
+      "mode": "rules_only",
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 100.0,
+      "duration_ms": 4.821100039407611,
       "top_findings": [
-        "payment_request",
+        "prompt_injection",
+        "dmarc_fail",
         "spf_fail"
       ]
     },
@@ -3223,12 +3204,14 @@
       "label": "phishing",
       "category": "thread_hijack",
       "mode": "rules_only",
-      "flagged": false,
-      "verdict": "likely_safe",
-      "score": 15.0,
-      "duration_ms": 11.215499995159917,
+      "flagged": true,
+      "verdict": "malicious",
+      "score": 100.0,
+      "duration_ms": 5.0033999141305685,
       "top_findings": [
-        "payment_request"
+        "prompt_injection",
+        "dmarc_fail",
+        "spf_fail"
       ]
     }
   ]

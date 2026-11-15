@@ -10,6 +10,14 @@ The deterministic checks produce the evidence and most of the score. The model
 can add context and some points, but it cannot remove a finding, lower the
 score or take any action.
 
+The three risks that matter most, and where each is handled:
+
+| Risk | Sections |
+| --- | --- |
+| Prompt injection: the email steers the model | T1 to T4 |
+| Data leakage: email content or secrets leave the machine | T8, T12, T13 |
+| Hallucinated findings: the model invents evidence or misleads the analyst | T5 |
+
 ## Scope
 
 In scope:
@@ -134,7 +142,7 @@ Mitigations:
 
 Residual risk: the injection check uses English patterns, so paraphrases,
 other languages, text inside images and well-crafted social engineering of the
-model can get past it. In the evaluation it caught 16 of 20 hidden
+model can get past it. In the evaluation it caught 15 of 20 hidden
 instructions. A successful injection can still cost the AI's points and bend
 the explanation; see T5.
 
@@ -199,14 +207,24 @@ marker break-up) and sits inside the marked block. The injection check covers
 the subject, display name and attachment names. The number of links,
 attachments and findings in the prompt is capped (20, 20 and 40).
 
-### T5. A misleading answer
+### T5. Hallucinated findings and misleading answers
 
-The model, steered or simply wrong, calls a phish legitimate, invents
-evidence, or recommends something harmful ("reply with your password to
+The model, steered or simply wrong, invents evidence ("the domain was
+registered yesterday", "the attachment contains a macro"), calls a phish
+legitimate, or recommends something harmful ("reply with your password to
 verify").
 
 Mitigations:
 
+- **A model claim never becomes a finding.** Indicators come only from the
+  deterministic checks and the threat intelligence lookups. Nothing the model
+  says is added to the indicators, the IOCs or the MITRE ATT&CK mapping, so an
+  invented detail cannot be blocked, pushed to Watchpost or counted in the
+  score beyond the clamped AI points.
+- The prompt marks the findings as verified facts, tells the model that
+  attachment contents and hidden text are not shown to it, and asks for an
+  explanation that cites concrete evidence, so each claim can be checked
+  against the findings printed in the same report.
 - The verdict and the deterministic findings come before the AI section in
   the terminal and HTML reports, and the AI section names the provider and
   model.
@@ -214,10 +232,11 @@ Mitigations:
   Hookline's own actions, which come from the verdict and findings only.
 - Its text is escaped and length-limited, and it is never sent to Watchpost.
 
-Residual risk: **this is the main open risk.** A persuasive, wrong
-explanation can lead an analyst to dismiss real findings. The tool cannot
-prevent over-trust; analysts should treat the explanation as a second opinion
-and the findings as the evidence.
+Residual risk: **this is the main open risk.** Nothing checks the
+explanation's claims against the findings automatically, and a persuasive,
+wrong explanation can lead an analyst to dismiss real findings. The tool
+cannot prevent over-trust; analysts should treat the explanation as a second
+opinion and the findings as the evidence.
 
 ### T6. Model-driven false positives
 
@@ -301,7 +320,7 @@ email cannot make Hookline call an internal service.
 
 Residual risk: by design, content inside attachments is unseen by both the
 rules and the model. HTML attachments with a login form are the clearest gap
-(caught 12% of the time in the evaluation).
+(3 of 8 caught in the evaluation).
 
 ### T11. Resource exhaustion
 
@@ -337,8 +356,10 @@ never written into reports or events.
 
 Mitigations: it listens on 127.0.0.1 by default and warns when bound
 elsewhere without a token. With `HOOKLINE_WEB_TOKEN` set, every upload needs
-the token, compared in constant time. Uploads are capped, analysed in memory
-and never stored. Responses carry a strict CSP, `X-Frame-Options: DENY`,
+the token, compared in constant time. Uploads are capped as they stream in,
+whether or not the client declares a size, and are never saved: each one is
+discarded when the response is sent (one over 1 MB passes through a temporary
+file, deleted at that point). Responses carry a strict CSP, `X-Frame-Options: DENY`,
 `nosniff`, `no-referrer` and `Cache-Control: no-store`. There is no docs UI
 that would need third-party scripts.
 
@@ -399,7 +420,8 @@ Watchpost credentials can create alerts. Give Hookline its own Watchpost user.
 | Web size limits, token and headers | `tests/test_web.py` |
 
 The evaluation adds a measured check: 20 phishing emails carry a hidden
-instruction, each with an otherwise identical twin. All 20 injected emails were
-flagged against 12 of 20 twins, so in rules-only mode an injection attempt
-makes detection more likely, not less. The same comparison for the model
-modes is part of `hookline eval run` and has not been run yet.
+instruction, each with an otherwise identical twin. 17 of the 20 injected
+emails were flagged against 11 of 20 twins, so in rules-only mode an injection
+attempt makes detection more likely, not less. For the model modes, `hookline
+eval run` also counts how often the injection changed the model's answer; that
+has not been run yet.

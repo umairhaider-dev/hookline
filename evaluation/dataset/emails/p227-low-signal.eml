@@ -1,39 +1,39 @@
-Return-Path: <dana.whitfield@vossberg-docs.test>
-Received: from mail.vossberg-docs.test (mail.vossberg-docs.test
- [198.51.100.10]) by mx1.larkspur.test (Postfix) with ESMTPS id NPWMKA7DNE for
- <aisha.karim@larkspur.test>; Fri, 25 Sep 2026 14:30:19 +0000
+Return-Path: <jordan.pike@harrow-group.test>
+Received: from mail.harrow-group.test (mail.harrow-group.test [198.51.100.16])
+ by mx1.larkspur.test (Postfix) with ESMTPS id GH9IUWH6ES for
+ <tomas.reyes@larkspur.test>; Mon, 28 Sep 2026 01:35:10 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=vossberg-docs.test; dkim=pass header.d=vossberg-docs.test;
- dmarc=pass header.from=vossberg-docs.test
-From: Dana Whitfield <dana.whitfield@vossberg-docs.test>
-To: Aisha Karim <aisha.karim@larkspur.test>
-Subject: Onboarding pack
-Date: Fri, 25 Sep 2026 14:30:00 +0000
-Message-ID: <jgrujxcwh2fkfqvj@vossberg-docs.test>
+ smtp.mailfrom=harrow-group.test; dkim=pass header.d=harrow-group.test;
+ dmarc=pass header.from=harrow-group.test
+From: Jordan Pike <jordan.pike@harrow-group.test>
+To: Tomas Reyes <tomas.reyes@larkspur.test>
+Subject: Agreement for review
+Date: Mon, 28 Sep 2026 01:35:00 +0000
+Message-ID: <sbrcb8hrfq5b22z9@harrow-group.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_efcdc085bdcba5904d502bf6"
+ boundary="=_hookline_e4274dd925e69ef9bc3c0385"
 
---=_hookline_efcdc085bdcba5904d502bf6
+--=_hookline_e4274dd925e69ef9bc3c0385
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Aisha,
+Hi Tomas,
 
-Here is the updated pricing sheet we talked about: https://files.vossberg-doc=
-s.test/s/957pwvxsaf Sign in with your work account to view it.
+Following up on our call, the agreement is ready for your review: https://fil=
+es.harrow-group.test/s/qvg5qq6xvn
 
 Kind regards,
-Dana Whitfield
+Jordan Pike
 
---=_hookline_efcdc085bdcba5904d502bf6
+--=_hookline_e4274dd925e69ef9bc3c0385
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Aisha,</p><p>Here is the updated pricing sheet we talked ab=
-out: <a href=3D"https://files.vossberg-docs.test/s/957pwvxsaf">https://files.=
-vossberg-docs.test/s/957pwvxsaf</a> Sign in with your work account to view it=
-.</p><p>Kind regards,<br>Dana Whitfield</p></body></html>
+<html><body><p>Hi Tomas,</p><p>Following up on our call, the agreement is rea=
+dy for your review: <a href=3D"https://files.harrow-group.test/s/qvg5qq6xvn">=
+https://files.harrow-group.test/s/qvg5qq6xvn</a></p><p>Kind regards,<br>Jorda=
+n Pike</p></body></html>
 
---=_hookline_efcdc085bdcba5904d502bf6--
+--=_hookline_e4274dd925e69ef9bc3c0385--

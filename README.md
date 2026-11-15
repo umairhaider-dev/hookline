@@ -9,18 +9,33 @@ The language model assists; it never decides alone. It cannot remove or override
 a deterministic finding, its contribution to the score is never negative, and
 the tool works fully in rules-only mode when no model is available.
 
-- **Evidence first.** Authentication results, sender and domain tricks, link
-  and attachment checks, social engineering language and prompt injection
-  attempts, each with the evidence behind it.
+## Features
+
+- **Evidence first.** Nine deterministic checks cover authentication results,
+  sender and display-name spoofing, the Received chain, lookalike and punycode
+  domains, link tricks, attachment types and hashes, social engineering
+  language, hidden text and prompt injection attempts, each finding with the
+  evidence behind it.
+- **An AI second opinion.** A local Ollama model (the default) or the
+  Anthropic API returns a likelihood, an attack type, the tactics used, a
+  plain-language explanation and suggested actions, validated against a strict
+  schema.
+- **Prompt injection defences in code.** The model's points are clamped so it
+  can never lower a score; hidden text never reaches it; injection attempts
+  become findings themselves.
+- **Transparent scoring.** Every report shows which findings contributed and
+  how many points each added; weights and thresholds are configurable.
 - **Safe by construction.** Links are never fetched and attachments never
   opened. Email content is treated as hostile everywhere: in the prompt, in the
   terminal and in the HTML report.
-- **Local by default.** The default model runs on your machine through Ollama;
-  cloud models get personal data redacted first. Threat intelligence lookups
-  are optional and send only public values.
+- **Local by default.** Cloud models get personal data redacted first.
+  Threat intelligence lookups (URLhaus, AbuseIPDB, VirusTotal) are optional,
+  cached, rate limited and send only public values.
 - **Built for a SOC.** Terminal, JSON and self-contained HTML reports with IOCs,
-  MITRE ATT&CK techniques and recommended actions; a small web interface; and
-  a push to the Watchpost SOC platform.
+  MITRE ATT&CK techniques and recommended actions; a small web interface and
+  JSON API; and a push to the Watchpost SOC platform.
+- **Measured.** A reproducible synthetic dataset of 240 labelled emails and a
+  harness that scores rules-only, AI-only and combined modes.
 
 ## How it works
 
@@ -114,6 +129,32 @@ documentation IP ranges): a benign meeting note, a credential phish, a gift-card
 request, a payroll lure with disguised attachments, and a bank lookalike that
 uses a Cyrillic letter. The example config protects their fictional company
 domains, which turns on the lookalike and display-name checks for them.
+
+## Example reports
+
+These come from the bundled samples in rules-only mode (`--no-ai`): no language
+model was available on the machine that produced them, so the AI section reads
+"Disabled" rather than showing an invented answer.
+
+**Terminal summary** of a gift card request from a free webmail account whose
+display name claims to be a Larkspur colleague (`hookline --config
+hookline.example.toml analyze samples/bec-gift-card.eml --no-ai`):
+
+![Terminal report for a gift card request](docs/images/terminal-report.svg)
+
+**HTML report** for a credential phish with a hidden prompt injection
+(`hookline analyze samples/credential-phish.eml -f html -o report.html
+--no-ai`). These show the top of the page; it continues with the rest of the
+indicators and the AI, threat intelligence, MITRE ATT&CK, IOC, link and
+attachment sections. The page follows the system's light or dark theme:
+
+| Light | Dark |
+| --- | --- |
+| ![HTML report, light theme](docs/images/html-report-light.png) | ![HTML report, dark theme](docs/images/html-report-dark.png) |
+
+**Web upload page** (`hookline serve`):
+
+![Web upload page](docs/images/web-upload.png)
 
 ## Deterministic checks
 
@@ -256,7 +297,10 @@ ATT&CK techniques (T1566 Phishing and its sub-techniques, plus T1598.003,
 T1656 Impersonation and T1036 Masquerading where the findings support them)
 and IOCs: the URLs, domains, IPs, addresses and hashes worth blocking. The
 organisation's own domains (protected and recipient domains) and internal IPs
-are left out of the IOCs. The HTML page escapes everything from the email,
+are left out of the IOCs, and so are the domains of free webmail providers and
+URL shorteners, and the servers that sent mail from a webmail address: they
+carry everyone's mail and links, so the sender's address and the full URLs are
+listed instead. The HTML page escapes everything from the email,
 shows indicators defanged (`hxxp://evil[.]test`), and has a policy that blocks
 scripts and external content.
 
@@ -269,8 +313,10 @@ hookline serve                    # http://127.0.0.1:8000
 
 The page takes an `.eml` upload and returns the HTML report; `POST
 /api/v1/analyze` (multipart field `file`) returns the JSON report, and
-`GET /api/v1/health` reports the version. Uploads are analysed in memory, never
-stored, and capped at `max_email_bytes`. Responses carry a strict
+`GET /api/v1/health` reports the version. Uploads are never saved: each one is
+discarded when the response is sent (one over 1 MB passes through a temporary
+file, deleted at that point). They are capped at `max_email_bytes` while they
+stream in, whether or not the client declares a size. Responses carry a strict
 Content-Security-Policy and `Cache-Control: no-store`. It listens on localhost
 by default; set `HOOKLINE_WEB_TOKEN` before exposing it, and send the token as
 `Authorization: Bearer ...` (or in the form's token field). It has no TLS or
@@ -303,7 +349,7 @@ An email counts as flagged when its verdict is suspicious or malicious.
 
 | Mode | Precision | Recall | F1 | False positive rate | Mean time per email |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Rules only | 1.000 | 0.700 | 0.824 | 0.000 | 7 ms |
+| Rules only | 1.000 | 0.617 | 0.763 | 0.000 | 4 ms |
 | AI only | not run | | | | |
 | Combined | not run | | | | |
 
@@ -322,17 +368,24 @@ What the rules-only run shows:
   awkward ones: newsletters with trackers, hidden preview text and sale
   deadlines, overdue-invoice reminders and internal password-expiry notices.
 - **Strong on loud attacks**: credential links, homoglyph senders and gift card
-  requests are all caught, as are 90% of invoice frauds.
-- **Weak where rules lack context**: HTML attachments (12%; attachments are
-  never opened, so the login form inside is unseen), quiet lures from properly
-  authenticated domains (25%), vendor lookalikes that are spotted but score too
-  low on their own (50%), hijacked threads from lookalikes of partners outside
-  the protected list (58%), and executive impersonation from free webmail (58%;
-  there is no executive directory to compare names against). These are the
-  cases the language model is there to help with.
+  requests are all caught, as are 92% of malware attachments.
+- **Weak where rules lack context**. These are the cases the language model is
+  there to help with:
+  - scams (0%): prize, inheritance and callback scams carry no links or
+    attachments, and the language checks have no patterns for prize claims,
+    advance fees or "call this number" lures;
+  - quiet lures from properly authenticated domains (25%);
+  - HTML attachments (38%): attachments are never opened, so the login form
+    inside is unseen;
+  - hijacked threads from lookalikes of partners outside the protected list
+    (50%);
+  - executive impersonation from free webmail (58%): there is no executive
+    directory to compare names against;
+  - vendor lookalikes and invoice fraud that are spotted but score too low on
+    their own (67% and 75%).
 - **Prompt injection backfires on the sender**: the `prompt_injection` check
-  fired on 16 of 20 hidden instructions, and 20 of 20 injected emails were
-  flagged against 12 of 20 of their otherwise identical twins.
+  fired on 15 of 20 hidden instructions, and 17 of 20 injected emails were
+  flagged against 11 of 20 of their otherwise identical twins.
 
 The dataset was written by the same author as the rules, so treat these
 numbers as a regression baseline and a way to compare modes, not as a
@@ -361,7 +414,11 @@ IOC logic all work from it.
 - **No context about the organisation.** Hookline does not know who the
   executives are, which vendors are real, or whether the sender has written
   before. That is why business email compromise and quiet lures from clean,
-  authenticated domains are its weakest categories.
+  authenticated domains are among its weakest categories.
+- **The language checks are a keyword baseline.** They know urgency, credential
+  and payment requests and gift cards, but not the wording of prize,
+  inheritance or callback scams, which the rules miss entirely in the
+  evaluation.
 - **Lookalike detection needs a list.** Typosquats and homoglyphs are found
   only for domains in `protected_domains`.
 - **Attachments and images are opaque.** Nothing is opened, rendered or read
@@ -381,7 +438,7 @@ IOC logic all work from it.
 - **One `.eml` at a time.** There is no Outlook `.msg` support and no mailbox
   integration.
 
-## Future work
+## Future improvements
 
 Gaps found by the evaluation, left as open work rather than tuned away on the
 same dataset:
@@ -391,8 +448,12 @@ same dataset:
   forms that post to other domains.
 - **Executive impersonation from free webmail** needs a configurable list of
   executive and VIP names to compare display names against.
-- **Vendor lookalikes** are found but often score too low alone. A known-vendor
-  list would let lookalikes of real suppliers count for more.
+- **Scams** are missed entirely. Patterns for prize claims, inheritance offers,
+  advance fees and callback lures (a phone number as the only way to act, with
+  a charge to dispute) would give the language check a baseline for them.
+- **Vendor lookalikes and invoice fraud** are found but often score too low
+  alone. A known-vendor list would let lookalikes of real suppliers count for
+  more.
 - **Quiet lures from authenticated domains** need signals rules do not have
   yet: domain age (an RDAP lookup by name) and first-contact senders.
 

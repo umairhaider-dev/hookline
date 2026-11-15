@@ -1,0 +1,25 @@
+Return-Path: <awards.desk49@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [203.0.113.77]) by mx1.larkspur.test (Postfix) with ESMTPS id 62VBEZ4ICM for
+ <sam.ortega@larkspur.test>; Sun, 13 Sep 2026 22:08:15 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Online Promotions Board <awards.desk49@quickpost-mail.test>
+Reply-To: Claims Agent <claims.agent49@inboxmail.test>
+To: Sam Ortega <sam.ortega@larkspur.test>
+Subject: Winning notification
+Date: Sun, 13 Sep 2026 22:08:00 +0000
+Message-ID: <udkfrfutuuwxp5ga@quickpost-mail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Sam,
+
+Your email address was selected in our annual online draw and has won USD 750=
+,000.00. To claim your prize, reply with your full name, address and phone nu=
+mber. A processing fee of USD 185 is payable before the funds are released.
+
+Regards,
+Online Promotions Board

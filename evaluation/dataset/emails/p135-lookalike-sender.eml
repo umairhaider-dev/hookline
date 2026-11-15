@@ -1,0 +1,35 @@
+Return-Path: <notifications@quillon-payroll-portal.test>
+Received: from mail.quillon-payroll-portal.test
+ (mail.quillon-payroll-portal.test [198.51.100.53]) by mx1.larkspur.test
+ (Postfix) with ESMTPS id 89I4QRWAWT for <aisha.karim@larkspur.test>; Tue, 01
+ Sep 2026 23:05:06 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=quillon-payroll-portal.test; dkim=pass
+ header.d=quillon-payroll-portal.test; dmarc=pass
+ header.from=quillon-payroll-portal.test
+From: Quillon Payroll <notifications@quillon-payroll-portal.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Quillon Payroll: new document
+Date: Tue, 01 Sep 2026 23:05:00 +0000
+Message-ID: <bpusr3jabqdfu5je@quillon-payroll-portal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_5af3586de6a4f58230836547"
+
+--=_hookline_5af3586de6a4f58230836547
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A new statement is available in online banking.
+https://portal.quillon-payroll-portal.test/statements/login?ref=46yz743zmz
+
+--=_hookline_5af3586de6a4f58230836547
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Aisha,</p><p>A new statement is available in online bank=
+ing.</p><p><a href=3D"https://portal.quillon-payroll-portal.test/statements/l=
+ogin?ref=3D46yz743zmz">Open Quillon Payroll</a></p></body></html>
+
+--=_hookline_5af3586de6a4f58230836547--

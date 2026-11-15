@@ -1,0 +1,33 @@
+Return-Path: <notifications@my-tamsin.test>
+Received: from mail.my-tamsin.test (mail.my-tamsin.test [198.51.100.58]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id P7QIFPG26K for
+ <grace.lund@larkspur.test>; Wed, 07 Oct 2026 05:04:26 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=my-tamsin.test; dkim=none header.d=my-tamsin.test; dmarc=none
+ header.from=my-tamsin.test
+From: Tamsin Cloud <notifications@my-tamsin.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Tamsin Cloud notification
+Date: Wed, 07 Oct 2026 05:04:00 +0000
+Message-ID: <9fyhbm3vjijinfss@my-tamsin.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_a50c6b71b1898ce2f7940aaa"
+
+--=_hookline_a50c6b71b1898ce2f7940aaa
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A document was shared with you. Sign in to open it.
+https://portal.my-tamsin.test/share/open?ref=zi479cn94p
+
+--=_hookline_a50c6b71b1898ce2f7940aaa
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello Grace,</p><p>A document was shared with you. Sign in to =
+open it.</p><p><a href=3D"https://portal.my-tamsin.test/share/open?ref=3Dzi47=
+9cn94p">Open Tamsin Cloud</a></p></body></html>
+
+--=_hookline_a50c6b71b1898ce2f7940aaa--

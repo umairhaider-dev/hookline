@@ -296,7 +296,7 @@ def push(
         return
     content = events_jsonl(selected)
     try:
-        target = resolve_url(url, settings.watchpost)
+        target = resolve_url(url, settings)
         with WatchpostClient(
             target,
             Credentials.from_settings(settings),
@@ -442,8 +442,11 @@ def eval_run(
         if assessor is not None:
             assessor.close()
     output.mkdir(parents=True, exist_ok=True)
-    (output / "results.json").write_text(result.model_dump_json(indent=2) + "\n", encoding="utf-8")
-    (output / "RESULTS.md").write_text(render_markdown(result), encoding="utf-8")
+    # LF everywhere, like predictions.csv, since these files are meant to be committed.
+    (output / "results.json").write_text(
+        result.model_dump_json(indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
+    (output / "RESULTS.md").write_text(render_markdown(result), encoding="utf-8", newline="\n")
     write_predictions(result, output / "predictions.csv")
     typer.echo(summary_table(result))
     typer.echo(f"Results written to {output}", err=True)

@@ -1,43 +1,41 @@
-Return-Path: <omar@harrow-consulting-billing.test>
-Received: from mail.harrow-consulting-billing.test
- (mail.harrow-consulting-billing.test [203.0.113.163]) by mx1.larkspur.test
- (Postfix) with ESMTPS id YEWW3MJG2N for <lena.okafor@larkspur.test>; Sun, 06
- Sep 2026 03:02:13 +0000
-Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=harrow-consulting-billing.test; dkim=pass
- header.d=harrow-consulting-billing.test; dmarc=pass
- header.from=harrow-consulting-billing.test
-From: Omar Haddad <omar@harrow-consulting-billing.test>
-To: Lena Okafor <lena.okafor@larkspur.test>
-Subject: Re: Contract renewal
-Date: Sun, 06 Sep 2026 03:02:00 +0000
-Message-ID: <hyav4e5n5jd5k37b@harrow-consulting-billing.test>
+Return-Path: <marcus@meridel-desin.test>
+Received: from mail.meridel-desin.test (mail.meridel-desin.test
+ [198.51.100.188]) by mx1.larkspur.test (Postfix) with ESMTPS id YF85B86BNW
+ for <omar.haddad@larkspur.test>; Thu, 24 Sep 2026 20:50:14 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=meridel-desin.test; dkim=none header.d=meridel-desin.test;
+ dmarc=none header.from=meridel-desin.test
+From: Marcus Bell <marcus@meridel-desin.test>
+To: Omar Haddad <omar.haddad@larkspur.test>
+Subject: Re: Project budget
+Date: Thu, 24 Sep 2026 20:50:00 +0000
+Message-ID: <r8a6thvtshq9dxvj@meridel-desin.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_7a6dd45291be06652d470cae"
+ boundary="=_hookline_4ba7fb20e22bac3a6adf7eb6"
 
---=_hookline_7a6dd45291be06652d470cae
+--=_hookline_4ba7fb20e22bac3a6adf7eb6
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Lena,
+Hi Omar,
 
-Please use the updated contract renewal at https://account-cloud-59x.test/doc=
-/5ebcnjpr; the old version is out of date.
+As discussed, here is the project budget with the new payment details: https:=
+//docs-center-fda.test/doc/ehpi2rvq
 
 Best,
-Omar
+Marcus
 
-On Tuesday, Lena Okafor wrote:
-> Thanks, please send the contract renewal when ready.
+On Tuesday, Omar Haddad wrote:
+> Thanks, please send the project budget when ready.
 
---=_hookline_7a6dd45291be06652d470cae
+--=_hookline_4ba7fb20e22bac3a6adf7eb6
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Lena,</p><p>Please use the updated contract renewal at <a h=
-ref=3D"https://account-cloud-59x.test/doc/5ebcnjpr">the document</a>; the old=
- version is out of date.</p><p>Best,<br>Omar</p></body></html>
+<html><body><p>Hi Omar,</p><p>As discussed, here is the project budget with t=
+he new payment details: <a href=3D"https://docs-center-fda.test/doc/ehpi2rvq"=
+>the document</a></p><p>Best,<br>Marcus</p></body></html>
 
---=_hookline_7a6dd45291be06652d470cae--
+--=_hookline_4ba7fb20e22bac3a6adf7eb6--

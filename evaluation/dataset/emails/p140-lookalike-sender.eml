@@ -1,33 +1,33 @@
-Return-Path: <notifications@tamsins.test>
-Received: from mail.tamsins.test (mail.tamsins.test [198.51.100.146]) by
- mx1.larkspur.test (Postfix) with ESMTPS id 8HAHS6SXY5 for
- <grace.lund@larkspur.test>; Tue, 15 Sep 2026 03:25:15 +0000
-Authentication-Results: mx1.larkspur.test; spf=fail
- smtp.mailfrom=tamsins.test; dkim=none header.d=tamsins.test; dmarc=fail
- header.from=tamsins.test
-From: Tamsin Cloud <notifications@tamsins.test>
-To: Grace Lund <grace.lund@larkspur.test>
-Subject: Tamsin Cloud: new document
-Date: Tue, 15 Sep 2026 03:25:00 +0000
-Message-ID: <s65qyxd2vpnamtjx@tamsins.test>
+Return-Path: <notifications@quilon-payroll.test>
+Received: from mail.quilon-payroll.test (mail.quilon-payroll.test
+ [203.0.113.247]) by mx1.larkspur.test (Postfix) with ESMTPS id 647HQETM8Z for
+ <ivan.sorensen@larkspur.test>; Fri, 18 Sep 2026 07:23:29 +0000
+Authentication-Results: mx1.larkspur.test; spf=softfail
+ smtp.mailfrom=quilon-payroll.test; dkim=none header.d=quilon-payroll.test;
+ dmarc=none header.from=quilon-payroll.test
+From: Quillon Payroll <notifications@quilon-payroll.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Quillon Payroll notification
+Date: Fri, 18 Sep 2026 07:23:00 +0000
+Message-ID: <869ravpc3xs4jy4j@quilon-payroll.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_0a85db45a023401b1ffb7a90"
+ boundary="=_hookline_12a2c84313c1291b46efdddc"
 
---=_hookline_0a85db45a023401b1ffb7a90
+--=_hookline_12a2c84313c1291b46efdddc
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
-A new statement is available in online banking.
-https://portal.tamsins.test/statements/login?ref=xygtxedrdy
+Your policy renewal needs your confirmation.
+https://portal.quilon-payroll.test/renewal/confirm?ref=wjafa34myp
 
---=_hookline_0a85db45a023401b1ffb7a90
+--=_hookline_12a2c84313c1291b46efdddc
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hello Grace,</p><p>A new statement is available in online bank=
-ing.</p><p><a href=3D"https://portal.tamsins.test/statements/login?ref=3Dxygt=
-xedrdy">Open Tamsin Cloud</a></p></body></html>
+<html><body><p>Hello Ivan,</p><p>Your policy renewal needs your confirmation.=
+</p><p><a href=3D"https://portal.quilon-payroll.test/renewal/confirm?ref=3Dwj=
+afa34myp">Open Quillon Payroll</a></p></body></html>
 
---=_hookline_0a85db45a023401b1ffb7a90--
+--=_hookline_12a2c84313c1291b46efdddc--

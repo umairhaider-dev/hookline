@@ -1,0 +1,41 @@
+Return-Path: <grace@vssberg-legal.test>
+Received: from mail.vssberg-legal.test (mail.vssberg-legal.test
+ [203.0.113.237]) by mx1.larkspur.test (Postfix) with ESMTPS id RB292KE778 for
+ <ivan.sorensen@larkspur.test>; Mon, 28 Sep 2026 09:20:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=vssberg-legal.test; dkim=none header.d=vssberg-legal.test;
+ dmarc=fail header.from=vssberg-legal.test
+From: Grace Lund <grace@vssberg-legal.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Re: Project budget
+Date: Mon, 28 Sep 2026 09:20:00 +0000
+Message-ID: <ijadimeuugdpqm4n@vssberg-legal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_5817b0f61b6a33e9437a9a87"
+
+--=_hookline_5817b0f61b6a33e9437a9a87
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ivan,
+
+Sorry, the earlier file had an error. The corrected project budget is here: h=
+ttps://mailbox-access-din.test/doc/t6jbh523
+
+Best,
+Grace
+
+On Tuesday, Ivan Sorensen wrote:
+> Thanks, please send the project budget when ready.
+
+--=_hookline_5817b0f61b6a33e9437a9a87
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi Ivan,</p><p>Sorry, the earlier file had an error. The corre=
+cted project budget is here: <a href=3D"https://mailbox-access-din.test/doc/t=
+6jbh523">the document</a></p><p>Best,<br>Grace</p></body></html>
+
+--=_hookline_5817b0f61b6a33e9437a9a87--

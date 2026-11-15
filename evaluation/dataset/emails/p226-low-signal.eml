@@ -1,39 +1,39 @@
-Return-Path: <jordan.pike@vossberg-docs.test>
-Received: from mail.vossberg-docs.test (mail.vossberg-docs.test
- [203.0.113.13]) by mx1.larkspur.test (Postfix) with ESMTPS id ARKWP8DKNV for
- <lena.okafor@larkspur.test>; Thu, 03 Sep 2026 13:34:11 +0000
+Return-Path: <omar.haddad@orrin-partners.test>
+Received: from mail.orrin-partners.test (mail.orrin-partners.test
+ [198.51.100.238]) by mx1.larkspur.test (Postfix) with ESMTPS id DPS7THE46W
+ for <felix.novak@larkspur.test>; Thu, 24 Sep 2026 15:33:25 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=vossberg-docs.test; dkim=pass header.d=vossberg-docs.test;
- dmarc=pass header.from=vossberg-docs.test
-From: Jordan Pike <jordan.pike@vossberg-docs.test>
-To: Lena Okafor <lena.okafor@larkspur.test>
-Subject: Q4 vendor scorecard
-Date: Thu, 03 Sep 2026 13:34:00 +0000
-Message-ID: <gkjpiwz3he8fhw7m@vossberg-docs.test>
+ smtp.mailfrom=orrin-partners.test; dkim=pass header.d=orrin-partners.test;
+ dmarc=pass header.from=orrin-partners.test
+From: Omar Haddad <omar.haddad@orrin-partners.test>
+To: Felix Novak <felix.novak@larkspur.test>
+Subject: Onboarding pack
+Date: Thu, 24 Sep 2026 15:33:00 +0000
+Message-ID: <2hjy3jhpwi5dsu3a@orrin-partners.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_e372706a25bbd24b860c028a"
+ boundary="=_hookline_e0cb5f6eae28d23484ca0b3e"
 
---=_hookline_e372706a25bbd24b860c028a
+--=_hookline_e0cb5f6eae28d23484ca0b3e
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Lena,
+Hi Felix,
 
-Here is the updated pricing sheet we talked about: https://files.vossberg-doc=
-s.test/s/arqrxijzws Sign in with your work account to view it.
+Sharing the onboarding pack for the new project. It's here: https://files.orr=
+in-partners.test/s/6x5qym334q
 
 Kind regards,
-Jordan Pike
+Omar Haddad
 
---=_hookline_e372706a25bbd24b860c028a
+--=_hookline_e0cb5f6eae28d23484ca0b3e
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Lena,</p><p>Here is the updated pricing sheet we talked abo=
-ut: <a href=3D"https://files.vossberg-docs.test/s/arqrxijzws">https://files.v=
-ossberg-docs.test/s/arqrxijzws</a> Sign in with your work account to view it.=
-</p><p>Kind regards,<br>Jordan Pike</p></body></html>
+<html><body><p>Hi Felix,</p><p>Sharing the onboarding pack for the new projec=
+t. It's here: <a href=3D"https://files.orrin-partners.test/s/6x5qym334q">http=
+s://files.orrin-partners.test/s/6x5qym334q</a></p><p>Kind regards,<br>Omar Ha=
+ddad</p></body></html>
 
---=_hookline_e372706a25bbd24b860c028a--
+--=_hookline_e0cb5f6eae28d23484ca0b3e--

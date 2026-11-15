@@ -1,0 +1,33 @@
+Return-Path: <security@xn--larksur-ujg.test>
+Received: from mail.xn--larksur-ujg.test (mail.xn--larksur-ujg.test
+ [203.0.113.58]) by mx1.larkspur.test (Postfix) with ESMTPS id 3ZQN568VJ8 for
+ <ruth.calder@larkspur.test>; Sat, 24 Oct 2026 19:04:26 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=xn--larksur-ujg.test; dkim=pass header.d=xn--larksur-ujg.test;
+ dmarc=pass header.from=xn--larksur-ujg.test
+From: Security Team <security@xn--larksur-ujg.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: New sign-in to your account
+Date: Sat, 24 Oct 2026 19:04:00 +0000
+Message-ID: <qg3s5zzj2maxvyaj@xn--larksur-ujg.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_3d7c730aa3249752903d84b5"
+
+--=_hookline_3d7c730aa3249752903d84b5
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+We noticed a sign-in from a new device. Verify your account: https://login.xn=
+--larksur-ujg.test/session/bgvwwaufuz
+
+--=_hookline_3d7c730aa3249752903d84b5
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>We noticed a sign-in from a new device.</p><p>If this was not =
+you, verify your account: <a href=3D"https://login.xn--larksur-ujg.test/sessi=
+on/bgvwwaufuz">https://login.larkspur.test/security</a></p></body></html>
+
+--=_hookline_3d7c730aa3249752903d84b5--

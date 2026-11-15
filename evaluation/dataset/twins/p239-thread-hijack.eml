@@ -1,0 +1,42 @@
+Return-Path: <omar@my-vossberg-legal.test>
+Received: from mail.my-vossberg-legal.test (mail.my-vossberg-legal.test
+ [203.0.113.43]) by mx1.larkspur.test (Postfix) with ESMTPS id QMNRERHDIE for
+ <ruth.calder@larkspur.test>; Sat, 17 Oct 2026 09:50:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=my-vossberg-legal.test; dkim=none
+ header.d=my-vossberg-legal.test; dmarc=fail
+ header.from=my-vossberg-legal.test
+From: Omar Haddad <omar@my-vossberg-legal.test>
+To: Ruth Calder <ruth.calder@larkspur.test>
+Subject: Re: Statement of work
+Date: Sat, 17 Oct 2026 09:50:00 +0000
+Message-ID: <gjdbbaa9jfd4dwnm@my-vossberg-legal.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_fd5d6005e6815188b3de36ad"
+
+--=_hookline_fd5d6005e6815188b3de36ad
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ruth,
+
+Please use the updated statement of work at https://account-access-u7w.test/d=
+oc/wdeqg3n5; the old version is out of date.
+
+Best,
+Omar
+
+On Tuesday, Ruth Calder wrote:
+> Thanks, please send the statement of work when ready.
+
+--=_hookline_fd5d6005e6815188b3de36ad
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi Ruth,</p><p>Please use the updated statement of work at <a =
+href=3D"https://account-access-u7w.test/doc/wdeqg3n5">the document</a>; the o=
+ld version is out of date.</p><p>Best,<br>Omar</p></body></html>
+
+--=_hookline_fd5d6005e6815188b3de36ad--

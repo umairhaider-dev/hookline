@@ -115,7 +115,12 @@ class Analyzer:
         ai_run = self._run_ai(email, indicators)
         # The AI's answer can only add to the deterministic score (see scoring).
         verdict = score_verdict(indicators, self._settings.scoring, ai_run.assessment)
-        iocs = extract_iocs(email, self._settings.checks.protected_domains)
+        checks = self._settings.checks
+        iocs = extract_iocs(
+            email,
+            checks.protected_domains,
+            shared_domains=(*checks.freemail_domains, *checks.url_shorteners),
+        )
         duration_ms = (time.perf_counter() - started) * 1000
         logger.info(
             "Analyzed %s: %s (score %.0f, %d indicators) in %.1f ms",

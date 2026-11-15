@@ -1,39 +1,39 @@
-Return-Path: <hana.ito@harrow-partners.test>
-Received: from mail.harrow-partners.test (mail.harrow-partners.test
- [198.51.100.123]) by mx1.larkspur.test (Postfix) with ESMTPS id YED6X5QYM3
- for <omar.haddad@larkspur.test>; Fri, 11 Sep 2026 20:54:20 +0000
+Return-Path: <grace.lund@vossberg-group.test>
+Received: from mail.vossberg-group.test (mail.vossberg-group.test
+ [198.51.100.44]) by mx1.larkspur.test (Postfix) with ESMTPS id X6NXFGYNCY for
+ <felix.novak@larkspur.test>; Tue, 13 Oct 2026 03:24:22 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=harrow-partners.test; dkim=pass header.d=harrow-partners.test;
- dmarc=pass header.from=harrow-partners.test
-From: Hana Ito <hana.ito@harrow-partners.test>
-To: Omar Haddad <omar.haddad@larkspur.test>
+ smtp.mailfrom=vossberg-group.test; dkim=pass header.d=vossberg-group.test;
+ dmarc=pass header.from=vossberg-group.test
+From: Grace Lund <grace.lund@vossberg-group.test>
+To: Felix Novak <felix.novak@larkspur.test>
 Subject: Q4 vendor scorecard
-Date: Fri, 11 Sep 2026 20:54:00 +0000
-Message-ID: <34q98sadps7the46@harrow-partners.test>
+Date: Tue, 13 Oct 2026 03:24:00 +0000
+Message-ID: <kngpwab5nnvkg8xn@vossberg-group.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_7886a482630d1b27b19522fe"
+ boundary="=_hookline_a80a69d152d7f844dae25096"
 
---=_hookline_7886a482630d1b27b19522fe
+--=_hookline_a80a69d152d7f844dae25096
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Omar,
+Hi Felix,
 
 Following up on our call, the agreement is ready for your review: https://fil=
-es.harrow-partners.test/s/2hniwnn8yc
+es.vossberg-group.test/s/5jxfk92uav
 
 Kind regards,
-Hana Ito
+Grace Lund
 
---=_hookline_7886a482630d1b27b19522fe
+--=_hookline_a80a69d152d7f844dae25096
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Omar,</p><p>Following up on our call, the agreement is read=
-y for your review: <a href=3D"https://files.harrow-partners.test/s/2hniwnn8yc=
-">https://files.harrow-partners.test/s/2hniwnn8yc</a></p><p>Kind regards,<br>=
-Hana Ito</p></body></html>
+<html><body><p>Hi Felix,</p><p>Following up on our call, the agreement is rea=
+dy for your review: <a href=3D"https://files.vossberg-group.test/s/5jxfk92uav=
+">https://files.vossberg-group.test/s/5jxfk92uav</a></p><p>Kind regards,<br>G=
+race Lund</p></body></html>
 
---=_hookline_7886a482630d1b27b19522fe--
+--=_hookline_a80a69d152d7f844dae25096--

@@ -67,6 +67,23 @@ def test_iocs_leave_out_own_domains_and_internal_addresses() -> None:
     )
 
 
+def test_shared_domains_are_not_listed_for_blocking() -> None:
+    email = make_email(
+        from_address=EmailAddress(address="dana.ceo@inboxmail.test"),
+        received=(ReceivedHop(raw="a", from_ip=ip_address("198.51.100.77")),),
+        links=(link("https://lnk.example.org/a1b2"), link("https://evil.test/a")),
+    )
+    shared = ["inboxmail.test", "lnk.example.org"]
+    iocs = extract_iocs(email, [], shared_domains=shared)
+    assert iocs.domains == ("evil.test",)
+    assert iocs.email_addresses == ("dana.ceo@inboxmail.test",)
+    assert iocs.urls == ("https://lnk.example.org/a1b2", "https://evil.test/a")
+    # The webmail provider's server sent it; only the sender's own servers are IOCs.
+    assert iocs.ip_addresses == ()
+    own_server = email.model_copy(update={"from_address": EmailAddress(address="ap@evil.test")})
+    assert extract_iocs(own_server, [], shared_domains=shared).ip_addresses == ("198.51.100.77",)
+
+
 def test_empty_email_has_no_iocs() -> None:
     assert extract_iocs(make_email(), []) == IOCSet()
 
@@ -142,6 +159,19 @@ def test_actions_for_malicious_mail_name_defanged_iocs() -> None:
     assert f"endpoint protection: {SHA}" in text
     assert "gift card" in text
     assert "AI-assisted mail tools" in text
+
+
+def test_malicious_webmail_sender_is_blocked_by_address() -> None:
+    indicators = [make_indicator(type=IndicatorType.PROMPT_INJECTION, severity=Severity.CRITICAL)]
+    indicators.append(make_indicator(type=IndicatorType.GIFT_CARD_REQUEST, severity=Severity.HIGH))
+    iocs = IOCSet(
+        domains=("evil.test",),
+        email_addresses=("dana.ceo@inboxmail.test", "billing@evil.test"),
+    )
+    text = "\n".join(recommend_actions(verdict_for(*indicators), indicators, iocs))
+    assert "Block the sender addresses: dana.ceo[@]inboxmail[.]test." in text
+    assert "billing" not in text
+    assert "proxy and firewall" not in text
 
 
 def test_actions_for_suspicious_mail() -> None:

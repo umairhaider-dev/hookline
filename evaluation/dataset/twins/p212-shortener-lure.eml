@@ -1,0 +1,33 @@
+Return-Path: <postmaster@center-access-q7i.test>
+Received: from mail.center-access-q7i.test (mail.center-access-q7i.test
+ [198.51.100.52]) by mx1.larkspur.test (Postfix) with ESMTPS id 75SK236AHA for
+ <lena.okafor@larkspur.test>; Sat, 31 Oct 2026 01:06:18 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=center-access-q7i.test; dkim=pass
+ header.d=center-access-q7i.test; dmarc=pass
+ header.from=center-access-q7i.test
+From: Mail Delivery System <postmaster@center-access-q7i.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Access expiring
+Date: Sat, 31 Oct 2026 01:06:00 +0000
+Message-ID: <taq7vb324fja53si@center-access-q7i.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_cea592d4dfa13df29c34771a"
+
+--=_hookline_cea592d4dfa13df29c34771a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your shared drive access expires today. Renew it here:
+https://lnk.example.org/m36zkhb
+
+--=_hookline_cea592d4dfa13df29c34771a
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Your shared drive access expires today. Renew it here:</p><p><=
+a href=3D"https://lnk.example.org/m36zkhb">Review now</a></p></body></html>
+
+--=_hookline_cea592d4dfa13df29c34771a--

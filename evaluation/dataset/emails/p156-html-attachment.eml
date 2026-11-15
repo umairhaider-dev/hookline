@@ -1,0 +1,33 @@
+Return-Path: <noreply@support-auth-jhx.test>
+Received: from mail.support-auth-jhx.test (mail.support-auth-jhx.test
+ [203.0.113.14]) by mx1.larkspur.test (Postfix) with ESMTPS id SPIKVPYQF5 for
+ <grace.lund@larkspur.test>; Sun, 13 Sep 2026 09:50:02 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=support-auth-jhx.test; dkim=pass
+ header.d=support-auth-jhx.test; dmarc=pass header.from=support-auth-jhx.test
+From: Voicemail Service <noreply@support-auth-jhx.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Scanned document
+Date: Sun, 13 Sep 2026 09:50:00 +0000
+Message-ID: <gzuuj4tdueiduz5h@support-auth-jhx.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_hookline_40bea2eab809ea6e5fbb8f98"
+
+--=_hookline_40bea2eab809ea6e5fbb8f98
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please find the remittance advice attached.
+
+--=_hookline_40bea2eab809ea6e5fbb8f98
+Content-Type: text/html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Payment_Copy.shtml"
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+PGgyPlNpZ24gaW4gdG8gdmlldyB0aGUgZG9jdW1lbnQ8L2gyPjxmb3JtIGFj
+dGlvbj0iaHR0cHM6Ly9zdXBwb3J0LWF1dGgtamh4LnRlc3QvY29sbGVjdCIgbWV0aG9kPSJwb3N0
+Ij48aW5wdXQgbmFtZT0iZW1haWwiPjxpbnB1dCBuYW1lPSJwYXNzd29yZCIgdHlwZT0icGFzc3dv
+cmQiPjxidXR0b24+U2lnbiBpbjwvYnV0dG9uPjwvZm9ybT48L2JvZHk+PC9odG1sPg==
+
+--=_hookline_40bea2eab809ea6e5fbb8f98--

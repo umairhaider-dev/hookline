@@ -1,0 +1,25 @@
+Return-Path: <billing@carelink-xz7.test>
+Received: from mail.carelink-xz7.test (mail.carelink-xz7.test [203.0.113.105])
+ by mx1.larkspur.test (Postfix) with ESMTPS id 6HA83UKF98 for
+ <hana.ito@larkspur.test>; Mon, 26 Oct 2026 22:56:19 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=carelink-xz7.test; dkim=pass header.d=carelink-xz7.test;
+ dmarc=pass header.from=carelink-xz7.test
+From: Billing Support <billing@carelink-xz7.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: Order confirmation #608080
+Date: Mon, 26 Oct 2026 22:56:00 +0000
+Message-ID: <4pqa2z37xrrexct3@carelink-xz7.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Hana,
+
+Thank you for renewing your Total Device Protection plan. USD 399.99 will be =
+charged to your account today.
+
+If you did not authorise this renewal, call our billing team on +1 202 555 01=
+79 within 24 hours to cancel and receive a full refund.
+
+Billing Support

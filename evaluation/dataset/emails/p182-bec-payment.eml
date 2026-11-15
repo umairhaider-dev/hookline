@@ -1,25 +1,24 @@
-Return-Path: <dana.whitfield@larksur.test>
-Received: from mail.larksur.test (mail.larksur.test [203.0.113.112]) by
- mx1.larkspur.test (Postfix) with ESMTPS id YV5MHVU776 for
- <sam.ortega@larkspur.test>; Wed, 23 Sep 2026 07:10:09 +0000
+Return-Path: <marcus.bell.cfo@quickpost-mail.test>
+Received: from mail.quickpost-mail.test (mail.quickpost-mail.test
+ [198.51.100.74]) by mx1.larkspur.test (Postfix) with ESMTPS id C4FHR6UB5V for
+ <aisha.karim@larkspur.test>; Wed, 09 Sep 2026 11:03:02 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=larksur.test; dkim=pass header.d=larksur.test; dmarc=pass
- header.from=larksur.test
-From: Dana Whitfield <dana.whitfield@larksur.test>
-Reply-To: Dana Whitfield <dana21@quickpost-mail.test>
-To: Sam Ortega <sam.ortega@larkspur.test>
-Subject: Vendor bank change
-Date: Wed, 23 Sep 2026 07:10:00 +0000
-Message-ID: <uivfu33qat2tcx5b@larksur.test>
+ smtp.mailfrom=quickpost-mail.test; dkim=pass header.d=quickpost-mail.test;
+ dmarc=pass header.from=quickpost-mail.test
+From: Marcus Bell <marcus.bell.cfo@quickpost-mail.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Quick request
+Date: Wed, 09 Sep 2026 11:03:00 +0000
+Message-ID: <hsi2zqzc6hs2d4v5@quickpost-mail.test>
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-Hi Sam,
+Hi Aisha,
 
-Can you handle a payment for me this afternoon? I'm in meetings all day, so e=
-mail only. I'll send the IBAN and amount once you confirm.
+I need you to process a wire transfer to a new vendor today. Keep this confid=
+ential until the deal is announced.
 
 Thanks,
-Dana
+Marcus
 Sent from my phone

@@ -1,0 +1,25 @@
+Return-Path: <ruth.calder@larkspur-billing.test>
+Received: from mail.larkspur-billing.test (mail.larkspur-billing.test
+ [198.51.100.138]) by mx1.larkspur.test (Postfix) with ESMTPS id M96JURBB5P
+ for <priya.raman@larkspur.test>; Fri, 16 Oct 2026 02:15:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur-billing.test; dkim=pass
+ header.d=larkspur-billing.test; dmarc=pass header.from=larkspur-billing.test
+From: Ruth Calder <ruth.calder@larkspur-billing.test>
+Reply-To: Ruth Calder <ruth23@inboxmail.test>
+To: Priya Raman <priya.raman@larkspur.test>
+Subject: Vendor bank change
+Date: Fri, 16 Oct 2026 02:15:00 +0000
+Message-ID: <43s388pjbgwzu5z3@larkspur-billing.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Priya,
+
+I need you to process a wire transfer to a new vendor today. Keep this confid=
+ential until the deal is announced.
+
+Thanks,
+Ruth
+Sent from my phone

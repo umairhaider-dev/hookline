@@ -1,0 +1,33 @@
+Return-Path: <security@xn--tmsin-4ve.test>
+Received: from mail.xn--tmsin-4ve.test (mail.xn--tmsin-4ve.test
+ [203.0.113.36]) by mx1.larkspur.test (Postfix) with ESMTPS id WWJTF48V2Y for
+ <hana.ito@larkspur.test>; Tue, 22 Sep 2026 01:37:09 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=xn--tmsin-4ve.test; dkim=pass header.d=xn--tmsin-4ve.test;
+ dmarc=pass header.from=xn--tmsin-4ve.test
+From: Security Team <security@xn--tmsin-4ve.test>
+To: Hana Ito <hana.ito@larkspur.test>
+Subject: New sign-in to your account
+Date: Tue, 22 Sep 2026 01:37:00 +0000
+Message-ID: <bq9a9k679zhq7pxd@xn--tmsin-4ve.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_2f1d6b5bf6d9aeeb46604813"
+
+--=_hookline_2f1d6b5bf6d9aeeb46604813
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+We noticed a sign-in from a new device. Verify your account: https://login.xn=
+--tmsin-4ve.test/session/up7wberxjm
+
+--=_hookline_2f1d6b5bf6d9aeeb46604813
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>We noticed a sign-in from a new device.</p><p>If this was not =
+you, verify your account: <a href=3D"https://login.xn--tmsin-4ve.test/session=
+/up7wberxjm">https://login.tamsin.test/security</a></p></body></html>
+
+--=_hookline_2f1d6b5bf6d9aeeb46604813--

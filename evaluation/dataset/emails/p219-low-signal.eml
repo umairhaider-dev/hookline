@@ -1,39 +1,39 @@
-Return-Path: <marcus.bell@meridel-group.test>
-Received: from mail.meridel-group.test (mail.meridel-group.test
- [203.0.113.10]) by mx1.larkspur.test (Postfix) with ESMTPS id P73QQMMX4U for
- <lena.okafor@larkspur.test>; Wed, 30 Sep 2026 02:22:15 +0000
+Return-Path: <lena.okafor@meridel-partners.test>
+Received: from mail.meridel-partners.test (mail.meridel-partners.test
+ [203.0.113.154]) by mx1.larkspur.test (Postfix) with ESMTPS id KXUDF7BG6N for
+ <marcus.bell@larkspur.test>; Sun, 11 Oct 2026 23:58:12 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=meridel-group.test; dkim=pass header.d=meridel-group.test;
- dmarc=pass header.from=meridel-group.test
-From: Marcus Bell <marcus.bell@meridel-group.test>
-To: Lena Okafor <lena.okafor@larkspur.test>
-Subject: Onboarding pack
-Date: Wed, 30 Sep 2026 02:22:00 +0000
-Message-ID: <esea7ktkp4skj7e6@meridel-group.test>
+ smtp.mailfrom=meridel-partners.test; dkim=pass
+ header.d=meridel-partners.test; dmarc=pass header.from=meridel-partners.test
+From: Lena Okafor <lena.okafor@meridel-partners.test>
+To: Marcus Bell <marcus.bell@larkspur.test>
+Subject: Updated pricing
+Date: Sun, 11 Oct 2026 23:58:00 +0000
+Message-ID: <jmepfrdvnmnfj8em@meridel-partners.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_a92e1e2a21b98955a0a9cf38"
+ boundary="=_hookline_0a91a97b0fd0cbd85f74261a"
 
---=_hookline_a92e1e2a21b98955a0a9cf38
+--=_hookline_0a91a97b0fd0cbd85f74261a
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Lena,
+Hi Marcus,
 
-I've shared the Q4 vendor scorecard with you. You can review it here: https:/=
-/files.meridel-group.test/s/xz237rxup8
+Following up on our call, the agreement is ready for your review: https://fil=
+es.meridel-partners.test/s/vmgyneavex
 
 Kind regards,
-Marcus Bell
+Lena Okafor
 
---=_hookline_a92e1e2a21b98955a0a9cf38
+--=_hookline_0a91a97b0fd0cbd85f74261a
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Lena,</p><p>I've shared the Q4 vendor scorecard with you. Y=
-ou can review it here: <a href=3D"https://files.meridel-group.test/s/xz237rxu=
-p8">https://files.meridel-group.test/s/xz237rxup8</a></p><p>Kind regards,<br>=
-Marcus Bell</p></body></html>
+<html><body><p>Hi Marcus,</p><p>Following up on our call, the agreement is re=
+ady for your review: <a href=3D"https://files.meridel-partners.test/s/vmgynea=
+vex">https://files.meridel-partners.test/s/vmgyneavex</a></p><p>Kind regards,=
+<br>Lena Okafor</p></body></html>
 
---=_hookline_a92e1e2a21b98955a0a9cf38--
+--=_hookline_0a91a97b0fd0cbd85f74261a--

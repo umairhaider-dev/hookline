@@ -1,0 +1,24 @@
+Return-Path: <dana.whitfield.ceo@inboxmail.test>
+Received: from mail.inboxmail.test (mail.inboxmail.test [198.51.100.15]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id I3ZQBQ64DI for
+ <aisha.karim@larkspur.test>; Tue, 22 Sep 2026 08:12:08 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=inboxmail.test; dkim=pass header.d=inboxmail.test; dmarc=pass
+ header.from=inboxmail.test
+From: Dana Whitfield <dana.whitfield.ceo@inboxmail.test>
+To: Aisha Karim <aisha.karim@larkspur.test>
+Subject: Today
+Date: Tue, 22 Sep 2026 08:12:00 +0000
+Message-ID: <kmk57dpiw7zbczt4@inboxmail.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Aisha,
+
+Can you handle a payment for me this afternoon? I'm in meetings all day, so e=
+mail only. I'll send the IBAN and amount once you confirm.
+
+Thanks,
+Dana
+Sent from my phone

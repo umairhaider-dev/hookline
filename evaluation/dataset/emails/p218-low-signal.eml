@@ -1,39 +1,39 @@
-Return-Path: <marcus.bell@meridel-docs.test>
-Received: from mail.meridel-docs.test (mail.meridel-docs.test [198.51.100.95])
- by mx1.larkspur.test (Postfix) with ESMTPS id YHBG5IIS4A for
- <ivan.sorensen@larkspur.test>; Wed, 23 Sep 2026 22:10:15 +0000
+Return-Path: <sam.ortega@vossberg-group.test>
+Received: from mail.vossberg-group.test (mail.vossberg-group.test
+ [198.51.100.172]) by mx1.larkspur.test (Postfix) with ESMTPS id 2WVGXASUQD
+ for <grace.lund@larkspur.test>; Fri, 04 Sep 2026 15:28:09 +0000
 Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=meridel-docs.test; dkim=pass header.d=meridel-docs.test;
- dmarc=pass header.from=meridel-docs.test
-From: Marcus Bell <marcus.bell@meridel-docs.test>
-To: Ivan Sorensen <ivan.sorensen@larkspur.test>
-Subject: Q4 vendor scorecard
-Date: Wed, 23 Sep 2026 22:10:00 +0000
-Message-ID: <sj3wwcfnq92xjfpw@meridel-docs.test>
+ smtp.mailfrom=vossberg-group.test; dkim=pass header.d=vossberg-group.test;
+ dmarc=pass header.from=vossberg-group.test
+From: Sam Ortega <sam.ortega@vossberg-group.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Agreement for review
+Date: Fri, 04 Sep 2026 15:28:00 +0000
+Message-ID: <cbm5tu373msrhphx@vossberg-group.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_89b0b7c04db4691189cd4876"
+ boundary="=_hookline_4620cf3a38f0517ac82d3f0d"
 
---=_hookline_89b0b7c04db4691189cd4876
+--=_hookline_4620cf3a38f0517ac82d3f0d
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Ivan,
+Hi Grace,
 
-Sharing the onboarding pack for the new project. It's here: https://files.mer=
-idel-docs.test/s/rz9w4wy9kv
+Here is the updated pricing sheet we talked about: https://files.vossberg-gro=
+up.test/s/sugjna29j2 Sign in with your work account to view it.
 
 Kind regards,
-Marcus Bell
+Sam Ortega
 
---=_hookline_89b0b7c04db4691189cd4876
+--=_hookline_4620cf3a38f0517ac82d3f0d
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Ivan,</p><p>Sharing the onboarding pack for the new project=
-. It's here: <a href=3D"https://files.meridel-docs.test/s/rz9w4wy9kv">https:/=
-/files.meridel-docs.test/s/rz9w4wy9kv</a></p><p>Kind regards,<br>Marcus Bell<=
-/p></body></html>
+<html><body><p>Hi Grace,</p><p>Here is the updated pricing sheet we talked ab=
+out: <a href=3D"https://files.vossberg-group.test/s/sugjna29j2">https://files=
+.vossberg-group.test/s/sugjna29j2</a> Sign in with your work account to view =
+it.</p><p>Kind regards,<br>Sam Ortega</p></body></html>
 
---=_hookline_89b0b7c04db4691189cd4876--
+--=_hookline_4620cf3a38f0517ac82d3f0d--

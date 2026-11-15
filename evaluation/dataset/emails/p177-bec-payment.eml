@@ -1,0 +1,25 @@
+Return-Path: <ruth.calder@larkspur-billing.test>
+Received: from mail.larkspur-billing.test (mail.larkspur-billing.test
+ [203.0.113.97]) by mx1.larkspur.test (Postfix) with ESMTPS id B54QB5NMWI for
+ <ivan.sorensen@larkspur.test>; Fri, 09 Oct 2026 12:11:23 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=larkspur-billing.test; dkim=pass
+ header.d=larkspur-billing.test; dmarc=pass header.from=larkspur-billing.test
+From: Ruth Calder <ruth.calder@larkspur-billing.test>
+Reply-To: Ruth Calder <ruth30@quickpost-mail.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Urgent payment
+Date: Fri, 09 Oct 2026 12:11:00 +0000
+Message-ID: <wq4d4jr2mncyy33y@larkspur-billing.test>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ivan,
+
+Please hold the transfer to the old account. The vendor sent updated banking =
+information and the payment must go to the new account.
+
+Thanks,
+Ruth
+Sent from my phone

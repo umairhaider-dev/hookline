@@ -9,7 +9,7 @@ from urllib.parse import parse_qs
 import httpx
 import pytest
 
-from hookline.config import WatchpostSettings
+from hookline.config import Settings, WatchpostSettings, load_settings
 from hookline.models import AIAssessment, AIRun, AIStatus, AttackType, EmailAddress, ReceivedHop
 from hookline.models.verdict import VerdictLabel
 from hookline.watchpost import (
@@ -239,21 +239,29 @@ def test_credentials() -> None:
 
 
 def test_resolve_url(caplog: pytest.LogCaptureFixture) -> None:
-    settings = WatchpostSettings(url="https://from-config.example.net/")
-    assert resolve_url("https://cli.example.net/", settings, {}) == "https://cli.example.net"
-    assert resolve_url(None, settings, {"WATCHPOST_URL": "https://env.example.net"}) == (
-        "https://env.example.net"
-    )
-    assert resolve_url(None, settings, {}) == "https://from-config.example.net"
+    settings = Settings(watchpost=WatchpostSettings(url="https://from-config.example.net/"))
+    assert resolve_url("https://cli.example.net/", settings) == "https://cli.example.net"
+    from_env = settings.model_copy(update={"watchpost_url": "https://env.example.net"})
+    assert resolve_url(None, from_env) == "https://env.example.net"
+    assert resolve_url(None, settings) == "https://from-config.example.net"
     with pytest.raises(WatchpostError, match="No Watchpost URL"):
-        resolve_url(None, WatchpostSettings(), {})
+        resolve_url(None, Settings())
     with pytest.raises(WatchpostError, match="must start with"):
-        resolve_url("watchpost.example.net", settings, {})
+        resolve_url("watchpost.example.net", settings)
     with caplog.at_level(logging.WARNING, logger="hookline"):
-        resolve_url("http://localhost:8000", settings, {})
+        resolve_url("http://localhost:8000", settings)
         assert "plain HTTP" not in caplog.text
-        resolve_url("http://watchpost.example.net", settings, {})
+        resolve_url("http://watchpost.example.net", settings)
     assert "plain HTTP" in caplog.text
+
+
+def test_watchpost_url_and_token_can_come_from_a_dotenv_file(tmp_path: Path) -> None:
+    (tmp_path / ".env").write_text(
+        "WATCHPOST_URL=https://dotenv.example.net\nWATCHPOST_TOKEN=t0ken\n", encoding="utf-8"
+    )
+    settings = load_settings()
+    assert resolve_url(None, settings) == "https://dotenv.example.net"
+    assert Credentials.from_settings(settings).token == "t0ken"
 
 
 def test_tls_verification(tmp_path: Path) -> None:

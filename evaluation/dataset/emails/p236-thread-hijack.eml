@@ -1,42 +1,41 @@
-Return-Path: <marcus@harrow-consu1ting.test>
-Received: from mail.harrow-consu1ting.test (mail.harrow-consu1ting.test
- [203.0.113.200]) by mx1.larkspur.test (Postfix) with ESMTPS id IQ4DVMP7X4 for
- <jordan.pike@larkspur.test>; Sun, 20 Sep 2026 01:31:15 +0000
-Authentication-Results: mx1.larkspur.test; spf=softfail
- smtp.mailfrom=harrow-consu1ting.test; dkim=none
- header.d=harrow-consu1ting.test; dmarc=none
- header.from=harrow-consu1ting.test
-From: Marcus Bell <marcus@harrow-consu1ting.test>
-To: Jordan Pike <jordan.pike@larkspur.test>
-Subject: Re: Contract renewal
-Date: Sun, 20 Sep 2026 01:31:00 +0000
-Message-ID: <dkc4x25x7r784smq@harrow-consu1ting.test>
+Return-Path: <priya@harrow-cosulting.test>
+Received: from mail.harrow-cosulting.test (mail.harrow-cosulting.test
+ [198.51.100.215]) by mx1.larkspur.test (Postfix) with ESMTPS id WYW4KJWFQ3
+ for <ivan.sorensen@larkspur.test>; Mon, 26 Oct 2026 18:05:18 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=harrow-cosulting.test; dkim=none
+ header.d=harrow-cosulting.test; dmarc=fail header.from=harrow-cosulting.test
+From: Priya Raman <priya@harrow-cosulting.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Re: Statement of work
+Date: Mon, 26 Oct 2026 18:05:00 +0000
+Message-ID: <a5qz8jv92pwjzzbs@harrow-cosulting.test>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="=_hookline_0e5c17606bdf57b20ec117a5"
+ boundary="=_hookline_b59f7eb20cb7c25f7f060520"
 
---=_hookline_0e5c17606bdf57b20ec117a5
+--=_hookline_b59f7eb20cb7c25f7f060520
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Jordan,
+Hi Ivan,
 
-As discussed, here is the contract renewal with the new payment details: http=
-s://share-update-26k.test/doc/mvvezwg8
+Please use the updated statement of work at https://portal-docs-qxy.test/doc/=
+2zrj8qm6; the old version is out of date.
 
 Best,
-Marcus
+Priya
 
-On Tuesday, Jordan Pike wrote:
-> Thanks, please send the contract renewal when ready.
+On Tuesday, Ivan Sorensen wrote:
+> Thanks, please send the statement of work when ready.
 
---=_hookline_0e5c17606bdf57b20ec117a5
+--=_hookline_b59f7eb20cb7c25f7f060520
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
 
-<html><body><p>Hi Jordan,</p><p>As discussed, here is the contract renewal wi=
-th the new payment details: <a href=3D"https://share-update-26k.test/doc/mvve=
-zwg8">the document</a></p><p>Best,<br>Marcus</p></body></html>
+<html><body><p>Hi Ivan,</p><p>Please use the updated statement of work at <a =
+href=3D"https://portal-docs-qxy.test/doc/2zrj8qm6">the document</a>; the old =
+version is out of date.</p><p>Best,<br>Priya</p></body></html>
 
---=_hookline_0e5c17606bdf57b20ec117a5--
+--=_hookline_b59f7eb20cb7c25f7f060520--

@@ -1,0 +1,35 @@
+Return-Path: <notifications@brightwater-logistics-billing.test>
+Received: from mail.brightwater-logistics-billing.test
+ (mail.brightwater-logistics-billing.test [198.51.100.119]) by
+ mx1.larkspur.test (Postfix) with ESMTPS id JPD77AAC5H for
+ <grace.lund@larkspur.test>; Mon, 21 Sep 2026 01:48:17 +0000
+Authentication-Results: mx1.larkspur.test; spf=pass
+ smtp.mailfrom=brightwater-logistics-billing.test; dkim=pass
+ header.d=brightwater-logistics-billing.test; dmarc=pass
+ header.from=brightwater-logistics-billing.test
+From: Brightwater Logistics <notifications@brightwater-logistics-billing.test>
+To: Grace Lund <grace.lund@larkspur.test>
+Subject: Brightwater Logistics notification
+Date: Mon, 21 Sep 2026 01:48:00 +0000
+Message-ID: <s4wuyp9u7rvzwku2@brightwater-logistics-billing.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_19c3e56bc85b9ee29050effe"
+
+--=_hookline_19c3e56bc85b9ee29050effe
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A document was shared with you. Sign in to open it.
+https://portal.brightwater-logistics-billing.test/share/open?ref=38p2mdxp9s
+
+--=_hookline_19c3e56bc85b9ee29050effe
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hello Grace,</p><p>A document was shared with you. Sign in to =
+open it.</p><p><a href=3D"https://portal.brightwater-logistics-billing.test/s=
+hare/open?ref=3D38p2mdxp9s">Open Brightwater Logistics</a></p></body></html>
+
+--=_hookline_19c3e56bc85b9ee29050effe--

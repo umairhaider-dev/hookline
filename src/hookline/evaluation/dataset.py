@@ -9,12 +9,15 @@ Layout::
 """
 
 import csv
+import logging
 from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
 
 from hookline.errors import InputError
 from hookline.evaluation.generator import Sample
+
+logger = logging.getLogger(__name__)
 
 LABELS_FILE = "labels.csv"
 EMAILS_DIR = "emails"
@@ -42,18 +45,26 @@ class Entry:
 
 
 def write_dataset(samples: Sequence[Sample], directory: Path) -> None:
-    """Write ``samples`` and their labels under ``directory``."""
+    """Write ``samples`` and their labels under ``directory``.
+
+    ``.eml`` files left in the ``emails`` and ``twins`` folders by an earlier,
+    different dataset are removed, so the folders hold exactly what
+    ``labels.csv`` lists.
+    """
     emails = directory / EMAILS_DIR
     twins = directory / TWINS_DIR
     emails.mkdir(parents=True, exist_ok=True)
     twins.mkdir(parents=True, exist_ok=True)
+    written: set[Path] = set()
     rows = []
     for sample in samples:
         name = f"{sample.sample_id}.eml"
         (emails / name).write_bytes(sample.raw)
+        written.add(emails / name)
         twin_file = ""
         if sample.twin is not None:
             (twins / name).write_bytes(sample.twin)
+            written.add(twins / name)
             twin_file = f"{TWINS_DIR}/{name}"
         rows.append(
             {
@@ -70,6 +81,13 @@ def write_dataset(samples: Sequence[Sample], directory: Path) -> None:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+    stale = [
+        path for folder in (emails, twins) for path in folder.glob("*.eml") if path not in written
+    ]
+    for path in stale:
+        path.unlink()
+    if stale:
+        logger.info("Removed %d email file(s) left from an earlier dataset", len(stale))
 
 
 def load_dataset(directory: Path) -> list[Entry]:

@@ -403,6 +403,11 @@ class Settings(BaseSettings):
         validation_alias=AliasChoices("HOOKLINE_WEB_TOKEN"),
         description="Bearer token the web interface requires for uploads, if set.",
     )
+    watchpost_url: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("HOOKLINE_WATCHPOST_URL", "WATCHPOST_URL"),
+        description="Watchpost base URL from the environment or .env; overrides [watchpost] url.",
+    )
     watchpost_token: SecretStr | None = Field(
         default=None, validation_alias=AliasChoices("HOOKLINE_WATCHPOST_TOKEN", "WATCHPOST_TOKEN")
     )

@@ -1,38 +1,34 @@
-Return-Path: <accounts@brightwater-ogistics.test>
-Received: from mail.brightwater-ogistics.test (mail.brightwater-ogistics.test
- [203.0.113.71]) by mx1.larkspur.test (Postfix) with ESMTPS id SUSQ7IM36Z for
- <jordan.pike@larkspur.test>; Sat, 19 Sep 2026 23:11:18 +0000
-Authentication-Results: mx1.larkspur.test; spf=pass
- smtp.mailfrom=brightwater-ogistics.test; dkim=pass
- header.d=brightwater-ogistics.test; dmarc=pass
- header.from=brightwater-ogistics.test
-From: Brightwater Logistics Accounts <accounts@brightwater-ogistics.test>
-To: Jordan Pike <jordan.pike@larkspur.test>
-Subject: Overdue: INV-2026-5823
-Date: Sat, 19 Sep 2026 23:11:00 +0000
-Message-ID: <khbgnh75sk236aha@brightwater-ogistics.test>
+Return-Path: <accounts@qui1lon-payroll.test>
+Received: from mail.qui1lon-payroll.test (mail.qui1lon-payroll.test
+ [203.0.113.197]) by mx1.larkspur.test (Postfix) with ESMTPS id TQ5EQSXBRT for
+ <lena.okafor@larkspur.test>; Sat, 19 Sep 2026 04:37:05 +0000
+From: Quillon Payroll Accounts <accounts@qui1lon-payroll.test>
+To: Lena Okafor <lena.okafor@larkspur.test>
+Subject: Overdue: INV-2026-3981
+Date: Sat, 19 Sep 2026 04:37:00 +0000
+Message-ID: <d62nbayme4drudmi@qui1lon-payroll.test>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="=_hookline_914431660302d427f62e6309"
+Content-Type: multipart/mixed; boundary="=_hookline_d4980bc2fc9812a160e44ba3"
 
---=_hookline_914431660302d427f62e6309
+--=_hookline_d4980bc2fc9812a160e44ba3
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 Hello,
 
-Invoice INV-2026-5823 is past due. Please note our new banking information be=
+Invoice INV-2026-3981 is past due. Please note our new banking information be=
 low and remit payment today to avoid a late fee.
 
-IBAN: XX41 0000 0000 4392 00
+IBAN: XX71 0000 0000 7546 00
 
-Brightwater Logistics Accounts
+Quillon Payroll Accounts
 
---=_hookline_914431660302d427f62e6309
+--=_hookline_d4980bc2fc9812a160e44ba3
 Content-Type: application/pdf
 Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="INV-2026-5823.pdf"
+Content-Disposition: attachment; filename="INV-2026-3981.pdf"
 MIME-Version: 1.0
 
 JVBERi0xLjcKJSBpbmVydCB0ZXN0IGZpbGUK
 
---=_hookline_914431660302d427f62e6309--
+--=_hookline_d4980bc2fc9812a160e44ba3--

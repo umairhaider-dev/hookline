@@ -1,0 +1,42 @@
+Return-Path: <priya@mail-meridel-design.test>
+Received: from mail.mail-meridel-design.test (mail.mail-meridel-design.test
+ [198.51.100.241]) by mx1.larkspur.test (Postfix) with ESMTPS id XDPMJW8Y5T
+ for <ivan.sorensen@larkspur.test>; Thu, 03 Sep 2026 02:14:03 +0000
+Authentication-Results: mx1.larkspur.test; spf=fail
+ smtp.mailfrom=mail-meridel-design.test; dkim=none
+ header.d=mail-meridel-design.test; dmarc=fail
+ header.from=mail-meridel-design.test
+From: Priya Raman <priya@mail-meridel-design.test>
+To: Ivan Sorensen <ivan.sorensen@larkspur.test>
+Subject: Re: Statement of work
+Date: Thu, 03 Sep 2026 02:14:00 +0000
+Message-ID: <nf5rdfmuist7nk39@mail-meridel-design.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_hookline_19688c08b0c27e63e3ad373e"
+
+--=_hookline_19688c08b0c27e63e3ad373e
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ivan,
+
+As discussed, here is the statement of work with the new payment details: htt=
+ps://files-center-n7u.test/doc/9t3bqxs5
+
+Best,
+Priya
+
+On Tuesday, Ivan Sorensen wrote:
+> Thanks, please send the statement of work when ready.
+
+--=_hookline_19688c08b0c27e63e3ad373e
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi Ivan,</p><p>As discussed, here is the statement of work wit=
+h the new payment details: <a href=3D"https://files-center-n7u.test/doc/9t3bq=
+xs5">the document</a></p><p>Best,<br>Priya</p></body></html>
+
+--=_hookline_19688c08b0c27e63e3ad373e--

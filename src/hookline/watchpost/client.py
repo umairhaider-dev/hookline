@@ -9,10 +9,9 @@ backoff, honouring ``Retry-After``.
 """
 
 import logging
-import os
 import ssl
 import time
-from collections.abc import Callable, Mapping
+from collections.abc import Callable
 from dataclasses import dataclass
 from types import TracebackType
 from typing import Any, Self
@@ -72,11 +71,9 @@ class Credentials:
         return bool(self.token) or self.can_sign_in
 
 
-def resolve_url(
-    explicit: str | None, settings: WatchpostSettings, environ: Mapping[str, str] = os.environ
-) -> str:
-    """The Watchpost URL from ``--url``, then ``WATCHPOST_URL``, then the config file."""
-    url = explicit or environ.get(URL_ENV) or settings.url
+def resolve_url(explicit: str | None, settings: Settings) -> str:
+    """The Watchpost URL: ``--url``, then ``WATCHPOST_URL`` (environment or .env), then config."""
+    url = explicit or settings.watchpost_url or settings.watchpost.url
     if not url:
         raise WatchpostError(
             f"No Watchpost URL: pass --url, set {URL_ENV} or set url in [watchpost]"

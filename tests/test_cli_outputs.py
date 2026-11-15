@@ -208,6 +208,7 @@ def test_eval_run_falls_back_to_rules_without_a_model(tmp_path: Path) -> None:
         "results.json",
         "predictions.csv",
     }
+    assert all(b"\r" not in path.read_bytes() for path in out.iterdir())
     quiet = runner.invoke(app, ["eval", "run", str(tmp_path / "d"), "-o", str(out), "--no-ai"])
     assert quiet.exit_code == 0
     assert "Language model not used" not in quiet.stderr
