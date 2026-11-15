@@ -132,25 +132,32 @@ domains, which turns on the lookalike and display-name checks for them.
 
 ## Example reports
 
-These come from the bundled samples in rules-only mode (`--no-ai`): no language
-model was available on the machine that produced them, so the AI section reads
-"Disabled" rather than showing an invented answer.
+All of these come from the bundled samples.
 
-**Terminal summary** of a gift card request from a free webmail account whose
-display name claims to be a Larkspur colleague (`hookline --config
-hookline.example.toml analyze samples/bec-gift-card.eml --no-ai`):
-
-![Terminal report for a gift card request](docs/images/terminal-report.svg)
-
-**HTML report** for a credential phish with a hidden prompt injection
-(`hookline analyze samples/credential-phish.eml -f html -o report.html
---no-ai`). These show the top of the page; it continues with the rest of the
-indicators and the AI, threat intelligence, MITRE ATT&CK, IOC, link and
-attachment sections. The page follows the system's light or dark theme:
+**HTML report** for a credential phish with a hidden prompt injection, analysed
+with `llama3.1:8b` running locally through Ollama (`hookline analyze
+samples/credential-phish.eml -f html -o report.html`). The model's answer adds
+40 points as its own line in the score breakdown, and its suggested actions are
+listed apart from Hookline's own. These show the top of the page, which follows
+the system's light or dark theme:
 
 | Light | Dark |
 | --- | --- |
 | ![HTML report, light theme](docs/images/html-report-light.png) | ![HTML report, dark theme](docs/images/html-report-dark.png) |
+
+Further down the same page, the model's assessment. It lists "DKIM fail" and
+says the sender's domain fails DKIM, but the message carried no DKIM signature
+at all (`dkim=none`); only SPF and DMARC failed. It is a small, real example of
+why the explanation is a second opinion and the findings are the evidence.
+
+![AI assessment section of the report](docs/images/ai-assessment.png)
+
+**Terminal summary** of a gift card request from a free webmail account whose
+display name claims to be a Larkspur colleague, in rules-only mode
+(`hookline --config hookline.example.toml analyze samples/bec-gift-card.eml
+--no-ai`):
+
+![Terminal report for a gift card request](docs/images/terminal-report.svg)
 
 **Web upload page** (`hookline serve`):
 

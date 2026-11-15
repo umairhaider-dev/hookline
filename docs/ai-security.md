@@ -214,6 +214,11 @@ registered yesterday", "the attachment contains a macro"), calls a phish
 legitimate, or recommends something harmful ("reply with your password to
 verify").
 
+This happens in practice. Asked about `samples/credential-phish.eml`,
+`llama3.1:8b` listed "DKIM fail" among the tactics and wrote that the sender's
+domain fails DKIM. The message has no DKIM signature at all (`dkim=none`), and
+no DKIM finding was given to the model; only SPF and DMARC failed.
+
 Mitigations:
 
 - **A model claim never becomes a finding.** Indicators come only from the
