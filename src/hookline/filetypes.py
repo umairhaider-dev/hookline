@@ -3,12 +3,26 @@
 Detection reads the leading bytes of a payload and, for ZIP containers, the
 archive's central directory (the list of member names). Nothing is extracted,
 decompressed, rendered or executed.
+
+A built-in signature table comes first, so a file gets the same answer on
+every platform. For content it does not recognise, libmagic (through
+python-magic) is asked as well, on Linux and macOS only: on Windows,
+python-magic's loader also tries a ``libmagic.dll`` in the current directory,
+where a planted DLL would run, and MSYS builds found on PATH, such as the one
+Git for Windows ships, which hang a native Python process. Only libmagic
+answers that name a type the checks understand are kept.
 """
 
 import io
+import logging
+import sys
 import zipfile
+from collections.abc import Callable
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import PurePosixPath
+
+logger = logging.getLogger(__name__)
 
 PE = "application/x-dosexec"
 ELF = "application/x-executable"
@@ -50,6 +64,11 @@ ACTIVE_CONTENT_TYPES = frozenset(
     {PE, ELF, MACHO, SHELL_SCRIPT, JAR, APK, LNK, ONENOTE, ISO, VHD, VHDX, HTML, SVG}
     | {DOCM, XLSM, PPTM}
 )
+
+# Platforms where python-magic loads the system libmagic and nothing else.
+LIBMAGIC_PLATFORMS = frozenset({"linux", "darwin"})
+# libmagic is a native parser of hostile bytes, so it sees no more than this.
+LIBMAGIC_SNIFF_BYTES = 64 * 1024
 
 MAX_ARCHIVE_MEMBERS = 200
 # Listing builds one object per entry, so archives declaring more are skipped.
@@ -99,6 +118,32 @@ _SIGNATURES: tuple[tuple[int, bytes, str], ...] = (
 )
 
 _HTML_STARTS = ("<!doctype html", "<html", "<head", "<body", "<script", "<meta", "<iframe")
+
+# Every type the checks reason about; libmagic answers outside it are dropped,
+# so a CSV or calendar file is never reported as a mismatch for its extension.
+_KNOWN_TYPES = frozenset(
+    {PE, ELF, MACHO, SHELL_SCRIPT, PDF, ZIP, DOCX, XLSX, PPTX, DOCM, XLSM, PPTM, JAR, APK}
+    | {OLE, RAR, SEVEN_ZIP, GZIP, BZIP2, XZ, CAB, LNK, ONENOTE, ISO, VHD, VHDX, RTF, HTML}
+    | {SVG, PNG, JPEG, GIF, TIFF, WEBP}
+)
+# Other names libmagic uses for those types, depending on its version.
+_LIBMAGIC_ALIASES = {
+    "application/vnd.microsoft.portable-executable": PE,
+    "application/x-msdownload": PE,
+    "application/x-sharedlib": ELF,
+    "application/x-pie-executable": ELF,
+    "application/x-object": ELF,
+    "application/cdfv2": OLE,
+    "application/x-msi": OLE,
+    "application/msword": OLE,
+    "application/vnd.ms-excel": OLE,
+    "application/vnd.ms-powerpoint": OLE,
+    "application/vnd.ms-office": OLE,
+    "application/x-rar": RAR,
+    "application/x-gzip": GZIP,
+    "application/rtf": RTF,
+    "application/xhtml+xml": HTML,
+}
 
 # Extension -> content types it may legitimately hold. An empty set means a
 # text format with no signature: any recognised binary type is a mismatch.
@@ -181,12 +226,12 @@ def file_extension(filename: str | None) -> str:
 
 def detect_type(data: bytes) -> str | None:
     """Identify a payload from its leading bytes. Returns None if unrecognised."""
-    for offset, magic, content_type in _SIGNATURES:
-        if data.startswith(magic, offset):
+    for offset, signature, content_type in _SIGNATURES:
+        if data.startswith(signature, offset):
             return content_type
     if data.startswith(b"RIFF") and data[8:12] == b"WEBP":
         return WEBP
-    return _detect_markup(data[:_TEXT_SNIFF_BYTES])
+    return _detect_markup(data[:_TEXT_SNIFF_BYTES]) or _libmagic_type(data)
 
 
 def _detect_markup(head: bytes) -> str | None:
@@ -196,6 +241,45 @@ def _detect_markup(head: bytes) -> str | None:
     if "<svg" in text and text.startswith(("<?xml", "<svg", "<!doctype svg")):
         return SVG
     return None
+
+
+def _libmagic_type(data: bytes) -> str | None:
+    """The type libmagic names for ``data``, if it is one the checks understand."""
+    identify = _load_libmagic()
+    if identify is None or not data:
+        return None
+    answer = identify(data[:LIBMAGIC_SNIFF_BYTES])
+    if answer is None:
+        return None
+    content_type = answer.strip().lower()
+    content_type = _LIBMAGIC_ALIASES.get(content_type, content_type)
+    return content_type if content_type in _KNOWN_TYPES else None
+
+
+@lru_cache(maxsize=1)
+def _load_libmagic() -> Callable[[bytes], str | None] | None:
+    """python-magic's MIME detector, or None where it is missing or not used."""
+    if sys.platform not in LIBMAGIC_PLATFORMS:
+        return None
+    try:
+        import magic
+    except ImportError as exc:  # python-magic or the libmagic library is missing
+        logger.debug("libmagic is not available: %s", exc)
+        return None
+    try:
+        detector = magic.Magic(mime=True)
+    except magic.MagicException as exc:
+        logger.warning("libmagic could not be loaded: %s", exc)
+        return None
+
+    def identify(data: bytes) -> str | None:
+        try:
+            return detector.from_buffer(data)
+        except magic.MagicException as exc:
+            logger.warning("libmagic could not identify an attachment: %s", exc)
+            return None
+
+    return identify
 
 
 def list_zip_archive(data: bytes) -> ArchiveListing | None:

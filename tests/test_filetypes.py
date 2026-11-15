@@ -1,10 +1,15 @@
 import io
+import logging
+import sys
 import zipfile
+from collections.abc import Callable, Iterator
 
 import pytest
 
 from hookline import filetypes
-from hookline.filetypes import detect_type, file_extension, list_zip_archive
+from hookline.filetypes import _load_libmagic, detect_type, file_extension, list_zip_archive
+
+Identify = Callable[[bytes], str | None]
 
 
 def make_zip(*names: str) -> bytes:
@@ -115,3 +120,125 @@ def test_archives_with_too_many_entries_are_not_listed(monkeypatch: pytest.Monke
     monkeypatch.setattr(filetypes, "MAX_ARCHIVE_ENTRIES", 2)
     assert list_zip_archive(make_zip("a", "b")) is not None
     assert list_zip_archive(make_zip("a", "b", "c")) is None
+
+
+# --- libmagic -----------------------------------------------------------------
+
+
+def use_libmagic(monkeypatch: pytest.MonkeyPatch, answers: dict[bytes, str | None]) -> list[int]:
+    """Stand in for libmagic with fixed answers; returns the sizes it was asked about."""
+    asked: list[int] = []
+
+    def identify(data: bytes) -> str | None:
+        asked.append(len(data))
+        return answers.get(data[:8])
+
+    monkeypatch.setattr(filetypes, "_load_libmagic", lambda: identify)
+    return asked
+
+
+def test_libmagic_names_only_types_the_checks_understand(monkeypatch: pytest.MonkeyPatch) -> None:
+    asked = use_libmagic(
+        monkeypatch,
+        {
+            b"<!-- x -": " TEXT/HTML ",
+            b"\x00\x01pe\x00\x00\x00\x00": "application/vnd.microsoft.portable-executable",
+            b"BEGIN:VC": "text/calendar",
+            b"\x00\x02\x00\x00\x00\x00\x00\x00": None,
+        },
+    )
+    assert detect_type(b"<!-- x --><html><body>Sign in</body></html>") == filetypes.HTML
+    assert detect_type(b"\x00\x01pe\x00\x00\x00\x00" + b"\x00" * 200_000) == filetypes.PE
+    assert detect_type(b"BEGIN:VCALENDAR\r\nEND:VCALENDAR\r\n") is None
+    assert detect_type(b"\x00\x02" + b"\x00" * 6) is None
+    assert max(asked) == filetypes.LIBMAGIC_SNIFF_BYTES
+    asked.clear()
+    assert detect_type(b"%PDF-1.7\n") == filetypes.PDF
+    assert detect_type(b"") is None
+    assert asked == []
+
+
+class FakeMagicError(Exception):
+    """Stands in for magic.MagicException."""
+
+
+class FakeMagic:
+    """Stands in for magic.Magic."""
+
+    broken = False
+
+    def __init__(self, mime: bool = False) -> None:
+        if self.broken:
+            raise FakeMagicError("no magic database")
+        assert mime
+
+    def from_buffer(self, buf: bytes) -> str:
+        if buf.startswith(b"bad"):
+            raise FakeMagicError("cannot read")
+        return "application/pdf"
+
+
+class FakeMagicModule(type(sys)):  # type: ignore[misc]
+    """Stands in for the magic module."""
+
+    MagicException = FakeMagicError
+    Magic = FakeMagic
+
+
+@pytest.fixture
+def fresh_loader() -> Iterator[Callable[[], Identify | None]]:
+    _load_libmagic.cache_clear()
+    yield _load_libmagic
+    _load_libmagic.cache_clear()
+
+
+def test_libmagic_is_loaded_once_where_it_is_safe(
+    monkeypatch: pytest.MonkeyPatch,
+    fresh_loader: Callable[[], Identify | None],
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    monkeypatch.setattr(filetypes, "LIBMAGIC_PLATFORMS", frozenset({sys.platform}))
+    monkeypatch.setitem(sys.modules, "magic", FakeMagicModule("magic"))
+    identify = fresh_loader()
+    assert identify is not None
+    assert fresh_loader() is identify
+    assert identify(b"anything") == "application/pdf"
+    with caplog.at_level(logging.WARNING, logger="hookline"):
+        assert identify(b"bad bytes") is None
+    assert "could not identify" in caplog.text
+
+
+def test_libmagic_is_skipped_when_unsafe_missing_or_broken(
+    monkeypatch: pytest.MonkeyPatch,
+    fresh_loader: Callable[[], Identify | None],
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    monkeypatch.setitem(sys.modules, "magic", FakeMagicModule("magic"))
+    monkeypatch.setattr(filetypes, "LIBMAGIC_PLATFORMS", frozenset())
+    assert fresh_loader() is None
+    _load_libmagic.cache_clear()
+    monkeypatch.setattr(filetypes, "LIBMAGIC_PLATFORMS", frozenset({sys.platform}))
+    monkeypatch.setitem(sys.modules, "magic", None)
+    assert fresh_loader() is None
+    _load_libmagic.cache_clear()
+    monkeypatch.setitem(sys.modules, "magic", FakeMagicModule("magic"))
+    monkeypatch.setattr(FakeMagic, "broken", True)
+    with caplog.at_level(logging.WARNING, logger="hookline"):
+        assert fresh_loader() is None
+    assert "could not be loaded" in caplog.text
+
+
+@pytest.mark.skipif(
+    sys.platform not in filetypes.LIBMAGIC_PLATFORMS,
+    reason="python-magic is only used on Linux and macOS",
+)
+def test_real_libmagic(
+    monkeypatch: pytest.MonkeyPatch, fresh_loader: Callable[[], Identify | None]
+) -> None:
+    if fresh_loader() is None:
+        pytest.skip("libmagic is not installed")
+    monkeypatch.setattr(filetypes, "_load_libmagic", fresh_loader)
+    page = b"<!-- saved page -->\n<HTML><body><form>Password</form></body></HTML>\n"
+    assert detect_type(page) == filetypes.HTML
+    assert detect_type(b"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nEND:VCALENDAR\r\n") is None
+    assert detect_type(bytes(range(256)) * 8) is None

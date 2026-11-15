@@ -177,6 +177,13 @@ Links are never fetched and attachments are never opened: URLs are analysed as
 text, and attachments are only hashed and identified from their leading bytes
 and, for ZIP files, their file list.
 
+File types come from a built-in signature table first, so a file gets the same
+answer on every platform. On Linux and macOS, libmagic (through python-magic)
+is asked about anything the table does not recognise, and its answer is kept
+when it names a type the checks understand. It is not used on Windows, where
+python-magic would load a `libmagic.dll` from the current folder or an MSYS
+build from PATH (Git for Windows ships one that hangs a normal Python process).
+
 ## Threat intelligence (optional)
 
 With API keys set in the environment or `.env`, Hookline looks up the email's

@@ -800,9 +800,10 @@ def _zip(*names: str) -> bytes:
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w") as archive:
         for name in names:
-            archive.writestr(
-                zipfile.ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0)), "inert test content"
-            )
+            info = zipfile.ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
+            # zipfile records the OS it runs on; pin it so every platform writes the same bytes.
+            info.create_system = 0
+            archive.writestr(info, "inert test content")
     return buffer.getvalue()
 
 

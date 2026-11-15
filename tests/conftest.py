@@ -7,6 +7,7 @@ from pathlib import Path
 
 import pytest
 
+from hookline import filetypes
 from hookline.logging_config import PACKAGE_LOGGER
 
 _KEY_VARIABLES = frozenset(
@@ -64,6 +65,8 @@ def isolated_environment(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Ite
     monkeypatch.setattr(socket.socket, "connect", _no_network)
     monkeypatch.setattr(socket, "socketpair", _socketpair)
     monkeypatch.setattr(socket, "getaddrinfo", _local_names_only)
+    # libmagic's answers vary by platform and version; tests that need it opt in.
+    monkeypatch.setattr(filetypes, "_load_libmagic", lambda: None)
     monkeypatch.chdir(tmp_path)
     yield
     package_logger = logging.getLogger(PACKAGE_LOGGER)

@@ -314,13 +314,17 @@ Mitigations: Hookline never opens, renders, runs or detonates attachments and
 never fetches a URL from an email. Attachments are hashed and identified from
 their leading bytes; ZIP archives are listed from their central directory
 without decompressing anything, and archives that declare more than 10,000
-entries are not listed. Since the only outbound connections go to configured
+entries are not listed. On Linux and macOS, libmagic is asked about content the
+built-in signatures do not recognise, and it sees only the first 64 KiB. It is
+never loaded on Windows, where python-magic would also try a `libmagic.dll`
+in the current folder, so a DLL planted next to saved attachments could run. Since the only outbound connections go to configured
 endpoints (the model, the reputation APIs, Watchpost), a crafted URL in an
 email cannot make Hookline call an internal service.
 
 Residual risk: by design, content inside attachments is unseen by both the
 rules and the model. HTML attachments with a login form are the clearest gap
-(3 of 8 caught in the evaluation).
+(3 of 8 caught in the evaluation). libmagic is native code parsing hostile
+bytes and has had memory-safety bugs, so keep the system package updated.
 
 ### T11. Resource exhaustion
 
