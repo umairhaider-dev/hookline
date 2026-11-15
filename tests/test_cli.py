@@ -8,7 +8,7 @@ from typer.testing import CliRunner
 
 from hookline import __version__
 from hookline.cli import EXIT_ANALYSIS_ERROR, EXIT_USAGE_ERROR, _harden_output_streams, app
-from tests.factories import SAMPLES_DIR
+from tests.factories import SAMPLES_DIR, plain_text
 
 PHISH = str(SAMPLES_DIR / "credential-phish.eml")
 SUBJECT = "\u26a0 Action required: your password expires today"
@@ -60,7 +60,7 @@ def test_analyze_json_to_file(tmp_path: Path) -> None:
 def test_output_file_needs_a_file_format(tmp_path: Path) -> None:
     result = runner.invoke(app, ["analyze", PHISH, "-o", str(tmp_path / "report.txt")])
     assert result.exit_code == EXIT_USAGE_ERROR
-    assert "--format json" in result.stderr
+    assert "use --format json or --format html" in plain_text(result.stderr)
 
 
 def test_unwritable_output_file(tmp_path: Path) -> None:

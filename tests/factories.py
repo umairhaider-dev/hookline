@@ -1,6 +1,7 @@
 """Builders for test data."""
 
 import hashlib
+import re
 from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
@@ -22,6 +23,23 @@ from hookline.scoring import score_indicators
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SAMPLES_DIR = PROJECT_ROOT / "samples"
+
+_ANSI_ESCAPE = re.compile(r"\x1b\[[0-9;]*m")
+# The Unicode box-drawing block, which Rich draws panels with.
+_PANEL_BORDER = re.compile(
+    "[\N{BOX DRAWINGS LIGHT HORIZONTAL}-\N{BOX DRAWINGS HEAVY UP AND LIGHT DOWN}]"
+)
+
+
+def plain_text(output: str) -> str:
+    """CLI output without colours, panel borders or line wrapping.
+
+    Typer draws usage errors in a coloured panel when it thinks it is on a
+    terminal, which it always does on GitHub Actions.
+    """
+    text = _PANEL_BORDER.sub(" ", _ANSI_ESCAPE.sub("", output))
+    return " ".join(text.split())
+
 
 DEFAULT_HEADERS: tuple[tuple[str, str], ...] = (
     ("From", '"Dana Whitfield" <dana.whitfield@larkspur.test>'),
