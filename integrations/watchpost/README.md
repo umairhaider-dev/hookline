@@ -53,3 +53,12 @@ language model answered differently, or Hookline was upgraded in between.
 
 The URL comes from `--url`, then `WATCHPOST_URL` (environment or `.env`), then
 `url` in `[watchpost]`; HTTPS is verified (`ca_bundle` adds a private CA).
+
+## Tested against
+
+Watchpost 0.1.0, run with its own Docker Compose stack. Both rules were added
+through `POST /api/rules`, and an analyst account pushed the five samples with
+`--wait`: four events were stored (the benign meeting note was skipped) and
+four alerts raised, three high and one medium, each mapped to T1566 with the
+findings and IOCs in its event. Pushing the same emails, and a saved JSON
+report of one of them, again stored nothing new.
