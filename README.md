@@ -363,13 +363,19 @@ An email counts as flagged when its verdict is suspicious or malicious.
 
 | Mode | Precision | Recall | F1 | False positive rate | Mean time per email |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Rules only | 1.000 | 0.617 | 0.763 | 0.000 | 4 ms |
-| AI only | not run | | | | |
-| Combined | not run | | | | |
+| Rules only | 1.000 | 0.617 | 0.763 | 0.000 | 10 ms |
+| AI only | 0.551 | 0.983 | 0.707 | 0.800 | 127.4 s |
+| Combined | 0.701 | 0.842 | 0.765 | 0.358 | 127.4 s |
 
-The AI-only and combined modes need a language model, and none was available
-when these results were produced, so those rows are left empty rather than
-estimated. Reproduce all three with a local model:
+The model was `llama3.1:8b` through Ollama, on a laptop CPU (Intel Core
+i7-8665U, 16 GB RAM, no GPU) with `HOOKLINE_LLM__TIMEOUT_SECONDS=600`. It
+returned valid JSON for all 240 emails, so no answer fell back to the rules.
+Each answer took between 70 and 234 seconds (median 120 s), so the AI times
+are the model's, not Hookline's, and a GPU would cut them sharply. The
+rules-only time was measured while the model had the CPU and is about 4 ms on
+its own. The laptop slept for 33 minutes during one request, and that sleep
+(taken from the Windows event log) is subtracted from that one email's time;
+nothing else was adjusted. Reproduce the run with:
 
 ```bash
 ollama pull llama3.1:8b
@@ -400,6 +406,38 @@ What the rules-only run shows:
 - **Prompt injection backfires on the sender**: the `prompt_injection` check
   fired on 15 of 20 hidden instructions, and 17 of 20 injected emails were
   flagged against 11 of 20 of their otherwise identical twins.
+
+What the model runs show:
+
+- **The model barely tells phishing from legitimate mail.** It rated almost
+  every notification-style email 80 out of 100, legitimate or not: the median
+  likelihood was 80 for the benign emails and 90 for the phishing ones. Only
+  internal memos and reply threads got low scores. On its own that catches 118
+  of 120 phishing emails but also flags 96 of 120 benign ones.
+- **Combined mode trades precision for recall.** The model can only add
+  points, so nothing the rules caught was lost, and 27 more phishing emails
+  were caught: scams went from 0% to 67%, HTML attachments from 38% to 100%,
+  and vendor lookalikes, invoice fraud and shortened links to 100%. The cost
+  is 43 false positives: every newsletter and IT notice, 9 of 10 password
+  resets and half the shipping notices. These legitimate emails already carry
+  5 to 20 rule points (tracking links, hidden preview text, a reset link), and
+  the 24 to 36 points from likelihoods of 80 to 95 push them past the
+  suspicious threshold of 35. The 65 legitimate emails with no findings all
+  stayed clean, but only because the model never rated one above 80; a
+  likelihood of 94 or more would flag one on its own. F1 is about the same as
+  rules only (0.765 against 0.763).
+- **Quiet lures stay hard.** The model rated most of them 80, which adds too
+  little to rule scores near zero, so combined mode still catches only 25%.
+- **Hidden instructions did not work on the model.** No injection lowered its
+  likelihood by 10 or more. The mean likelihood was 90.8 with the injection
+  and 82.8 without, and its answer changed (likelihood moved by 10 or more, or
+  a different attack type) in 6 of 20 pairs. Combined mode flagged 19 of 20
+  injected emails against 15 of 20 twins.
+
+With this model, combined mode is a setting for when a missed phish costs more
+than reviewing a false alarm; otherwise rules only is the better default. A
+small local model's likelihood needs calibrating before its points are worth
+much (see [Future improvements](#future-improvements)).
 
 The dataset was written by the same author as the rules, so treat these
 numbers as a regression baseline and a way to compare modes, not as a
@@ -443,9 +481,12 @@ IOC logic all work from it.
   are only as good as the receiving server that wrote them.
 - **English only.** The language checks and prompt injection patterns are
   written for English.
-- **The model's quality is unmeasured.** The AI modes have not been run on
-  the evaluation set yet, and small local models can be inconsistent. The
-  explanation is a second opinion; the findings are the evidence.
+- **The default local model is poorly calibrated.** On the evaluation set
+  `llama3.1:8b` rated most legitimate notifications 80 out of 100, so combined
+  mode flags 36% of benign emails along with the extra phishing it catches. It
+  also invents details now and then (see T5 in
+  [docs/ai-security.md](docs/ai-security.md)). The explanation is a second
+  opinion; the findings are the evidence.
 - **Redaction is a best effort.** Names other than the recipients', postal
   addresses and business details still reach a cloud model.
 - **The evaluation is synthetic** and written by the same author as the rules.
@@ -473,8 +514,13 @@ same dataset:
 
 Beyond those:
 
-- Run and publish the AI-only and combined evaluation, including how injected
-  instructions affect the model, with a local and a cloud model.
+- **Calibrate the model's likelihood.** For `llama3.1:8b`, 80 means "an
+  ordinary notification", not "probably phishing". The point where the model
+  starts adding score is fixed at 50 today; making it a per-model setting,
+  chosen on a separate set of emails rather than on this dataset, would keep
+  the extra recall with fewer false positives.
+- Run the evaluation with a larger local model and with the Anthropic
+  provider, to see how much of the miscalibration is down to model size.
 - Prompt injection and language patterns in more languages.
 - Outlook `.msg` input and a report-phish mailbox reader.
 - Rate limiting and a Host allowlist for the web interface.

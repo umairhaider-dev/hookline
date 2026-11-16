@@ -144,7 +144,10 @@ Residual risk: the injection check uses English patterns, so paraphrases,
 other languages, text inside images and well-crafted social engineering of the
 model can get past it. In the evaluation it caught 15 of 20 hidden
 instructions. A successful injection can still cost the AI's points and bend
-the explanation; see T5.
+the explanation; see T5. Against `llama3.1:8b` none of the 20 did: no
+injection lowered the model's likelihood by 10 or more, and its mean
+likelihood was higher with the injection (90.8) than without (82.8). That is
+one small model on 20 synthetic attempts, not proof that the boundary holds.
 
 ### T2. Hidden prompt injection
 
@@ -218,6 +221,13 @@ This happens in practice. Asked about `samples/credential-phish.eml`,
 `llama3.1:8b` listed "DKIM fail" among the tactics and wrote that the sender's
 domain fails DKIM. The message has no DKIM signature at all (`dkim=none`), and
 no DKIM finding was given to the model; only SPF and DMARC failed.
+
+The quieter version of the problem is a likelihood that sounds confident but
+means little. On the evaluation set `llama3.1:8b` rated 94 of the 120
+legitimate emails 70 or more, most of them exactly 80: newsletters, receipts,
+meeting invites and HR announcements alike. In combined mode that flagged 43
+legitimate emails that the rules alone left clean. The clamp stops the model
+from hiding a phish, but not from crying wolf.
 
 Mitigations:
 
@@ -395,6 +405,7 @@ Watchpost credentials can create alerts. Give Hookline its own Watchpost user.
 | Risk | Likelihood | Impact | What reduces it |
 | --- | --- | --- | --- |
 | Persuasive but wrong explanation (T5) | Medium | High | Analyst training; findings shown first |
+| Poorly calibrated likelihood raising false positives (T5) | High with `llama3.1:8b` | Medium: 36% of benign emails flagged in combined mode | Rules-only mode; a larger or calibrated model |
 | Injection the pattern list misses (T1) | Medium | Low: costs only the AI's points | Scoring clamp; future multilingual patterns |
 | CSS hiding the parser does not model (T2) | Low | Low | Scoring clamp |
 | Personal data in a cloud prompt (T8) | Medium with a cloud model | Medium | Local model; `redaction = "always"`; `show-prompt` review |
@@ -407,7 +418,8 @@ Watchpost credentials can create alerts. Give Hookline its own Watchpost user.
 - Keep the local model unless a cloud model is approved for this data, and
   review `hookline show-prompt` output before approving one.
 - Run `hookline eval run` with the chosen model before relying on combined
-  mode; model behaviour on this dataset has not been measured yet.
+  mode. With `llama3.1:8b` it raised recall from 62% to 84% but flagged 36% of
+  the benign emails, so measure the trade-off for your own model and mail.
 - Treat the AI section as a second opinion. When it disagrees with the
   findings, the findings win.
 - Set `HOOKLINE_WEB_TOKEN` and use a TLS reverse proxy for any shared web
@@ -431,6 +443,8 @@ Watchpost credentials can create alerts. Give Hookline its own Watchpost user.
 The evaluation adds a measured check: 20 phishing emails carry a hidden
 instruction, each with an otherwise identical twin. 17 of the 20 injected
 emails were flagged against 11 of 20 twins, so in rules-only mode an injection
-attempt makes detection more likely, not less. For the model modes, `hookline
-eval run` also counts how often the injection changed the model's answer; that
-has not been run yet.
+attempt makes detection more likely, not less. With `llama3.1:8b`, the
+injection changed the model's answer (likelihood moved by 10 or more, or a
+different attack type) in 6 of 20 pairs and lowered the likelihood by 10 or
+more in none; combined mode flagged 19 of 20 injected emails against 15 of 20
+twins.
