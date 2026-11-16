@@ -49,6 +49,11 @@ dev = [
     "uvicorn>=0.30",
 ]
 
+[project.urls]
+Repository = "https://github.com/umairhaider-dev/hookline"
+Issues = "https://github.com/umairhaider-dev/hookline/issues"
+Documentation = "https://github.com/umairhaider-dev/hookline#readme"
+
 [project.scripts]
 hookline = "hookline.cli:app"
 

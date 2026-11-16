@@ -1,6 +1,7 @@
 # Sending Hookline verdicts to Watchpost
 
-`hookline push` uploads analysed emails to Watchpost as JSON events through its
+`hookline push` uploads analysed emails to
+[Watchpost](https://github.com/umairhaider-dev/watchpost) as JSON events through its
 ingest API (`POST /api/ingest/uploads`, parser `json`). The two rules in
 `rules/` turn those events into alerts mapped to ATT&CK T1566 (Phishing), one
 alert per email:

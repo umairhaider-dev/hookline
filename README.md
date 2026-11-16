@@ -1,5 +1,7 @@
 # Hookline
 
+[![CI](https://github.com/umairhaider-dev/hookline/actions/workflows/ci.yml/badge.svg)](https://github.com/umairhaider-dev/hookline/actions/workflows/ci.yml)
+
 Hookline analyzes suspicious emails (`.eml` files) for SOC analysts. Deterministic
 security checks produce the evidence, a language model adds context and a
 plain-language explanation, and a transparent scoring step combines the two into
@@ -77,9 +79,11 @@ warning or a recorded status in the report, and the analysis still completes.
 
 ## Quick start
 
-Requires Python 3.11 or newer. From the project folder:
+Requires Python 3.11 or newer.
 
 ```bash
+git clone https://github.com/umairhaider-dev/hookline.git
+cd hookline
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -e .                   # add [web], [anthropic] or [dev] as needed
@@ -339,7 +343,8 @@ deployment.
 
 ## Watchpost
 
-`hookline push` sends analysed emails to Watchpost, the self-hosted SOC
+`hookline push` sends analysed emails to
+[Watchpost](https://github.com/umairhaider-dev/watchpost), the self-hosted SOC
 platform, through its ingest API; the rules in `integrations/watchpost/rules/`
 turn them into alerts, one per email. See
 [integrations/watchpost/README.md](integrations/watchpost/README.md).
@@ -552,6 +557,10 @@ AI layer is tested against a fake provider. Coverage must stay above 85%.
 | `src/hookline/watchpost/` | Watchpost events and client |
 | `src/hookline/evaluation/` | Dataset generator and evaluation harness |
 | `docs/ai-security.md` | Threat model for the AI layer |
+
+## Security
+
+To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
 ## License
 
